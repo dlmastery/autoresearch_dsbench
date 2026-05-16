@@ -106,11 +106,29 @@ Mirrors `dlmastery/autoresearch` (commit-locked locally at 4/20/2026) section-fo
 - `_status.py`: 82/112 BEAT-DSBENCH, 112/112 FORENSIC PASS (unchanged).
 - `framework/_final_audit.py`: all checks green.
 
-## DARE-bench template sync — DEFERRED
+## DARE-bench template sync — COMPLETED (template-only, no git commit yet)
 
-`C:/Users/evija/dare-bench/framework/CLAUDE_template.md` does not yet exist
-on disk at the time of this sweep — the recon and framework agents are
-still scaffolding it in parallel. The dare-bench template, once it lands,
-will encode the same 35-item Lessons Learned section in its initial render
-(the agents have the dsbench template as their reference). A second sweep
-of this kind will run against dare-bench after their template materialises.
+`C:/Users/evija/dare-bench/framework/CLAUDE_template.md` landed mid-sweep
+(2026-05-16). Applied the same 35-item sweep:
+
+- Added Champion-summary committee-resumption-pointer block at the top
+  (literal placeholders; same future-pre-commit-hook pattern as dsbench).
+- Added top-level "Portability Patterns" section with three subsections
+  (Forbidden-Path Access Audit, Held-Back-Surface Discipline, Parallel-
+  Agent Orchestration) — note that DARE-bench already has Agent K wired in
+  Layer 2 of `forensic_audit.py`, so the portability section is the
+  protocol-level statement.
+- Added "Lessons Learned (append-only)" table with rows 1-26 inherited
+  from dsbench (referenced not duplicated) plus rows 27-35 written
+  verbatim with the DARE-bench specialisations (e.g. row 33 reads "every
+  `forbidden` entry in `registry/tasks.json` is OFF-LIMITS"; row 32 lists
+  the DARE-bench-specific token set including the HuggingFace URL).
+- Added "Single-command end-to-end refresh" section adapted for
+  `--variant_tag` scope and 324-task count.
+
+The dare-bench tree is NOT a git repo at this time (no `.git/` directory
+found), so no commit was created there. The autoresearch skill pack is
+single-source (the dsbench-side `skills/autoresearch-pack/`); both
+templates reference the same skills by name. When dare-bench is
+git-initialised, a `git add framework/CLAUDE_template.md && git commit
+-m "Initial CLAUDE_template + 2026-05-16 sweep"` finishes the sync.
