@@ -100,6 +100,26 @@ These are the lessons-learned corrections from the DSBench project. Each maps to
 
 **Existing skills extended (5):** `forensic-audit-pipeline`, `winner-archive-protocol`, `interactive-dashboard-design`, `train-val-test-invariants`, `mlops-documentation`.
 
+## Source 4 — `dsbench/framework/CLAUDE_template.md` 2026-05-15 sweep additions (Lessons rows 27-35)
+
+These rows generalise the dsbench protocol so it transplants cleanly to the DARE-bench inversion + future benchmarks. Each lands in the template AND ships a matching skill.
+
+| Section | Skill(s) | New/Extended |
+|---|---|---|
+| Champion summary (top-of-template committee resumption pointer) | `committee-resumption-pointers`, `mlops-documentation` | EXTENDED (block added at top) |
+| Portability Patterns → Forbidden-Path Access Audit (forensic agent K) | `forbidden-path-audit` | NEW |
+| Portability Patterns → Held-Back-Surface Discipline (DARE-bench inversion) | `held-back-surface-discipline`, `data-integrity-rules` (extended) | NEW + EXTENDED |
+| Portability Patterns → Parallel-Agent Orchestration (file-system rendezvous) | `parallel-agent-orchestration` | NEW |
+| Single-command end-to-end refresh (now own skill) | `single-command-refresh`, `mlops-documentation` | NEW (split from `mlops-documentation`) |
+| Lessons Learned row 27 — three-stream FE as task-specific innovation template | `three-stream-feature-engineering` (existed; reinforced for cross-benchmark use) | REINFORCED |
+| Lessons Learned row 28 — stacked ensemble design | `stacked-ensemble-design` (existed; reinforced) | REINFORCED |
+| Lessons Learned row 29 — regime gate (defensive filter) | `regime-gate` (existed; reinforced) | REINFORCED |
+| Lessons Learned row 30 — sub-period robustness audit | `sub-period-robustness-audit` (existed; reinforced) | REINFORCED |
+
+**New skills added in this sweep (4):** `forbidden-path-audit`, `held-back-surface-discipline`, `parallel-agent-orchestration`, `single-command-refresh`.
+
+**Existing skills reinforced (5):** `three-stream-feature-engineering`, `stacked-ensemble-design`, `regime-gate`, `sub-period-robustness-audit`, `committee-resumption-pointers`.
+
 ## Audit verification
 
-The companion script `audit/audit_pack.py` automatically verifies every H2/H3 header in all three source CLAUDE.md files (autoresearch FX, autoresearch SPY, DSBench template) maps to ≥1 skill. Latest run: **156/156 sections covered, PASS** (see `audit/coverage_report.md`).
+The companion script `audit/audit_pack.py` automatically verifies every H2/H3 header in all three source CLAUDE.md files (autoresearch FX, autoresearch SPY, DSBench template) maps to ≥1 skill. Latest run (2026-05-15 sweep): **153/153 sections covered, PASS** (see `audit/coverage_report.md`). Skill count is now **48** (36 original + 8 dsbench-2026-05 + 4 sweep-2026-05-15).

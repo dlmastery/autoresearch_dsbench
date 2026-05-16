@@ -1,0 +1,40 @@
+%% Four-layer audit gate — every commit that changes experiment state runs all four
+flowchart TB
+    START([commit touches<br/>experiment state]) --> L1
+    subgraph L1[Layer 1 — Section Coverage]
+      direction TB
+      L1A[framework/validator.py]
+      L1A --> L1B{36+ required<br/>sections present?}
+      L1B -->|no| FAIL1[FAIL — fix per-task CLAUDE.md]
+      L1B -->|yes| L1C{X_test or y_test in<br/>runner / hill_climb?}
+      L1C -->|yes| FAIL1
+      L1C -->|no| L2
+    end
+    subgraph L2[Layer 2 — Forensic Committee]
+      direction TB
+      L2A[framework/forensic_audit.py]
+      L2A --> L2B{All FAIL-class<br/>agents A,B,C,D,E,F,G,I pass?}
+      L2B -->|no| FAIL2[FAIL — see forensic_audit.md]
+      L2B -->|yes| L3
+    end
+    subgraph L3[Layer 3 — 14-Section Explainability]
+      direction TB
+      L3A[framework/build_submission.py]
+      L3A --> L3B{All 14 sections<br/>present per winner?}
+      L3B -->|no| FAIL3[FAIL — re-run builder]
+      L3B -->|yes| L4
+    end
+    subgraph L4[Layer 4 — Skill-Pack Coverage]
+      direction TB
+      L4A[skills/autoresearch-pack/<br/>audit/audit_pack.py]
+      L4A --> L4B{Every H2/H3 in source<br/>CLAUDE.md maps to skill?}
+      L4B -->|no| FAIL4[FAIL — add skill or extend matrix]
+      L4B -->|yes| GREEN
+    end
+    GREEN([GREEN — submittable])
+
+    FAIL1 fillStyle "stroke:#c00,fill:#fee"
+    FAIL2 fillStyle "stroke:#c00,fill:#fee"
+    FAIL3 fillStyle "stroke:#c00,fill:#fee"
+    FAIL4 fillStyle "stroke:#c00,fill:#fee"
+    GREEN fillStyle "stroke:#080,fill:#efe"

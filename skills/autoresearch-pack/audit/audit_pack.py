@@ -175,6 +175,24 @@ SECTION_SKILL_MAP: Dict[str, List[str]] = {
     "Per-Backbone 25-Experiment Mandate (MANDATORY)": ["per-backbone-experiment-mandate"],
     "Per-Sample Decision Logging (MANDATORY for every experiment)":
         ["per-sample-decision-logging"],
+
+    # 2026-05 sweep additions — DSBench-template Champion summary block + four
+    # new portability skills (forbidden-path-audit / held-back-surface-discipline
+    # / parallel-agent-orchestration / single-command-refresh) — see
+    # coverage_matrix.md "Source 3" extension table.
+    "Champion summary (auto-populated from `registry/final_rollup.json` + `registry/forensic_summary.json`)":
+        ["committee-resumption-pointers", "mlops-documentation"],
+    "Parallel-Agent Orchestration (file-system rendezvous)":
+        ["parallel-agent-orchestration"],
+    "Held-Back-Surface Discipline (DARE-bench inversion-aware)":
+        ["held-back-surface-discipline", "data-integrity-rules"],
+    "Forbidden-Path Access Audit (forensic agent K)":
+        ["forbidden-path-audit", "forensic-audit-pipeline"],
+    "Single-command end-to-end refresh":
+        ["single-command-refresh", "mlops-documentation"],
+    "Portability Patterns (cross-benchmark — DSBench + DARE-bench)": [
+        "forbidden-path-audit", "held-back-surface-discipline",
+        "parallel-agent-orchestration"],
 }
 
 

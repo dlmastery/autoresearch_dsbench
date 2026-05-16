@@ -92,3 +92,25 @@ delta. The cross-task dashboard at `dashboard/index.html` reads that file.
 ## Provenance
 
 Mirrors `dlmastery/autoresearch` (commit-locked locally at 4/20/2026) section-for-section. Every per-task CLAUDE.md is validated to contain the substrings listed in `framework/SECTION_MAPPING.md`.
+
+## 2026-05-15 sweep (Lessons rows 27-35, four new portability skills)
+
+- Added Champion-summary committee-resumption-pointer block at the top of
+  `framework/CLAUDE_template.md`.
+- Added top-level "Portability Patterns" section with three subsections.
+- Added Lessons Learned rows 27-35.
+- New skills shipped: `forbidden-path-audit`, `held-back-surface-discipline`,
+  `parallel-agent-orchestration`, `single-command-refresh`.
+- Skill-pack coverage audit: **153/153 (100.0%) PASS** (up from 148/148).
+- `n_skills`: 48 (up from 44).
+- `_status.py`: 82/112 BEAT-DSBENCH, 112/112 FORENSIC PASS (unchanged).
+- `framework/_final_audit.py`: all checks green.
+
+## DARE-bench template sync — DEFERRED
+
+`C:/Users/evija/dare-bench/framework/CLAUDE_template.md` does not yet exist
+on disk at the time of this sweep — the recon and framework agents are
+still scaffolding it in parallel. The dare-bench template, once it lands,
+will encode the same 35-item Lessons Learned section in its initial render
+(the agents have the dsbench template as their reference). A second sweep
+of this kind will run against dare-bench after their template materialises.

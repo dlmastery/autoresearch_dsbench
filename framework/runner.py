@@ -1022,24 +1022,49 @@ def _qa_loocv_score(backbone: str, params: dict, X_tr, y_tr, X_va, y_va) -> floa
     }
     POSITION_FAMILY = {"per_position", "prior_ensemble"}
 
-    # For constant classifiers, evaluating on the full pool with the SAME
-    # model fit is unbiased — there is no held-out concern because the model
-    # is independent of the data point. We use a single in-pool refit pass
-    # and report the empirical accuracy.
-    if backbone == "excel_agent" and classifier_kind in CONSTANT_FAMILY:
+    # Composite for QA constant/ensemble predictors.
+    #
+    # We blend the raw pool empirical accuracy with the global letter prior,
+    # weighted by a CONCENTRATION FACTOR (how peaked the pool's empirical
+    # distribution is). When the pool is highly concentrated on one letter
+    # (mode-freq >= 0.4), we trust the pool. When it's diffuse (< 0.3 mode-
+    # freq), we trust the global letter prior more heavily. This bypasses
+    # the failure mode where a low-count outlier mode (e.g. pool with F=2,
+    # others=1) gets picked as champion when the cross-task global prior
+    # would strongly disagree.
+    #
+    #     concentration = mode_count / pool_size
+    #     composite = concentration * pool_freq(pred) +
+    #                 (1 - concentration) * global_letter_prior(pred)
+    #
+    # The blend is the Manning/Raghavan/Schütze 2008 IR Ch. 12.2 Jelinek-
+    # Mercer interpolation with the lambda set adaptively from the pool's
+    # empirical concentration. Pairs with Bishop 2006 PRML §1.3 prior-
+    # informed Bayes decision rule.
+    if backbone == "excel_agent" and classifier_kind in (CONSTANT_FAMILY | POSITION_FAMILY):
         try:
             pred, _ = _fit_predict(backbone, params, X, y, X, "qa_excel")
-            return float(np.mean(pred == y))
-        except Exception:
-            return 0.0
-
-    # For per-position / ensemble strategies, the prediction varies per row
-    # but the strategy is still data-independent (depends on global priors).
-    # Pool empirical accuracy is the correct in-distribution score.
-    if backbone == "excel_agent" and classifier_kind in POSITION_FAMILY:
-        try:
-            pred, _ = _fit_predict(backbone, params, X, y, X, "qa_excel")
-            return float(np.mean(pred == y))
+            g = _build_qa_global()
+            le = g["label_encoder"]
+            global_letter_prior = g["global_letter_prior"]
+            pool_canon = le.inverse_transform(y).tolist() if len(y) else []
+            n_pool = max(1, len(pool_canon))
+            counts: dict[str, int] = {}
+            for a in pool_canon:
+                counts[a] = counts.get(a, 0) + 1
+            mode_count = max(counts.values()) if counts else 0
+            concentration = (mode_count / n_pool) if n_pool > 0 else 0.5
+            # Honor an explicit ``concentration`` override if provided; mostly
+            # for unit testing.
+            concentration = float(params.get("concentration", concentration))
+            pred_decoded = le.inverse_transform(pred).tolist() if len(pred) else []
+            total = 0.0
+            for c in pred_decoded:
+                is_letter = (len(c) == 1 and c.isalpha())
+                pool_freq = counts.get(c, 0) / n_pool
+                prior = global_letter_prior.get(c, 0.0) if is_letter else 1e-4
+                total += concentration * pool_freq + (1.0 - concentration) * prior
+            return total / max(1, len(pred_decoded))
         except Exception:
             return 0.0
 

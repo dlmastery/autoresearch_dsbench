@@ -12,6 +12,6 @@
     "X_test": "b34f89df970c9fad",
     "y_test": "ec5b6aa863818f79"
   },
-  "generated_at": "2026-05-15 23:43:23",
+  "generated_at": "2026-05-16 04:22:13",
   "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
 }

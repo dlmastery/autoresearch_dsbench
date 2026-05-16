@@ -5,6 +5,25 @@
 > / `modeling` / `roc_auc` parameters substituted. Section coverage is
 > verified by `framework/validator.py` against `framework/SECTION_MAPPING.md`.
 
+## Champion summary (auto-populated from `registry/final_rollup.json` + `registry/forensic_summary.json`)
+
+> **🏆 Project state — read this FIRST on session start (committee resumption pointer).**
+>
+> - **Beat DSBench:** <count>/<total> (<percent>%)
+> - **Forensic PASS:** <count>/<total>
+> - **Champion of champions:** <task_slug> · <backbone> · composite <value>
+> - **Resume in one command:** `& "C:/Users/evija/anaconda3/python.exe" framework/_status.py`
+> - **Cross-task dashboard:** http://localhost:8765/dashboard/index.html
+>
+> Placeholder fields are LITERAL — they are deliberately not auto-substituted in
+> this template so the file never lies about state it hasn't measured. A future
+> enhancement (a pre-commit hook in `framework/_substitute_champion_summary.py`)
+> will read `registry/final_rollup.json` + `registry/forensic_summary.json` and
+> rewrite the literals into actual counts during the regenerate-CLAUDE step. Until
+> that hook ships, run `framework/_status.py` to see live numbers. See skill
+> `committee-resumption-pointers` for the pattern and `single-command-refresh` for
+> the surrounding ritual.
+
 ## On Session Start (ALWAYS do this first)
 
 You ARE the autoresearch loop. Claude Code is the outer loop — there is no separate Python agent. When a session starts:
@@ -593,6 +612,43 @@ C:/Users/evija/dsbench/modeling/playground-series-s3e24/                    # ta
 | TEST_FRAC | 0.15 | `data/splits.py` |
 | RANDOM_SEED | 42 | global |
 
+## Portability Patterns (cross-benchmark — DSBench + DARE-bench)
+
+The autoresearch protocol is designed to transplant cleanly from one benchmark
+to another. Four patterns generalise the dsbench-specific rules so the same
+framework runs unmodified against benchmarks with different held-back surfaces,
+different parallelisation needs, or different propagation rituals.
+
+### Forbidden-Path Access Audit (forensic agent K)
+
+A static-code grep that fails the forensic audit if any runner / hill-climb
+file references the held-back surface declared in `task_config.json`. Default
+token set targets `data/test/` (DSBench); inversion mode targets `data/train/`
+(DARE-bench eval-only). The accessor (the ONE file allowed to touch the
+held-back surface, e.g. `framework/final_report.py` for DSBench or
+`framework/final_eval.py` for DARE-bench) is exempt. Wire as the FIRST agent
+in the committee — a positive grep aborts downstream agents. See skill
+`forbidden-path-audit`.
+
+### Held-Back-Surface Discipline (DARE-bench inversion-aware)
+
+Generalises the DSBench rule "test set is OFF-LIMITS until final_report" to
+any benchmark whose held-back surface is named differently. Every
+`task_config.json` declares `held_back_surface`, `held_back_tokens`,
+`final_accessor`, `final_artefact`. The same protocol applies in inversion
+mode: in DARE-bench the held-back surface is `data/train/`, the accessor is
+`framework/final_eval.py`, and the search loop has no path to either. See
+skill `held-back-surface-discipline`.
+
+### Parallel-Agent Orchestration (file-system rendezvous)
+
+When the workload splits cleanly (e.g. 112 tasks × 5 backbones × 25 iters),
+launch N parallel background agents and coordinate via the file system. Each
+agent writes to disjoint paths (`autoresearch_results/<unit>/`); each emits a
+`_done.json` sentinel on completion; the foreground coordinator polls the
+registry. No shared mutable state, no centralised queue — the file system IS
+the queue. See skill `parallel-agent-orchestration`.
+
 ## Common Mistakes (Never Repeat)
 
 | Mistake | Consequence | Prevention |
@@ -651,6 +707,15 @@ This is the master "next-time-you-do-this-don't-miss-this" checklist. Every corr
 | 24 | **GitHub checkpoint protocol.** First commit goes to `dlmastery/autoresearch_dsbench`. Push exclusively via `gh repo create … --source .` + `git push -u origin main`. SSL backend: schannel on Windows (`git config --global http.sslBackend schannel`). Repo is ~156 MB after exclusions (24K+ files); push takes ~2-5 min initial, fast for follow-ups. | `mlops-documentation` (EXTENDED) |
 | 25 | **Two-tab dashboard navigation.** Cross-task leaderboard row click → per-task autoresearch dashboard in a NEW TAB (not modal, not new window). Per-task experiment row click → INLINE detail panel within the same dashboard. `target="_blank"` for cross-task; same-page DOM mutation for per-task. | `interactive-dashboard-design` (EXTENDED) |
 | 26 | **Live dashboard auto-refresh.** Cross-task leaderboard and per-task dashboards auto-refresh every 30s via `setInterval(load, 30000)` so a long-running background agent's progress is visible without manual reload. | `interactive-dashboard-design` (EXTENDED) |
+| 27 | **Three-stream feature engineering as task-specific innovation template.** From `autoresearchindexspy`, the daily / pre-market / hourly causal-anchor pattern. The DARE-bench mandate "task-specific innovative backbones" maps onto this — every new task category gets its own causally-anchored multi-stream derivation. Anchor cutoff is non-negotiable: train at the latest causal anchor, never at a post-prediction anchor. | `three-stream-feature-engineering` |
+| 28 | **Stacked ensemble design (val-weighted N-component).** N independently-tuned champions, softmax-weighted by per-component val composite, averaged at test time. SPY demo: 12 components, +0.277 composite. Weights computed on val ONLY; test held-out. Lakshminarayanan et al. 2017 NeurIPS (arXiv:1612.01474). | `stacked-ensemble-design` |
+| 29 | **Regime gate as defensive filter.** Conditional rule (`rvol60d > 15%` for SPY) that gates trading to the model's edge regime. Defensive — doesn't generate alpha in off-regime, just avoids losses. Threshold chosen on val only. Ang & Bekaert 2002 RFS. | `regime-gate` |
+| 30 | **Sub-period robustness audit.** Rolling-window evaluation across pre-registered sub-periods (5-year blocks, regime quartiles) to expose regime-specialist behaviour. Headline: `min_subperiod_sharpe / max_subperiod_sharpe`. Concentrated edge → gate; regime-flip → retrain or retire. Bailey & López de Prado 2014. | `sub-period-robustness-audit` |
+| 31 | **Champion summary block at top of CLAUDE.md.** Committee resumption pointer — beat-count, forensic-pass count, champion of champions, resume command, dashboard URL. Auto-populated from `registry/final_rollup.json` + `registry/forensic_summary.json` (placeholders kept literal in the template; a future pre-commit hook will substitute). | `committee-resumption-pointers` |
+| 32 | **Forbidden-path access audit (forensic agent K).** Static-code grep that fails the audit if any runner references the held-back surface. Parameterised by `task_config.json:held_back_tokens`; DSBench grep targets `X_test`/`y_test`/`data/test/`; DARE-bench inversion targets `X_train`/`y_train`/`data/train/`. The single declared accessor is exempt. Agent K runs FIRST in the committee. | `forbidden-path-audit` (NEW) |
+| 33 | **Held-back-surface discipline (eval-only mandate / DARE-bench inversion).** The autoresearch loop's `data/test/`-is-forbidden rule generalises to `data/<held-back-surface>/`-is-forbidden. Each `task_config.json` declares the surface, tokens, single accessor, and frozen output artefact. DSBench: test held back, `final_report.py` is accessor. DARE-bench: train held back, `final_eval.py` is accessor. One declared accessor, one frozen artefact, one final touch. | `held-back-surface-discipline` (NEW) + `data-integrity-rules` (EXTENDED) |
+| 34 | **Parallel-agent orchestration via file-system rendezvous.** When work splits cleanly (112 tasks × 5 backbones × 25 iters), launch N parallel background agents; each writes to disjoint paths and emits a `_done.json` sentinel; the foreground coordinator polls the registry. No shared mutable state, no centralised queue — file system is the queue. Each agent has its own crash-recovery checkpoint. | `parallel-agent-orchestration` (NEW) |
+| 35 | **Single-command end-to-end refresh (9-step ritual).** After any correction: regenerate task CLAUDE.md (step 2) → re-run affected experiments (3) → refresh 4 audit layers (4a-d) → rebuild submissions (5) → refresh dashboards (6) → status snapshot (7) → final audit (8) → commit + push (9). Doc-only corrections can skip steps 3 and 4a. The ritual is the contract between "user added a correction" and "everything propagated correctly". | `single-command-refresh` (NEW) + `mlops-documentation` |
 
 When a new correction lands, add a row here AND update the corresponding skill (or create a new one) AND re-run `skills/autoresearch-pack/audit/audit_pack.py` to confirm coverage holds at 100%. **Then** regenerate every per-task `CLAUDE.md` via `framework/_regenerate_claude_only.py` so the new rule reaches all 112 task repos. **Then** commit + push to `dlmastery/autoresearch_dsbench`.
 
