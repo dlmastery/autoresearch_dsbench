@@ -1,0 +1,452 @@
+[
+  {
+    "task": "2012-round-2-asset-schedule",
+    "current_composite": 0.35444444444444445,
+    "candidate_c": 49,
+    "candidate_val_acc": 1.0,
+    "candidate_train_acc": 0.3333333333333333,
+    "candidate_composite": 0.3,
+    "candidate_test_score": 0.0,
+    "pool_histogram": {
+      "54": 1,
+      "49": 2,
+      "60": 1
+    },
+    "val_histogram": {
+      "49": 1
+    },
+    "test_histogram": {
+      "54": 1
+    },
+    "overwrite": false
+  },
+  {
+    "task": "2012-round-2-find-that-error",
+    "current_composite": 0.27835,
+    "candidate_c": 60,
+    "candidate_val_acc": 0.5,
+    "candidate_train_acc": 0.0,
+    "candidate_composite": -0.025,
+    "candidate_test_score": 0.25,
+    "pool_histogram": {
+      "54": 6,
+      "55": 3,
+      "49": 5,
+      "60": 2
+    },
+    "val_histogram": {
+      "55": 1,
+      "54": 1,
+      "60": 2
+    },
+    "test_histogram": {
+      "55": 1,
+      "54": 1,
+      "60": 1,
+      "49": 1
+    },
+    "overwrite": false
+  },
+  {
+    "task": "2013-round-2-data-analysis",
+    "current_composite": 0.3356856319223184,
+    "candidate_c": 55,
+    "candidate_val_acc": 0.6666666666666666,
+    "candidate_train_acc": 0.4,
+    "candidate_composite": 0.3866666666666667,
+    "candidate_test_score": 0.0,
+    "pool_histogram": {
+      "54": 2,
+      "49": 5,
+      "55": 6
+    },
+    "val_histogram": {
+      "55": 2,
+      "49": 1
+    },
+    "test_histogram": {
+      "60": 1,
+      "49": 1,
+      "54": 1
+    },
+    "overwrite": true,
+    "new_exp_num": 27
+  },
+  {
+    "task": "2013-round-2-hard-times-turnaround-a-toy-company",
+    "current_composite": 0.4126666666666666,
+    "candidate_c": 54,
+    "candidate_val_acc": 1.0,
+    "candidate_train_acc": 0.0,
+    "candidate_composite": -0.05,
+    "candidate_test_score": 1.0,
+    "pool_histogram": {
+      "49": 4,
+      "55": 2,
+      "54": 2
+    },
+    "val_histogram": {
+      "54": 2
+    },
+    "test_histogram": {
+      "54": 1
+    },
+    "overwrite": false
+  },
+  {
+    "task": "2013-round-2-theory-and-practice",
+    "current_composite": 0.25866666666666666,
+    "candidate_c": 49,
+    "candidate_val_acc": 0.3333333333333333,
+    "candidate_train_acc": 0.3333333333333333,
+    "candidate_composite": 0.3333333333333333,
+    "candidate_test_score": 0.0,
+    "pool_histogram": {
+      "55": 2,
+      "54": 4,
+      "49": 4,
+      "60": 2
+    },
+    "val_histogram": {
+      "49": 1,
+      "55": 1,
+      "60": 1
+    },
+    "test_histogram": {
+      "60": 1,
+      "55": 2
+    },
+    "overwrite": true,
+    "new_exp_num": 27
+  },
+  {
+    "task": "2014-round-1-dealing-with-data",
+    "current_composite": 0.4126666666666666,
+    "candidate_c": 49,
+    "candidate_val_acc": 1.0,
+    "candidate_train_acc": 0.4,
+    "candidate_composite": 0.37,
+    "candidate_test_score": 0.0,
+    "pool_histogram": {
+      "54": 1,
+      "60": 1,
+      "49": 3,
+      "55": 1
+    },
+    "val_histogram": {
+      "49": 1
+    },
+    "test_histogram": {
+      "54": 1
+    },
+    "overwrite": false
+  },
+  {
+    "task": "2014-round-2-purple-city",
+    "current_composite": 0.23961904761904762,
+    "candidate_c": 49,
+    "candidate_val_acc": 1.0,
+    "candidate_train_acc": 0.16666666666666666,
+    "candidate_composite": 0.12499999999999999,
+    "candidate_test_score": 0.0,
+    "pool_histogram": {
+      "54": 2,
+      "49": 2,
+      "60": 1,
+      "55": 2
+    },
+    "val_histogram": {
+      "49": 1
+    },
+    "test_histogram": {
+      "55": 1
+    },
+    "overwrite": false
+  },
+  {
+    "task": "2014-round-2-stepping-up",
+    "current_composite": 0.22533333333333336,
+    "candidate_c": 85,
+    "candidate_val_acc": 0.5,
+    "candidate_train_acc": 0.16666666666666666,
+    "candidate_composite": 0.15,
+    "candidate_test_score": 0.5,
+    "pool_histogram": {
+      "49": 2,
+      "54": 2,
+      "55": 1,
+      "85": 2,
+      "78": 1
+    },
+    "val_histogram": {
+      "78": 1,
+      "85": 1
+    },
+    "test_histogram": {
+      "55": 1,
+      "85": 1
+    },
+    "overwrite": false
+  },
+  {
+    "task": "2014-round-2-time-is-money",
+    "current_composite": 0.25866666666666666,
+    "candidate_c": 49,
+    "candidate_val_acc": 1.0,
+    "candidate_train_acc": 0.2,
+    "candidate_composite": 0.16,
+    "candidate_test_score": 0.0,
+    "pool_histogram": {
+      "60": 1,
+      "49": 2,
+      "54": 2,
+      "55": 1
+    },
+    "val_histogram": {
+      "49": 1
+    },
+    "test_histogram": {
+      "55": 1
+    },
+    "overwrite": false
+  },
+  {
+    "task": "2015-round-1-bread-and-butter",
+    "current_composite": 0.24533333333333338,
+    "candidate_c": 85,
+    "candidate_val_acc": 0.3333333333333333,
+    "candidate_train_acc": 0.2222222222222222,
+    "candidate_composite": 0.21666666666666665,
+    "candidate_test_score": 0.0,
+    "pool_histogram": {
+      "54": 4,
+      "60": 1,
+      "85": 3,
+      "49": 1,
+      "55": 2,
+      "78": 1
+    },
+    "val_histogram": {
+      "85": 1,
+      "55": 1,
+      "78": 1
+    },
+    "test_histogram": {
+      "60": 2,
+      "78": 1
+    },
+    "overwrite": false
+  },
+  {
+    "task": "2015-round-1-tax",
+    "current_composite": 0.39045,
+    "candidate_c": 55,
+    "candidate_val_acc": 0.5,
+    "candidate_train_acc": 0.3333333333333333,
+    "candidate_composite": 0.32499999999999996,
+    "candidate_test_score": 0.0,
+    "pool_histogram": {
+      "60": 2,
+      "49": 1,
+      "54": 2,
+      "55": 3
+    },
+    "val_histogram": {
+      "54": 1,
+      "55": 1
+    },
+    "test_histogram": {
+      "49": 1,
+      "60": 1
+    },
+    "overwrite": false
+  },
+  {
+    "task": "2015-round-2-the-price-is-right",
+    "current_composite": 0.2753185185185185,
+    "candidate_c": 54,
+    "candidate_val_acc": 0.5,
+    "candidate_train_acc": 0.2857142857142857,
+    "candidate_composite": 0.27499999999999997,
+    "candidate_test_score": 0.0,
+    "pool_histogram": {
+      "54": 3,
+      "60": 2,
+      "78": 1,
+      "55": 1,
+      "49": 2
+    },
+    "val_histogram": {
+      "54": 1,
+      "49": 1
+    },
+    "test_histogram": {
+      "49": 1,
+      "85": 1
+    },
+    "overwrite": false
+  },
+  {
+    "task": "2015-round-one-options-to-call",
+    "current_composite": 0.21733333333333335,
+    "candidate_c": 55,
+    "candidate_val_acc": 0.5,
+    "candidate_train_acc": 0.16666666666666666,
+    "candidate_composite": 0.15,
+    "candidate_test_score": 0.0,
+    "pool_histogram": {
+      "54": 1,
+      "55": 2,
+      "60": 2,
+      "85": 2,
+      "49": 1
+    },
+    "val_histogram": {
+      "55": 1,
+      "85": 1
+    },
+    "test_histogram": {
+      "54": 1,
+      "85": 1
+    },
+    "overwrite": false
+  },
+  {
+    "task": "2016-round-1-section-2-chip-off-the-old-block",
+    "current_composite": 0.23021814876033053,
+    "candidate_c": 60,
+    "candidate_val_acc": 0.5,
+    "candidate_train_acc": 0.2222222222222222,
+    "candidate_composite": 0.20833333333333331,
+    "candidate_test_score": 0.0,
+    "pool_histogram": {
+      "60": 3,
+      "93": 2,
+      "55": 1,
+      "78": 1,
+      "91": 1,
+      "15": 1,
+      "29": 1,
+      "49": 1
+    },
+    "val_histogram": {
+      "49": 1,
+      "60": 1
+    },
+    "test_histogram": {
+      "91": 1,
+      "49": 1
+    },
+    "overwrite": false
+  },
+  {
+    "task": "2016-round-2-section-2-fund-the-future",
+    "current_composite": 0.16733333333333333,
+    "candidate_c": 93,
+    "candidate_val_acc": 0.5,
+    "candidate_train_acc": 0.0,
+    "candidate_composite": -0.025,
+    "candidate_test_score": 0.0,
+    "pool_histogram": {
+      "78": 1,
+      "60": 1,
+      "85": 1,
+      "55": 1,
+      "89": 1,
+      "91": 1,
+      "93": 1,
+      "10": 1
+    },
+    "val_histogram": {
+      "93": 1,
+      "10": 1
+    },
+    "test_histogram": {
+      "85": 1,
+      "18": 1
+    },
+    "overwrite": false
+  },
+  {
+    "task": "2016-round-2-section-3-tally-up",
+    "current_composite": 0.1904,
+    "candidate_c": 49,
+    "candidate_val_acc": 0.5,
+    "candidate_train_acc": 0.0,
+    "candidate_composite": -0.025,
+    "candidate_test_score": 0.0,
+    "pool_histogram": {
+      "55": 1,
+      "54": 1,
+      "93": 1,
+      "85": 2,
+      "60": 1,
+      "49": 1,
+      "31": 1
+    },
+    "val_histogram": {
+      "49": 1,
+      "31": 1
+    },
+    "test_histogram": {
+      "60": 1,
+      "84": 1
+    },
+    "overwrite": false
+  },
+  {
+    "task": "2017-round-2-section-1-collect-the-cash",
+    "current_composite": 0.18933333333333335,
+    "candidate_c": 78,
+    "candidate_val_acc": 0.5,
+    "candidate_train_acc": 0.125,
+    "candidate_composite": 0.10625,
+    "candidate_test_score": 0.0,
+    "pool_histogram": {
+      "60": 2,
+      "93": 1,
+      "85": 1,
+      "78": 2,
+      "91": 1,
+      "55": 1,
+      "37": 1,
+      "49": 1
+    },
+    "val_histogram": {
+      "78": 1,
+      "49": 1
+    },
+    "test_histogram": {
+      "91": 1,
+      "46": 1
+    },
+    "overwrite": false
+  },
+  {
+    "task": "2017-round-2-section-3-system-allocation",
+    "current_composite": 0.17533333333333334,
+    "candidate_c": 49,
+    "candidate_val_acc": 0.5,
+    "candidate_train_acc": 0.0,
+    "candidate_composite": -0.025,
+    "candidate_test_score": 0.0,
+    "pool_histogram": {
+      "55": 1,
+      "93": 1,
+      "54": 1,
+      "78": 1,
+      "39": 1,
+      "85": 1,
+      "49": 1,
+      "35": 1
+    },
+    "val_histogram": {
+      "49": 1,
+      "35": 1
+    },
+    "test_histogram": {
+      "93": 1
+    },
+    "overwrite": false
+  }
+]

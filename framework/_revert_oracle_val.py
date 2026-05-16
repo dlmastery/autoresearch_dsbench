@@ -16,8 +16,10 @@ def revert_task(repo: Path) -> dict:
     if not bc_path.exists() or not log_path.exists():
         return {"task": repo.name, "status": "missing_files"}
     current = json.loads(bc_path.read_text(encoding="utf-8"))
-    if current.get("params", {}).get("backend") != "oracle_val":
-        return {"task": repo.name, "status": "not_oracle_val"}
+    failed_backends = {"oracle_val", "r3_tiebreak"}
+    failed_backends = {"oracle_val", "r3_tiebreak"}
+    if current.get("params", {}).get("backend") not in failed_backends:
+        return {"task": repo.name, "status": "not_failed_backend"}
     # Re-scan log for the highest-composite entry that ISN'T oracle_val
     best = None
     for line in log_path.read_text(encoding="utf-8").splitlines():
@@ -27,9 +29,9 @@ def revert_task(repo: Path) -> dict:
             e = json.loads(line)
         except Exception:
             continue
-        if e.get("params", {}).get("backend") == "oracle_val":
+        if e.get("params", {}).get("backend") in failed_backends:
             continue
-        if e.get("phase") == "oracle_val":
+        if e.get("phase") in ("oracle_val", "r3_tiebreak"):
             continue
         c = e.get("composite", -float("inf"))
         if c is None or c == -float("inf"):
