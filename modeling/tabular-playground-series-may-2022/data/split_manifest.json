@@ -1,0 +1,17 @@
+{
+  "task_slug": "tabular-playground-series-may-2022",
+  "n_train": 1400,
+  "n_val": 300,
+  "n_test": 300,
+  "n_features": 32,
+  "hashes": {
+    "X_train": "83db9c7e4b4e51e3",
+    "y_train": "2cb062ba00ceed95",
+    "X_val": "545eed701e0b7bfc",
+    "y_val": "7fe7c9c9bc620e0a",
+    "X_test": "14ff141e47cc2523",
+    "y_test": "cebd9bd03926bbbe"
+  },
+  "generated_at": "2026-05-15 09:20:58",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

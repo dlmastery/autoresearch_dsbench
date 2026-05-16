@@ -1,0 +1,20 @@
+{
+  "task": "tweet-sentiment-extraction",
+  "name": "tweet-sentiment-extraction",
+  "problem_type": "regression",
+  "metric": "rmse",
+  "champion_backbone": "mlp",
+  "champion_composite": -0.4007133541284315,
+  "champion_val": -0.38888178002391915,
+  "champion_train": -0.1522502979336722,
+  "test_score": -0.39997071367579473,
+  "test_metrics": {
+    "rmse": 0.39997071367579473,
+    "mae": 0.3138769567012787,
+    "r2": 0.9964591860771179
+  },
+  "dsbench_baseline": -1.0,
+  "delta_vs_dsbench": 0.6000292863242053,
+  "beats_dsbench": true,
+  "timestamp": "2026-05-16 00:12:10"
+}

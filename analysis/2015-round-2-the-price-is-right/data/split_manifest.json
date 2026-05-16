@@ -1,0 +1,17 @@
+{
+  "task_slug": "2015-round-2-the-price-is-right",
+  "n_train": 7,
+  "n_val": 2,
+  "n_test": 2,
+  "n_features": 47,
+  "hashes": {
+    "X_train": "7c51fee6cd336544",
+    "y_train": "88120bc73a1e812e",
+    "X_val": "ae95cf20d24fdab9",
+    "y_val": "83a69a34dacdb049",
+    "X_test": "2be811db74bb7a80",
+    "y_test": "c5b07bbf6179a9e7"
+  },
+  "generated_at": "2026-05-15 23:46:46",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

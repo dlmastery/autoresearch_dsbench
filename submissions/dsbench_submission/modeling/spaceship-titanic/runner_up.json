@@ -1,0 +1,55 @@
+{
+  "experiment_num": 83,
+  "backbone": "mlp",
+  "description": "mlp iter 8/25: Seed variance run #3.",
+  "params": {
+    "iterations": 400,
+    "epochs": 30,
+    "lr": 0.001,
+    "seed": 99
+  },
+  "metric": "roc_auc",
+  "train_score": 0.9999346638762697,
+  "val_score": 0.9974976540506726,
+  "composite": 0.9973758035593927,
+  "train_metrics": {
+    "accuracy": 0.9985714285714286,
+    "f1": 0.9986033519553073,
+    "precision": 0.99721059972106,
+    "recall": 1.0,
+    "mcc": 0.9971454437173415,
+    "roc_auc": 0.9999346638762697,
+    "confusion": [
+      [
+        683,
+        2
+      ],
+      [
+        0,
+        715
+      ]
+    ]
+  },
+  "val_metrics": {
+    "accuracy": 0.97,
+    "f1": 0.968421052631579,
+    "precision": 0.9452054794520548,
+    "recall": 0.9928057553956835,
+    "mcc": 0.9409115666318472,
+    "roc_auc": 0.9974976540506726,
+    "confusion": [
+      [
+        153,
+        8
+      ],
+      [
+        1,
+        138
+      ]
+    ]
+  },
+  "elapsed_sec": 1.0069491863250732,
+  "timestamp": "2026-05-15 08:20:49",
+  "task_slug": "spaceship-titanic",
+  "uses_test_set": false
+}

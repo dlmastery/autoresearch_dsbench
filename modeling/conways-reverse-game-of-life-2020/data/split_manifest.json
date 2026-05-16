@@ -1,0 +1,17 @@
+{
+  "task_slug": "conways-reverse-game-of-life-2020",
+  "n_train": 1400,
+  "n_val": 300,
+  "n_test": 300,
+  "n_features": 32,
+  "hashes": {
+    "X_train": "c5fea646b0ec5a94",
+    "y_train": "97545dc3e85ebaab",
+    "X_val": "a61e24eaeabce355",
+    "y_val": "ce28e39571f7facd",
+    "X_test": "67b81522387ab649",
+    "y_test": "1ba94b4425afacef"
+  },
+  "generated_at": "2026-05-15 10:19:18",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

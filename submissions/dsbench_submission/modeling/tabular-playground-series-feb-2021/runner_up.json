@@ -1,0 +1,54 @@
+{
+  "experiment_num": 99,
+  "backbone": "mlp",
+  "description": "mlp iter 24/25: Slightly above default.",
+  "params": {
+    "iterations": 400,
+    "epochs": 30,
+    "lr": 0.0015
+  },
+  "metric": "roc_auc",
+  "train_score": 0.9998999338338004,
+  "val_score": 0.993948832035595,
+  "composite": 0.9936512769456848,
+  "train_metrics": {
+    "accuracy": 0.9964285714285714,
+    "f1": 0.9963423555230432,
+    "precision": 0.9941605839416059,
+    "recall": 0.998533724340176,
+    "mcc": 0.9928623330494339,
+    "roc_auc": 0.9998999338338004,
+    "confusion": [
+      [
+        714,
+        4
+      ],
+      [
+        1,
+        681
+      ]
+    ]
+  },
+  "val_metrics": {
+    "accuracy": 0.9466666666666667,
+    "f1": 0.9477124183006536,
+    "precision": 0.9602649006622517,
+    "recall": 0.9354838709677419,
+    "mcc": 0.8936275564220019,
+    "roc_auc": 0.993948832035595,
+    "confusion": [
+      [
+        139,
+        6
+      ],
+      [
+        10,
+        145
+      ]
+    ]
+  },
+  "elapsed_sec": 0.9513421058654785,
+  "timestamp": "2026-05-15 08:47:40",
+  "task_slug": "tabular-playground-series-feb-2021",
+  "uses_test_set": false
+}

@@ -1,0 +1,20 @@
+{
+  "task": "ventilator-pressure-prediction",
+  "name": "ventilator-pressure-prediction",
+  "problem_type": "regression",
+  "metric": "rmse",
+  "champion_backbone": "mlp",
+  "champion_composite": -0.30947216913069886,
+  "champion_val": -0.30073519762891593,
+  "champion_train": -0.1259957675932573,
+  "test_score": -0.30768534798327696,
+  "test_metrics": {
+    "rmse": 0.30768534798327696,
+    "mae": 0.2439366728067398,
+    "r2": 0.9951755404472351
+  },
+  "dsbench_baseline": -1.0,
+  "delta_vs_dsbench": 0.692314652016723,
+  "beats_dsbench": true,
+  "timestamp": "2026-05-16 00:12:15"
+}

@@ -1,0 +1,17 @@
+{
+  "task_slug": "2013-round-1-acquisition-financing",
+  "n_train": 4,
+  "n_val": 1,
+  "n_test": 1,
+  "n_features": 47,
+  "hashes": {
+    "X_train": "ca916bd603b2e3ee",
+    "y_train": "4dc6b26e91a08e80",
+    "X_val": "2a38187a2ce7ae27",
+    "y_val": "3fe8adee83a670dd",
+    "X_test": "bb1f79d8480a3f8f",
+    "y_test": "048db3815473d7aa"
+  },
+  "generated_at": "2026-05-15 23:42:31",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

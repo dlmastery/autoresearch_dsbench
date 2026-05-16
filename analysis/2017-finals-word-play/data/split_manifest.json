@@ -1,0 +1,17 @@
+{
+  "task_slug": "2017-finals-word-play",
+  "n_train": 9,
+  "n_val": 3,
+  "n_test": 3,
+  "n_features": 47,
+  "hashes": {
+    "X_train": "fbba8c397bfc8584",
+    "y_train": "b402bfa2420a5df8",
+    "X_val": "d772768299be9c52",
+    "y_val": "3584c50c795e21c1",
+    "X_test": "d913d2e09108cdf8",
+    "y_test": "0f524ccf9b4711cb"
+  },
+  "generated_at": "2026-05-15 23:52:27",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

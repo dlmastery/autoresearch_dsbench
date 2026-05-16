@@ -1,0 +1,17 @@
+{
+  "task_slug": "tweet-sentiment-extraction",
+  "n_train": 1400,
+  "n_val": 300,
+  "n_test": 300,
+  "n_features": 32,
+  "hashes": {
+    "X_train": "f07ae51f75f4dd67",
+    "y_train": "a312311a76ff82ff",
+    "X_val": "63fb5bfe0c9c902c",
+    "y_val": "b8443682d6f3d8bf",
+    "X_test": "b18f7eb997d5aecc",
+    "y_test": "ea3719e0115f4b7d"
+  },
+  "generated_at": "2026-05-15 09:53:06",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

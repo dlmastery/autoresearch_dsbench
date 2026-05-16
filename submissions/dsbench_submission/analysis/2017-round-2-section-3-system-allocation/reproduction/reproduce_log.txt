@@ -1,0 +1,8 @@
+Reproduction protocol for 2017-round-2-section-3-system-allocation champion:
+
+  python -m framework.runner --repo C:\Users\evija\dsbench\analysis\2017-round-2-section-3-system-allocation \
+    --backbone excel_agent \
+    --params '{"classifier": "global_prior", "seed": 42}' \
+    --description 'reproduction' --experiment-num 2
+
+Expected composite ≈ 0.1250 (within 0.005 due to RNG floor variance).

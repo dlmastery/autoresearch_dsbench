@@ -1,0 +1,17 @@
+{
+  "name": "us-patent-phrase-to-phrase-matching",
+  "slug": "us-patent-phrase-to-phrase-matching",
+  "kind": "modeling",
+  "problem_type": "regression",
+  "task_type": "nlp",
+  "metric": "rmse",
+  "iterations_per_backbone": 25,
+  "backbones": [
+    "xgboost",
+    "lightgbm",
+    "catboost",
+    "mlp",
+    "ft_transformer"
+  ],
+  "dsbench_baseline": -1.0
+}

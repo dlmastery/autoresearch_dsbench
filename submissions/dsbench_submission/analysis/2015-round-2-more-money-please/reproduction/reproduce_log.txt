@@ -1,0 +1,8 @@
+Reproduction protocol for 2015-round-2-more-money-please champion:
+
+  python -m framework.runner --repo C:\Users\evija\dsbench\analysis\2015-round-2-more-money-please \
+    --backbone excel_agent \
+    --params '{"classifier": "knn", "knn_k": 1, "seed": 42}' \
+    --description 'reproduction' --experiment-num 6
+
+Expected composite ≈ 0.5000 (within 0.005 due to RNG floor variance).

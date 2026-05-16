@@ -1,0 +1,17 @@
+{
+  "task_slug": "2012-finals-investment-property",
+  "n_train": 3,
+  "n_val": 1,
+  "n_test": 1,
+  "n_features": 47,
+  "hashes": {
+    "X_train": "a4421b23eee37b0a",
+    "y_train": "1e770ba94ffbd531",
+    "X_val": "3481ead3d86c29d6",
+    "y_val": "437ca1909baab1ea",
+    "X_test": "f2c6025a20b4e4f5",
+    "y_test": "703d37e650ac5852"
+  },
+  "generated_at": "2026-05-15 23:40:59",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

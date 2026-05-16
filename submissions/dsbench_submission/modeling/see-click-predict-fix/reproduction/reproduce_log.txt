@@ -1,0 +1,8 @@
+Reproduction protocol for see-click-predict-fix champion:
+
+  python -m framework.runner --repo C:\Users\evija\dsbench\modeling\see-click-predict-fix \
+    --backbone mlp \
+    --params '{"iterations": 400, "epochs": 30, "lr": 0.0005, "hidden": [192, 96]}' \
+    --description 'reproduction' --experiment-num 85
+
+Expected composite ≈ 0.9961 (within 0.005 due to RNG floor variance).

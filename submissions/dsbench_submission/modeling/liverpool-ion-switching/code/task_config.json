@@ -1,0 +1,17 @@
+{
+  "name": "liverpool-ion-switching",
+  "slug": "liverpool-ion-switching",
+  "kind": "modeling",
+  "problem_type": "classification_multiclass",
+  "task_type": "time_series",
+  "metric": "macro_f1",
+  "iterations_per_backbone": 25,
+  "backbones": [
+    "xgboost",
+    "lightgbm",
+    "catboost",
+    "mlp",
+    "ft_transformer"
+  ],
+  "dsbench_baseline": 0.34
+}

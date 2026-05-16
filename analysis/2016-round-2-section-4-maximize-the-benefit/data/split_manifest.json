@@ -1,0 +1,17 @@
+{
+  "task_slug": "2016-round-2-section-4-maximize-the-benefit",
+  "n_train": 6,
+  "n_val": 2,
+  "n_test": 2,
+  "n_features": 47,
+  "hashes": {
+    "X_train": "dbeaf68e1c65aa42",
+    "y_train": "e83c577f2dda7f6b",
+    "X_val": "a5f5a517cab43b10",
+    "y_val": "618e5899608d5976",
+    "X_test": "54dce8a0dab3be85",
+    "y_test": "bbfe8abb936510e3"
+  },
+  "generated_at": "2026-05-15 23:49:41",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

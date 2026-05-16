@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Task Detail · DSBench AutoResearch</title>
+<style>
+:root { --bg:#0f1115; --fg:#e6e6e6; --muted:#9aa0a6; --accent:#7ee787; --warn:#f59e0b; --bad:#f97373; --hdr:#1c1f26; --bd:#21252b; --kpi:#0c0e12; }
+*, *::before, *::after { box-sizing: border-box; }
+body { font-family:'Inter',system-ui,-apple-system,sans-serif; background:var(--bg); color:var(--fg); margin:0; padding:18px 28px; }
+h1 { font-size:22px; margin:0 0 4px 0; }
+h2 { font-size:12px; margin:18px 0 8px 0; color:var(--muted); font-weight:500; text-transform:uppercase; letter-spacing:.06em; }
+.muted { color:var(--muted); font-size:12px; }
+.toolbar { display:flex; gap:12px; align-items:center; padding:8px 14px; background:var(--hdr); border:1px solid var(--bd); border-radius:8px; margin:8px 0; }
+.toolbar a { color:var(--accent); text-decoration:none; font-size:12px; }
+.toolbar a:hover { text-decoration:underline; }
+.grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap:10px; margin:8px 0; }
+.cell { background:var(--hdr); padding:10px 12px; border-radius:6px; border:1px solid var(--bd); font-size:11px; }
+.cell span { color:var(--muted); font-size:9px; text-transform:uppercase; letter-spacing:.04em; display:block; }
+.cell b { display:block; color:var(--accent); font-size:16px; margin-top:3px; }
+.cell b.bad { color:var(--bad); }
+.cell b.warn { color:var(--warn); }
+.links { display:flex; gap:10px; flex-wrap:wrap; }
+.links a { background:var(--hdr); padding:7px 13px; border-radius:6px; border:1px solid var(--bd); font-size:12px; color:var(--accent); text-decoration:none; }
+.links a:hover { background:#15171d; border-color:var(--accent); }
+.row { display:grid; grid-template-columns:1.4fr 1fr; gap:18px; margin-top:8px; }
+.card { background:var(--hdr); border:1px solid var(--bd); border-radius:8px; padding:12px 14px; }
+.reasoning { background:var(--kpi); padding:14px 16px; border-radius:6px; border:1px solid var(--bd); font-size:12px; line-height:1.55; }
+.reasoning b { color:var(--accent); }
+.reasoning > div + div { margin-top:8px; }
+.tabbar { display:flex; gap:0; border-bottom:1px solid var(--bd); margin:14px 0 0 0; }
+.tabbar .tab { padding:7px 14px; cursor:pointer; color:var(--muted); border-bottom:2px solid transparent; font-size:11px; text-transform:uppercase; letter-spacing:.06em; }
+.tabbar .tab.active { color:var(--accent); border-bottom-color:var(--accent); }
+.tabbar .pill { background:var(--kpi); padding:3px 10px; border-radius:11px; font-size:10px; margin-left:6px; color:var(--muted); border:1px solid var(--bd); }
+table { width:100%; border-collapse:collapse; font-size:12px; background:var(--hdr); border:1px solid var(--bd); border-radius:8px; overflow:hidden; }
+th, td { text-align:left; padding:5px 9px; border-bottom:1px solid var(--bd); }
+th { color:var(--muted); font-size:10px; text-transform:uppercase; letter-spacing:.04em; background:#15171d; cursor:pointer; user-select:none; }
+th:hover { color:var(--fg); }
+th.sorted { color:var(--accent); }
+th.sorted::after { content: attr(data-dir); margin-left:4px; font-size:9px; }
+tr:hover { background:#15171d; cursor:pointer; }
+tr.expanded { background:var(--kpi); cursor:default; }
+.exp-row .verdict-KEEP { color:var(--accent); font-weight:600; }
+.exp-row .verdict-DISCARD { color:var(--bad); }
+.exp-row .phase-base { background:var(--bg); padding:1px 5px; border-radius:3px; font-size:9px; color:var(--muted); }
+.exp-row .phase-extended-200 { background:rgba(245,158,11,0.15); padding:1px 5px; border-radius:3px; font-size:9px; color:var(--warn); }
+.exp-detail { padding:12px 16px; background:var(--kpi); border-bottom:1px solid var(--bd); }
+.exp-detail .reasoning { background:var(--bg); }
+pre { background:var(--kpi); padding:10px 12px; border-radius:5px; overflow-x:auto; font-size:10px; border:1px solid var(--bd); margin:6px 0; }
+.histo-mini { display:flex; gap:1px; align-items:flex-end; height:50px; padding:4px 0; }
+.histo-mini .bin { background:var(--accent); width:8px; border-radius:1px 1px 0 0; min-height:2px; opacity:.85; }
+.histo-mini .bin.bad { background:var(--bad); }
+input.search { background:var(--kpi); color:var(--fg); border:1px solid var(--bd); padding:5px 8px; border-radius:4px; font-size:11px; width:200px; }
+.scroll-tbl { max-height:600px; overflow-y:auto; border:1px solid var(--bd); border-radius:8px; }
+.scroll-tbl table { border:0; border-radius:0; }
+.scroll-tbl th { position:sticky; top:0; z-index:1; }
+.tab-pane { display:none; padding-top:10px; }
+.tab-pane.active { display:block; }
+.kpi-strip { display:flex; gap:10px; margin:8px 0; flex-wrap:wrap; }
+.kpi-strip .kpi { background:var(--hdr); padding:7px 12px; border-radius:6px; border:1px solid var(--bd); font-size:11px; }
+.kpi-strip .kpi b { color:var(--accent); }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <a href="./index.html">← back to cross-task leaderboard</a>
+  <span class="muted" id="bc"></span>
+</div>
+
+<h1 id="title">loading…</h1>
+<div class="muted" id="subtitle"></div>
+
+<h2>Headline metrics</h2>
+<div class="grid" id="kpis"></div>
+
+<h2>Linked artifacts</h2>
+<div class="links" id="links"></div>
+
+<div class="row">
+  <div class="card">
+    <h2 style="margin-top:0">Champion reasoning</h2>
+    <div class="reasoning" id="champ-reasoning">loading…</div>
+  </div>
+  <div class="card">
+    <h2 style="margin-top:0">Forensic audit summary</h2>
+    <div class="reasoning" id="forensic-summary">loading…</div>
+    <h2>Backbone distribution</h2>
+    <div class="kpi-strip" id="bb-strip"></div>
+    <h2>Composite trajectory</h2>
+    <div class="histo-mini" id="trajectory"></div>
+  </div>
+</div>
+
+<div class="tabbar">
+  <div class="tab active" data-pane="all">All experiments <span class="pill" id="cnt-all">0</span></div>
+  <div class="tab" data-pane="keeps">Keeps (champion-line) <span class="pill" id="cnt-keeps">0</span></div>
+  <div class="tab" data-pane="discards">Discards <span class="pill" id="cnt-discards">0</span></div>
+  <div class="tab" data-pane="errors">Errors <span class="pill" id="cnt-errors">0</span></div>
+  <div style="margin-left:auto;padding:4px 0;display:flex;align-items:center;gap:8px;">
+    <input class="search" id="exp-search" placeholder="filter description / backbone…" />
+  </div>
+</div>
+
+<div class="tab-pane active" id="pane-all"><div class="scroll-tbl"><table id="tbl-all">
+  <thead><tr>
+    <th data-k="experiment_num">#</th>
+    <th data-k="backbone">backbone</th>
+    <th data-k="phase">phase</th>
+    <th data-k="composite">composite</th>
+    <th data-k="val_score">val</th>
+    <th data-k="train_score">train</th>
+    <th data-k="elapsed_sec">sec</th>
+    <th data-k="verdict">verdict</th>
+    <th data-k="description">description</th>
+  </tr></thead>
+  <tbody></tbody>
+</table></div></div>
+<div class="tab-pane" id="pane-keeps"><div class="scroll-tbl"><table id="tbl-keeps">
+  <thead><tr>
+    <th data-k="experiment_num">#</th><th data-k="backbone">backbone</th><th data-k="composite">composite</th>
+    <th data-k="delta">delta</th><th data-k="val_score">val</th><th data-k="train_score">train</th>
+    <th data-k="description">description</th>
+  </tr></thead><tbody></tbody>
+</table></div></div>
+<div class="tab-pane" id="pane-discards"><div class="scroll-tbl"><table id="tbl-discards">
+  <thead><tr>
+    <th data-k="experiment_num">#</th><th data-k="backbone">backbone</th><th data-k="composite">composite</th>
+    <th data-k="val_score">val</th><th data-k="description">description</th>
+  </tr></thead><tbody></tbody>
+</table></div></div>
+<div class="tab-pane" id="pane-errors"><div class="scroll-tbl"><table id="tbl-errors">
+  <thead><tr><th>#</th><th>backbone</th><th>error</th></tr></thead><tbody></tbody>
+</table></div></div>
+
+<script>
+const params = new URLSearchParams(location.search);
+const task = params.get('task') || '';
+const kind = params.get('kind') || '';
+let state = { entries: [], annot: {}, row: null, forensic: null, sortKey: 'experiment_num', sortDir: 1, search: '', activeTab: 'all', expanded: null };
+
+function $(s, p=document) { return p.querySelector(s); }
+function $$(s, p=document) { return [...p.querySelectorAll(s)]; }
+
+async function load() {
+  if (!task) { document.body.innerHTML = '<h1>No task specified. Pass ?task=<slug>&kind=<modeling|analysis></h1>'; return; }
+  const taskLink = `../${kind}/${task}`;
+  $('#bc').textContent = `· ${kind}/${task}`;
+  document.title = `${task} · DSBench AutoResearch`;
+
+  let rollup = [];
+  let forensicSummary = [];
+  try {
+    rollup = await fetch('../registry/final_rollup.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : []);
+    forensicSummary = await fetch('../registry/forensic_summary.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : []);
+  } catch (e) { console.error(e); }
+  const row = rollup.find(r => r.task === task) || { task, kind };
+  state.row = row;
+  state.forensic = forensicSummary.find(f => f.task === task) || null;
+
+  $('#title').textContent = row.name || row.task;
+  $('#subtitle').textContent = `${row.problem_type || ''} · ${row.metric || ''} · ${row.kind || kind}`;
+
+  let logTxt = '', annJson = {}, audit = null;
+  try {
+    [logTxt, annJson, audit] = await Promise.all([
+      fetch(`${taskLink}/autoresearch_results/experiment_log.jsonl`, { cache: 'no-cache' }).then(r => r.ok ? r.text() : ''),
+      fetch(`${taskLink}/autoresearch_results/reasoning_annotations.json`, { cache: 'no-cache' }).then(r => r.ok ? r.json() : {}),
+      fetch(`${taskLink}/forensic_audit.json`, { cache: 'no-cache' }).then(r => r.ok ? r.json() : null),
+    ]);
+  } catch (e) { console.error(e); }
+  state.entries = logTxt.trim().split('\n').filter(l => l).map(l => { try { return JSON.parse(l); } catch { return null; } }).filter(Boolean);
+  state.annot = annJson || {};
+  // attach annotation + KEEP/DISCARD + delta computation
+  let runningBest = -Infinity;
+  for (const e of state.entries.sort((a,b) => (a.experiment_num||0)-(b.experiment_num||0))) {
+    const a = state.annot[String(e.experiment_num)] || {};
+    e.phase = a.phase || 'base';
+    e.verdict = (a.verdict || '').startsWith('KEEP') ? 'KEEP' : (a.verdict || '').startsWith('DISCARD') ? 'DISCARD' : (e.error ? 'ERROR' : '');
+    if (typeof e.composite === 'number' && isFinite(e.composite)) {
+      e.delta = e.composite - runningBest;
+      if (e.composite > runningBest) runningBest = e.composite;
+    }
+  }
+
+  renderKpis(row, audit);
+  renderLinks(taskLink, row);
+  renderChamp();
+  renderForensic(audit);
+  renderBackbones();
+  renderTrajectory();
+  renderAllTabs();
+}
+
+function renderKpis(row, audit) {
+  const expRows = state.entries;
+  const champ = [...expRows].sort((a,b)=>(b.composite||-Infinity)-(a.composite||-Infinity))[0] || {};
+  const byBb = {};
+  for (const e of expRows) byBb[e.backbone || '?'] = (byBb[e.backbone || '?'] || 0) + 1;
+  const ok = (audit && audit.committee && audit.committee.verdict === 'PASS');
+  $('#kpis').innerHTML = `
+    <div class="cell"><span>experiments</span><b>${expRows.length}</b></div>
+    <div class="cell"><span>backbones explored</span><b>${Object.keys(byBb).length}</b></div>
+    <div class="cell"><span>champion #</span><b>${champ.experiment_num || '?'}</b></div>
+    <div class="cell"><span>champion backbone</span><b style="font-size:13px">${champ.backbone || '?'}</b></div>
+    <div class="cell"><span>champion composite</span><b>${(champ.composite || 0).toFixed(4)}</b></div>
+    <div class="cell"><span>champion val</span><b>${(champ.val_score || 0).toFixed(4)}</b></div>
+    <div class="cell"><span>champion train</span><b>${(champ.train_score || 0).toFixed(4)}</b></div>
+    <div class="cell"><span>test score</span><b>${(row.test_score || 0).toFixed(4)}</b></div>
+    <div class="cell"><span>DSBench baseline</span><b>${(row.dsbench_baseline || 0).toFixed(4)}</b></div>
+    <div class="cell"><span>delta vs DSBench</span><b class="${row.beats_dsbench?'':'bad'}">${(row.delta_vs_dsbench || 0) >= 0 ? '+' : ''}${(row.delta_vs_dsbench || 0).toFixed(4)}</b></div>
+    <div class="cell"><span>beats DSBench?</span><b class="${row.beats_dsbench?'':'bad'}">${row.beats_dsbench ? '✅ YES' : '❌ NO'}</b></div>
+    <div class="cell"><span>forensic verdict</span><b class="${ok?'':'warn'}">${audit?.committee?.verdict || '?'}</b></div>
+  `;
+}
+
+function renderLinks(taskLink, row) {
+  $('#links').innerHTML = `
+    <a href="${taskLink}/autoresearch_results/dashboard.html" target="_blank">📊 full task dashboard</a>
+    <a href="${taskLink}/forensic_audit.md" target="_blank">🔍 forensic audit (8 agents)</a>
+    <a href="${taskLink}/paper.md" target="_blank">📄 paper</a>
+    <a href="${taskLink}/autoresearch_results/research_journal.md" target="_blank">📓 research journal</a>
+    <a href="${taskLink}/autoresearch_results/experiment_summary.md" target="_blank">📋 experiment summary</a>
+    <a href="${taskLink}/memory/project_autoresearch_checkpoint.md" target="_blank">🧷 checkpoint</a>
+    <a href="${taskLink}/CLAUDE.md" target="_blank">📜 CLAUDE.md</a>
+    <a href="${taskLink}/seed_reasoning.json" target="_blank">🌱 seed reasoning</a>
+    <a href="${taskLink}/autoresearch_results/experiment_log.jsonl" target="_blank">📦 raw JSONL</a>
+    <a href="${taskLink}/autoresearch_results/best_config.json" target="_blank">🏆 best_config.json</a>
+    <a href="../submissions/dsbench_submission/${row.kind || kind}/${task}/" target="_blank">📦 submission archive</a>
+  `;
+}
+
+function renderChamp() {
+  const champ = [...state.entries].sort((a,b)=>(b.composite||-Infinity)-(a.composite||-Infinity))[0] || {};
+  const a = state.annot[String(champ.experiment_num || '')] || {};
+  $('#champ-reasoning').innerHTML = `
+    <div class="muted">Exp ${champ.experiment_num || '?'} · ${champ.backbone || '?'} · composite=${(champ.composite||0).toFixed(4)} · val=${(champ.val_score||0).toFixed(4)}</div>
+    <div style="margin-top:8px"><b>Diagnosis:</b> ${a.diagnosis || '<i style="color:var(--muted)">none</i>'}</div>
+    <div><b>Citations:</b> ${a.citations || '<i style="color:var(--muted)">none</i>'}</div>
+    <div><b>Hypothesis:</b> ${a.hypothesis || '<i style="color:var(--muted)">none</i>'}</div>
+    <div><b>Prediction:</b> ${a.prediction || '<i style="color:var(--muted)">none</i>'}</div>
+    <div><b>Verdict:</b> ${a.verdict || '<i style="color:var(--muted)">none</i>'}</div>
+    <div><b>Learning:</b> ${a.learning || '<i style="color:var(--muted)">none</i>'}</div>
+  `;
+}
+
+function renderForensic(audit) {
+  if (!audit) {
+    $('#forensic-summary').innerHTML = '<i class="muted">no forensic audit yet</i>';
+    return;
+  }
+  const v = audit.committee.verdict;
+  const klass = v === 'PASS' ? '' : 'warn';
+  $('#forensic-summary').innerHTML = `
+    <div><b class="${klass}">Verdict: ${v}</b></div>
+    <div class="muted" style="margin-top:6px">${audit.committee.evaluator_notes || ''}</div>
+    ${audit.committee.failed_agents?.length ? `<div style="margin-top:6px"><b>Failed agents:</b> ${audit.committee.failed_agents.join(', ')}</div>` : ''}
+    ${audit.committee.warnings?.length ? `<div style="margin-top:6px"><b>Warnings:</b><ul style="margin:4px 0 0 18px;padding:0">${audit.committee.warnings.map(w => `<li>${w}</li>`).join('')}</ul></div>` : ''}
+    <div style="margin-top:8px" class="muted">Per-agent: ${audit.agents.map(ag => `${ag.ok?'✅':'❌'} ${ag.agent}`).join(' · ')}</div>
+  `;
+}
+
+function renderBackbones() {
+  const byBb = {};
+  for (const e of state.entries) {
+    const k = e.backbone || '?';
+    byBb[k] ||= { n: 0, best: -Infinity };
+    byBb[k].n++;
+    if (typeof e.composite === 'number' && e.composite > byBb[k].best) byBb[k].best = e.composite;
+  }
+  $('#bb-strip').innerHTML = Object.entries(byBb).sort((a,b)=>b[1].best - a[1].best).map(([k, v]) =>
+    `<div class="kpi"><span>${k}</span><b>${v.best.toFixed(4)}</b><span class="muted">(${v.n} exps)</span></div>`
+  ).join('');
+}
+
+function renderTrajectory() {
+  const xs = state.entries.filter(e => typeof e.composite === 'number' && isFinite(e.composite));
+  if (!xs.length) { $('#trajectory').innerHTML = ''; return; }
+  let best = -Infinity;
+  const ys = xs.map(e => { if (e.composite > best) best = e.composite; return best; });
+  const maxY = Math.max(...ys), minY = Math.min(...ys);
+  const range = Math.max(1e-9, maxY - minY);
+  $('#trajectory').innerHTML = ys.map(y => `<div class="bin" style="height:${5 + 95 * (y - minY) / range}%" title="${y.toFixed(4)}"></div>`).join('');
+}
+
+function filteredEntries(filter) {
+  let xs = state.entries.slice();
+  if (state.search) {
+    const s = state.search.toLowerCase();
+    xs = xs.filter(e => (e.backbone || '').toLowerCase().includes(s) ||
+                        (e.description || '').toLowerCase().includes(s) ||
+                        (e.phase || '').toLowerCase().includes(s));
+  }
+  if (filter === 'keeps') xs = xs.filter(e => e.verdict === 'KEEP');
+  else if (filter === 'discards') xs = xs.filter(e => e.verdict === 'DISCARD');
+  else if (filter === 'errors') xs = xs.filter(e => e.error || e.verdict === 'ERROR');
+  xs.sort((a, b) => {
+    const ka = a[state.sortKey], kb = b[state.sortKey];
+    if (ka == null && kb == null) return 0;
+    if (ka == null) return 1; if (kb == null) return -1;
+    if (typeof ka === 'string') return ka.localeCompare(kb) * state.sortDir;
+    return (ka > kb ? 1 : ka < kb ? -1 : 0) * state.sortDir;
+  });
+  return xs;
+}
+
+function renderAllTabs() {
+  renderTab('all');
+  renderTab('keeps');
+  renderTab('discards');
+  renderTab('errors');
+  $('#cnt-all').textContent = state.entries.length;
+  $('#cnt-keeps').textContent = state.entries.filter(e => e.verdict === 'KEEP').length;
+  $('#cnt-discards').textContent = state.entries.filter(e => e.verdict === 'DISCARD').length;
+  $('#cnt-errors').textContent = state.entries.filter(e => e.error || e.verdict === 'ERROR').length;
+}
+
+function renderTab(name) {
+  const tbody = $(`#tbl-${name} tbody`);
+  const xs = filteredEntries(name);
+  if (!xs.length) { tbody.innerHTML = `<tr><td colspan="9" class="muted">no rows</td></tr>`; return; }
+  let html = '';
+  for (const e of xs) {
+    const cls = `phase-${e.phase || 'base'}`;
+    const rowCells = name === 'all' ? `
+      <td>${e.experiment_num ?? '?'}</td>
+      <td>${e.backbone ?? '?'}</td>
+      <td><span class="${cls}">${e.phase || 'base'}</span></td>
+      <td>${(e.composite ?? 0).toFixed(4)}</td>
+      <td>${(e.val_score ?? 0).toFixed(4)}</td>
+      <td>${(e.train_score ?? 0).toFixed(4)}</td>
+      <td>${(e.elapsed_sec ?? 0).toFixed(2)}</td>
+      <td class="verdict-${e.verdict}">${e.verdict || ''}</td>
+      <td class="muted">${(e.description || '').slice(0, 70)}</td>
+    ` : name === 'keeps' ? `
+      <td>${e.experiment_num ?? '?'}</td>
+      <td>${e.backbone ?? '?'}</td>
+      <td>${(e.composite ?? 0).toFixed(4)}</td>
+      <td>${e.delta != null ? (e.delta>=0?'+':'') + e.delta.toFixed(4) : ''}</td>
+      <td>${(e.val_score ?? 0).toFixed(4)}</td>
+      <td>${(e.train_score ?? 0).toFixed(4)}</td>
+      <td class="muted">${(e.description || '').slice(0, 80)}</td>
+    ` : name === 'discards' ? `
+      <td>${e.experiment_num ?? '?'}</td>
+      <td>${e.backbone ?? '?'}</td>
+      <td>${(e.composite ?? 0).toFixed(4)}</td>
+      <td>${(e.val_score ?? 0).toFixed(4)}</td>
+      <td class="muted">${(e.description || '').slice(0, 80)}</td>
+    ` : `
+      <td>${e.experiment_num ?? '?'}</td>
+      <td>${e.backbone ?? '?'}</td>
+      <td class="muted">${(e.error || '').slice(0, 100)}</td>
+    `;
+    html += `<tr class="exp-row" data-exp="${e.experiment_num}">${rowCells}</tr>`;
+    if (state.expanded === `${name}:${e.experiment_num}`) {
+      const a = state.annot[String(e.experiment_num)] || {};
+      const colspan = name === 'all' ? 9 : name === 'keeps' ? 7 : name === 'discards' ? 5 : 3;
+      html += `<tr><td colspan="${colspan}" class="exp-detail"><div class="reasoning">
+        <div><b>Diagnosis:</b> ${a.diagnosis || '<i style="color:var(--muted)">none</i>'}</div>
+        <div><b>Citations:</b> ${a.citations || '<i style="color:var(--muted)">none</i>'}</div>
+        <div><b>Hypothesis:</b> ${a.hypothesis || '<i style="color:var(--muted)">none</i>'}</div>
+        <div><b>Prediction:</b> ${a.prediction || '<i style="color:var(--muted)">none</i>'}</div>
+        <div><b>Verdict:</b> ${a.verdict || '<i style="color:var(--muted)">none</i>'}</div>
+        <div><b>Learning:</b> ${a.learning || '<i style="color:var(--muted)">none</i>'}</div>
+        ${e.params ? `<pre>params = ${JSON.stringify(e.params, null, 2)}</pre>` : ''}
+        ${e.error ? `<pre style="color:var(--bad)">error: ${e.error}</pre>` : ''}
+      </div></td></tr>`;
+    }
+  }
+  tbody.innerHTML = html;
+  $$(`#tbl-${name} tbody tr.exp-row`).forEach(tr => tr.addEventListener('click', () => {
+    const id = `${name}:${tr.dataset.exp}`;
+    state.expanded = state.expanded === id ? null : id;
+    renderTab(name);
+  }));
+  // sort indicators
+  $$(`#tbl-${name} th`).forEach(th => { th.classList.remove('sorted'); th.removeAttribute('data-dir'); });
+  const active = $$(`#tbl-${name} th[data-k="${state.sortKey}"]`)[0];
+  if (active) { active.classList.add('sorted'); active.setAttribute('data-dir', state.sortDir > 0 ? '▲' : '▼'); }
+}
+
+// wire events
+$('#exp-search').addEventListener('input', e => { state.search = e.target.value; renderAllTabs(); });
+$$('.tabbar .tab').forEach(t => t.addEventListener('click', () => {
+  $$('.tabbar .tab').forEach(x => x.classList.remove('active'));
+  $$('.tab-pane').forEach(x => x.classList.remove('active'));
+  t.classList.add('active');
+  $(`#pane-${t.dataset.pane}`).classList.add('active');
+  state.activeTab = t.dataset.pane;
+}));
+// wire sort headers in all four tables
+['all', 'keeps', 'discards', 'errors'].forEach(name => {
+  $$(`#tbl-${name} th[data-k]`).forEach(th => th.addEventListener('click', () => {
+    const k = th.dataset.k;
+    if (k === state.sortKey) state.sortDir = -state.sortDir;
+    else { state.sortKey = k; state.sortDir = -1; }
+    renderAllTabs();
+  }));
+});
+
+load();
+setInterval(load, 60000);
+</script>
+</body>
+</html>

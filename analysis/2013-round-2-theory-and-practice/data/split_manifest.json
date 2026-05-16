@@ -1,0 +1,17 @@
+{
+  "task_slug": "2013-round-2-theory-and-practice",
+  "n_train": 9,
+  "n_val": 3,
+  "n_test": 3,
+  "n_features": 47,
+  "hashes": {
+    "X_train": "33005228802a3239",
+    "y_train": "d4fb7db4784a672a",
+    "X_val": "3f9f93cc53b35599",
+    "y_val": "6dfb0d16b4ca434c",
+    "X_test": "450cc5194a0d590b",
+    "y_test": "7f3fca7484bbd4a6"
+  },
+  "generated_at": "2026-05-15 23:43:48",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

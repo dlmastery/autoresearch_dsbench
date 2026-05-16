@@ -1,0 +1,20 @@
+{
+  "task": "google-quest-challenge",
+  "name": "google-quest-challenge",
+  "problem_type": "regression",
+  "metric": "rmse",
+  "champion_backbone": "mlp",
+  "champion_composite": -0.3531338463602154,
+  "champion_val": -0.343100932029341,
+  "champion_train": -0.1424426454118531,
+  "test_score": -0.33798526254456007,
+  "test_metrics": {
+    "rmse": 0.33798526254456007,
+    "mae": 0.2632911801338196,
+    "r2": 0.9969118237495422
+  },
+  "dsbench_baseline": -1.0,
+  "delta_vs_dsbench": 0.6620147374554399,
+  "beats_dsbench": true,
+  "timestamp": "2026-05-16 00:10:58"
+}

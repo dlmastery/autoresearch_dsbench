@@ -1,0 +1,17 @@
+{
+  "task_slug": "cat-in-the-dat-ii",
+  "n_train": 1400,
+  "n_val": 300,
+  "n_test": 300,
+  "n_features": 32,
+  "hashes": {
+    "X_train": "6a687a46447f5e79",
+    "y_train": "17d826b395cb1713",
+    "X_val": "4015b6129094b510",
+    "y_val": "784c2a2992c14cd4",
+    "X_test": "dff7493396b1865c",
+    "y_test": "c7d407a2045e60f7"
+  },
+  "generated_at": "2026-05-15 03:34:04",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

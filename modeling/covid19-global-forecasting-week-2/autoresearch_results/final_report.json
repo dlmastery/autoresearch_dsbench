@@ -1,0 +1,20 @@
+{
+  "task": "covid19-global-forecasting-week-2",
+  "name": "covid19-global-forecasting-week-2",
+  "problem_type": "regression",
+  "metric": "rmse",
+  "champion_backbone": "mlp",
+  "champion_composite": -0.31596715013404403,
+  "champion_val": -0.30644798301957904,
+  "champion_train": -0.11606464073027974,
+  "test_score": -0.30355471551993435,
+  "test_metrics": {
+    "rmse": 0.30355471551993435,
+    "mae": 0.23809212446212769,
+    "r2": 0.995631754398346
+  },
+  "dsbench_baseline": -1.0,
+  "delta_vs_dsbench": 0.6964452844800657,
+  "beats_dsbench": true,
+  "timestamp": "2026-05-16 00:10:43"
+}

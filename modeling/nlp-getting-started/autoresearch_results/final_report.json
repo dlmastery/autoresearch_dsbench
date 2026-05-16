@@ -1,0 +1,33 @@
+{
+  "task": "nlp-getting-started",
+  "name": "nlp-getting-started",
+  "problem_type": "classification_binary",
+  "metric": "roc_auc",
+  "champion_backbone": "mlp",
+  "champion_composite": 0.9934757755751255,
+  "champion_val": 0.9937641975858537,
+  "champion_train": 0.9995326378004179,
+  "test_score": 0.9936968168925308,
+  "test_metrics": {
+    "accuracy": 0.9633333333333334,
+    "f1": 0.9673590504451038,
+    "precision": 0.9588235294117647,
+    "recall": 0.9760479041916168,
+    "mcc": 0.9257324073832659,
+    "roc_auc": 0.9936968168925308,
+    "confusion": [
+      [
+        126,
+        7
+      ],
+      [
+        4,
+        163
+      ]
+    ]
+  },
+  "dsbench_baseline": 0.5,
+  "delta_vs_dsbench": 0.49369681689253075,
+  "beats_dsbench": true,
+  "timestamp": "2026-05-16 00:11:08"
+}

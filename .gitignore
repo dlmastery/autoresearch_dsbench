@@ -1,0 +1,31 @@
+# Synthetic / regenerable data caches
+.data_cache/
+**/.data_cache/
+*.npz
+
+# Python
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.mypy_cache/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+
+# Backups produced by the agent runs
+**/_backup_pre_*/
+
+# Large background-job stdout (regenerable from `framework/run_all.py`)
+registry/run_all_stdout.log
+registry/run_all_analysis_stdout.log
+registry/run_extended_regression_stdout.log
+
+# Local server / runtime artefacts
+*.log
+*.tmp

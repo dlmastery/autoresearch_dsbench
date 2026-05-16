@@ -1,0 +1,33 @@
+{
+  "task": "conways-reverse-game-of-life-2020",
+  "name": "conways-reverse-game-of-life-2020",
+  "problem_type": "classification_binary",
+  "metric": "roc_auc",
+  "champion_backbone": "mlp",
+  "champion_composite": 0.9963678060006615,
+  "champion_val": 0.9965331792524112,
+  "champion_train": 0.9998406442874042,
+  "test_score": 0.9885333333333334,
+  "test_metrics": {
+    "accuracy": 0.9333333333333333,
+    "f1": 0.934640522875817,
+    "precision": 0.9166666666666666,
+    "recall": 0.9533333333333334,
+    "mcc": 0.8673608331108886,
+    "roc_auc": 0.9885333333333334,
+    "confusion": [
+      [
+        137,
+        13
+      ],
+      [
+        7,
+        143
+      ]
+    ]
+  },
+  "dsbench_baseline": 0.5,
+  "delta_vs_dsbench": 0.4885333333333334,
+  "beats_dsbench": true,
+  "timestamp": "2026-05-16 00:10:39"
+}

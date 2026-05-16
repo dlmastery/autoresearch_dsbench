@@ -1,0 +1,3 @@
+sample_id,actual,prediction,correct,confidence
+0,93,55,0,0.7005510340700094
+1,36,54,0,0.4205950145722022

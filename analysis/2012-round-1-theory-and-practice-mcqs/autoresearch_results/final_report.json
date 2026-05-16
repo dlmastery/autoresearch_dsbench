@@ -1,0 +1,39 @@
+{
+  "task": "2012-round-1-theory-and-practice-mcqs",
+  "name": "2012-round-1-theory-and-practice-mcqs",
+  "problem_type": "qa_excel",
+  "metric": "exact_match_accuracy",
+  "champion_backbone": "excel_agent",
+  "champion_composite": 0.4,
+  "champion_val": 0.4,
+  "champion_train": 0.4,
+  "test_score": 0.4,
+  "test_metrics": {
+    "accuracy": 0.4,
+    "f1": 0.19047619047619047,
+    "precision": 0.13333333333333333,
+    "recall": 0.3333333333333333,
+    "mcc": 0.0,
+    "confusion": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        2,
+        0
+      ]
+    ]
+  },
+  "dsbench_baseline": 0.3412,
+  "delta_vs_dsbench": 0.05880000000000002,
+  "beats_dsbench": true,
+  "timestamp": "2026-05-16 00:12:16"
+}

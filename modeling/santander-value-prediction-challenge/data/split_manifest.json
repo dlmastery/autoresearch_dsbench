@@ -1,0 +1,17 @@
+{
+  "task_slug": "santander-value-prediction-challenge",
+  "n_train": 1400,
+  "n_val": 300,
+  "n_test": 300,
+  "n_features": 32,
+  "hashes": {
+    "X_train": "4451dbe9622f1c91",
+    "y_train": "89fcf3656a58d78e",
+    "X_val": "bb12b279dabae770",
+    "y_val": "368c8abfa767e737",
+    "X_test": "d2b42fe1123c7118",
+    "y_test": "89bf822c5b2c9f4a"
+  },
+  "generated_at": "2026-05-15 08:06:39",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

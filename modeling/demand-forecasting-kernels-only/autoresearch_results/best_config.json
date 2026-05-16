@@ -1,0 +1,33 @@
+{
+  "experiment_num": 165,
+  "backbone": "mlp",
+  "description": "ext mlp 40/200: MLP capacity sweep \u2014 hidden=(512, 256) lr=0.003. The base 25",
+  "params": {
+    "iterations": 600,
+    "epochs": 60,
+    "lr": 0.003,
+    "hidden": [
+      512,
+      256
+    ],
+    "weight_decay": 0.0005
+  },
+  "metric": "rmse",
+  "train_score": -0.14368489257807887,
+  "val_score": -0.35775201694418457,
+  "composite": -0.36845537316248983,
+  "train_metrics": {
+    "rmse": 0.14368489257807887,
+    "mae": 0.1030392050743103,
+    "r2": 0.9992082715034485
+  },
+  "val_metrics": {
+    "rmse": 0.35775201694418457,
+    "mae": 0.2820190489292145,
+    "r2": 0.9943665266036987
+  },
+  "elapsed_sec": 4.608189821243286,
+  "timestamp": "2026-05-15 19:07:49",
+  "task_slug": "demand-forecasting-kernels-only",
+  "uses_test_set": false
+}

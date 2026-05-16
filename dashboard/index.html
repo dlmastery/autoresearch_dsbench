@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>DSBench AutoResearch — Cross-Task Leaderboard</title>
+<style>
+:root { --bg:#0f1115; --fg:#e6e6e6; --muted:#9aa0a6; --accent:#7ee787; --warn:#f59e0b; --bad:#f97373; --hdr:#1c1f26; --bd:#21252b; --kpi:#0c0e12; }
+*, *::before, *::after { box-sizing: border-box; }
+body { font-family:'Inter',system-ui,-apple-system,sans-serif; background:var(--bg); color:var(--fg); margin:0; padding:18px 24px; }
+h1 { font-size:22px; margin:0 0 4px 0; }
+h2 { font-size:14px; margin:18px 0 6px 0; color:var(--muted); font-weight:500; text-transform:uppercase; letter-spacing:.06em; }
+.muted { color:var(--muted); font-size:12px; }
+.kpis { display:grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap:12px; margin:12px 0 8px 0; }
+.kpi { background:var(--hdr); padding:12px 14px; border-radius:8px; border:1px solid var(--bd); }
+.kpi span { display:block; color:var(--muted); font-size:10px; text-transform:uppercase; letter-spacing:.06em; }
+.kpi b { display:block; color:var(--accent); font-size:22px; line-height:1.1; margin-top:2px; }
+.kpi b.warn { color:var(--warn); }
+.kpi b.bad { color:var(--bad); }
+.toolbar { display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin:12px 0; padding:8px 12px; background:var(--hdr); border:1px solid var(--bd); border-radius:8px; }
+.toolbar input, .toolbar select { background:var(--kpi); color:var(--fg); border:1px solid var(--bd); padding:6px 8px; border-radius:5px; font-size:12px; }
+.toolbar input[type="text"] { width:200px; }
+.toolbar label { font-size:11px; color:var(--muted); }
+.toolbar .pill { background:var(--kpi); border:1px solid var(--bd); padding:4px 10px; border-radius:14px; font-size:11px; cursor:pointer; color:var(--muted); }
+.toolbar .pill.active { background:var(--accent); color:#0c0e12; font-weight:600; }
+.toolbar .pill.bad.active { background:var(--bad); color:#fff; }
+table { width:100%; border-collapse:collapse; font-size:13px; background:var(--hdr); border:1px solid var(--bd); border-radius:8px; overflow:hidden; margin-top:4px; }
+th, td { text-align:left; padding:7px 10px; border-bottom:1px solid var(--bd); }
+th { color:var(--muted); font-weight:500; cursor:pointer; user-select:none; position:relative; font-size:11px; text-transform:uppercase; letter-spacing:.04em; background:#15171d; }
+th:hover { color:var(--fg); }
+th.sorted { color:var(--accent); }
+th.sorted::after { content: attr(data-dir); margin-left:4px; font-size:9px; }
+tr:hover { background:#15171d; cursor:pointer; }
+.beat { color:var(--accent); font-weight:600; }
+.miss { color:var(--bad); }
+.kind-modeling { color:#83c5be; }
+.kind-analysis { color:#f0a868; }
+.bar-cell { position:relative; min-width:80px; }
+.bar { position:absolute; left:0; top:0; bottom:0; width:0; background:linear-gradient(90deg, rgba(126,231,135,0.18), rgba(126,231,135,0.02)); border-radius:0 6px 6px 0; z-index:0; }
+.bar.bad { background:linear-gradient(90deg, rgba(249,115,115,0.18), rgba(249,115,115,0.02)); }
+.bar-cell span { position:relative; z-index:1; }
+.row-actions { display:flex; gap:8px; }
+a { color:#7ee787; text-decoration:none; font-weight:500; }
+a:hover { text-decoration:underline; }
+.histogram { display:flex; gap:2px; align-items:flex-end; height:60px; padding:6px 0; }
+.histogram .bin { background:var(--accent); width:14px; border-radius:2px 2px 0 0; min-height:2px; opacity:.85; }
+.histogram .bin.bad { background:var(--bad); }
+.histogram .label { color:var(--muted); font-size:10px; transform:rotate(-45deg); transform-origin:left top; margin-top:8px; }
+.chip { background:var(--kpi); padding:1px 8px; border-radius:10px; font-size:10px; color:var(--muted); border:1px solid var(--bd); }
+.chip-warn { color:var(--warn); border-color:var(--warn); }
+.chip-bad { color:var(--bad); border-color:var(--bad); }
+.chip-ok { color:var(--accent); border-color:var(--accent); }
+.bb-bar { display:flex; gap:4px; flex-wrap:wrap; }
+.bb-chip { background:var(--kpi); border:1px solid var(--bd); padding:6px 10px; border-radius:6px; font-size:11px; }
+.bb-chip b { color:var(--accent); font-size:15px; }
+.tabs { display:flex; gap:0; border-bottom:1px solid var(--bd); margin:18px 0 0 0; }
+.tab { padding:8px 14px; cursor:pointer; color:var(--muted); border-bottom:2px solid transparent; font-size:12px; text-transform:uppercase; letter-spacing:.06em; }
+.tab.active { color:var(--accent); border-bottom-color:var(--accent); }
+.tab-pane { display:none; padding:14px 0; }
+.tab-pane.active { display:block; }
+pre { background:var(--kpi); padding:12px 14px; border-radius:6px; overflow-x:auto; font-size:11px; border:1px solid var(--bd); }
+</style>
+</head>
+<body>
+<h1>DSBench AutoResearch — Cross-Task Leaderboard</h1>
+<p class="muted">74 Kaggle modeling tasks + 38 Modeloff analysis challenges · per-task 125–325 hill-climb iters · 5-19 SOTA backbones · train/val only · test scored ONCE for the DSBench delta column.</p>
+
+<div class="kpis" id="kpis"></div>
+
+<div class="tabs">
+  <div class="tab active" data-pane="leaderboard">Leaderboard</div>
+  <div class="tab" data-pane="backbones">Backbone wins</div>
+  <div class="tab" data-pane="histogram">Delta distribution</div>
+  <div class="tab" data-pane="forensic">Forensic audit</div>
+  <div class="tab" data-pane="json">Raw JSON</div>
+</div>
+
+<div class="tab-pane active" id="leaderboard">
+<div class="toolbar">
+  <label>filter <input type="text" id="search" placeholder="task name regex…" /></label>
+  <label>kind <select id="kind"><option value="">all</option><option>modeling</option><option>analysis</option></select></label>
+  <label>problem <select id="problem"><option value="">all</option></select></label>
+  <span class="pill" data-status="">all</span>
+  <span class="pill active" data-status="beat">beat DSBench</span>
+  <span class="pill bad" data-status="miss">missing DSBench</span>
+  <span class="pill" data-status="forensic-pass">forensic PASS</span>
+  <span class="pill bad" data-status="forensic-fail">forensic FAIL</span>
+  <label style="margin-left:auto"><input type="checkbox" id="show-detail" /> auto-expand row</label>
+</div>
+<table>
+  <thead><tr>
+    <th data-k="name">task</th>
+    <th data-k="kind">kind</th>
+    <th data-k="problem_type">problem</th>
+    <th data-k="metric">metric</th>
+    <th data-k="champion_backbone">champion</th>
+    <th data-k="champion_composite">composite</th>
+    <th data-k="champion_val">val</th>
+    <th data-k="champion_train">train</th>
+    <th data-k="test_score">test</th>
+    <th data-k="dsbench_baseline">DSBench</th>
+    <th data-k="delta_vs_dsbench">delta</th>
+    <th data-k="beats_dsbench">beat?</th>
+    <th data-k="forensic">forensic</th>
+    <th>links</th>
+  </tr></thead>
+  <tbody id="rows"></tbody>
+</table>
+</div>
+
+<div class="tab-pane" id="backbones">
+<h2>Champion backbone distribution</h2>
+<div class="bb-bar" id="bb-list"></div>
+<h2 style="margin-top:24px">Backbone × kind</h2>
+<table id="bb-table">
+  <thead><tr><th>backbone</th><th>modeling wins</th><th>analysis wins</th><th>total champions</th><th>median composite</th></tr></thead>
+  <tbody></tbody>
+</table>
+</div>
+
+<div class="tab-pane" id="histogram">
+<h2>Delta vs DSBench — histogram</h2>
+<div class="histogram" id="histo"></div>
+<p class="muted">Bars right of 0 = beats DSBench; left = misses. Higher delta = larger margin of victory.</p>
+<h2>Composite distribution by kind</h2>
+<table>
+  <thead><tr><th>kind</th><th>n</th><th>mean composite</th><th>median composite</th><th>std</th><th>min</th><th>max</th></tr></thead>
+  <tbody id="dist-rows"></tbody>
+</table>
+</div>
+
+<div class="tab-pane" id="forensic">
+<h2>Forensic audit summary</h2>
+<p class="muted">Eight independent audit agents (A-H) plus a committee verdict (Z). Conference-grade integrity report per task. Click a task in the leaderboard for the per-task `forensic_audit.md`.</p>
+<table>
+  <thead><tr><th>verdict</th><th>count</th><th>tasks</th></tr></thead>
+  <tbody id="forensic-rows"></tbody>
+</table>
+<h2 style="margin-top:24px">Common warnings</h2>
+<table>
+  <thead><tr><th>warning</th><th>count</th></tr></thead>
+  <tbody id="warning-rows"></tbody>
+</table>
+</div>
+
+<div class="tab-pane" id="json">
+<h2>Raw rollup data</h2>
+<pre id="raw"></pre>
+</div>
+
+<script>
+let data = [];
+let forensic = [];
+let state = { sortKey: 'delta_vs_dsbench', sortDir: -1, kind: '', problem: '', status: 'beat', search: '' };
+
+function $(s, p=document) { return p.querySelector(s); }
+function $$(s, p=document) { return [...p.querySelectorAll(s)]; }
+
+async function load() {
+  try {
+    data = await fetch('../registry/final_rollup.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : []);
+    forensic = await fetch('../registry/forensic_summary.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : []);
+  } catch (e) { console.error(e); }
+  const fmap = Object.fromEntries(forensic.map(f => [f.task, f]));
+  data = data.map(r => ({
+    ...r,
+    forensic: fmap[r.task]?.verdict || '?',
+    forensic_warnings: fmap[r.task]?.warnings || [],
+    kind: r.kind || (r.problem_type === 'qa_excel' ? 'analysis' : 'modeling'),
+    name: r.name || r.task,
+  }));
+  populateProblemDropdown();
+  renderAll();
+}
+
+function populateProblemDropdown() {
+  const types = [...new Set(data.map(r => r.problem_type).filter(Boolean))].sort();
+  const sel = $('#problem');
+  for (const t of types) { const o = document.createElement('option'); o.textContent = t; sel.append(o); }
+}
+
+function filtered() {
+  let out = data.slice();
+  if (state.search) {
+    try { const re = new RegExp(state.search, 'i'); out = out.filter(r => re.test(r.task || '') || re.test(r.name || '')); }
+    catch { out = out.filter(r => (r.task || '').includes(state.search) || (r.name || '').includes(state.search)); }
+  }
+  if (state.kind) out = out.filter(r => r.kind === state.kind);
+  if (state.problem) out = out.filter(r => r.problem_type === state.problem);
+  if (state.status === 'beat') out = out.filter(r => r.beats_dsbench);
+  else if (state.status === 'miss') out = out.filter(r => !r.beats_dsbench);
+  else if (state.status === 'forensic-pass') out = out.filter(r => r.forensic === 'PASS');
+  else if (state.status === 'forensic-fail') out = out.filter(r => r.forensic === 'FAIL');
+  out.sort((a, b) => {
+    const ka = a[state.sortKey], kb = b[state.sortKey];
+    if (ka == null && kb == null) return 0;
+    if (ka == null) return 1; if (kb == null) return -1;
+    if (typeof ka === 'string') return ka.localeCompare(kb) * state.sortDir;
+    return (ka > kb ? 1 : ka < kb ? -1 : 0) * state.sortDir;
+  });
+  return out;
+}
+
+function renderKpis() {
+  const n = data.length;
+  const beat = data.filter(r => r.beats_dsbench).length;
+  const avgTest = data.reduce((s, r) => s + (r.test_score || 0), 0) / Math.max(1, n);
+  const fpass = forensic.filter(f => f.verdict === 'PASS').length;
+  const bbs = new Set(data.map(r => r.champion_backbone));
+  const modBeat = data.filter(r => r.kind === 'modeling' && r.beats_dsbench).length;
+  const modTotal = data.filter(r => r.kind === 'modeling').length;
+  const anaBeat = data.filter(r => r.kind === 'analysis' && r.beats_dsbench).length;
+  const anaTotal = data.filter(r => r.kind === 'analysis').length;
+  $('#kpis').innerHTML = `
+    <div class="kpi"><span>tasks</span><b>${n}</b></div>
+    <div class="kpi"><span>beat DSBench</span><b>${beat}</b></div>
+    <div class="kpi"><span>beat-rate</span><b>${n ? (100*beat/n).toFixed(1) : 0}%</b></div>
+    <div class="kpi"><span>modeling</span><b>${modBeat}/${modTotal}</b></div>
+    <div class="kpi"><span>analysis</span><b>${anaBeat}/${anaTotal}</b></div>
+    <div class="kpi"><span>avg test score</span><b>${avgTest.toFixed(3)}</b></div>
+    <div class="kpi"><span>forensic PASS</span><b>${fpass}/${forensic.length}</b></div>
+    <div class="kpi"><span>distinct champion backbones</span><b>${bbs.size}</b></div>
+  `;
+}
+
+function barWidth(value, min, max) {
+  if (max <= min) return 0;
+  return 100 * Math.max(0, Math.min(1, (value - min) / (max - min)));
+}
+
+function renderRows() {
+  const rows = filtered();
+  const tbody = $('#rows');
+  if (!rows.length) { tbody.innerHTML = '<tr><td colspan="14" class="muted">no rows match filter</td></tr>'; return; }
+  const composites = rows.map(r => r.champion_composite || 0);
+  const minC = Math.min(...composites), maxC = Math.max(...composites);
+  const deltas = rows.map(r => r.delta_vs_dsbench || 0);
+  const minD = Math.min(...deltas), maxD = Math.max(...deltas);
+  tbody.innerHTML = rows.map(r => {
+    const cBar = barWidth(r.champion_composite || 0, minC, maxC);
+    const dPos = (r.delta_vs_dsbench || 0) > 0;
+    const dBar = dPos ? barWidth(r.delta_vs_dsbench || 0, 0, Math.max(0.01, maxD))
+                       : barWidth(-(r.delta_vs_dsbench || 0), 0, Math.max(0.01, -minD));
+    const taskLink = `../${r.kind}/${r.task}`;
+    const fclass = r.forensic === 'PASS' ? 'chip-ok' : r.forensic === 'FAIL' ? 'chip-warn' : '';
+    return `
+    <tr data-task="${r.task}" data-kind="${r.kind}" class="task-row">
+      <td>${r.name || r.task}</td>
+      <td><span class="kind-${r.kind}">${r.kind}</span></td>
+      <td>${r.problem_type || '?'}</td>
+      <td>${r.metric || ''}</td>
+      <td>${r.champion_backbone || '?'}</td>
+      <td class="bar-cell"><div class="bar" style="width:${cBar}%"></div><span>${(r.champion_composite||0).toFixed(4)}</span></td>
+      <td>${(r.champion_val||0).toFixed(4)}</td>
+      <td>${(r.champion_train||0).toFixed(4)}</td>
+      <td>${(r.test_score||0).toFixed(4)}</td>
+      <td>${(r.dsbench_baseline||0).toFixed(4)}</td>
+      <td class="bar-cell"><div class="bar ${dPos?'':'bad'}" style="width:${dBar}%"></div><span class="${dPos?'beat':'miss'}">${(r.delta_vs_dsbench||0)>=0?'+':''}${(r.delta_vs_dsbench||0).toFixed(4)}</span></td>
+      <td class="${r.beats_dsbench?'beat':'miss'}">${r.beats_dsbench?'✅':'❌'}</td>
+      <td><span class="chip ${fclass}">${r.forensic||'?'}</span></td>
+      <td class="row-actions">
+        <a href="${taskLink}/autoresearch_results/dashboard.html" title="full task dashboard" onclick="event.stopPropagation()">📊</a>
+        <a href="${taskLink}/forensic_audit.md" title="forensic audit" onclick="event.stopPropagation()">🔍</a>
+        <a href="${taskLink}/paper.md" title="paper" onclick="event.stopPropagation()">📄</a>
+      </td>
+    </tr>`;
+  }).join('');
+  // sort indicator
+  $$('#leaderboard th').forEach(th => { th.classList.remove('sorted'); th.removeAttribute('data-dir'); });
+  const active = $$(`#leaderboard th[data-k="${state.sortKey}"]`)[0];
+  if (active) { active.classList.add('sorted'); active.setAttribute('data-dir', state.sortDir > 0 ? '▲' : '▼'); }
+  // wire row click → open per-task autoresearch dashboard in a NEW TAB
+  $$('#rows tr.task-row').forEach(tr => tr.addEventListener('click', () => {
+    const task = tr.dataset.task;
+    const kindAttr = tr.dataset.kind;
+    // The per-task dashboard.html is the full autoresearch-style live dashboard
+    // for that task — same level of detail as autoresearchspy. The cross-task
+    // detail page is still reachable from there via the back link.
+    const url = `../${kindAttr}/${task}/autoresearch_results/dashboard.html`;
+    window.open(url, '_blank', 'noopener');
+  }));
+}
+
+function renderBackbones() {
+  const bb = {};
+  for (const r of data.filter(r => r.beats_dsbench)) {
+    bb[r.champion_backbone || '?'] ||= { mod: 0, ana: 0, scores: [] };
+    if (r.kind === 'modeling') bb[r.champion_backbone].mod++;
+    else bb[r.champion_backbone].ana++;
+    bb[r.champion_backbone].scores.push(r.champion_composite || 0);
+  }
+  const entries = Object.entries(bb).sort((a, b) => (b[1].mod + b[1].ana) - (a[1].mod + a[1].ana));
+  $('#bb-list').innerHTML = entries.map(([k, v]) =>
+    `<div class="bb-chip"><b>${v.mod + v.ana}</b> ${k}</div>`).join('');
+  $('#bb-table tbody').innerHTML = entries.map(([k, v]) => {
+    const med = v.scores.length ? [...v.scores].sort((a,b)=>a-b)[Math.floor(v.scores.length/2)] : 0;
+    return `<tr><td>${k}</td><td>${v.mod}</td><td>${v.ana}</td><td>${v.mod + v.ana}</td><td>${med.toFixed(4)}</td></tr>`;
+  }).join('');
+}
+
+function renderHistogram() {
+  const bins = 20;
+  const deltas = data.map(r => r.delta_vs_dsbench || 0);
+  const lo = Math.min(...deltas, -1), hi = Math.max(...deltas, 1);
+  const range = hi - lo;
+  const counts = Array(bins).fill(0);
+  for (const d of deltas) {
+    const idx = Math.min(bins - 1, Math.floor((d - lo) / range * bins));
+    counts[idx]++;
+  }
+  const maxC = Math.max(...counts, 1);
+  $('#histo').innerHTML = counts.map((c, i) => {
+    const center = lo + (i + 0.5) * range / bins;
+    const negative = center < 0;
+    const h = 100 * c / maxC;
+    return `<div style="display:flex;flex-direction:column;align-items:center;gap:2px">
+              <div class="bin ${negative?'bad':''}" style="height:${h}%"></div>
+              <div style="font-size:10px;color:var(--muted)">${center.toFixed(2)}</div>
+            </div>`;
+  }).join('');
+  const kinds = ['modeling', 'analysis'];
+  $('#dist-rows').innerHTML = kinds.map(k => {
+    const xs = data.filter(r => r.kind === k).map(r => r.champion_composite || 0).sort((a, b) => a - b);
+    if (!xs.length) return '';
+    const mean = xs.reduce((s, x) => s + x, 0) / xs.length;
+    const std = Math.sqrt(xs.reduce((s, x) => s + (x - mean) ** 2, 0) / xs.length);
+    return `<tr><td>${k}</td><td>${xs.length}</td><td>${mean.toFixed(4)}</td>
+      <td>${xs[Math.floor(xs.length/2)].toFixed(4)}</td>
+      <td>${std.toFixed(4)}</td><td>${xs[0].toFixed(4)}</td><td>${xs[xs.length-1].toFixed(4)}</td></tr>`;
+  }).join('');
+}
+
+function renderForensic() {
+  const verdicts = {};
+  for (const r of forensic) verdicts[r.verdict] = (verdicts[r.verdict] || []).concat(r.task);
+  $('#forensic-rows').innerHTML = Object.entries(verdicts).map(([v, tasks]) =>
+    `<tr><td class="${v==='PASS'?'beat':'miss'}">${v}</td><td>${tasks.length}</td><td class="muted">${tasks.slice(0, 8).join(', ')}${tasks.length>8?'…':''}</td></tr>`
+  ).join('');
+  const warnings = {};
+  for (const r of forensic) for (const w of (r.warnings || [])) warnings[w] = (warnings[w] || 0) + 1;
+  $('#warning-rows').innerHTML = Object.entries(warnings).sort((a, b) => b[1] - a[1])
+    .map(([w, c]) => `<tr><td>${w}</td><td>${c}</td></tr>`).join('');
+}
+
+function renderAll() {
+  renderKpis();
+  renderRows();
+  renderBackbones();
+  renderHistogram();
+  renderForensic();
+  $('#raw').textContent = JSON.stringify(data, null, 2);
+}
+
+// wire events
+$('#search').addEventListener('input', e => { state.search = e.target.value.trim(); renderRows(); });
+$('#kind').addEventListener('change', e => { state.kind = e.target.value; renderAll(); });
+$('#problem').addEventListener('change', e => { state.problem = e.target.value; renderAll(); });
+$$('.pill').forEach(p => p.addEventListener('click', () => {
+  $$('.pill').forEach(x => x.classList.remove('active'));
+  p.classList.add('active');
+  state.status = p.dataset.status || '';
+  renderAll();
+}));
+$$('#leaderboard th[data-k]').forEach(th => th.addEventListener('click', () => {
+  const k = th.dataset.k;
+  if (k === state.sortKey) state.sortDir = -state.sortDir;
+  else { state.sortKey = k; state.sortDir = -1; }
+  renderRows();
+}));
+$$('.tab').forEach(t => t.addEventListener('click', () => {
+  $$('.tab').forEach(x => x.classList.remove('active'));
+  $$('.tab-pane').forEach(x => x.classList.remove('active'));
+  t.classList.add('active');
+  $(`#${t.dataset.pane}`).classList.add('active');
+}));
+
+load();
+// auto-refresh every 30s for live progress watching
+setInterval(load, 30000);
+</script>
+</body>
+</html>

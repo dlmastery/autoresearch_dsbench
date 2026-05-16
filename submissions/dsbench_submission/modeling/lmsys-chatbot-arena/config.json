@@ -1,0 +1,33 @@
+{
+  "experiment_num": 165,
+  "backbone": "mlp",
+  "description": "ext mlp 40/200: MLP capacity sweep \u2014 hidden=(512, 256) lr=0.003. The base 25",
+  "params": {
+    "iterations": 600,
+    "epochs": 60,
+    "lr": 0.003,
+    "hidden": [
+      512,
+      256
+    ],
+    "weight_decay": 0.0005
+  },
+  "metric": "rmse",
+  "train_score": -0.12666686135149516,
+  "val_score": -0.3087596568053029,
+  "composite": -0.31786429657799325,
+  "train_metrics": {
+    "rmse": 0.12666686135149516,
+    "mae": 0.08831065148115158,
+    "r2": 0.9994633197784424
+  },
+  "val_metrics": {
+    "rmse": 0.3087596568053029,
+    "mae": 0.24842651188373566,
+    "r2": 0.9967675805091858
+  },
+  "elapsed_sec": 3.9293863773345947,
+  "timestamp": "2026-05-15 19:35:35",
+  "task_slug": "lmsys-chatbot-arena",
+  "uses_test_set": false
+}

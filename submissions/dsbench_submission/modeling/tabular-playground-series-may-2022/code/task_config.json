@@ -1,0 +1,17 @@
+{
+  "name": "tabular-playground-series-may-2022",
+  "slug": "tabular-playground-series-may-2022",
+  "kind": "modeling",
+  "problem_type": "classification_binary",
+  "task_type": "tabular",
+  "metric": "roc_auc",
+  "iterations_per_backbone": 25,
+  "backbones": [
+    "xgboost",
+    "lightgbm",
+    "catboost",
+    "mlp",
+    "ft_transformer"
+  ],
+  "dsbench_baseline": 0.5
+}

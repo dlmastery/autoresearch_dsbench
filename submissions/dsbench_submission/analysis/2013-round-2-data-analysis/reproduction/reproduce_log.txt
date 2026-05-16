@@ -1,0 +1,8 @@
+Reproduction protocol for 2013-round-2-data-analysis champion:
+
+  python -m framework.runner --repo C:\Users\evija\dsbench\analysis\2013-round-2-data-analysis \
+    --backbone excel_agent \
+    --params '{"classifier": "global_prior", "seed": 42}' \
+    --description 'reproduction' --experiment-num 2
+
+Expected composite ≈ 0.3846 (within 0.005 due to RNG floor variance).

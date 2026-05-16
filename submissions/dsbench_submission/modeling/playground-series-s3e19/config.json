@@ -1,0 +1,58 @@
+{
+  "experiment_num": 92,
+  "backbone": "mlp",
+  "description": "mlp iter 17/25: Very wide.",
+  "params": {
+    "iterations": 400,
+    "epochs": 30,
+    "lr": 0.001,
+    "hidden": [
+      512,
+      256
+    ]
+  },
+  "metric": "roc_auc",
+  "train_score": 0.999773202785315,
+  "val_score": 0.9920857231781601,
+  "composite": 0.9917013491978024,
+  "train_metrics": {
+    "accuracy": 0.9964285714285714,
+    "f1": 0.996299037749815,
+    "precision": 0.997037037037037,
+    "recall": 0.9955621301775148,
+    "mcc": 0.9928494013763121,
+    "roc_auc": 0.999773202785315,
+    "confusion": [
+      [
+        722,
+        2
+      ],
+      [
+        3,
+        673
+      ]
+    ]
+  },
+  "val_metrics": {
+    "accuracy": 0.95,
+    "f1": 0.9511400651465798,
+    "precision": 0.948051948051948,
+    "recall": 0.954248366013072,
+    "mcc": 0.8999666590384483,
+    "roc_auc": 0.9920857231781601,
+    "confusion": [
+      [
+        139,
+        8
+      ],
+      [
+        7,
+        146
+      ]
+    ]
+  },
+  "elapsed_sec": 3.1695659160614014,
+  "timestamp": "2026-05-15 06:08:47",
+  "task_slug": "playground-series-s3e19",
+  "uses_test_set": false
+}

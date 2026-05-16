@@ -1,0 +1,2 @@
+Snapshot of framework/runner.py for excel_agent on 2017-finals-castles-in-the-air.
+Hash of framework/runner.py at start: see registry/runtime_hashes.json

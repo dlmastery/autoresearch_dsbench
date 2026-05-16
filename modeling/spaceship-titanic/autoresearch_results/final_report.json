@@ -1,0 +1,33 @@
+{
+  "task": "spaceship-titanic",
+  "name": "spaceship-titanic",
+  "problem_type": "classification_binary",
+  "metric": "roc_auc",
+  "champion_backbone": "mlp",
+  "champion_composite": 0.9977116888668549,
+  "champion_val": 0.9978104472943384,
+  "champion_train": 0.99978561584401,
+  "test_score": 0.9962665007333659,
+  "test_metrics": {
+    "accuracy": 0.97,
+    "f1": 0.9700996677740864,
+    "precision": 0.9733333333333334,
+    "recall": 0.9668874172185431,
+    "mcc": 0.9400208895852109,
+    "roc_auc": 0.9962665007333659,
+    "confusion": [
+      [
+        145,
+        4
+      ],
+      [
+        5,
+        146
+      ]
+    ]
+  },
+  "dsbench_baseline": 0.5,
+  "delta_vs_dsbench": 0.49626650073336587,
+  "beats_dsbench": true,
+  "timestamp": "2026-05-16 00:11:50"
+}

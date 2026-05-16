@@ -1,0 +1,33 @@
+{
+  "experiment_num": 164,
+  "backbone": "mlp",
+  "description": "ext mlp 39/200: MLP capacity sweep \u2014 hidden=(512, 256) lr=0.001. The base 25",
+  "params": {
+    "iterations": 600,
+    "epochs": 60,
+    "lr": 0.001,
+    "hidden": [
+      512,
+      256
+    ],
+    "weight_decay": 0.0005
+  },
+  "metric": "rmse",
+  "train_score": -0.17452300408263974,
+  "val_score": -0.40857123245423665,
+  "composite": -0.4202736438728165,
+  "train_metrics": {
+    "rmse": 0.17452300408263974,
+    "mae": 0.12209666520357132,
+    "r2": 0.999298095703125
+  },
+  "val_metrics": {
+    "rmse": 0.40857123245423665,
+    "mae": 0.32156386971473694,
+    "r2": 0.9961034059524536
+  },
+  "elapsed_sec": 5.149540185928345,
+  "timestamp": "2026-05-15 20:03:14",
+  "task_slug": "us-patent-phrase-to-phrase-matching",
+  "uses_test_set": false
+}

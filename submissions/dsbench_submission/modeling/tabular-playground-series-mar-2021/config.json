@@ -1,0 +1,54 @@
+{
+  "experiment_num": 79,
+  "backbone": "mlp",
+  "description": "mlp iter 4/25: Higher LR \u2014 test if baseline is under-optimised in compute budget.",
+  "params": {
+    "iterations": 400,
+    "epochs": 30,
+    "lr": 0.003
+  },
+  "metric": "roc_auc",
+  "train_score": 0.9999571112595198,
+  "val_score": 0.9970619658119657,
+  "composite": 0.996917208539588,
+  "train_metrics": {
+    "accuracy": 0.9971428571428571,
+    "f1": 0.9972183588317107,
+    "precision": 0.9972183588317107,
+    "recall": 0.9972183588317107,
+    "mcc": 0.9942815012693025,
+    "roc_auc": 0.9999571112595198,
+    "confusion": [
+      [
+        679,
+        2
+      ],
+      [
+        2,
+        717
+      ]
+    ]
+  },
+  "val_metrics": {
+    "accuracy": 0.98,
+    "f1": 0.9808917197452229,
+    "precision": 0.9746835443037974,
+    "recall": 0.9871794871794872,
+    "mcc": 0.9600001866657951,
+    "roc_auc": 0.9970619658119657,
+    "confusion": [
+      [
+        140,
+        4
+      ],
+      [
+        2,
+        154
+      ]
+    ]
+  },
+  "elapsed_sec": 0.8226785659790039,
+  "timestamp": "2026-05-15 09:13:20",
+  "task_slug": "tabular-playground-series-mar-2021",
+  "uses_test_set": false
+}

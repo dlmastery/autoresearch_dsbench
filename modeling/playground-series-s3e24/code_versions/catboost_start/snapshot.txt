@@ -1,0 +1,2 @@
+Snapshot of framework/runner.py for catboost on playground-series-s3e24.
+Hash of framework/runner.py at start: see registry/runtime_hashes.json

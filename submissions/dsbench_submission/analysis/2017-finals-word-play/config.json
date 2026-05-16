@@ -1,0 +1,158 @@
+{
+  "experiment_num": 1,
+  "backbone": "excel_agent",
+  "description": "excel_agent iter 1/25: Baseline: predict the per-task training mode for every Modeloff question. This i",
+  "params": {
+    "classifier": "prior_only",
+    "seed": 42
+  },
+  "metric": "exact_match_accuracy",
+  "train_score": 0.1111111111111111,
+  "val_score": 0.0,
+  "composite": 0.0,
+  "train_metrics": {
+    "accuracy": 0.1111111111111111,
+    "f1": 0.022222222222222223,
+    "precision": 0.012345679012345678,
+    "recall": 0.1111111111111111,
+    "mcc": 0.0,
+    "confusion": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "val_metrics": {
+    "accuracy": 0.0,
+    "f1": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "mcc": 0.0,
+    "confusion": [
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ]
+    ]
+  },
+  "elapsed_sec": 0.004521369934082031,
+  "timestamp": "2026-05-15 23:52:27",
+  "task_slug": "2017-finals-word-play",
+  "uses_test_set": false
+}

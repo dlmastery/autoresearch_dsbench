@@ -1,0 +1,17 @@
+{
+  "task_slug": "2012-round-2-asset-schedule",
+  "n_train": 3,
+  "n_val": 1,
+  "n_test": 1,
+  "n_features": 47,
+  "hashes": {
+    "X_train": "c66d63361b18503a",
+    "y_train": "72f30b02ecca0b51",
+    "X_val": "a467465279bef94f",
+    "y_val": "22950c1440bdaf5f",
+    "X_test": "6bfe39f0f7fa8153",
+    "y_test": "5a092879c557d027"
+  },
+  "generated_at": "2026-05-15 23:41:53",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "2017-round-2-section-1-collect-the-cash",
+  "slug": "2017-round-2-section-1-collect-the-cash",
+  "kind": "analysis",
+  "problem_type": "qa_excel",
+  "task_type": "financial_modeling_excel",
+  "metric": "exact_match_accuracy",
+  "iterations_per_backbone": 25,
+  "backbones": [
+    "excel_agent"
+  ],
+  "dsbench_baseline": 0.3412
+}

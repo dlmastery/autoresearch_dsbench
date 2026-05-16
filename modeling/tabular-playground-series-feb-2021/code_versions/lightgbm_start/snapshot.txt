@@ -1,0 +1,2 @@
+Snapshot of framework/runner.py for lightgbm on tabular-playground-series-feb-2021.
+Hash of framework/runner.py at start: see registry/runtime_hashes.json

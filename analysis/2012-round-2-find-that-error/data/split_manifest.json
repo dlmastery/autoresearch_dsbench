@@ -1,0 +1,17 @@
+{
+  "task_slug": "2012-round-2-find-that-error",
+  "n_train": 12,
+  "n_val": 4,
+  "n_test": 4,
+  "n_features": 47,
+  "hashes": {
+    "X_train": "bd21f71c8056991a",
+    "y_train": "fd14404b95eaf498",
+    "X_val": "7bd76aaae0275a0f",
+    "y_val": "8b2b3120facf054e",
+    "X_test": "96a7059512e223f7",
+    "y_test": "7c7bf2499cbe6ab0"
+  },
+  "generated_at": "2026-05-15 23:41:56",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

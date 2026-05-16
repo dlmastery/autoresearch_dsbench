@@ -1,0 +1,17 @@
+{
+  "task_slug": "ventilator-pressure-prediction",
+  "n_train": 1400,
+  "n_val": 300,
+  "n_test": 300,
+  "n_features": 32,
+  "hashes": {
+    "X_train": "fb36851d167e1982",
+    "y_train": "9b06aacfc119e53a",
+    "X_val": "2a4bbe1f9aa2c349",
+    "y_val": "209360f6d56e0559",
+    "X_test": "a9b616a90e9450cf",
+    "y_test": "140106c44b607d0b"
+  },
+  "generated_at": "2026-05-15 10:04:56",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

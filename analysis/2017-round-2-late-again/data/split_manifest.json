@@ -1,0 +1,17 @@
+{
+  "task_slug": "2017-round-2-late-again",
+  "n_train": 7,
+  "n_val": 2,
+  "n_test": 2,
+  "n_features": 47,
+  "hashes": {
+    "X_train": "f3e2d8ef61421d37",
+    "y_train": "6aef619a9ca11d5a",
+    "X_val": "fba1b5d4d80c6a3c",
+    "y_val": "3d4ebce0c66bea87",
+    "X_test": "fad49cec27afdc3d",
+    "y_test": "d90287c3b8fd0dc4"
+  },
+  "generated_at": "2026-05-15 23:53:52",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

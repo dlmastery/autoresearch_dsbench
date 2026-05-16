@@ -1,0 +1,17 @@
+{
+  "task_slug": "2017-round-1-go-with-the-flow",
+  "n_train": 6,
+  "n_val": 2,
+  "n_test": 2,
+  "n_features": 47,
+  "hashes": {
+    "X_train": "ff343094b2348805",
+    "y_train": "9f3e2f10c6b89e45",
+    "X_val": "be9be7d9f65c7364",
+    "y_val": "06c30e1970f3618a",
+    "X_test": "f58b5be3f27aa7d2",
+    "y_test": "808534926ee2a9da"
+  },
+  "generated_at": "2026-05-15 23:53:04",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

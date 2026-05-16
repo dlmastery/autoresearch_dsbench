@@ -1,0 +1,55 @@
+{
+  "experiment_num": 100,
+  "backbone": "mlp",
+  "description": "mlp iter 25/25: Final variance seed (6th).",
+  "params": {
+    "iterations": 400,
+    "epochs": 30,
+    "lr": 0.001,
+    "seed": 7
+  },
+  "metric": "roc_auc",
+  "train_score": 0.9999612194245779,
+  "val_score": 0.9936886083825949,
+  "composite": 0.9933749778304957,
+  "train_metrics": {
+    "accuracy": 0.9971428571428571,
+    "f1": 0.997179125528914,
+    "precision": 0.995774647887324,
+    "recall": 0.998587570621469,
+    "mcc": 0.9942888408443435,
+    "roc_auc": 0.9999612194245779,
+    "confusion": [
+      [
+        689,
+        3
+      ],
+      [
+        1,
+        707
+      ]
+    ]
+  },
+  "val_metrics": {
+    "accuracy": 0.95,
+    "f1": 0.9484536082474226,
+    "precision": 0.971830985915493,
+    "recall": 0.9261744966442953,
+    "mcc": 0.9009466960997479,
+    "roc_auc": 0.9936886083825949,
+    "confusion": [
+      [
+        147,
+        4
+      ],
+      [
+        11,
+        138
+      ]
+    ]
+  },
+  "elapsed_sec": 0.9571738243103027,
+  "timestamp": "2026-05-15 08:04:58",
+  "task_slug": "santander-customer-transaction-prediction",
+  "uses_test_set": false
+}

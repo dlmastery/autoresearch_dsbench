@@ -1,0 +1,13 @@
+{
+  "name": "2017-finals-ladder-up",
+  "slug": "2017-finals-ladder-up",
+  "kind": "analysis",
+  "problem_type": "qa_excel",
+  "task_type": "financial_modeling_excel",
+  "metric": "exact_match_accuracy",
+  "iterations_per_backbone": 25,
+  "backbones": [
+    "excel_agent"
+  ],
+  "dsbench_baseline": 0.3412
+}

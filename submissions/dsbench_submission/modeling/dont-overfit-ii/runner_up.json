@@ -1,0 +1,57 @@
+{
+  "experiment_num": 80,
+  "backbone": "mlp",
+  "description": "mlp iter 5/25: Larger hidden \u2014 increases representational capacity.",
+  "params": {
+    "iterations": 400,
+    "epochs": 30,
+    "hidden": [
+      256,
+      128
+    ]
+  },
+  "metric": "roc_auc",
+  "train_score": 0.9992100735019462,
+  "val_score": 0.9956958393113343,
+  "composite": 0.9955201276018038,
+  "train_metrics": {
+    "accuracy": 0.9892857142857143,
+    "f1": 0.9891696750902527,
+    "precision": 0.9870317002881844,
+    "recall": 0.9913169319826338,
+    "mcc": 0.9785780557588525,
+    "roc_auc": 0.9992100735019462,
+    "confusion": [
+      [
+        700,
+        9
+      ],
+      [
+        6,
+        685
+      ]
+    ]
+  },
+  "val_metrics": {
+    "accuracy": 0.96,
+    "f1": 0.9565217391304348,
+    "precision": 0.9428571428571428,
+    "recall": 0.9705882352941176,
+    "mcc": 0.9198303242305355,
+    "roc_auc": 0.9956958393113343,
+    "confusion": [
+      [
+        156,
+        8
+      ],
+      [
+        4,
+        132
+      ]
+    ]
+  },
+  "elapsed_sec": 2.197840452194214,
+  "timestamp": "2026-05-15 04:23:07",
+  "task_slug": "dont-overfit-ii",
+  "uses_test_set": false
+}

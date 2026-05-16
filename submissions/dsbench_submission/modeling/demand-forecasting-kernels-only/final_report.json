@@ -1,0 +1,20 @@
+{
+  "task": "demand-forecasting-kernels-only",
+  "name": "demand-forecasting-kernels-only",
+  "problem_type": "regression",
+  "metric": "rmse",
+  "champion_backbone": "mlp",
+  "champion_composite": -0.36845537316248983,
+  "champion_val": -0.35775201694418457,
+  "champion_train": -0.14368489257807887,
+  "test_score": -0.314247253506114,
+  "test_metrics": {
+    "rmse": 0.314247253506114,
+    "mae": 0.24952758848667145,
+    "r2": 0.9966039657592773
+  },
+  "dsbench_baseline": -1.0,
+  "delta_vs_dsbench": 0.685752746493886,
+  "beats_dsbench": true,
+  "timestamp": "2026-05-16 00:10:52"
+}

@@ -1,0 +1,81 @@
+{
+  "experiment_num": 13,
+  "backbone": "excel_agent",
+  "description": "excel_agent iter 13/25: LogReg with a balanced blend (prior_weight=0.5) toward the per-task / global pri",
+  "params": {
+    "classifier": "logreg",
+    "C": 1.0,
+    "max_iter": 500,
+    "prior_weight": 0.5,
+    "seed": 42
+  },
+  "metric": "exact_match_accuracy",
+  "train_score": 0.42857142857142855,
+  "val_score": 0.3333333333333333,
+  "composite": 0.3333333333333333,
+  "train_metrics": {
+    "accuracy": 0.42857142857142855,
+    "f1": 0.3,
+    "precision": 0.26666666666666666,
+    "recall": 0.4,
+    "mcc": 0.3746343246326776,
+    "confusion": [
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "val_metrics": {
+    "accuracy": 0.5,
+    "f1": 0.3333333333333333,
+    "precision": 0.25,
+    "recall": 0.5,
+    "mcc": 0.0,
+    "confusion": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  "elapsed_sec": 1.1911585330963135,
+  "timestamp": "2026-05-15 23:46:55",
+  "task_slug": "2015-round-2-the-price-is-right",
+  "uses_test_set": false
+}

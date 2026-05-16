@@ -1,0 +1,17 @@
+{
+  "task_slug": "2014-round-2-stepping-up",
+  "n_train": 6,
+  "n_val": 2,
+  "n_test": 2,
+  "n_features": 47,
+  "hashes": {
+    "X_train": "7519d33248225e1b",
+    "y_train": "3f6ec3f4102c9eee",
+    "X_val": "2f9a389e24ddbd34",
+    "y_val": "5a1f5a99f60ef0d0",
+    "X_test": "a4567dd42d62e6eb",
+    "y_test": "c8ede8997c15c22f"
+  },
+  "generated_at": "2026-05-15 23:45:06",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

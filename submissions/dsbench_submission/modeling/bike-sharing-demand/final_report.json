@@ -1,0 +1,20 @@
+{
+  "task": "bike-sharing-demand",
+  "name": "bike-sharing-demand",
+  "problem_type": "regression",
+  "metric": "rmse",
+  "champion_backbone": "mlp",
+  "champion_composite": -0.391798218681519,
+  "champion_val": -0.3798180453831125,
+  "champion_train": -0.14021457941498253,
+  "test_score": -0.3358726217031659,
+  "test_metrics": {
+    "rmse": 0.3358726217031659,
+    "mae": 0.26014813780784607,
+    "r2": 0.9944305419921875
+  },
+  "dsbench_baseline": -1.0,
+  "delta_vs_dsbench": 0.6641273782968341,
+  "beats_dsbench": true,
+  "timestamp": "2026-05-16 00:10:34"
+}

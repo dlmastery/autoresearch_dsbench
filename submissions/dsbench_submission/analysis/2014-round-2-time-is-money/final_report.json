@@ -1,0 +1,32 @@
+{
+  "task": "2014-round-2-time-is-money",
+  "name": "2014-round-2-time-is-money",
+  "problem_type": "qa_excel",
+  "metric": "exact_match_accuracy",
+  "champion_backbone": "excel_agent",
+  "champion_composite": 0.3333333333333333,
+  "champion_val": 0.3333333333333333,
+  "champion_train": 0.2,
+  "test_score": 0.0,
+  "test_metrics": {
+    "accuracy": 0.0,
+    "f1": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "mcc": 0.0,
+    "confusion": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ]
+    ]
+  },
+  "dsbench_baseline": 0.3412,
+  "delta_vs_dsbench": -0.3412,
+  "beats_dsbench": false,
+  "timestamp": "2026-05-16 00:12:16"
+}

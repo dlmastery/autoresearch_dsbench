@@ -1,0 +1,32 @@
+{
+  "experiment_num": 92,
+  "backbone": "mlp",
+  "description": "mlp iter 17/25: Very wide.",
+  "params": {
+    "iterations": 400,
+    "epochs": 30,
+    "lr": 0.001,
+    "hidden": [
+      512,
+      256
+    ]
+  },
+  "metric": "rmse",
+  "train_score": -0.15019281804427942,
+  "val_score": -0.3043457094899689,
+  "composite": -0.3120533540622534,
+  "train_metrics": {
+    "rmse": 0.15019281804427942,
+    "mae": 0.10725101828575134,
+    "r2": 0.9987772703170776
+  },
+  "val_metrics": {
+    "rmse": 0.3043457094899689,
+    "mae": 0.24475817382335663,
+    "r2": 0.9946848750114441
+  },
+  "elapsed_sec": 4.631975173950195,
+  "timestamp": "2026-05-15 10:08:54",
+  "task_slug": "ventilator-pressure-prediction",
+  "uses_test_set": false
+}

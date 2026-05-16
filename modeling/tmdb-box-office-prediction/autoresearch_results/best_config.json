@@ -1,0 +1,33 @@
+{
+  "experiment_num": 165,
+  "backbone": "mlp",
+  "description": "ext mlp 40/200: MLP capacity sweep \u2014 hidden=(512, 256) lr=0.003. The base 25",
+  "params": {
+    "iterations": 600,
+    "epochs": 60,
+    "lr": 0.003,
+    "hidden": [
+      512,
+      256
+    ],
+    "weight_decay": 0.0005
+  },
+  "metric": "rmse",
+  "train_score": -0.1304218679130811,
+  "val_score": -0.3215500371721792,
+  "composite": -0.33110644563513414,
+  "train_metrics": {
+    "rmse": 0.1304218679130811,
+    "mae": 0.08354497700929642,
+    "r2": 0.999256432056427
+  },
+  "val_metrics": {
+    "rmse": 0.3215500371721792,
+    "mae": 0.2542033791542053,
+    "r2": 0.9953941106796265
+  },
+  "elapsed_sec": 5.153866529464722,
+  "timestamp": "2026-05-15 19:49:36",
+  "task_slug": "tmdb-box-office-prediction",
+  "uses_test_set": false
+}

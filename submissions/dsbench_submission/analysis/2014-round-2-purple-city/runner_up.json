@@ -1,0 +1,69 @@
+{
+  "experiment_num": 4,
+  "backbone": "excel_agent",
+  "description": "excel_agent iter 4/25: LogReg with strong L2 (C=0.1). Stronger regularisation flattens the per-task one",
+  "params": {
+    "classifier": "logreg",
+    "C": 0.1,
+    "max_iter": 500,
+    "seed": 42
+  },
+  "metric": "exact_match_accuracy",
+  "train_score": 0.6666666666666666,
+  "val_score": 0.2857142857142857,
+  "composite": 0.2857142857142857,
+  "train_metrics": {
+    "accuracy": 0.6666666666666666,
+    "f1": 0.4,
+    "precision": 0.3333333333333333,
+    "recall": 0.5,
+    "mcc": 0.554700196225229,
+    "confusion": [
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ]
+    ]
+  },
+  "val_metrics": {
+    "accuracy": 0.0,
+    "f1": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "mcc": 0.0,
+    "confusion": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        0
+      ]
+    ]
+  },
+  "elapsed_sec": 0.404587984085083,
+  "timestamp": "2026-05-15 23:44:53",
+  "task_slug": "2014-round-2-purple-city",
+  "uses_test_set": false
+}

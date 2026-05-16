@@ -1,0 +1,8 @@
+Reproduction protocol for 2016-round-1-section-3-roll-the-dice champion:
+
+  python -m framework.runner --repo C:\Users\evija\dsbench\analysis\2016-round-1-section-3-roll-the-dice \
+    --backbone excel_agent \
+    --params '{"classifier": "prior_only", "seed": 42}' \
+    --description 'reproduction' --experiment-num 1
+
+Expected composite ≈ 0.0000 (within 0.005 due to RNG floor variance).

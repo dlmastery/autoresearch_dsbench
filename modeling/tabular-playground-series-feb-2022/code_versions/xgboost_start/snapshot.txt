@@ -1,0 +1,2 @@
+Snapshot of framework/runner.py for xgboost on tabular-playground-series-feb-2022.
+Hash of framework/runner.py at start: see registry/runtime_hashes.json

@@ -1,0 +1,58 @@
+{
+  "experiment_num": 92,
+  "backbone": "mlp",
+  "description": "mlp iter 17/25: Very wide.",
+  "params": {
+    "iterations": 400,
+    "epochs": 30,
+    "lr": 0.001,
+    "hidden": [
+      512,
+      256
+    ]
+  },
+  "metric": "roc_auc",
+  "train_score": 0.9996714118067248,
+  "val_score": 0.9967930159012962,
+  "composite": 0.9966490961060248,
+  "train_metrics": {
+    "accuracy": 0.9935714285714285,
+    "f1": 0.9935483870967742,
+    "precision": 0.99,
+    "recall": 0.9971223021582734,
+    "mcc": 0.9871680403222467,
+    "roc_auc": 0.9996714118067248,
+    "confusion": [
+      [
+        698,
+        7
+      ],
+      [
+        2,
+        693
+      ]
+    ]
+  },
+  "val_metrics": {
+    "accuracy": 0.97,
+    "f1": 0.968421052631579,
+    "precision": 0.971830985915493,
+    "recall": 0.965034965034965,
+    "mcc": 0.9398712846836152,
+    "roc_auc": 0.9967930159012962,
+    "confusion": [
+      [
+        153,
+        4
+      ],
+      [
+        5,
+        138
+      ]
+    ]
+  },
+  "elapsed_sec": 2.619568347930908,
+  "timestamp": "2026-05-15 07:54:15",
+  "task_slug": "porto-seguro-safe-driver-prediction",
+  "uses_test_set": false
+}

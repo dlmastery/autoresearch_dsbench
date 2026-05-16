@@ -1,0 +1,17 @@
+{
+  "name": "porto-seguro-safe-driver-prediction",
+  "slug": "porto-seguro-safe-driver-prediction",
+  "kind": "modeling",
+  "problem_type": "classification_binary",
+  "task_type": "tabular",
+  "metric": "roc_auc",
+  "iterations_per_backbone": 25,
+  "backbones": [
+    "xgboost",
+    "lightgbm",
+    "catboost",
+    "mlp",
+    "ft_transformer"
+  ],
+  "dsbench_baseline": 0.5
+}

@@ -1,0 +1,17 @@
+{
+  "task_slug": "2017-round-1-when-it-rains-it-pours",
+  "n_train": 7,
+  "n_val": 2,
+  "n_test": 2,
+  "n_features": 47,
+  "hashes": {
+    "X_train": "238d576c9fc9bb93",
+    "y_train": "fd984746c0db0423",
+    "X_val": "af6f854d9dde04bb",
+    "y_val": "3057c596409e39de",
+    "X_test": "01ecf24efc79935a",
+    "y_test": "399b45a7ee9da540"
+  },
+  "generated_at": "2026-05-15 23:53:25",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

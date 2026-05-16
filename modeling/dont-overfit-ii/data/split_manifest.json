@@ -1,0 +1,17 @@
+{
+  "task_slug": "dont-overfit-ii",
+  "n_train": 1400,
+  "n_val": 300,
+  "n_test": 300,
+  "n_features": 32,
+  "hashes": {
+    "X_train": "26333a676c0f85af",
+    "y_train": "7e69b920e1e319eb",
+    "X_val": "05e74adce3bdf45d",
+    "y_val": "f14e44af10ffb102",
+    "X_test": "424078e90cededb8",
+    "y_test": "b11980c9a10e537a"
+  },
+  "generated_at": "2026-05-15 04:20:15",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

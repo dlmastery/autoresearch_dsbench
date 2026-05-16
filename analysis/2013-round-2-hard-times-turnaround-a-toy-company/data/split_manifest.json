@@ -1,0 +1,17 @@
+{
+  "task_slug": "2013-round-2-hard-times-turnaround-a-toy-company",
+  "n_train": 6,
+  "n_val": 2,
+  "n_test": 1,
+  "n_features": 47,
+  "hashes": {
+    "X_train": "4e9032f6c6d59ebb",
+    "y_train": "c35eaccc2ff3257b",
+    "X_val": "580c9b3d8f4097af",
+    "y_val": "fb71a8690a3dc37e",
+    "X_test": "76d256bd7f680c84",
+    "y_test": "437ca1909baab1ea"
+  },
+  "generated_at": "2026-05-15 23:43:38",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

@@ -1,0 +1,2 @@
+Snapshot of framework/runner.py for excel_agent on 2015-round-2-the-price-is-right.
+Hash of framework/runner.py at start: see registry/runtime_hashes.json

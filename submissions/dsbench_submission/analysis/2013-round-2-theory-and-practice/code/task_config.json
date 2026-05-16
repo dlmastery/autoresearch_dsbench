@@ -1,0 +1,13 @@
+{
+  "name": "2013-round-2-theory-and-practice",
+  "slug": "2013-round-2-theory-and-practice",
+  "kind": "analysis",
+  "problem_type": "qa_excel",
+  "task_type": "financial_modeling_excel",
+  "metric": "exact_match_accuracy",
+  "iterations_per_backbone": 25,
+  "backbones": [
+    "excel_agent"
+  ],
+  "dsbench_baseline": 0.3412
+}

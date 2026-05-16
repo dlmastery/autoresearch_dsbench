@@ -1,0 +1,17 @@
+{
+  "task_slug": "google-quest-challenge",
+  "n_train": 1400,
+  "n_val": 300,
+  "n_test": 300,
+  "n_features": 32,
+  "hashes": {
+    "X_train": "116d3d36bfdcfcb6",
+    "y_train": "be161a3025ad83c1",
+    "X_val": "9b7e02aa479d054b",
+    "y_val": "b79eb849e437f229",
+    "X_test": "6a11c6cb3a4a70d1",
+    "y_test": "5199a8456a8e269c"
+  },
+  "generated_at": "2026-05-15 04:31:24",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

@@ -1,0 +1,74 @@
+{
+  "experiment_num": 1,
+  "backbone": "excel_agent",
+  "description": "excel_agent iter 1/25: Baseline: predict the per-task training mode for every Modeloff question. This i",
+  "params": {
+    "classifier": "prior_only",
+    "seed": 42
+  },
+  "metric": "exact_match_accuracy",
+  "train_score": 0.5,
+  "val_score": 0.375,
+  "composite": 0.375,
+  "train_metrics": {
+    "accuracy": 0.5,
+    "f1": 0.16666666666666666,
+    "precision": 0.125,
+    "recall": 0.25,
+    "mcc": 0.0,
+    "confusion": [
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        3,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ]
+    ]
+  },
+  "val_metrics": {
+    "accuracy": 0.0,
+    "f1": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "mcc": 0.0,
+    "confusion": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ]
+  },
+  "elapsed_sec": 0.0029997825622558594,
+  "timestamp": "2026-05-15 23:53:04",
+  "task_slug": "2017-round-1-go-with-the-flow",
+  "uses_test_set": false
+}

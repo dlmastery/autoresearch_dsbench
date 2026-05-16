@@ -1,0 +1,17 @@
+{
+  "task_slug": "2013-round-2-data-analysis",
+  "n_train": 10,
+  "n_val": 3,
+  "n_test": 3,
+  "n_features": 47,
+  "hashes": {
+    "X_train": "3a5d6307b053493e",
+    "y_train": "8f36f81913565b18",
+    "X_val": "1d4ce5fa60d27778",
+    "y_val": "2b1aa1306fdf89e0",
+    "X_test": "b34f89df970c9fad",
+    "y_test": "ec5b6aa863818f79"
+  },
+  "generated_at": "2026-05-15 23:43:23",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

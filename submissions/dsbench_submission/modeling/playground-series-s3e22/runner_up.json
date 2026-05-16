@@ -1,0 +1,55 @@
+{
+  "experiment_num": 82,
+  "backbone": "mlp",
+  "description": "mlp iter 7/25: Seed variance run #2.",
+  "params": {
+    "iterations": 400,
+    "epochs": 30,
+    "lr": 0.001,
+    "seed": 0
+  },
+  "metric": "roc_auc",
+  "train_score": 0.9998814562890505,
+  "val_score": 0.994621266002845,
+  "composite": 0.9943582564885347,
+  "train_metrics": {
+    "accuracy": 0.9935714285714285,
+    "f1": 0.993805918788713,
+    "precision": 0.9944903581267218,
+    "recall": 0.9931224209078404,
+    "mcc": 0.9871254210544128,
+    "roc_auc": 0.9998814562890505,
+    "confusion": [
+      [
+        669,
+        4
+      ],
+      [
+        5,
+        722
+      ]
+    ]
+  },
+  "val_metrics": {
+    "accuracy": 0.95,
+    "f1": 0.9498327759197325,
+    "precision": 0.9403973509933775,
+    "recall": 0.9594594594594594,
+    "mcc": 0.9001889118797399,
+    "roc_auc": 0.994621266002845,
+    "confusion": [
+      [
+        143,
+        9
+      ],
+      [
+        6,
+        142
+      ]
+    ]
+  },
+  "elapsed_sec": 0.9380707740783691,
+  "timestamp": "2026-05-15 06:24:10",
+  "task_slug": "playground-series-s3e22",
+  "uses_test_set": false
+}

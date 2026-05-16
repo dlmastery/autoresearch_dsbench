@@ -1,0 +1,8 @@
+Reproduction protocol for 2013-round-1-theory-and-practice champion:
+
+  python -m framework.runner --repo C:\Users\evija\dsbench\analysis\2013-round-1-theory-and-practice \
+    --backbone excel_agent \
+    --params '{"classifier": "dummy_majority", "seed": 42}' \
+    --description 'reproduction' --experiment-num 11
+
+Expected composite ≈ 0.3750 (within 0.005 due to RNG floor variance).

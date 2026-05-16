@@ -1,0 +1,2 @@
+Snapshot of framework/runner.py for ft_transformer on playground-series-s3e23.
+Hash of framework/runner.py at start: see registry/runtime_hashes.json

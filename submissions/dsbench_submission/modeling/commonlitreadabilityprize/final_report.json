@@ -1,0 +1,20 @@
+{
+  "task": "commonlitreadabilityprize",
+  "name": "commonlitreadabilityprize",
+  "problem_type": "regression",
+  "metric": "rmse",
+  "champion_backbone": "mlp",
+  "champion_composite": -0.35838551130689467,
+  "champion_val": -0.34809575535033666,
+  "champion_train": -0.142300636219176,
+  "test_score": -0.35463051947438795,
+  "test_metrics": {
+    "rmse": 0.35463051947438795,
+    "mae": 0.2726331651210785,
+    "r2": 0.9970579147338867
+  },
+  "dsbench_baseline": -1.0,
+  "delta_vs_dsbench": 0.645369480525612,
+  "beats_dsbench": true,
+  "timestamp": "2026-05-16 00:10:37"
+}

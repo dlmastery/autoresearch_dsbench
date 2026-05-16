@@ -1,0 +1,2 @@
+Snapshot of framework/runner.py for excel_agent on 2013-round-2-hard-times-turnaround-a-toy-company.
+Hash of framework/runner.py at start: see registry/runtime_hashes.json

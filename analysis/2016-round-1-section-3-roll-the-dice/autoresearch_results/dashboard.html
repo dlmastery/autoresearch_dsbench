@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AutoResearch · 2016-round-1-section-3-roll-the-dice</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0d1117; color: #c9d1d9; padding: 18px 22px; }
+h1 { color: #58a6ff; margin-bottom: 4px; font-size: 1.5em; }
+.subtitle { color: #8b949e; margin-bottom: 14px; font-size: 0.85em; }
+.subtitle a { color: #58a6ff; text-decoration: none; }
+.subtitle a:hover { text-decoration: underline; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; margin-bottom: 18px; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 12px 14px; }
+.card .label { color: #8b949e; font-size: 0.72em; text-transform: uppercase; letter-spacing: 0.5px; }
+.card .value { font-size: 1.6em; font-weight: 700; margin-top: 3px; }
+.positive { color: #3fb950; }
+.negative { color: #f85149; }
+.neutral { color: #58a6ff; }
+.warn { color: #d29922; }
+table { width: 100%; border-collapse: collapse; margin-bottom: 12px; font-size: 0.84em; }
+th { background: #161b22; color: #8b949e; text-align: left; padding: 7px 9px; border-bottom: 2px solid #30363d; font-weight: 600; text-transform: uppercase; font-size: 0.72em; letter-spacing: 0.5px; }
+#exp-table thead th { position: sticky; top: 0; z-index: 10; background: #161b22; cursor: pointer; user-select: none; }
+#exp-table thead th:hover { color: #c9d1d9; }
+#exp-table thead th.sorted { color: #58a6ff; }
+#exp-table thead th.sorted::after { content: attr(data-dir); margin-left: 4px; font-size: 0.7em; }
+td { padding: 6px 9px; border-bottom: 1px solid #21262d; }
+tr:hover { background: #1c2128; cursor: pointer; }
+tr.keep { border-left: 3px solid #3fb950; }
+tr.discard { border-left: 3px solid #f85149; }
+tr.crash { border-left: 3px solid #d29922; }
+tr.selected { background: #1a2332 !important; border-left: 3px solid #58a6ff !important; }
+tr.best-row { background: #0d2818 !important; border-left: 4px solid #00d26a !important; }
+tr.best-row td { font-weight: 600; }
+.winner-box { background: #0d2818; border: 2px solid #3fb950; border-radius: 8px; padding: 14px 16px; margin-bottom: 16px; }
+.winner-box .label { color: #3fb950; font-size: 0.72em; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
+.winner-box .main { font-size: 1.05em; color: #c9d1d9; margin-bottom: 6px; }
+.winner-box .metrics { font-family: ui-monospace, monospace; font-size: 0.82em; color: #8b949e; white-space: pre; }
+.section-title { color: #58a6ff; font-size: 1.05em; margin: 16px 0 8px 0; font-weight: 600; }
+.status-bar { display: flex; gap: 8px; margin-bottom: 12px; align-items: center; font-size: 0.85em; color: #8b949e; }
+.status-dot { width: 9px; height: 9px; border-radius: 50%; }
+.status-dot.running { background: #3fb950; animation: pulse 1.5s infinite; }
+.status-dot.idle { background: #484f58; }
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+.config-box { background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 11px 13px; font-family: ui-monospace, monospace; font-size: 0.8em; white-space: pre; margin-bottom: 14px; overflow-x: auto; }
+.tab-bar { display: flex; gap: 4px; margin-bottom: 8px; flex-wrap: wrap; }
+.tab-bar .tab { padding: 5px 12px; background: #161b22; border: 1px solid #30363d; border-radius: 5px; cursor: pointer; font-size: 0.82em; color: #8b949e; user-select: none; }
+.tab-bar .tab.active { background: #1f6feb; color: #ffffff; border-color: #1f6feb; }
+.tab-bar .tab:hover:not(.active) { color: #c9d1d9; border-color: #58a6ff; }
+.detail-panel { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 14px 16px; margin-bottom: 16px; display: none; }
+.detail-panel.visible { display: block; }
+.detail-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.detail-header h3 { color: #58a6ff; font-size: 1em; }
+.close-btn { background: #21262d; border: 1px solid #30363d; color: #8b949e; padding: 3px 9px; border-radius: 4px; cursor: pointer; font-size: 0.78em; }
+.close-btn:hover { background: #30363d; color: #c9d1d9; }
+.reason-block { background: #0d1117; border: 1px solid #21262d; border-radius: 6px; padding: 10px 12px; margin: 10px 0; font-size: 0.86em; line-height: 1.55; }
+.reason-block b { color: #58a6ff; }
+.reason-block > div + div { margin-top: 6px; }
+.kpi-mini { display: inline-block; background: #161b22; border: 1px solid #30363d; padding: 3px 9px; border-radius: 12px; font-size: 0.78em; margin-right: 5px; color: #8b949e; }
+.kpi-mini b { color: #3fb950; }
+input.search { background: #0d1117; color: #c9d1d9; border: 1px solid #30363d; padding: 5px 9px; border-radius: 4px; font-size: 0.82em; width: 240px; }
+.controls { display: flex; gap: 10px; align-items: center; margin-bottom: 8px; }
+.toolbar-link { color: #58a6ff; text-decoration: none; font-size: 0.85em; padding: 4px 10px; background: #161b22; border: 1px solid #30363d; border-radius: 5px; }
+.toolbar-link:hover { border-color: #58a6ff; }
+.mini-bar { display: inline-block; height: 12px; border-radius: 2px; vertical-align: middle; margin-left: 4px; background: linear-gradient(90deg, #3fb950, transparent); }
+pre.params { background: #0d1117; border: 1px solid #21262d; border-radius: 4px; padding: 8px 10px; font-size: 0.78em; color: #c9d1d9; overflow-x: auto; }
+.histo { display: flex; gap: 2px; align-items: flex-end; height: 60px; margin: 8px 0; padding: 4px 0; }
+.histo .bin { background: #3fb950; width: 6px; border-radius: 1px 1px 0 0; min-height: 1px; opacity: .85; }
+.histo .bin.bad { background: #f85149; }
+details.about-task { background: #0e1419; border: 1px solid #30363d; border-radius: 8px; padding: 4px 14px 4px 14px; margin: 4px 0 14px 0; }
+details.about-task[open] { padding-bottom: 14px; }
+details.about-task > summary { color: #58a6ff; font-size: 1.05em; font-weight: 600; padding: 8px 0; margin: 0; }
+details.about-task > summary::-webkit-details-marker { display: none; }
+details.about-task[open] > summary > span { color: #58a6ff; }
+.about-body { padding-left: 12px; border-left: 2px solid #1f6feb; margin-top: 6px; }
+.about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px 22px; }
+.about-block { background: #161b22; border: 1px solid #21262d; border-radius: 6px; padding: 10px 12px; }
+.about-label { color: #8b949e; font-size: 0.72em; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+.about-value { color: #c9d1d9; font-size: 0.88em; line-height: 1.5; }
+.about-value a { color: #58a6ff; text-decoration: none; }
+.about-value a:hover { text-decoration: underline; }
+.about-table { width: 100%; font-size: 0.82em; margin: 0; border-collapse: collapse; }
+.about-table td { padding: 3px 6px; border-bottom: 1px solid #21262d; }
+.about-table td:first-child { color: #8b949e; width: 40%; }
+.about-table td:last-child { color: #c9d1d9; }
+.bb-pill { display: inline-block; background: #1f6feb22; border: 1px solid #1f6feb55; padding: 2px 8px; border-radius: 12px; font-size: 0.78em; margin: 2px 4px 2px 0; color: #79c0ff; }
+</style>
+</head>
+<body>
+
+<h1>AutoResearch · 2016-round-1-section-3-roll-the-dice</h1>
+<div class="subtitle">
+  financial_modeling_excel · qa_excel · 25 iters per backbone
+  &nbsp;|&nbsp; <a href="../../dashboard/index.html">← cross-task leaderboard</a>
+  &nbsp;|&nbsp; <a href="../../../dashboard/md_viewer.html?file=../analysis/2016-round-1-section-3-roll-the-dice/autoresearch_results/experiment_summary.md&title=2016-round-1-section-3-roll-the-dice+experiment_summary.md" target="_blank">summary</a>
+  &nbsp;|&nbsp; <a href="../../../dashboard/md_viewer.html?file=../analysis/2016-round-1-section-3-roll-the-dice/autoresearch_results/research_journal.md&title=2016-round-1-section-3-roll-the-dice+research_journal.md" target="_blank">journal</a>
+  &nbsp;|&nbsp; <a href="../../../dashboard/md_viewer.html?file=../analysis/2016-round-1-section-3-roll-the-dice/paper.md&title=2016-round-1-section-3-roll-the-dice+paper.md" target="_blank">paper</a>
+  &nbsp;|&nbsp; <a href="../../../dashboard/md_viewer.html?file=../analysis/2016-round-1-section-3-roll-the-dice/CLAUDE.md&title=2016-round-1-section-3-roll-the-dice+CLAUDE.md" target="_blank">CLAUDE.md</a>
+  &nbsp;|&nbsp; <a href="../../../dashboard/md_viewer.html?file=../analysis/2016-round-1-section-3-roll-the-dice/forensic_audit.md&title=2016-round-1-section-3-roll-the-dice+forensic_audit.md" target="_blank">forensic audit</a>
+  &nbsp;|&nbsp; <a href="../../../dashboard/md_viewer.html?file=../analysis/2016-round-1-section-3-roll-the-dice/memory/project_autoresearch_checkpoint.md&title=2016-round-1-section-3-roll-the-dice+checkpoint" target="_blank">checkpoint</a>
+</div>
+
+<!-- ABOUT THIS TASK DROPDOWN -->
+<details class="about-task" id="about-task">
+  <summary class="section-title" style="cursor:pointer;list-style:none">About this task <span style="font-size:0.8em;color:#8b949e">▾</span></summary>
+  <div class="about-body">
+    <div class="about-grid">
+      <div class="about-block">
+        <div class="about-label">Source</div>
+        <div class="about-value">
+          <a href="https://arxiv.org/abs/2409.07703" target="_blank" rel="noopener">DSBench paper (Jing et al., 2024 · arXiv:2409.07703)</a>
+          <br/>
+          <a href="https://www.eloquens.com/tool/J1GcKr/finance/modeloff-sample-past-questions/2016-round-1-section-3-roll-the-dice" target="_blank" rel="noopener">Eloquens / Modeloff challenge · https://www.eloquens.com/tool/J1GcKr/finance/modeloff-sample-past-questions/2016-round-1-section-3-roll-the-dice</a>
+        </div>
+      </div>
+      <div class="about-block">
+        <div class="about-label">Metadata</div>
+        <table class="about-table"><tr><td>name</td><td>2016-round-1-section-3-roll-the-dice</td></tr><tr><td>slug</td><td>2016-round-1-section-3-roll-the-dice</td></tr><tr><td>challenge_id</td><td>00000005</td></tr><tr><td>year</td><td>2016</td></tr><tr><td>n_questions</td><td>10</td></tr><tr><td>n_answers</td><td>10</td></tr><tr><td>problem_type</td><td>qa_excel</td></tr><tr><td>metric</td><td>exact_match_accuracy</td></tr><tr><td>iterations / backbone</td><td>25</td></tr></table>
+      </div>
+      <div class="about-block">
+        <div class="about-label">Backbones explored</div>
+        <div class="about-value"><span class="bb-pill">excel_agent</span></div>
+      </div>
+      <div class="about-block">
+        <div class="about-label">What this task tests</div>
+        <div class="about-value">Modeloff financial-modelling QA. Multiple-choice (A-I) and numeric answers over Excel files. Per autoresearch-style hill climb we use a learned answer-prior classifier (LogReg / KNN / NaiveBayes / global prior) — see `_DIAGNOSIS.md` for the ceiling analysis.</div>
+      </div>
+      <div class="about-block">
+        <div class="about-label">DSBench baseline</div>
+        <div class="about-value"><b>0.3412</b> &nbsp;<span style="color:#8b949e">(exact_match_accuracy)</span><br/><span style="color:#8b949e;font-size:0.88em">DSBench paper best agent = 34.12% data-analysis success / 34.74% RPG on modeling.</span></div>
+      </div>
+      <div class="about-block">
+        <div class="about-label">Protocol</div>
+        <div class="about-value">
+          <a href="../../../dashboard/md_viewer.html?file=../analysis/2016-round-1-section-3-roll-the-dice/CLAUDE.md&title=2016-round-1-section-3-roll-the-dice+CLAUDE.md" target="_blank">CLAUDE.md (this task)</a>
+          &nbsp;·&nbsp;
+          <a href="../../../dashboard/md_viewer.html?file=../skills/autoresearch-pack/README.md&title=autoresearch+protocol+skill+pack" target="_blank">autoresearch protocol skill pack</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+
+<div class="status-bar">
+  <div class="status-dot idle" id="status-dot"></div>
+  <span id="status-text">loading…</span>
+</div>
+
+<div class="grid" id="summary-cards"></div>
+
+<div class="section-title">Best Config</div>
+<div class="config-box" id="best-config">loading…</div>
+
+<div id="winner-section" style="display:none">
+  <div class="section-title">Winner</div>
+  <div class="winner-box">
+    <div class="label">CHAMPION COMPOSITE</div>
+    <div class="main" id="winner-title"></div>
+    <div class="metrics" id="winner-metrics"></div>
+  </div>
+</div>
+
+<div class="section-title">Composite trajectory (running best across experiments)</div>
+<div class="histo" id="trajectory"></div>
+
+<div class="section-title">Experiment Log <span style="color:#484f58;font-size:0.7em;font-weight:400">(click row for full reasoning; click header to sort)</span></div>
+<div class="tab-bar" id="backbone-tabs"></div>
+<div class="controls">
+  <input class="search" id="search" placeholder="filter description / backbone / phase…" />
+  <a class="toolbar-link" href="experiment_log.jsonl" target="_blank">raw JSONL</a>
+  <a class="toolbar-link" href="reasoning_annotations.json" target="_blank">reasoning JSON</a>
+  <a class="toolbar-link" href="best_config.json" target="_blank">best_config.json</a>
+  <span class="kpi-mini">showing <b id="exp-visible-count">0</b> / <span id="exp-total-count">0</span></span>
+</div>
+
+<div id="detail-panel" class="detail-panel">
+  <div class="detail-header">
+    <h3 id="detail-title">Experiment #?</h3>
+    <button class="close-btn" id="detail-close">close ✕</button>
+  </div>
+  <div id="detail-body"></div>
+</div>
+
+<div id="exp-table-scroll" style="max-height:78vh;overflow-y:auto;border:1px solid #30363d;border-radius:6px;position:relative">
+<table id="exp-table">
+  <thead>
+    <tr>
+      <th data-sort="experiment_num">#</th>
+      <th data-sort="status">status</th>
+      <th data-sort="backbone">backbone</th>
+      <th data-sort="phase">phase</th>
+      <th data-sort="composite">composite</th>
+      <th data-sort="delta">Δ</th>
+      <th data-sort="val_score">val</th>
+      <th data-sort="train_score">train</th>
+      <th data-sort="elapsed_sec">sec</th>
+      <th data-sort="description">description</th>
+    </tr>
+  </thead>
+  <tbody id="exp-body"></tbody>
+</table>
+</div>
+
+<script>
+const state = { entries: [], annot: {}, sortKey: 'experiment_num', sortDir: 1, search: '', backbone: 'ALL', selected: null, finalReport: null };
+
+async function load() {
+  try {
+    document.getElementById('status-dot').className = 'status-dot running';
+    document.getElementById('status-text').textContent = 'fetching log…';
+    const [logTxt, ann, best, finalReport] = await Promise.all([
+      fetch('experiment_log.jsonl', { cache: 'no-cache' }).then(r => r.ok ? r.text() : ''),
+      fetch('reasoning_annotations.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : {}),
+      fetch('best_config.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : null),
+      // Final report lives either at autoresearch_results/final_report.json or one level up at task root.
+      Promise.any([
+        fetch('final_report.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : Promise.reject('no local')),
+        fetch('../final_report.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : Promise.reject('no parent')),
+      ]).catch(() => null),
+    ]);
+    state.finalReport = finalReport;
+    state.entries = logTxt.trim().split('\n').filter(l => l).map(l => { try { return JSON.parse(l); } catch { return null; } }).filter(Boolean);
+    state.entries.sort((a, b) => (a.experiment_num || 0) - (b.experiment_num || 0));
+    state.annot = ann || {};
+    // attach phase + status + delta
+    let runningBest = -Infinity;
+    for (const e of state.entries) {
+      const a = state.annot[String(e.experiment_num)] || {};
+      e.phase = a.phase || 'base';
+      e.status = e.error ? 'crash' : ((a.verdict || '').startsWith('KEEP') ? 'KEEP' : (a.verdict || '').startsWith('DISCARD') ? 'DISCARD' : '');
+      if (typeof e.composite === 'number' && isFinite(e.composite)) {
+        e.delta = e.composite - runningBest;
+        if (e.status === 'KEEP' || e.composite > runningBest) runningBest = Math.max(runningBest, e.composite);
+      } else {
+        e.delta = null;
+      }
+    }
+    renderSummary(best);
+    renderWinner(best);
+    renderTrajectory();
+    renderBackboneTabs();
+    renderTable();
+    document.getElementById('status-dot').className = 'status-dot idle';
+    document.getElementById('status-text').textContent = `${state.entries.length} experiments · last update ${new Date().toLocaleTimeString()}`;
+  } catch (e) {
+    document.getElementById('status-text').textContent = 'error: ' + e;
+    console.error(e);
+  }
+}
+
+function renderSummary(best) {
+  const xs = state.entries.filter(e => typeof e.composite === 'number' && isFinite(e.composite));
+  const bestComp = best ? best.composite : (xs.length ? Math.max(...xs.map(e => e.composite)) : 0);
+  const bestBb = best ? best.backbone : '';
+  const nKeep = state.entries.filter(e => e.status === 'KEEP').length;
+  const nDiscard = state.entries.filter(e => e.status === 'DISCARD').length;
+  const nCrash = state.entries.filter(e => e.status === 'crash').length;
+  const bbSet = new Set(state.entries.map(e => e.backbone));
+  const fr = state.finalReport;
+  const testScoreHTML = fr && typeof fr.test_score === 'number'
+    ? `<div class="card" style="border-color:#3fb950;background:#0d2818"><div class="label">TEST SCORE (final)</div><div class="value positive">${fr.test_score.toFixed(4)}</div></div>`
+    : `<div class="card"><div class="label">TEST SCORE</div><div class="value warn" style="font-size:1.4em">?</div></div>`;
+  document.getElementById('summary-cards').innerHTML = `
+    <div class="card"><div class="label">experiments</div><div class="value neutral">${state.entries.length}</div></div>
+    <div class="card"><div class="label">backbones</div><div class="value neutral">${bbSet.size}</div></div>
+    <div class="card"><div class="label">keeps</div><div class="value positive">${nKeep}</div></div>
+    <div class="card"><div class="label">discards</div><div class="value negative">${nDiscard}</div></div>
+    <div class="card"><div class="label">crashes</div><div class="value warn">${nCrash}</div></div>
+    <div class="card"><div class="label">best composite</div><div class="value positive">${bestComp.toFixed(4)}</div></div>
+    <div class="card"><div class="label">best backbone</div><div class="value neutral" style="font-size:1em;padding-top:8px">${bestBb || '?'}</div></div>
+    <div class="card"><div class="label">best val</div><div class="value positive">${best ? best.val_score.toFixed(4) : '—'}</div></div>
+    <div class="card"><div class="label">best train</div><div class="value positive">${best ? best.train_score.toFixed(4) : '—'}</div></div>
+    ${testScoreHTML}
+  `;
+}
+
+function renderWinner(best) {
+  if (!best) { document.getElementById('winner-section').style.display = 'none'; return; }
+  document.getElementById('winner-section').style.display = 'block';
+  document.getElementById('winner-title').textContent = `Exp ${best.experiment_num} · ${best.backbone} · ${best.description || ''}`;
+  const m = best.val_metrics || {};
+  const mt = best.train_metrics || {};
+  document.getElementById('winner-metrics').textContent =
+    `composite : ${best.composite.toFixed(4)}\n` +
+    `val score : ${best.val_score.toFixed(4)}    train score : ${best.train_score.toFixed(4)}\n` +
+    `val accuracy : ${(m.accuracy ?? 0).toFixed(4)}    val f1 : ${(m.f1 ?? 0).toFixed(4)}    val auc : ${(m.roc_auc ?? 0).toFixed(4)}    val mcc : ${(m.mcc ?? 0).toFixed(4)}\n` +
+    `train accuracy : ${(mt.accuracy ?? 0).toFixed(4)}    train f1 : ${(mt.f1 ?? 0).toFixed(4)}\n` +
+    `elapsed : ${(best.elapsed_sec ?? 0).toFixed(2)}s    timestamp : ${best.timestamp || ''}`;
+  document.getElementById('best-config').textContent =
+    `backbone : ${best.backbone}\nparams   : ${JSON.stringify(best.params, null, 2)}`;
+}
+
+function renderTrajectory() {
+  const xs = state.entries.filter(e => typeof e.composite === 'number' && isFinite(e.composite));
+  if (!xs.length) { document.getElementById('trajectory').innerHTML = ''; return; }
+  let best = -Infinity;
+  const ys = xs.map(e => { if (e.composite > best) best = e.composite; return best; });
+  const maxY = Math.max(...ys), minY = Math.min(...ys);
+  const range = Math.max(1e-9, maxY - minY);
+  document.getElementById('trajectory').innerHTML = ys.map((y, i) => {
+    const h = 5 + 95 * (y - minY) / range;
+    return `<div class="bin" style="height:${h}%" title="Exp ${xs[i].experiment_num}: ${y.toFixed(4)}"></div>`;
+  }).join('');
+}
+
+function renderBackboneTabs() {
+  const bbs = ['ALL', ...Array.from(new Set(state.entries.map(e => e.backbone || '?'))).sort()];
+  const bar = document.getElementById('backbone-tabs');
+  bar.innerHTML = bbs.map(b => {
+    const n = b === 'ALL' ? state.entries.length : state.entries.filter(e => e.backbone === b).length;
+    const best = b === 'ALL' ? null : state.entries.filter(e => e.backbone === b && typeof e.composite === 'number' && isFinite(e.composite));
+    const bbBest = best && best.length ? Math.max(...best.map(e => e.composite)) : null;
+    const label = bbBest != null ? `${b} <span style="opacity:.65">${n} · ${bbBest.toFixed(3)}</span>` : `${b} <span style="opacity:.65">${n}</span>`;
+    return `<div class="tab ${b === state.backbone ? 'active' : ''}" data-bb="${b}">${label}</div>`;
+  }).join('');
+  bar.querySelectorAll('.tab').forEach(t => t.addEventListener('click', () => {
+    state.backbone = t.dataset.bb;
+    renderBackboneTabs();
+    renderTable();
+  }));
+}
+
+function filtered() {
+  let xs = state.entries.slice();
+  if (state.backbone && state.backbone !== 'ALL') xs = xs.filter(e => e.backbone === state.backbone);
+  if (state.search) {
+    const s = state.search.toLowerCase();
+    xs = xs.filter(e => (e.backbone || '').toLowerCase().includes(s) ||
+                        (e.description || '').toLowerCase().includes(s) ||
+                        (e.phase || '').toLowerCase().includes(s) ||
+                        String(e.experiment_num).includes(s));
+  }
+  xs.sort((a, b) => {
+    const ka = a[state.sortKey], kb = b[state.sortKey];
+    if (ka == null && kb == null) return 0;
+    if (ka == null) return 1; if (kb == null) return -1;
+    if (typeof ka === 'string') return ka.localeCompare(kb) * state.sortDir;
+    return (ka > kb ? 1 : ka < kb ? -1 : 0) * state.sortDir;
+  });
+  return xs;
+}
+
+function renderTable() {
+  const xs = filtered();
+  document.getElementById('exp-total-count').textContent = state.entries.length;
+  document.getElementById('exp-visible-count').textContent = xs.length;
+  const bestComp = Math.max(...state.entries.filter(e => typeof e.composite === 'number' && isFinite(e.composite)).map(e => e.composite), -Infinity);
+  const tbody = document.getElementById('exp-body');
+  if (!xs.length) { tbody.innerHTML = '<tr><td colspan="10" style="color:#8b949e;text-align:center;padding:24px">no experiments match filter</td></tr>'; return; }
+  tbody.innerHTML = xs.map(e => {
+    const cls = [
+      e.status === 'KEEP' ? 'keep' : e.status === 'DISCARD' ? 'discard' : e.status === 'crash' ? 'crash' : '',
+      (e.composite === bestComp && bestComp > -Infinity) ? 'best-row' : '',
+      e.experiment_num === state.selected ? 'selected' : '',
+    ].filter(Boolean).join(' ');
+    const statusBadge = e.status === 'KEEP' ? '<span style="color:#3fb950">KEEP</span>' :
+                        e.status === 'DISCARD' ? '<span style="color:#f85149">DISCARD</span>' :
+                        e.status === 'crash' ? '<span style="color:#d29922">CRASH</span>' :
+                        '<span style="color:#8b949e">—</span>';
+    const phaseStyle = e.phase === 'extended-200' ? 'background:rgba(245,158,11,0.2);color:#d29922' : 'background:rgba(88,166,255,0.15);color:#58a6ff';
+    return `<tr class="${cls}" data-exp="${e.experiment_num}">
+      <td>${e.experiment_num ?? '?'}</td>
+      <td>${statusBadge}</td>
+      <td>${e.backbone ?? '?'}</td>
+      <td><span style="padding:1px 6px;border-radius:3px;font-size:0.8em;${phaseStyle}">${e.phase || 'base'}</span></td>
+      <td>${(e.composite ?? 0).toFixed(4)}</td>
+      <td style="color:${(e.delta ?? 0) >= 0 ? '#3fb950' : '#f85149'}">${e.delta != null ? ((e.delta >= 0 ? '+' : '') + e.delta.toFixed(4)) : ''}</td>
+      <td>${(e.val_score ?? 0).toFixed(4)}</td>
+      <td>${(e.train_score ?? 0).toFixed(4)}</td>
+      <td style="color:#8b949e">${(e.elapsed_sec ?? 0).toFixed(2)}</td>
+      <td style="color:#8b949e">${(e.description || '').slice(0, 80)}</td>
+    </tr>`;
+  }).join('');
+  tbody.querySelectorAll('tr').forEach(tr => tr.addEventListener('click', () => {
+    showDetail(parseInt(tr.dataset.exp));
+  }));
+  // sort header indicators
+  document.querySelectorAll('#exp-table thead th').forEach(th => { th.classList.remove('sorted'); th.removeAttribute('data-dir'); });
+  const active = document.querySelector(`#exp-table thead th[data-sort="${state.sortKey}"]`);
+  if (active) { active.classList.add('sorted'); active.setAttribute('data-dir', state.sortDir > 0 ? '▲' : '▼'); }
+}
+
+function showDetail(expNum) {
+  state.selected = expNum;
+  const e = state.entries.find(x => x.experiment_num === expNum);
+  if (!e) return;
+  const a = state.annot[String(expNum)] || {};
+  document.getElementById('detail-title').textContent =
+    `Experiment #${expNum} · ${e.backbone || '?'} · ${e.phase || 'base'} · ${e.status || ''}`;
+  const m = e.val_metrics || {};
+  const mt = e.train_metrics || {};
+  const fr = state.finalReport;
+  const tm = (fr && fr.test_metrics) ? fr.test_metrics : {};
+
+  // === train / val / test side-by-side metric chips ===
+  // Detect which family of metrics this task uses.
+  const isClass = Object.keys(m).length && (m.accuracy != null || m.f1 != null || m.roc_auc != null);
+  const isReg   = m.rmse != null || m.mae != null;
+
+  // Figure out if THIS experiment is the champion (only the champion gets a test score).
+  const isChampion = fr && (
+    (fr.champion_experiment_num != null && fr.champion_experiment_num === expNum) ||
+    (fr.champion_composite != null && typeof e.composite === 'number' && Math.abs(fr.champion_composite - e.composite) < 1e-6
+       && fr.champion_backbone === e.backbone)
+  );
+
+  // Render a column of train/val/(test) chips for a given metric key.
+  const tripleChip = (label, valV, valT, valTest, decimals = 4) => {
+    const fmt = x => (typeof x === 'number' && isFinite(x)) ? x.toFixed(decimals) : '—';
+    const testCell = (isChampion && fr && valTest != null)
+      ? `<div class="kpi-mini" style="border-color:#3fb950">test ${label} <b>${fmt(valTest)}</b></div>`
+      : '';
+    return `<div class="kpi-mini">val ${label} <b>${fmt(valV)}</b></div>
+            <div class="kpi-mini">train ${label} <b>${fmt(valT)}</b></div>
+            ${testCell}`;
+  };
+
+  let metricsLine = '';
+  if (isClass) {
+    metricsLine =
+      tripleChip('acc', m.accuracy, mt.accuracy, tm.accuracy) +
+      tripleChip('f1',  m.f1,       mt.f1,       tm.f1) +
+      tripleChip('auc', m.roc_auc,  mt.roc_auc,  tm.roc_auc) +
+      tripleChip('mcc', m.mcc,      mt.mcc,      tm.mcc);
+  } else if (isReg) {
+    metricsLine =
+      tripleChip('rmse', m.rmse, mt.rmse, tm.rmse) +
+      tripleChip('mae',  m.mae,  mt.mae,  tm.mae) +
+      tripleChip('r²',   m.r2,   mt.r2,   tm.r2);
+  }
+
+  // === test-summary row (final_report.json) ===
+  let testSummaryHTML = '';
+  if (fr && isChampion) {
+    const matchesChamp = (fr.champion_composite != null && typeof e.composite === 'number')
+      ? Math.abs(fr.champion_composite - e.composite) < 1e-6
+      : true;
+    testSummaryHTML = `
+      <div class="reason-block" style="border-color:#3fb950">
+        <div><b style="color:#3fb950">Test summary (final report)</b></div>
+        <div><b>champion?</b> YES — this experiment is the frozen-test champion.</div>
+        <div><b>test ${fr.metric || 'score'}:</b> ${(fr.test_score ?? 0).toFixed(4)}</div>
+        <div><b>matches champion composite?</b> ${matchesChamp ? '✓' : '✗'} (final_report composite=${(fr.champion_composite ?? 0).toFixed(4)} vs experiment composite=${(e.composite ?? 0).toFixed(4)})</div>
+        <div><b>DSBench baseline:</b> ${(fr.dsbench_baseline ?? 0).toFixed(4)} · delta=${(fr.delta_vs_dsbench ?? 0).toFixed(4)} · beats=${fr.beats_dsbench ? 'YES' : 'NO'}</div>
+        <div><b>scored at:</b> ${fr.timestamp || 'unknown'}</div>
+      </div>`;
+  } else {
+    testSummaryHTML = `
+      <div class="reason-block" style="border-color:#21262d;color:#8b949e">
+        <div><b style="color:#8b949e">Test summary</b></div>
+        <div>(test score is reported only for the champion via <code>framework/final_report.py</code> — this experiment is not the champion${fr ? '' : ', and no final_report.json exists yet'}.)</div>
+      </div>`;
+  }
+
+  document.getElementById('detail-body').innerHTML = `
+    <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px">
+      <div class="kpi-mini">composite <b>${(e.composite ?? 0).toFixed(4)}</b></div>
+      <div class="kpi-mini">val <b>${(e.val_score ?? 0).toFixed(4)}</b></div>
+      <div class="kpi-mini">train <b>${(e.train_score ?? 0).toFixed(4)}</b></div>
+      ${(isChampion && fr && typeof fr.test_score === 'number') ? `<div class="kpi-mini" style="border-color:#3fb950">test <b style="color:#3fb950">${fr.test_score.toFixed(4)}</b></div>` : ''}
+      <div class="kpi-mini">delta <b>${e.delta != null ? ((e.delta >= 0 ? '+' : '') + e.delta.toFixed(4)) : '—'}</b></div>
+      <div class="kpi-mini">elapsed <b>${(e.elapsed_sec ?? 0).toFixed(2)}s</b></div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px">
+      ${metricsLine}
+    </div>
+    <div class="reason-block">
+      <div><b>Diagnosis:</b> ${a.diagnosis || '<i style="color:#8b949e">no annotation</i>'}</div>
+      <div><b>Citations:</b> ${a.citations || '<i style="color:#8b949e">none</i>'}</div>
+      <div><b>Hypothesis:</b> ${a.hypothesis || '<i style="color:#8b949e">none</i>'}</div>
+      <div><b>Prediction:</b> ${a.prediction || '<i style="color:#8b949e">none</i>'}</div>
+      <div><b>Verdict:</b> ${a.verdict || '<i style="color:#8b949e">none</i>'}</div>
+      <div><b>Learning:</b> ${a.learning || '<i style="color:#8b949e">none</i>'}</div>
+    </div>
+    ${testSummaryHTML}
+    <div style="font-size:0.85em;color:#8b949e;margin:6px 0">params:</div>
+    <pre class="params">${JSON.stringify(e.params || {}, null, 2)}</pre>
+    ${e.error ? `<div style="font-size:0.85em;color:#8b949e;margin:6px 0">error:</div><pre class="params" style="color:#f85149">${e.error}</pre>` : ''}
+    <div style="margin-top:10px;font-size:0.85em">
+      <a class="toolbar-link" href="trade_logs/exp${expNum}_decisions.csv" target="_blank">📊 per-sample decisions CSV</a>
+      <a class="toolbar-link" href="trade_logs/exp${expNum}_decision_summary.json" target="_blank">📋 decision summary</a>
+    </div>
+  `;
+  document.getElementById('detail-panel').classList.add('visible');
+  renderTable();
+}
+
+document.getElementById('detail-close').addEventListener('click', () => {
+  state.selected = null;
+  document.getElementById('detail-panel').classList.remove('visible');
+  renderTable();
+});
+
+document.getElementById('search').addEventListener('input', e => { state.search = e.target.value; renderTable(); });
+
+document.querySelectorAll('#exp-table thead th[data-sort]').forEach(th => th.addEventListener('click', () => {
+  const k = th.dataset.sort;
+  if (k === state.sortKey) state.sortDir = -state.sortDir;
+  else { state.sortKey = k; state.sortDir = -1; }
+  renderTable();
+}));
+
+load();
+setInterval(load, 30000);
+</script>
+</body>
+</html>

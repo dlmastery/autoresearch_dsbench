@@ -1,0 +1,17 @@
+{
+  "task_slug": "us-patent-phrase-to-phrase-matching",
+  "n_train": 1400,
+  "n_val": 300,
+  "n_test": 300,
+  "n_features": 32,
+  "hashes": {
+    "X_train": "59aff039a73c6e35",
+    "y_train": "b0451000649d40a7",
+    "X_val": "fc65b064915d46e0",
+    "y_val": "b85cb98dd8332895",
+    "X_test": "6c529f4432c091d9",
+    "y_test": "edb91594c861758b"
+  },
+  "generated_at": "2026-05-15 09:59:02",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

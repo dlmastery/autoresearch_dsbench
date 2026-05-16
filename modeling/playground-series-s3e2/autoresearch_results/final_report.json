@@ -1,0 +1,33 @@
+{
+  "task": "playground-series-s3e2",
+  "name": "playground-series-s3e2",
+  "problem_type": "classification_binary",
+  "metric": "roc_auc",
+  "champion_backbone": "mlp",
+  "champion_composite": 0.9933758675270311,
+  "champion_val": 0.9936263148511322,
+  "champion_train": 0.9986352613331535,
+  "test_score": 0.9966100182880593,
+  "test_metrics": {
+    "accuracy": 0.9633333333333334,
+    "f1": 0.9665653495440729,
+    "precision": 0.9352941176470588,
+    "recall": 1.0,
+    "mcc": 0.9286161262262029,
+    "roc_auc": 0.9966100182880593,
+    "confusion": [
+      [
+        130,
+        11
+      ],
+      [
+        0,
+        159
+      ]
+    ]
+  },
+  "dsbench_baseline": 0.5,
+  "delta_vs_dsbench": 0.4966100182880593,
+  "beats_dsbench": true,
+  "timestamp": "2026-05-16 00:11:18"
+}

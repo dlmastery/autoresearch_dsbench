@@ -1,0 +1,17 @@
+{
+  "task_slug": "porto-seguro-safe-driver-prediction",
+  "n_train": 1400,
+  "n_val": 300,
+  "n_test": 300,
+  "n_features": 32,
+  "hashes": {
+    "X_train": "37841839ccf03b17",
+    "y_train": "22abda0756cf550d",
+    "X_val": "51008bbe3f9bb2b9",
+    "y_val": "4899cf4350439bc7",
+    "X_test": "fb7b6f70d65b3351",
+    "y_test": "b87f53c397c5ae39"
+  },
+  "generated_at": "2026-05-15 07:50:55",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

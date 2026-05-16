@@ -1,0 +1,58 @@
+{
+  "experiment_num": 85,
+  "backbone": "mlp",
+  "description": "mlp iter 10/25: Combined moderate lr + mid hidden \u2014 balanced.",
+  "params": {
+    "iterations": 400,
+    "epochs": 30,
+    "lr": 0.0005,
+    "hidden": [
+      192,
+      96
+    ]
+  },
+  "metric": "roc_auc",
+  "train_score": 0.9994811201268191,
+  "val_score": 0.9894636015325671,
+  "composite": 0.9889627256028545,
+  "train_metrics": {
+    "accuracy": 0.9942857142857143,
+    "f1": 0.9944674965421854,
+    "precision": 0.9930939226519337,
+    "recall": 0.9958448753462604,
+    "mcc": 0.9885631440880965,
+    "roc_auc": 0.9994811201268191,
+    "confusion": [
+      [
+        673,
+        5
+      ],
+      [
+        3,
+        719
+      ]
+    ]
+  },
+  "val_metrics": {
+    "accuracy": 0.9333333333333333,
+    "f1": 0.9224806201550387,
+    "precision": 0.9015151515151515,
+    "recall": 0.9444444444444444,
+    "mcc": 0.8647760236693852,
+    "roc_auc": 0.9894636015325671,
+    "confusion": [
+      [
+        161,
+        13
+      ],
+      [
+        7,
+        119
+      ]
+    ]
+  },
+  "elapsed_sec": 1.7013845443725586,
+  "timestamp": "2026-05-15 05:31:35",
+  "task_slug": "playground-series-s3e11",
+  "uses_test_set": false
+}

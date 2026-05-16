@@ -1,0 +1,2 @@
+Snapshot of framework/runner.py for excel_agent on 2014-round-1-precise-debt-modeling.
+Hash of framework/runner.py at start: see registry/runtime_hashes.json

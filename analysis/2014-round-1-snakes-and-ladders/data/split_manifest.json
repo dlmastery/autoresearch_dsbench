@@ -1,0 +1,17 @@
+{
+  "task_slug": "2014-round-1-snakes-and-ladders",
+  "n_train": 3,
+  "n_val": 1,
+  "n_test": 1,
+  "n_features": 47,
+  "hashes": {
+    "X_train": "a788f0bfbb9996f1",
+    "y_train": "02e588d614b1cf78",
+    "X_val": "c9492809b1b05bf3",
+    "y_val": "437ca1909baab1ea",
+    "X_test": "33620188402790d2",
+    "y_test": "703d37e650ac5852"
+  },
+  "generated_at": "2026-05-15 23:44:48",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

@@ -1,0 +1,17 @@
+{
+  "task_slug": "2016-round-1-section-4-going-around-in-circles",
+  "n_train": 6,
+  "n_val": 2,
+  "n_test": 2,
+  "n_features": 47,
+  "hashes": {
+    "X_train": "a64127d4181656ea",
+    "y_train": "d3b87799509ea33c",
+    "X_val": "9d911e25b0c5e893",
+    "y_val": "ed86d965ee12327b",
+    "X_test": "888f581e1cbe9093",
+    "y_test": "8af21a3f1c09cb5f"
+  },
+  "generated_at": "2026-05-15 23:48:27",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

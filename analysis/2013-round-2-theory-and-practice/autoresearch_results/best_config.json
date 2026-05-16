@@ -1,0 +1,74 @@
+{
+  "experiment_num": 2,
+  "backbone": "excel_agent",
+  "description": "excel_agent iter 2/25: Alternative baseline: predict the GLOBAL training mode pooled across all 38 Mode",
+  "params": {
+    "classifier": "global_prior",
+    "seed": 42
+  },
+  "metric": "exact_match_accuracy",
+  "train_score": 0.3333333333333333,
+  "val_score": 0.3333333333333333,
+  "composite": 0.3333333333333333,
+  "train_metrics": {
+    "accuracy": 0.3333333333333333,
+    "f1": 0.125,
+    "precision": 0.08333333333333333,
+    "recall": 0.25,
+    "mcc": 0.0,
+    "confusion": [
+      [
+        3,
+        0,
+        0,
+        0
+      ],
+      [
+        4,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "val_metrics": {
+    "accuracy": 0.3333333333333333,
+    "f1": 0.16666666666666666,
+    "precision": 0.1111111111111111,
+    "recall": 0.3333333333333333,
+    "mcc": 0.0,
+    "confusion": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ]
+    ]
+  },
+  "elapsed_sec": 0.005030632019042969,
+  "timestamp": "2026-05-15 23:43:48",
+  "task_slug": "2013-round-2-theory-and-practice",
+  "uses_test_set": false
+}

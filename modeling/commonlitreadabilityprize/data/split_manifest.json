@@ -1,0 +1,17 @@
+{
+  "task_slug": "commonlitreadabilityprize",
+  "n_train": 1400,
+  "n_val": 300,
+  "n_test": 300,
+  "n_features": 32,
+  "hashes": {
+    "X_train": "06d0d9389eea6063",
+    "y_train": "44c8498c8538130a",
+    "X_val": "97d59bb1aa155cd7",
+    "y_val": "9b99d82b86e8c64c",
+    "X_test": "bed8922616c30e88",
+    "y_test": "b9f26355e38edbea"
+  },
+  "generated_at": "2026-05-15 03:39:39",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

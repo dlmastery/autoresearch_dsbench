@@ -1,0 +1,57 @@
+{
+  "experiment_num": 80,
+  "backbone": "mlp",
+  "description": "mlp iter 5/25: Larger hidden \u2014 increases representational capacity.",
+  "params": {
+    "iterations": 400,
+    "epochs": 30,
+    "hidden": [
+      256,
+      128
+    ]
+  },
+  "metric": "roc_auc",
+  "train_score": 0.9995055886865616,
+  "val_score": 0.9953331259167073,
+  "composite": 0.9951245027782146,
+  "train_metrics": {
+    "accuracy": 0.9907142857142858,
+    "f1": 0.9903917220990391,
+    "precision": 0.9911242603550295,
+    "recall": 0.9896602658788775,
+    "mcc": 0.9814086302487357,
+    "roc_auc": 0.9995055886865616,
+    "confusion": [
+      [
+        717,
+        6
+      ],
+      [
+        7,
+        670
+      ]
+    ]
+  },
+  "val_metrics": {
+    "accuracy": 0.97,
+    "f1": 0.9696969696969697,
+    "precision": 0.972972972972973,
+    "recall": 0.9664429530201343,
+    "mcc": 0.9400155593735305,
+    "roc_auc": 0.9953331259167073,
+    "confusion": [
+      [
+        147,
+        4
+      ],
+      [
+        5,
+        144
+      ]
+    ]
+  },
+  "elapsed_sec": 2.0996124744415283,
+  "timestamp": "2026-05-15 10:22:23",
+  "task_slug": "conways-reverse-game-of-life-2020",
+  "uses_test_set": false
+}

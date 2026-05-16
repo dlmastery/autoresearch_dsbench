@@ -1,0 +1,33 @@
+{
+  "task": "cat-in-the-dat",
+  "name": "cat-in-the-dat",
+  "problem_type": "classification_binary",
+  "metric": "roc_auc",
+  "champion_backbone": "mlp",
+  "champion_composite": 0.9968091279770109,
+  "champion_val": 0.9969284188034188,
+  "champion_train": 0.9993142353315754,
+  "test_score": 0.9954648526077098,
+  "test_metrics": {
+    "accuracy": 0.96,
+    "f1": 0.9605263157894737,
+    "precision": 0.9668874172185431,
+    "recall": 0.954248366013072,
+    "mcc": 0.9200711414629527,
+    "roc_auc": 0.9954648526077098,
+    "confusion": [
+      [
+        142,
+        5
+      ],
+      [
+        7,
+        146
+      ]
+    ]
+  },
+  "dsbench_baseline": 0.5,
+  "delta_vs_dsbench": 0.4954648526077098,
+  "beats_dsbench": true,
+  "timestamp": "2026-05-16 00:10:34"
+}

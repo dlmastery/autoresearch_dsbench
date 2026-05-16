@@ -1,0 +1,33 @@
+{
+  "experiment_num": 164,
+  "backbone": "mlp",
+  "description": "ext mlp 39/200: MLP capacity sweep \u2014 hidden=(512, 256) lr=0.001. The base 25",
+  "params": {
+    "iterations": 600,
+    "epochs": 60,
+    "lr": 0.001,
+    "hidden": [
+      512,
+      256
+    ],
+    "weight_decay": 0.0005
+  },
+  "metric": "rmse",
+  "train_score": -0.12972941697864673,
+  "val_score": -0.38741738376987317,
+  "composite": -0.4003017821094345,
+  "train_metrics": {
+    "rmse": 0.12972941697864673,
+    "mae": 0.07253877073526382,
+    "r2": 0.9992298483848572
+  },
+  "val_metrics": {
+    "rmse": 0.38741738376987317,
+    "mae": 0.293995201587677,
+    "r2": 0.99440598487854
+  },
+  "elapsed_sec": 8.224382877349854,
+  "timestamp": "2026-05-15 18:25:59",
+  "task_slug": "bike-sharing-demand",
+  "uses_test_set": false
+}

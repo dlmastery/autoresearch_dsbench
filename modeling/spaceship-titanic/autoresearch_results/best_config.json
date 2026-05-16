@@ -1,0 +1,58 @@
+{
+  "experiment_num": 92,
+  "backbone": "mlp",
+  "description": "mlp iter 17/25: Very wide.",
+  "params": {
+    "iterations": 400,
+    "epochs": 30,
+    "lr": 0.001,
+    "hidden": [
+      512,
+      256
+    ]
+  },
+  "metric": "roc_auc",
+  "train_score": 0.99978561584401,
+  "val_score": 0.9978104472943384,
+  "composite": 0.9977116888668549,
+  "train_metrics": {
+    "accuracy": 0.995,
+    "f1": 0.9951219512195122,
+    "precision": 0.9916666666666667,
+    "recall": 0.9986013986013986,
+    "mcc": 0.9900191606676925,
+    "roc_auc": 0.99978561584401,
+    "confusion": [
+      [
+        679,
+        6
+      ],
+      [
+        1,
+        714
+      ]
+    ]
+  },
+  "val_metrics": {
+    "accuracy": 0.97,
+    "f1": 0.9681978798586572,
+    "precision": 0.9513888888888888,
+    "recall": 0.9856115107913669,
+    "mcc": 0.9403491236871159,
+    "roc_auc": 0.9978104472943384,
+    "confusion": [
+      [
+        154,
+        7
+      ],
+      [
+        2,
+        137
+      ]
+    ]
+  },
+  "elapsed_sec": 2.8804473876953125,
+  "timestamp": "2026-05-15 08:21:13",
+  "task_slug": "spaceship-titanic",
+  "uses_test_set": false
+}

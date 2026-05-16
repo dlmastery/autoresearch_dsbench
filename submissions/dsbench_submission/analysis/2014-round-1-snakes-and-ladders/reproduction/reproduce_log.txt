@@ -1,0 +1,8 @@
+Reproduction protocol for 2014-round-1-snakes-and-ladders champion:
+
+  python -m framework.runner --repo C:\Users\evija\dsbench\analysis\2014-round-1-snakes-and-ladders \
+    --backbone excel_agent \
+    --params '{"classifier": "prior_only", "seed": 42}' \
+    --description 'reproduction' --experiment-num 1
+
+Expected composite ≈ 0.7500 (within 0.005 due to RNG floor variance).

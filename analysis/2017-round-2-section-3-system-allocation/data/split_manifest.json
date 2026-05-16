@@ -1,0 +1,17 @@
+{
+  "task_slug": "2017-round-2-section-3-system-allocation",
+  "n_train": 6,
+  "n_val": 2,
+  "n_test": 1,
+  "n_features": 47,
+  "hashes": {
+    "X_train": "d7b8d3c8cf32ab1d",
+    "y_train": "3fc7cbb5fd85a72e",
+    "X_val": "0f833ad8405a281b",
+    "y_val": "180aecad711b9350",
+    "X_test": "08bfcd272cd29771",
+    "y_test": "1d2a14e7ae0a039f"
+  },
+  "generated_at": "2026-05-15 23:54:46",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

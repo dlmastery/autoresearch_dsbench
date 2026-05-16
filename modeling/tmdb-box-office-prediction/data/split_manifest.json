@@ -1,0 +1,17 @@
+{
+  "task_slug": "tmdb-box-office-prediction",
+  "n_train": 1400,
+  "n_val": 300,
+  "n_test": 300,
+  "n_features": 32,
+  "hashes": {
+    "X_train": "db34318f7de247fd",
+    "y_train": "df128ddc25ab5221",
+    "X_val": "d189ad1fca64cf17",
+    "y_val": "b174351b52735902",
+    "X_test": "b79c480057a19465",
+    "y_test": "986fb694635d8183"
+  },
+  "generated_at": "2026-05-15 09:47:08",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

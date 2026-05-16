@@ -1,0 +1,2 @@
+Snapshot of framework/runner.py for catboost on covid19-global-forecasting-week-2.
+Hash of framework/runner.py at start: see registry/runtime_hashes.json

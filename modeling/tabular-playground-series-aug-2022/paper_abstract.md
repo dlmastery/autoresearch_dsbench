@@ -1,0 +1,3 @@
+# Abstract — autoresearch on tabular-playground-series-aug-2022
+
+We apply the autoresearch protocol (Karpathy 2024, dlmastery/autoresearch 2026) to the DSBench `tabular-playground-series-aug-2022` benchmark (classification_binary on tabular data). The protocol drives 25 hill-climbing iterations per SOTA backbone (xgboost, lightgbm, catboost, mlp, ft_transformer), each cited to the relevant 2024-2026 arXiv paper, with train/val-only selection (test set held back for the final DSBench comparison report). The champion composite metric is `min(val, train) - 0.05*|val - train|` to penalise overfit. The target is to meet or beat the DSBench paper's best-agent baselines on the test set.

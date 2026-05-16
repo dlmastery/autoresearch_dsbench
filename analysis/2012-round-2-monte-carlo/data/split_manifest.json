@@ -1,0 +1,17 @@
+{
+  "task_slug": "2012-round-2-monte-carlo",
+  "n_train": 1,
+  "n_val": 1,
+  "n_test": 1,
+  "n_features": 47,
+  "hashes": {
+    "X_train": "b3dbe1d3b82de3a3",
+    "y_train": "3fe8adee83a670dd",
+    "X_val": "8f92ab02fec61209",
+    "y_val": "437ca1909baab1ea",
+    "X_test": "1da3f8a93c5f77f8",
+    "y_test": "048db3815473d7aa"
+  },
+  "generated_at": "2026-05-15 23:42:29",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

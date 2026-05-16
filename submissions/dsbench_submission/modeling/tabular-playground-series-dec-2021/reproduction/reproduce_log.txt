@@ -1,0 +1,8 @@
+Reproduction protocol for tabular-playground-series-dec-2021 champion:
+
+  python -m framework.runner --repo C:\Users\evija\dsbench\modeling\tabular-playground-series-dec-2021 \
+    --backbone mlp \
+    --params '{"iterations": 400, "epochs": 30, "lr": 0.001, "seed": 0}' \
+    --description 'reproduction' --experiment-num 82
+
+Expected composite ≈ 0.9912 (within 0.005 due to RNG floor variance).

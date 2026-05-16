@@ -1,0 +1,49 @@
+{
+  "task": "liverpool-ion-switching",
+  "name": "liverpool-ion-switching",
+  "problem_type": "classification_multiclass",
+  "metric": "macro_f1",
+  "champion_backbone": "mlp",
+  "champion_composite": 0.9162413297145553,
+  "champion_val": 0.9197184839608549,
+  "champion_train": 0.989261568886847,
+  "test_score": 0.8743839072714911,
+  "test_metrics": {
+    "accuracy": 0.8766666666666667,
+    "f1": 0.8743839072714911,
+    "precision": 0.876966043348332,
+    "recall": 0.8751161858974359,
+    "mcc": 0.8350069859130735,
+    "roc_auc": 0.9887230664596613,
+    "confusion": [
+      [
+        57,
+        3,
+        2,
+        3
+      ],
+      [
+        2,
+        87,
+        0,
+        7
+      ],
+      [
+        4,
+        3,
+        62,
+        6
+      ],
+      [
+        0,
+        4,
+        3,
+        57
+      ]
+    ]
+  },
+  "dsbench_baseline": 0.34,
+  "delta_vs_dsbench": 0.5343839072714911,
+  "beats_dsbench": true,
+  "timestamp": "2026-05-16 00:11:02"
+}

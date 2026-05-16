@@ -1,0 +1,8 @@
+Reproduction protocol for covid19-global-forecasting-week-1 champion:
+
+  python -m framework.runner --repo C:\Users\evija\dsbench\modeling\covid19-global-forecasting-week-1 \
+    --backbone mlp \
+    --params '{"iterations": 600, "epochs": 60, "lr": 0.003, "hidden": [512, 256], "weight_decay": 0.0005}' \
+    --description 'reproduction' --experiment-num 165
+
+Expected composite ≈ -0.4320 (within 0.005 due to RNG floor variance).

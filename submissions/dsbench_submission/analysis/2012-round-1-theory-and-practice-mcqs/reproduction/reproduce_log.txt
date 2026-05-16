@@ -1,0 +1,8 @@
+Reproduction protocol for 2012-round-1-theory-and-practice-mcqs champion:
+
+  python -m framework.runner --repo C:\Users\evija\dsbench\analysis\2012-round-1-theory-and-practice-mcqs \
+    --backbone excel_agent \
+    --params '{"classifier": "prior_only", "seed": 42}' \
+    --description 'reproduction' --experiment-num 1
+
+Expected composite ≈ 0.4000 (within 0.005 due to RNG floor variance).

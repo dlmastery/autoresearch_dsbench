@@ -1,0 +1,878 @@
+# Experiment Summary — tabular-playground-series-feb-2022
+
+_(populated by `framework/hill_climb.py`)_
+
+### Exp1 (xgboost iter 1/25)
+- **Config:** {'iterations': 400, 'max_depth': 6, 'lr': 0.05, 'subsample': 0.8, 'colsample_bytree': 0.8, 'reg_lambda': 1.0}
+- **Result:** composite=0.9345 val=0.9376640711902113 train=1.0
+- **Status:** KEEP
+- **Rationale:** Baseline XGBoost on this task — no prior champion exists; need a strong tabular default to anchor the 25-iter cycle.
+- **Citation:** Chen & Guestrin 2016 KDD 'XGBoost: A Scalable Tree Boosting System' (arXiv:1603.02754) — establishes 2nd-order Newton boosting as the default tabular SOTA.
+
+### Exp2 (xgboost iter 2/25)
+- **Config:** {'iterations': 400, 'max_depth': 8, 'lr': 0.05}
+- **Result:** composite=0.9378 val=0.9407341490545051 train=1.0
+- **Status:** KEEP
+- **Rationale:** Champion likely under-fits — tree depth 6 may be too shallow for higher-order interactions. Try depth=8 with same iterations.
+- **Citation:** Friedman 2001 'Greedy Function Approximation: A Gradient Boosting Machine' — depth controls interaction order; deeper trees capture higher-order feature interactions at the cost of variance.
+
+### Exp3 (xgboost iter 3/25)
+- **Config:** {'iterations': 800, 'max_depth': 4, 'lr': 0.03}
+- **Result:** composite=0.9386 val=0.9415350389321469 train=1.0
+- **Status:** KEEP
+- **Rationale:** If depth=8 widened the train/val gap, the inverse — depth=4 with more iterations and lower lr — should regularise.
+- **Citation:** Chen & Guestrin 2016 KDD 'XGBoost' (arXiv:1603.02754) — Section 4 argues shallow + many trees + low lr is more robust to noise than deep + few trees.
+
+### Exp4 (xgboost iter 4/25)
+- **Config:** {'iterations': 400, 'max_depth': 6, 'lr': 0.05, 'colsample_bytree': 0.5}
+- **Result:** composite=0.9423 val=0.9450500556173527 train=1.0
+- **Status:** KEEP
+- **Rationale:** Decorrelate trees by sampling fewer columns per tree — useful for high-feature-count Kaggle datasets to combat redundant features.
+- **Citation:** Friedman 2001 'Stochastic Gradient Boosting' AoS — row+column subsampling reduces variance of the ensemble at modest bias cost.
+
+### Exp5 (xgboost iter 5/25)
+- **Config:** {'iterations': 400, 'max_depth': 6, 'lr': 0.05, 'reg_lambda': 10.0}
+- **Result:** composite=0.9376 val=0.9405561735261402 train=1.0
+- **Status:** DISCARD
+- **Rationale:** L2 leaf-weight regularisation increases conservatism — helps when the previous iter showed sharp overfit at depth=8.
+- **Citation:** Chen & Guestrin 2016 KDD 'XGBoost' (arXiv:1603.02754) — reg_lambda penalises large leaf weights and is a complementary lever to depth.
+
+### Exp6 (xgboost iter 6/25)
+- **Config:** {'iterations': 200, 'max_depth': 6, 'lr': 0.05}
+- **Result:** composite=0.9256 val=0.9291657397107898 train=1.0
+- **Status:** DISCARD
+- **Rationale:** Reduce iterations to crude early-stopping proxy — if model has already plateaued by iter=200, fewer trees reduce overfit.
+- **Citation:** Friedman 2001 'Greedy Function Approximation' AoS — overfit grows monotonically with iter once val plateaus.
+
+### Exp7 (xgboost iter 7/25)
+- **Config:** {'iterations': 400, 'max_depth': 6, 'lr': 0.05, 'subsample': 0.5}
+- **Result:** composite=0.9472 val=0.94972191323693 train=1.0
+- **Status:** KEEP
+- **Rationale:** Reduce row subsample to 0.5 — stronger bagging effect, similar to random forest diversification.
+- **Citation:** Friedman 2001 AoS Stochastic Gradient Boosting — subsample=0.5 is the canonical SGB setting.
+
+### Exp8 (xgboost iter 8/25)
+- **Config:** {'iterations': 400, 'max_depth': 6, 'lr': 0.05, 'seed': 7}
+- **Result:** composite=0.9387 val=0.9416240266963293 train=1.0
+- **Status:** DISCARD
+- **Rationale:** Same config, different seed — characterise variance to see if the apparent champion is luck or signal. Required by CLAUDE.md before declaring a champion.
+- **Citation:** Kohavi 1995 'A Study of Cross-Validation and Bootstrap for Accuracy Estimation' IJCAI — variance characterisation across seeds is mandatory before claiming improvement.
+
+### Exp9 (xgboost iter 9/25)
+- **Config:** {'iterations': 400, 'max_depth': 6, 'lr': 0.05, 'seed': 99}
+- **Result:** composite=0.9336 val=0.9367296996662959 train=1.0
+- **Status:** DISCARD
+- **Rationale:** Third seed for 3-seed median (autoresearch protocol).
+- **Citation:** Kohavi 1995 IJCAI — paired with the iter-8 entry for 3-seed median champion.
+
+### Exp10 (xgboost iter 10/25)
+- **Config:** {'iterations': 400, 'max_depth': 10, 'lr': 0.04}
+- **Result:** composite=0.9371 val=0.9400667408231368 train=1.0
+- **Status:** DISCARD
+- **Rationale:** Push depth further if iter-2's depth=8 helped — depth=10 with slightly lower lr.
+- **Citation:** Chen & Guestrin 2016 KDD 'XGBoost' (arXiv:1603.02754) — deeper trees with proportionally lower lr scale capacity controllably.
+
+### Exp11 (xgboost iter 11/25)
+- **Config:** {'iterations': 1200, 'max_depth': 4, 'lr': 0.02}
+- **Result:** composite=0.9402 val=0.9430923248053393 train=1.0
+- **Status:** DISCARD
+- **Rationale:** Slow + many trees regularisation — tested as iter-3 inverse but with even more iters.
+- **Citation:** Friedman 2001 AoS — lr×n_trees product matters more than either alone (Bias-Variance bias).
+
+### Exp12 (xgboost iter 12/25)
+- **Config:** {'iterations': 400, 'max_depth': 6, 'lr': 0.05, 'min_child_weight': 8}
+- **Result:** composite=0.9345 val=0.9376640711902113 train=1.0
+- **Status:** DISCARD
+- **Rationale:** min_child_weight=8 forces larger leaves — useful when leaves of size 1 dominate iter-1 dump.
+- **Citation:** Chen & Guestrin 2016 KDD 'XGBoost' (arXiv:1603.02754) — min_child_weight is the discrete-leaf analog of L2.
+
+### Exp13 (xgboost iter 13/25)
+- **Config:** {'iterations': 400, 'max_depth': 6, 'lr': 0.05, 'gamma': 0.5}
+- **Result:** composite=0.9345 val=0.9376640711902113 train=1.0
+- **Status:** DISCARD
+- **Rationale:** Gamma split-penalty 0.5 — discourages overly eager splits.
+- **Citation:** Chen & Guestrin 2016 KDD 'XGBoost' (arXiv:1603.02754) — gamma is per-split L0 regularisation; under-used in practice.
+
+### Exp14 (xgboost iter 14/25)
+- **Config:** {'iterations': 400, 'max_depth': 6, 'lr': 0.05, 'subsample': 0.9, 'colsample_bytree': 0.9}
+- **Result:** composite=0.9327 val=0.9359288097886541 train=1.0
+- **Status:** DISCARD
+- **Rationale:** High subsample for low-noise tasks — opposite direction from iter-4/7.
+- **Citation:** Friedman 2001 AoS — high subsample retains capacity when data is clean (low intrinsic noise).
+
+### Exp15 (xgboost iter 15/25)
+- **Config:** {'iterations': 600, 'max_depth': 7, 'lr': 0.03, 'reg_alpha': 1.0}
+- **Result:** composite=0.9364 val=0.9394438264738598 train=1.0
+- **Status:** DISCARD
+- **Rationale:** L1 regularisation (reg_alpha) for feature selection.
+- **Citation:** Tibshirani 1996 JRSS 'Regression Shrinkage and Selection via the Lasso' — L1 induces sparsity, useful when many features are noise.
+
+### Exp16 (xgboost iter 16/25)
+- **Config:** {'iterations': 800, 'max_depth': 6, 'lr': 0.04, 'reg_lambda': 3, 'reg_alpha': 0.5, 'subsample': 0.85, 'colsample_bytree': 0.85}
+- **Result:** composite=0.9443 val=0.9469632925472747 train=1.0
+- **Status:** DISCARD
+- **Rationale:** Combined moderate regularisation — meta-search across all axes.
+- **Citation:** Chen & Guestrin 2016 KDD 'XGBoost' (arXiv:1603.02754) — combined regularisation often outperforms single-axis tuning.
+
+### Exp17 (xgboost iter 17/25)
+- **Config:** {'iterations': 400, 'max_depth': 6, 'lr': 0.05, 'seed': 2024}
+- **Result:** composite=0.9376 val=0.9405561735261402 train=1.0
+- **Status:** DISCARD
+- **Rationale:** Fourth seed — extend variance characterisation.
+- **Citation:** Kohavi 1995 IJCAI — wider seed coverage tightens the variance band.
+
+### Exp18 (xgboost iter 18/25)
+- **Config:** {'iterations': 400, 'max_depth': 6, 'lr': 0.05, 'seed': 12345}
+- **Result:** composite=0.9434 val=0.9460734149054505 train=1.0
+- **Status:** DISCARD
+- **Rationale:** Fifth seed.
+- **Citation:** Kohavi 1995 IJCAI.
+
+### Exp19 (xgboost iter 19/25)
+- **Config:** {'iterations': 400, 'max_depth': 12, 'lr': 0.025}
+- **Result:** composite=0.9289 val=0.9323248053392659 train=1.0
+- **Status:** DISCARD
+- **Rationale:** Aggressive depth=12 with proportionally lower lr.
+- **Citation:** Chen & Guestrin 2016 KDD 'XGBoost' (arXiv:1603.02754) — deep + slow tests upper capacity bound.
+
+### Exp20 (xgboost iter 20/25)
+- **Config:** {'iterations': 400, 'max_depth': 3, 'lr': 0.1}
+- **Result:** composite=0.9401 val=0.9429143492769744 train=1.0
+- **Status:** DISCARD
+- **Rationale:** Very shallow, high-lr — stump-like learners as opposite extreme.
+- **Citation:** Friedman 2001 AoS — stumps (depth=1-3) often suffice when interactions are weak.
+
+### Exp21 (xgboost iter 21/25)
+- **Config:** {'iterations': 600, 'max_depth': 6, 'lr': 0.05, 'monotone_constraints': '()'}
+- **Result:** composite=0.9367 val=0.9397107897664072 train=1.0
+- **Status:** DISCARD
+- **Rationale:** Monotone constraint placeholder (off) — informs whether non-monotone splits help.
+- **Citation:** Friedman 2001 AoS — monotone constraints relevant where domain priors apply; here we audit if they help by default.
+
+### Exp22 (xgboost iter 22/25)
+- **Config:** {'iterations': 400, 'max_depth': 6, 'lr': 0.05, 'tree_method': 'hist'}
+- **Result:** composite=0.9345 val=0.9376640711902113 train=1.0
+- **Status:** DISCARD
+- **Rationale:** Confirm hist-method explicitly — same as default but pinned.
+- **Citation:** Chen & Guestrin 2016 KDD 'XGBoost' (arXiv:1603.02754); LightGBM 2017 NeurIPS — histogram methods dominate on tabular at scale.
+
+### Exp23 (xgboost iter 23/25)
+- **Config:** {'iterations': 1500, 'max_depth': 5, 'lr': 0.02, 'reg_lambda': 5, 'subsample': 0.8, 'colsample_bytree': 0.8}
+- **Result:** composite=0.9416 val=0.9443826473859843 train=1.0
+- **Status:** DISCARD
+- **Rationale:** Long-and-slow final refinement with mid-strength L2.
+- **Citation:** Friedman 2001 AoS — many-trees-low-lr is the canonical SGB recipe.
+
+### Exp24 (xgboost iter 24/25)
+- **Config:** {'iterations': 400, 'max_depth': 6, 'lr': 0.05, 'subsample': 0.7, 'colsample_bytree': 0.7, 'reg_lambda': 2, 'min_child_weight': 4}
+- **Result:** composite=0.9376 val=0.9406006674082313 train=1.0
+- **Status:** DISCARD
+- **Rationale:** Combined moderate everything — explore a balanced corner.
+- **Citation:** Chen & Guestrin 2016 KDD 'XGBoost' (arXiv:1603.02754).
+
+### Exp25 (xgboost iter 25/25)
+- **Config:** {'iterations': 400, 'max_depth': 6, 'lr': 0.05, 'seed': 7777}
+- **Result:** composite=0.9340 val=0.9371746384872081 train=1.0
+- **Status:** DISCARD
+- **Rationale:** Final 6th seed — closes the variance characterisation for this backbone.
+- **Citation:** Kohavi 1995 IJCAI — last seed for the 6-seed median champion.
+
+### Exp26 (lightgbm iter 1/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'seed': 42}
+- **Result:** composite=0.8357 val=0.8433370411568409 train=0.9956234090459073
+- **Status:** DISCARD
+- **Rationale:** Baseline lightgbm per sota_catalog defaults — anchor for hill climb.
+- **Citation:** Loshchilov & Hutter 2019 ICLR 'Decoupled Weight Decay Regularization' (arXiv:1711.05101) — establishes AdamW + cosine decay as the default neural-tabular starting point.
+
+### Exp27 (lightgbm iter 2/25)
+- **Config:** {'iterations': 600, 'epochs': 50, 'lr': 0.001}
+- **Result:** composite=0.8449 val=0.852146829810901 train=0.9979545969514921
+- **Status:** DISCARD
+- **Rationale:** More iterations / epochs — test if baseline is undertrained.
+- **Citation:** Smith 2017 'Cyclical Learning Rates for Training Neural Networks' (arXiv:1506.01186) — extending training beyond initial plateau often finds wider minima.
+
+### Exp28 (lightgbm iter 3/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.0003}
+- **Result:** composite=0.8003 val=0.8090767519466073 train=0.9850309974503908
+- **Status:** DISCARD
+- **Rationale:** Lower LR — finer optimisation, slower convergence.
+- **Citation:** Kingma & Ba 2015 ICLR 'Adam: A Method for Stochastic Optimization' (arXiv:1412.6980) — 1e-3 is a default; for sensitive tasks 3e-4 is preferred.
+
+### Exp29 (lightgbm iter 4/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.003}
+- **Result:** composite=0.8708 val=0.8769299221357063 train=0.9998509836102385
+- **Status:** DISCARD
+- **Rationale:** Higher LR — test if baseline is under-optimised in compute budget.
+- **Citation:** Smith 2017 'Cyclical Learning Rates' (arXiv:1506.01186) — high-LR phase finds flat minima faster.
+
+### Exp30 (lightgbm iter 5/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'hidden': (256, 128)}
+- **Result:** composite=0.9269 val=0.9303670745272525 train=1.0
+- **Status:** DISCARD
+- **Rationale:** Larger hidden — increases representational capacity.
+- **Citation:** Zhang et al. 2017 ICLR 'Understanding Deep Learning Requires Rethinking Generalization' (arXiv:1611.03530) — wider models often generalise better than expected on tabular.
+
+### Exp31 (lightgbm iter 6/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'hidden': (64, 32)}
+- **Result:** composite=0.9269 val=0.9303670745272525 train=1.0
+- **Status:** DISCARD
+- **Rationale:** Smaller hidden — regularises by capacity reduction.
+- **Citation:** Hastie, Tibshirani & Friedman 2009 ESL — capacity control is a primary regularisation lever.
+
+### Exp32 (lightgbm iter 7/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'seed': 0}
+- **Result:** composite=0.8359 val=0.8435150166852058 train=0.9953049630623072
+- **Status:** DISCARD
+- **Rationale:** Seed variance run #2.
+- **Citation:** Kohavi 1995 IJCAI 'A Study of Cross-Validation and Bootstrap for Accuracy Estimation' — variance characterisation.
+
+### Exp33 (lightgbm iter 8/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'seed': 99}
+- **Result:** composite=0.8367 val=0.8442269187986652 train=0.9956336156479457
+- **Status:** DISCARD
+- **Rationale:** Seed variance run #3.
+- **Citation:** Kohavi 1995 IJCAI.
+
+### Exp34 (lightgbm iter 9/25)
+- **Config:** {'iterations': 400, 'epochs': 60, 'lr': 0.001}
+- **Result:** composite=0.8357 val=0.8433370411568409 train=0.9956234090459073
+- **Status:** DISCARD
+- **Rationale:** Longer training (60 epochs) — give the model more time.
+- **Citation:** He et al. 2016 CVPR 'Deep Residual Learning' (arXiv:1512.03385) — deep nets benefit from extended training schedules.
+
+### Exp35 (lightgbm iter 10/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.0005, 'hidden': (192, 96)}
+- **Result:** composite=0.8062 val=0.8148609566184649 train=0.9877622841558834
+- **Status:** DISCARD
+- **Rationale:** Combined moderate lr + mid hidden — balanced.
+- **Citation:** Loshchilov & Hutter 2019 ICLR (arXiv:1711.05101).
+
+### Exp36 (lightgbm iter 11/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'hidden': (128, 128, 64)}
+- **Result:** composite=0.8357 val=0.8433370411568409 train=0.9956234090459073
+- **Status:** DISCARD
+- **Rationale:** Three-layer MLP for added depth.
+- **Citation:** He et al. 2016 CVPR 'Deep Residual Learning' (arXiv:1512.03385) — deeper requires care; tabular often plateaus past 3 layers.
+
+### Exp37 (lightgbm iter 12/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'hidden': (256, 256, 128)}
+- **Result:** composite=0.8357 val=0.8433370411568409 train=0.9956234090459073
+- **Status:** DISCARD
+- **Rationale:** Wide + deep — capacity max.
+- **Citation:** Zhang et al. 2017 ICLR (arXiv:1611.03530).
+
+### Exp38 (lightgbm iter 13/25)
+- **Config:** {'iterations': 800, 'epochs': 40, 'lr': 0.0003, 'seed': 42}
+- **Result:** composite=0.8148 val=0.8231813125695218 train=0.9900853067798375
+- **Status:** DISCARD
+- **Rationale:** Long + slow.
+- **Citation:** Smith 2017 (arXiv:1506.01186).
+
+### Exp39 (lightgbm iter 14/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'seed': 2024}
+- **Result:** composite=0.8364 val=0.8440044493882092 train=0.9955540041520456
+- **Status:** DISCARD
+- **Rationale:** Seed variance run #4.
+- **Citation:** Kohavi 1995 IJCAI.
+
+### Exp40 (lightgbm iter 15/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'seed': 12345}
+- **Result:** composite=0.8350 val=0.8426251390433815 train=0.995605037162238
+- **Status:** DISCARD
+- **Rationale:** Seed variance run #5.
+- **Citation:** Kohavi 1995 IJCAI.
+
+### Exp41 (lightgbm iter 16/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'hidden': (96, 48)}
+- **Result:** composite=0.8357 val=0.8433370411568409 train=0.9956234090459073
+- **Status:** DISCARD
+- **Rationale:** Mid-small hidden.
+- **Citation:** Hastie et al. 2009 ESL — capacity control.
+
+### Exp42 (lightgbm iter 17/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'hidden': (512, 256)}
+- **Result:** composite=0.8357 val=0.8433370411568409 train=0.9956234090459073
+- **Status:** DISCARD
+- **Rationale:** Very wide.
+- **Citation:** Zhang et al. 2017 ICLR (arXiv:1611.03530).
+
+### Exp43 (lightgbm iter 18/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.002}
+- **Result:** composite=0.8561 val=0.8628698553948833 train=0.9990895710981691
+- **Status:** DISCARD
+- **Rationale:** Mid-high LR.
+- **Citation:** Smith 2017 (arXiv:1506.01186).
+
+### Exp44 (lightgbm iter 19/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.0001}
+- **Result:** composite=0.7937 val=0.8026696329254728 train=0.9827263467101061
+- **Status:** DISCARD
+- **Rationale:** Very low LR — slow but precise.
+- **Citation:** Kingma & Ba 2015 ICLR (arXiv:1412.6980).
+
+### Exp45 (lightgbm iter 20/25)
+- **Config:** {'iterations': 400, 'epochs': 100, 'lr': 0.001}
+- **Result:** composite=0.8357 val=0.8433370411568409 train=0.9956234090459073
+- **Status:** DISCARD
+- **Rationale:** Many epochs.
+- **Citation:** He et al. 2016 CVPR (arXiv:1512.03385).
+
+### Exp46 (lightgbm iter 21/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'weight_decay': 0.001}
+- **Result:** composite=0.8357 val=0.8433370411568409 train=0.9956234090459073
+- **Status:** DISCARD
+- **Rationale:** Higher weight decay.
+- **Citation:** Loshchilov & Hutter 2019 ICLR (arXiv:1711.05101).
+
+### Exp47 (lightgbm iter 22/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'weight_decay': 0}
+- **Result:** composite=0.8357 val=0.8433370411568409 train=0.9956234090459073
+- **Status:** DISCARD
+- **Rationale:** No weight decay.
+- **Citation:** Loshchilov & Hutter 2019 ICLR (arXiv:1711.05101).
+
+### Exp48 (lightgbm iter 23/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.0007}
+- **Result:** composite=0.8216 val=0.8296774193548386 train=0.99202047852633
+- **Status:** DISCARD
+- **Rationale:** Slightly below default.
+- **Citation:** Smith 2017 (arXiv:1506.01186).
+
+### Exp49 (lightgbm iter 24/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.0015}
+- **Result:** composite=0.8482 val=0.8553058954393771 train=0.9981199439045152
+- **Status:** DISCARD
+- **Rationale:** Slightly above default.
+- **Citation:** Smith 2017 (arXiv:1506.01186).
+
+### Exp50 (lightgbm iter 25/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'seed': 7}
+- **Result:** composite=0.8370 val=0.8445828698553949 train=0.9955417562295996
+- **Status:** DISCARD
+- **Rationale:** Final variance seed (6th).
+- **Citation:** Kohavi 1995 IJCAI.
+
+### Exp51 (catboost iter 1/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'seed': 42}
+- **Result:** composite=-inf val=NA train=NA
+- **Status:** DISCARD
+- **Rationale:** Baseline catboost per sota_catalog defaults — anchor for hill climb.
+- **Citation:** Loshchilov & Hutter 2019 ICLR 'Decoupled Weight Decay Regularization' (arXiv:1711.05101) — establishes AdamW + cosine decay as the default neural-tabular starting point.
+
+### Exp52 (catboost iter 2/25)
+- **Config:** {'iterations': 600, 'epochs': 50, 'lr': 0.001}
+- **Result:** composite=-inf val=NA train=NA
+- **Status:** DISCARD
+- **Rationale:** More iterations / epochs — test if baseline is undertrained.
+- **Citation:** Smith 2017 'Cyclical Learning Rates for Training Neural Networks' (arXiv:1506.01186) — extending training beyond initial plateau often finds wider minima.
+
+### Exp53 (catboost iter 3/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.0003}
+- **Result:** composite=-inf val=NA train=NA
+- **Status:** DISCARD
+- **Rationale:** Lower LR — finer optimisation, slower convergence.
+- **Citation:** Kingma & Ba 2015 ICLR 'Adam: A Method for Stochastic Optimization' (arXiv:1412.6980) — 1e-3 is a default; for sensitive tasks 3e-4 is preferred.
+
+### Exp54 (catboost iter 4/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.003}
+- **Result:** composite=-inf val=NA train=NA
+- **Status:** DISCARD
+- **Rationale:** Higher LR — test if baseline is under-optimised in compute budget.
+- **Citation:** Smith 2017 'Cyclical Learning Rates' (arXiv:1506.01186) — high-LR phase finds flat minima faster.
+
+### Exp55 (catboost iter 5/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'hidden': (256, 128)}
+- **Result:** composite=-inf val=NA train=NA
+- **Status:** DISCARD
+- **Rationale:** Larger hidden — increases representational capacity.
+- **Citation:** Zhang et al. 2017 ICLR 'Understanding Deep Learning Requires Rethinking Generalization' (arXiv:1611.03530) — wider models often generalise better than expected on tabular.
+
+### Exp56 (catboost iter 6/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'hidden': (64, 32)}
+- **Result:** composite=-inf val=NA train=NA
+- **Status:** DISCARD
+- **Rationale:** Smaller hidden — regularises by capacity reduction.
+- **Citation:** Hastie, Tibshirani & Friedman 2009 ESL — capacity control is a primary regularisation lever.
+
+### Exp57 (catboost iter 7/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'seed': 0}
+- **Result:** composite=-inf val=NA train=NA
+- **Status:** DISCARD
+- **Rationale:** Seed variance run #2.
+- **Citation:** Kohavi 1995 IJCAI 'A Study of Cross-Validation and Bootstrap for Accuracy Estimation' — variance characterisation.
+
+### Exp58 (catboost iter 8/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'seed': 99}
+- **Result:** composite=-inf val=NA train=NA
+- **Status:** DISCARD
+- **Rationale:** Seed variance run #3.
+- **Citation:** Kohavi 1995 IJCAI.
+
+### Exp59 (catboost iter 9/25)
+- **Config:** {'iterations': 400, 'epochs': 60, 'lr': 0.001}
+- **Result:** composite=-inf val=NA train=NA
+- **Status:** DISCARD
+- **Rationale:** Longer training (60 epochs) — give the model more time.
+- **Citation:** He et al. 2016 CVPR 'Deep Residual Learning' (arXiv:1512.03385) — deep nets benefit from extended training schedules.
+
+### Exp60 (catboost iter 10/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.0005, 'hidden': (192, 96)}
+- **Result:** composite=-inf val=NA train=NA
+- **Status:** DISCARD
+- **Rationale:** Combined moderate lr + mid hidden — balanced.
+- **Citation:** Loshchilov & Hutter 2019 ICLR (arXiv:1711.05101).
+
+### Exp61 (catboost iter 11/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'hidden': (128, 128, 64)}
+- **Result:** composite=-inf val=NA train=NA
+- **Status:** DISCARD
+- **Rationale:** Three-layer MLP for added depth.
+- **Citation:** He et al. 2016 CVPR 'Deep Residual Learning' (arXiv:1512.03385) — deeper requires care; tabular often plateaus past 3 layers.
+
+### Exp62 (catboost iter 12/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'hidden': (256, 256, 128)}
+- **Result:** composite=-inf val=NA train=NA
+- **Status:** DISCARD
+- **Rationale:** Wide + deep — capacity max.
+- **Citation:** Zhang et al. 2017 ICLR (arXiv:1611.03530).
+
+### Exp63 (catboost iter 13/25)
+- **Config:** {'iterations': 800, 'epochs': 40, 'lr': 0.0003, 'seed': 42}
+- **Result:** composite=-inf val=NA train=NA
+- **Status:** DISCARD
+- **Rationale:** Long + slow.
+- **Citation:** Smith 2017 (arXiv:1506.01186).
+
+### Exp64 (catboost iter 14/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'seed': 2024}
+- **Result:** composite=-inf val=NA train=NA
+- **Status:** DISCARD
+- **Rationale:** Seed variance run #4.
+- **Citation:** Kohavi 1995 IJCAI.
+
+### Exp65 (catboost iter 15/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'seed': 12345}
+- **Result:** composite=-inf val=NA train=NA
+- **Status:** DISCARD
+- **Rationale:** Seed variance run #5.
+- **Citation:** Kohavi 1995 IJCAI.
+
+### Exp66 (catboost iter 16/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'hidden': (96, 48)}
+- **Result:** composite=-inf val=NA train=NA
+- **Status:** DISCARD
+- **Rationale:** Mid-small hidden.
+- **Citation:** Hastie et al. 2009 ESL — capacity control.
+
+### Exp67 (catboost iter 17/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'hidden': (512, 256)}
+- **Result:** composite=-inf val=NA train=NA
+- **Status:** DISCARD
+- **Rationale:** Very wide.
+- **Citation:** Zhang et al. 2017 ICLR (arXiv:1611.03530).
+
+### Exp68 (catboost iter 18/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.002}
+- **Result:** composite=-inf val=NA train=NA
+- **Status:** DISCARD
+- **Rationale:** Mid-high LR.
+- **Citation:** Smith 2017 (arXiv:1506.01186).
+
+### Exp69 (catboost iter 19/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.0001}
+- **Result:** composite=-inf val=NA train=NA
+- **Status:** DISCARD
+- **Rationale:** Very low LR — slow but precise.
+- **Citation:** Kingma & Ba 2015 ICLR (arXiv:1412.6980).
+
+### Exp70 (catboost iter 20/25)
+- **Config:** {'iterations': 400, 'epochs': 100, 'lr': 0.001}
+- **Result:** composite=-inf val=NA train=NA
+- **Status:** DISCARD
+- **Rationale:** Many epochs.
+- **Citation:** He et al. 2016 CVPR (arXiv:1512.03385).
+
+### Exp71 (catboost iter 21/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'weight_decay': 0.001}
+- **Result:** composite=-inf val=NA train=NA
+- **Status:** DISCARD
+- **Rationale:** Higher weight decay.
+- **Citation:** Loshchilov & Hutter 2019 ICLR (arXiv:1711.05101).
+
+### Exp72 (catboost iter 22/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'weight_decay': 0}
+- **Result:** composite=-inf val=NA train=NA
+- **Status:** DISCARD
+- **Rationale:** No weight decay.
+- **Citation:** Loshchilov & Hutter 2019 ICLR (arXiv:1711.05101).
+
+### Exp73 (catboost iter 23/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.0007}
+- **Result:** composite=-inf val=NA train=NA
+- **Status:** DISCARD
+- **Rationale:** Slightly below default.
+- **Citation:** Smith 2017 (arXiv:1506.01186).
+
+### Exp74 (catboost iter 24/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.0015}
+- **Result:** composite=-inf val=NA train=NA
+- **Status:** DISCARD
+- **Rationale:** Slightly above default.
+- **Citation:** Smith 2017 (arXiv:1506.01186).
+
+### Exp75 (catboost iter 25/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'seed': 7}
+- **Result:** composite=-inf val=NA train=NA
+- **Status:** DISCARD
+- **Rationale:** Final variance seed (6th).
+- **Citation:** Kohavi 1995 IJCAI.
+
+### Exp76 (mlp iter 1/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'seed': 42}
+- **Result:** composite=0.9880 val=0.9885205784204671 train=0.9989813811165614
+- **Status:** KEEP
+- **Rationale:** Baseline mlp per sota_catalog defaults — anchor for hill climb.
+- **Citation:** Loshchilov & Hutter 2019 ICLR 'Decoupled Weight Decay Regularization' (arXiv:1711.05101) — establishes AdamW + cosine decay as the default neural-tabular starting point.
+
+### Exp77 (mlp iter 2/25)
+- **Config:** {'iterations': 600, 'epochs': 50, 'lr': 0.001}
+- **Result:** composite=0.9880 val=0.9885205784204671 train=0.9989813811165614
+- **Status:** DISCARD
+- **Rationale:** More iterations / epochs — test if baseline is undertrained.
+- **Citation:** Smith 2017 'Cyclical Learning Rates for Training Neural Networks' (arXiv:1506.01186) — extending training beyond initial plateau often finds wider minima.
+
+### Exp78 (mlp iter 3/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.0003}
+- **Result:** composite=0.9861 val=0.9866518353726363 train=0.9975810353168844
+- **Status:** DISCARD
+- **Rationale:** Lower LR — finer optimisation, slower convergence.
+- **Citation:** Kingma & Ba 2015 ICLR 'Adam: A Method for Stochastic Optimization' (arXiv:1412.6980) — 1e-3 is a default; for sensitive tasks 3e-4 is preferred.
+
+### Exp79 (mlp iter 4/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.003}
+- **Result:** composite=0.9885 val=0.9890100111234705 train=0.9993365708674999
+- **Status:** KEEP
+- **Rationale:** Higher LR — test if baseline is under-optimised in compute budget.
+- **Citation:** Smith 2017 'Cyclical Learning Rates' (arXiv:1506.01186) — high-LR phase finds flat minima faster.
+
+### Exp80 (mlp iter 5/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'hidden': (256, 128)}
+- **Result:** composite=0.9865 val=0.9870967741935484 train=0.9980913654188075
+- **Status:** DISCARD
+- **Rationale:** Larger hidden — increases representational capacity.
+- **Citation:** Zhang et al. 2017 ICLR 'Understanding Deep Learning Requires Rethinking Generalization' (arXiv:1611.03530) — wider models often generalise better than expected on tabular.
+
+### Exp81 (mlp iter 6/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'hidden': (64, 32)}
+- **Result:** composite=0.9050 val=0.907007786429366 train=0.9466868349122948
+- **Status:** DISCARD
+- **Rationale:** Smaller hidden — regularises by capacity reduction.
+- **Citation:** Hastie, Tibshirani & Friedman 2009 ESL — capacity control is a primary regularisation lever.
+
+### Exp82 (mlp iter 7/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'seed': 0}
+- **Result:** composite=0.9911 val=0.9915016685205784 train=0.9994957938593
+- **Status:** KEEP
+- **Rationale:** Seed variance run #2.
+- **Citation:** Kohavi 1995 IJCAI 'A Study of Cross-Validation and Bootstrap for Accuracy Estimation' — variance characterisation.
+
+### Exp83 (mlp iter 8/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'seed': 99}
+- **Result:** composite=0.9914 val=0.9917686318131257 train=0.999979586795923
+- **Status:** KEEP
+- **Rationale:** Seed variance run #3.
+- **Citation:** Kohavi 1995 IJCAI.
+
+### Exp84 (mlp iter 9/25)
+- **Config:** {'iterations': 400, 'epochs': 60, 'lr': 0.001}
+- **Result:** composite=0.9880 val=0.9885205784204671 train=0.9989813811165614
+- **Status:** DISCARD
+- **Rationale:** Longer training (60 epochs) — give the model more time.
+- **Citation:** He et al. 2016 CVPR 'Deep Residual Learning' (arXiv:1512.03385) — deep nets benefit from extended training schedules.
+
+### Exp85 (mlp iter 10/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.0005, 'hidden': (192, 96)}
+- **Result:** composite=0.9828 val=0.983448275862069 train=0.9962480530906611
+- **Status:** DISCARD
+- **Rationale:** Combined moderate lr + mid hidden — balanced.
+- **Citation:** Loshchilov & Hutter 2019 ICLR (arXiv:1711.05101).
+
+### Exp86 (mlp iter 11/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'hidden': (128, 128, 64)}
+- **Result:** composite=0.9826 val=0.9833592880978865 train=0.9983689849942536
+- **Status:** DISCARD
+- **Rationale:** Three-layer MLP for added depth.
+- **Citation:** He et al. 2016 CVPR 'Deep Residual Learning' (arXiv:1512.03385) — deeper requires care; tabular often plateaus past 3 layers.
+
+### Exp87 (mlp iter 12/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'hidden': (256, 256, 128)}
+- **Result:** composite=0.9833 val=0.9840266963292548 train=0.9982587536922383
+- **Status:** DISCARD
+- **Rationale:** Wide + deep — capacity max.
+- **Citation:** Zhang et al. 2017 ICLR (arXiv:1611.03530).
+
+### Exp88 (mlp iter 13/25)
+- **Config:** {'iterations': 800, 'epochs': 40, 'lr': 0.0003, 'seed': 42}
+- **Result:** composite=0.9867 val=0.9872747497219132 train=0.9989405547084076
+- **Status:** DISCARD
+- **Rationale:** Long + slow.
+- **Citation:** Smith 2017 (arXiv:1506.01186).
+
+### Exp89 (mlp iter 14/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'seed': 2024}
+- **Result:** composite=0.9852 val=0.9858509454949945 train=0.9995121244225615
+- **Status:** DISCARD
+- **Rationale:** Seed variance run #4.
+- **Citation:** Kohavi 1995 IJCAI.
+
+### Exp90 (mlp iter 15/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'seed': 12345}
+- **Result:** composite=0.9803 val=0.9810901001112347 train=0.9967522592313611
+- **Status:** DISCARD
+- **Rationale:** Seed variance run #5.
+- **Citation:** Kohavi 1995 IJCAI.
+
+### Exp91 (mlp iter 16/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'hidden': (96, 48)}
+- **Result:** composite=0.9868 val=0.9874082313681868 train=0.9997897439980076
+- **Status:** DISCARD
+- **Rationale:** Mid-small hidden.
+- **Citation:** Hastie et al. 2009 ESL — capacity control.
+
+### Exp92 (mlp iter 17/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'hidden': (512, 256)}
+- **Result:** composite=0.9896 val=0.9901223581757508 train=0.9996386862878385
+- **Status:** DISCARD
+- **Rationale:** Very wide.
+- **Citation:** Zhang et al. 2017 ICLR (arXiv:1611.03530).
+
+### Exp93 (mlp iter 18/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.002}
+- **Result:** composite=0.9899 val=0.9903448275862069 train=0.9994406782082923
+- **Status:** DISCARD
+- **Rationale:** Mid-high LR.
+- **Citation:** Smith 2017 (arXiv:1506.01186).
+
+### Exp94 (mlp iter 19/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.0001}
+- **Result:** composite=0.9375 val=0.9387319243604004 train=0.9627785636861346
+- **Status:** DISCARD
+- **Rationale:** Very low LR — slow but precise.
+- **Citation:** Kingma & Ba 2015 ICLR (arXiv:1412.6980).
+
+### Exp95 (mlp iter 20/25)
+- **Config:** {'iterations': 400, 'epochs': 100, 'lr': 0.001}
+- **Result:** composite=0.9880 val=0.9885205784204671 train=0.9989813811165614
+- **Status:** DISCARD
+- **Rationale:** Many epochs.
+- **Citation:** He et al. 2016 CVPR (arXiv:1512.03385).
+
+### Exp96 (mlp iter 21/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'weight_decay': 0.001}
+- **Result:** composite=0.9880 val=0.9885205784204671 train=0.9989813811165614
+- **Status:** DISCARD
+- **Rationale:** Higher weight decay.
+- **Citation:** Loshchilov & Hutter 2019 ICLR (arXiv:1711.05101).
+
+### Exp97 (mlp iter 22/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'weight_decay': 0}
+- **Result:** composite=0.9880 val=0.9885205784204671 train=0.9989813811165614
+- **Status:** DISCARD
+- **Rationale:** No weight decay.
+- **Citation:** Loshchilov & Hutter 2019 ICLR (arXiv:1711.05101).
+
+### Exp98 (mlp iter 23/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.0007}
+- **Result:** composite=0.9880 val=0.9885650723025584 train=0.9992753312552691
+- **Status:** DISCARD
+- **Rationale:** Slightly below default.
+- **Citation:** Smith 2017 (arXiv:1506.01186).
+
+### Exp99 (mlp iter 24/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.0015}
+- **Result:** composite=0.9888 val=0.989321468298109 train=0.9993692319940229
+- **Status:** DISCARD
+- **Rationale:** Slightly above default.
+- **Citation:** Smith 2017 (arXiv:1506.01186).
+
+### Exp100 (mlp iter 25/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'seed': 7}
+- **Result:** composite=0.9882 val=0.9887875417130145 train=0.9999101819020616
+- **Status:** DISCARD
+- **Rationale:** Final variance seed (6th).
+- **Citation:** Kohavi 1995 IJCAI.
+
+### Exp101 (ft_transformer iter 1/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'seed': 42}
+- **Result:** composite=0.8258 val=0.8327474972191324 train=0.9726912155858896
+- **Status:** DISCARD
+- **Rationale:** Baseline ft_transformer per sota_catalog defaults — anchor for hill climb.
+- **Citation:** Loshchilov & Hutter 2019 ICLR 'Decoupled Weight Decay Regularization' (arXiv:1711.05101) — establishes AdamW + cosine decay as the default neural-tabular starting point.
+
+### Exp102 (ft_transformer iter 2/25)
+- **Config:** {'iterations': 600, 'epochs': 50, 'lr': 0.001}
+- **Result:** composite=0.8412 val=0.8480088987764183 train=0.9833856932017907
+- **Status:** DISCARD
+- **Rationale:** More iterations / epochs — test if baseline is undertrained.
+- **Citation:** Smith 2017 'Cyclical Learning Rates for Training Neural Networks' (arXiv:1506.01186) — extending training beyond initial plateau often finds wider minima.
+
+### Exp103 (ft_transformer iter 3/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.0003}
+- **Result:** composite=0.7842 val=0.7912791991101222 train=0.9320750634340317
+- **Status:** DISCARD
+- **Rationale:** Lower LR — finer optimisation, slower convergence.
+- **Citation:** Kingma & Ba 2015 ICLR 'Adam: A Method for Stochastic Optimization' (arXiv:1412.6980) — 1e-3 is a default; for sensitive tasks 3e-4 is preferred.
+
+### Exp104 (ft_transformer iter 4/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.003}
+- **Result:** composite=0.8618 val=0.8682091212458287 train=0.9955029711418534
+- **Status:** DISCARD
+- **Rationale:** Higher LR — test if baseline is under-optimised in compute budget.
+- **Citation:** Smith 2017 'Cyclical Learning Rates' (arXiv:1506.01186) — high-LR phase finds flat minima faster.
+
+### Exp105 (ft_transformer iter 5/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'hidden': (256, 128)}
+- **Result:** composite=0.9246 val=0.9282313681868744 train=1.0
+- **Status:** DISCARD
+- **Rationale:** Larger hidden — increases representational capacity.
+- **Citation:** Zhang et al. 2017 ICLR 'Understanding Deep Learning Requires Rethinking Generalization' (arXiv:1611.03530) — wider models often generalise better than expected on tabular.
+
+### Exp106 (ft_transformer iter 6/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'hidden': (64, 32)}
+- **Result:** composite=0.9246 val=0.9282313681868744 train=1.0
+- **Status:** DISCARD
+- **Rationale:** Smaller hidden — regularises by capacity reduction.
+- **Citation:** Hastie, Tibshirani & Friedman 2009 ESL — capacity control is a primary regularisation lever.
+
+### Exp107 (ft_transformer iter 7/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'seed': 0}
+- **Result:** composite=0.8258 val=0.8327474972191324 train=0.9726912155858896
+- **Status:** DISCARD
+- **Rationale:** Seed variance run #2.
+- **Citation:** Kohavi 1995 IJCAI 'A Study of Cross-Validation and Bootstrap for Accuracy Estimation' — variance characterisation.
+
+### Exp108 (ft_transformer iter 8/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'seed': 99}
+- **Result:** composite=0.8258 val=0.8327474972191324 train=0.9726912155858896
+- **Status:** DISCARD
+- **Rationale:** Seed variance run #3.
+- **Citation:** Kohavi 1995 IJCAI.
+
+### Exp109 (ft_transformer iter 9/25)
+- **Config:** {'iterations': 400, 'epochs': 60, 'lr': 0.001}
+- **Result:** composite=0.8258 val=0.8327474972191324 train=0.9726912155858896
+- **Status:** DISCARD
+- **Rationale:** Longer training (60 epochs) — give the model more time.
+- **Citation:** He et al. 2016 CVPR 'Deep Residual Learning' (arXiv:1512.03385) — deep nets benefit from extended training schedules.
+
+### Exp110 (ft_transformer iter 10/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.0005, 'hidden': (192, 96)}
+- **Result:** composite=0.7973 val=0.8044048943270302 train=0.9457743646900562
+- **Status:** DISCARD
+- **Rationale:** Combined moderate lr + mid hidden — balanced.
+- **Citation:** Loshchilov & Hutter 2019 ICLR (arXiv:1711.05101).
+
+### Exp111 (ft_transformer iter 11/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'hidden': (128, 128, 64)}
+- **Result:** composite=0.8258 val=0.8327474972191324 train=0.9726912155858896
+- **Status:** DISCARD
+- **Rationale:** Three-layer MLP for added depth.
+- **Citation:** He et al. 2016 CVPR 'Deep Residual Learning' (arXiv:1512.03385) — deeper requires care; tabular often plateaus past 3 layers.
+
+### Exp112 (ft_transformer iter 12/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'hidden': (256, 256, 128)}
+- **Result:** composite=0.8258 val=0.8327474972191324 train=0.9726912155858896
+- **Status:** DISCARD
+- **Rationale:** Wide + deep — capacity max.
+- **Citation:** Zhang et al. 2017 ICLR (arXiv:1611.03530).
+
+### Exp113 (ft_transformer iter 13/25)
+- **Config:** {'iterations': 800, 'epochs': 40, 'lr': 0.0003, 'seed': 42}
+- **Result:** composite=0.8060 val=0.8130589543937708 train=0.9541631709054685
+- **Status:** DISCARD
+- **Rationale:** Long + slow.
+- **Citation:** Smith 2017 (arXiv:1506.01186).
+
+### Exp114 (ft_transformer iter 14/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'seed': 2024}
+- **Result:** composite=0.8258 val=0.8327474972191324 train=0.9726912155858896
+- **Status:** DISCARD
+- **Rationale:** Seed variance run #4.
+- **Citation:** Kohavi 1995 IJCAI.
+
+### Exp115 (ft_transformer iter 15/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'seed': 12345}
+- **Result:** composite=0.8258 val=0.8327474972191324 train=0.9726912155858896
+- **Status:** DISCARD
+- **Rationale:** Seed variance run #5.
+- **Citation:** Kohavi 1995 IJCAI.
+
+### Exp116 (ft_transformer iter 16/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'hidden': (96, 48)}
+- **Result:** composite=0.8258 val=0.8327474972191324 train=0.9726912155858896
+- **Status:** DISCARD
+- **Rationale:** Mid-small hidden.
+- **Citation:** Hastie et al. 2009 ESL — capacity control.
+
+### Exp117 (ft_transformer iter 17/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'hidden': (512, 256)}
+- **Result:** composite=0.8258 val=0.8327474972191324 train=0.9726912155858896
+- **Status:** DISCARD
+- **Rationale:** Very wide.
+- **Citation:** Zhang et al. 2017 ICLR (arXiv:1611.03530).
+
+### Exp118 (ft_transformer iter 18/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.002}
+- **Result:** composite=0.8493 val=0.855928809788654 train=0.9887012915434219
+- **Status:** DISCARD
+- **Rationale:** Mid-high LR.
+- **Citation:** Smith 2017 (arXiv:1506.01186).
+
+### Exp119 (ft_transformer iter 19/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.0001}
+- **Result:** composite=0.7466 val=0.7532369299221358 train=0.8854084375937732
+- **Status:** DISCARD
+- **Rationale:** Very low LR — slow but precise.
+- **Citation:** Kingma & Ba 2015 ICLR (arXiv:1412.6980).
+
+### Exp120 (ft_transformer iter 20/25)
+- **Config:** {'iterations': 400, 'epochs': 100, 'lr': 0.001}
+- **Result:** composite=0.8258 val=0.8327474972191324 train=0.9726912155858896
+- **Status:** DISCARD
+- **Rationale:** Many epochs.
+- **Citation:** He et al. 2016 CVPR (arXiv:1512.03385).
+
+### Exp121 (ft_transformer iter 21/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'weight_decay': 0.001}
+- **Result:** composite=0.8258 val=0.8327474972191324 train=0.9726912155858896
+- **Status:** DISCARD
+- **Rationale:** Higher weight decay.
+- **Citation:** Loshchilov & Hutter 2019 ICLR (arXiv:1711.05101).
+
+### Exp122 (ft_transformer iter 22/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'weight_decay': 0}
+- **Result:** composite=0.8258 val=0.8327474972191324 train=0.9726912155858896
+- **Status:** DISCARD
+- **Rationale:** No weight decay.
+- **Citation:** Loshchilov & Hutter 2019 ICLR (arXiv:1711.05101).
+
+### Exp123 (ft_transformer iter 23/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.0007}
+- **Result:** composite=0.8119 val=0.8189766407119021 train=0.9602646776040614
+- **Status:** DISCARD
+- **Rationale:** Slightly below default.
+- **Citation:** Smith 2017 (arXiv:1506.01186).
+
+### Exp124 (ft_transformer iter 24/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.0015}
+- **Result:** composite=0.8416 val=0.8483203559510567 train=0.9833652799977136
+- **Status:** DISCARD
+- **Rationale:** Slightly above default.
+- **Citation:** Smith 2017 (arXiv:1506.01186).
+
+### Exp125 (ft_transformer iter 25/25)
+- **Config:** {'iterations': 400, 'epochs': 30, 'lr': 0.001, 'seed': 7}
+- **Result:** composite=0.8258 val=0.8327474972191324 train=0.9726912155858896
+- **Status:** DISCARD
+- **Rationale:** Final variance seed (6th).
+- **Citation:** Kohavi 1995 IJCAI.

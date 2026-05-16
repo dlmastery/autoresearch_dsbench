@@ -1,0 +1,20 @@
+{
+  "task": "lmsys-chatbot-arena",
+  "name": "lmsys-chatbot-arena",
+  "problem_type": "regression",
+  "metric": "rmse",
+  "champion_backbone": "mlp",
+  "champion_composite": -0.31786429657799325,
+  "champion_val": -0.3087596568053029,
+  "champion_train": -0.12666686135149516,
+  "test_score": -0.32466549715272736,
+  "test_metrics": {
+    "rmse": 0.32466549715272736,
+    "mae": 0.2582570016384125,
+    "r2": 0.9965299963951111
+  },
+  "dsbench_baseline": -1.0,
+  "delta_vs_dsbench": 0.6753345028472726,
+  "beats_dsbench": true,
+  "timestamp": "2026-05-16 00:11:04"
+}

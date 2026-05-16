@@ -1,0 +1,55 @@
+{
+  "experiment_num": 100,
+  "backbone": "mlp",
+  "description": "mlp iter 25/25: Final variance seed (6th).",
+  "params": {
+    "iterations": 400,
+    "epochs": 30,
+    "lr": 0.001,
+    "seed": 7
+  },
+  "metric": "roc_auc",
+  "train_score": 0.998746846707105,
+  "val_score": 0.9952413019079687,
+  "composite": 0.9950660246680119,
+  "train_metrics": {
+    "accuracy": 0.9821428571428571,
+    "f1": 0.9818971759594497,
+    "precision": 0.9868995633187773,
+    "recall": 0.9769452449567724,
+    "mcc": 0.9643282612228921,
+    "roc_auc": 0.998746846707105,
+    "confusion": [
+      [
+        697,
+        9
+      ],
+      [
+        16,
+        678
+      ]
+    ]
+  },
+  "val_metrics": {
+    "accuracy": 0.9666666666666667,
+    "f1": 0.9691358024691358,
+    "precision": 0.9874213836477987,
+    "recall": 0.9515151515151515,
+    "mcc": 0.9336872196478113,
+    "roc_auc": 0.9952413019079687,
+    "confusion": [
+      [
+        133,
+        2
+      ],
+      [
+        8,
+        157
+      ]
+    ]
+  },
+  "elapsed_sec": 0.7227556705474854,
+  "timestamp": "2026-05-15 07:12:21",
+  "task_slug": "playground-series-s3e8",
+  "uses_test_set": false
+}

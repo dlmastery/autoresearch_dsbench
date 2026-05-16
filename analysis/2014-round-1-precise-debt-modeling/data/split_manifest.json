@@ -1,0 +1,17 @@
+{
+  "task_slug": "2014-round-1-precise-debt-modeling",
+  "n_train": 6,
+  "n_val": 1,
+  "n_test": 1,
+  "n_features": 47,
+  "hashes": {
+    "X_train": "a344075eb3b41c7c",
+    "y_train": "469b36035e5cc014",
+    "X_val": "0c2d96f4a371fa32",
+    "y_val": "048db3815473d7aa",
+    "X_test": "b178e9a5367c179f",
+    "y_test": "437ca1909baab1ea"
+  },
+  "generated_at": "2026-05-15 23:44:34",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

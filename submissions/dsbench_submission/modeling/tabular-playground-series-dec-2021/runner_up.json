@@ -1,0 +1,58 @@
+{
+  "experiment_num": 92,
+  "backbone": "mlp",
+  "description": "mlp iter 17/25: Very wide.",
+  "params": {
+    "iterations": 400,
+    "epochs": 30,
+    "lr": 0.001,
+    "hidden": [
+      512,
+      256
+    ]
+  },
+  "metric": "roc_auc",
+  "train_score": 0.9987706156724038,
+  "val_score": 0.9910411838117312,
+  "composite": 0.9906547122186976,
+  "train_metrics": {
+    "accuracy": 0.9828571428571429,
+    "f1": 0.9823008849557522,
+    "precision": 0.9881305637982196,
+    "recall": 0.9765395894428153,
+    "mcc": 0.9657446998091876,
+    "roc_auc": 0.9987706156724038,
+    "confusion": [
+      [
+        710,
+        8
+      ],
+      [
+        16,
+        666
+      ]
+    ]
+  },
+  "val_metrics": {
+    "accuracy": 0.95,
+    "f1": 0.9526813880126183,
+    "precision": 0.949685534591195,
+    "recall": 0.9556962025316456,
+    "mcc": 0.8996990948249486,
+    "roc_auc": 0.9910411838117312,
+    "confusion": [
+      [
+        134,
+        8
+      ],
+      [
+        7,
+        151
+      ]
+    ]
+  },
+  "elapsed_sec": 2.3498926162719727,
+  "timestamp": "2026-05-15 08:42:14",
+  "task_slug": "tabular-playground-series-dec-2021",
+  "uses_test_set": false
+}

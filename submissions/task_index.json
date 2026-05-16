@@ -1,0 +1,898 @@
+[
+  {
+    "task": "bike-sharing-demand",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": -0.3358726217031659,
+    "delta_vs_dsbench": 0.6641273782968341
+  },
+  {
+    "task": "cat-in-the-dat",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9954648526077098,
+    "delta_vs_dsbench": 0.4954648526077098
+  },
+  {
+    "task": "cat-in-the-dat-ii",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9917248166040435,
+    "delta_vs_dsbench": 0.49172481660404355
+  },
+  {
+    "task": "commonlitreadabilityprize",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": -0.35463051947438795,
+    "delta_vs_dsbench": 0.645369480525612
+  },
+  {
+    "task": "conways-reverse-game-of-life-2020",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9885333333333334,
+    "delta_vs_dsbench": 0.4885333333333334
+  },
+  {
+    "task": "covid19-global-forecasting-week-1",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": -0.3840867264123838,
+    "delta_vs_dsbench": 0.6159132735876163
+  },
+  {
+    "task": "covid19-global-forecasting-week-2",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": -0.30355471551993435,
+    "delta_vs_dsbench": 0.6964452844800657
+  },
+  {
+    "task": "covid19-global-forecasting-week-3",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": -0.3720024227171115,
+    "delta_vs_dsbench": 0.6279975772828885
+  },
+  {
+    "task": "covid19-global-forecasting-week-4",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": -0.3356400437064762,
+    "delta_vs_dsbench": 0.6643599562935238
+  },
+  {
+    "task": "demand-forecasting-kernels-only",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": -0.314247253506114,
+    "delta_vs_dsbench": 0.685752746493886
+  },
+  {
+    "task": "dont-overfit-ii",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9956881223328591,
+    "delta_vs_dsbench": 0.4956881223328591
+  },
+  {
+    "task": "feedback-prize-english-language-learning",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": -0.3248621175875074,
+    "delta_vs_dsbench": 0.6751378824124926
+  },
+  {
+    "task": "google-quest-challenge",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": -0.33798526254456007,
+    "delta_vs_dsbench": 0.6620147374554399
+  },
+  {
+    "task": "instant-gratification",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9794782763532763,
+    "delta_vs_dsbench": 0.47947827635327633
+  },
+  {
+    "task": "learning-agency-lab-automated-essay-scoring-2",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": -0.3822924331567271,
+    "delta_vs_dsbench": 0.6177075668432729
+  },
+  {
+    "task": "liverpool-ion-switching",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.8743839072714911,
+    "delta_vs_dsbench": 0.5343839072714911
+  },
+  {
+    "task": "lmsys-chatbot-arena",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": -0.32466549715272736,
+    "delta_vs_dsbench": 0.6753345028472726
+  },
+  {
+    "task": "microsoft-malware-prediction",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9949768847795163,
+    "delta_vs_dsbench": 0.4949768847795163
+  },
+  {
+    "task": "nlp-getting-started",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9936968168925308,
+    "delta_vs_dsbench": 0.49369681689253075
+  },
+  {
+    "task": "playground-series-s3e1",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9934655049786628,
+    "delta_vs_dsbench": 0.4934655049786628
+  },
+  {
+    "task": "playground-series-s3e10",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9905572134871498,
+    "delta_vs_dsbench": 0.49055721348714976
+  },
+  {
+    "task": "playground-series-s3e11",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.997021692745377,
+    "delta_vs_dsbench": 0.497021692745377
+  },
+  {
+    "task": "playground-series-s3e12",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9957406743185078,
+    "delta_vs_dsbench": 0.49574067431850777
+  },
+  {
+    "task": "playground-series-s3e13",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9941121370266293,
+    "delta_vs_dsbench": 0.49411213702662926
+  },
+  {
+    "task": "playground-series-s3e14",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9959090091710123,
+    "delta_vs_dsbench": 0.4959090091710123
+  },
+  {
+    "task": "playground-series-s3e16",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9935064935064936,
+    "delta_vs_dsbench": 0.49350649350649356
+  },
+  {
+    "task": "playground-series-s3e17",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9974611375885262,
+    "delta_vs_dsbench": 0.49746113758852617
+  },
+  {
+    "task": "playground-series-s3e18",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9954323586046303,
+    "delta_vs_dsbench": 0.4954323586046303
+  },
+  {
+    "task": "playground-series-s3e19",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9905316500711238,
+    "delta_vs_dsbench": 0.49053165007112376
+  },
+  {
+    "task": "playground-series-s3e2",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9966100182880593,
+    "delta_vs_dsbench": 0.4966100182880593
+  },
+  {
+    "task": "playground-series-s3e20",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9890625000000001,
+    "delta_vs_dsbench": 0.48906250000000007
+  },
+  {
+    "task": "playground-series-s3e22",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9926994301994302,
+    "delta_vs_dsbench": 0.4926994301994302
+  },
+  {
+    "task": "playground-series-s3e23",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9955943175687826,
+    "delta_vs_dsbench": 0.4955943175687826
+  },
+  {
+    "task": "playground-series-s3e24",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9924474015464845,
+    "delta_vs_dsbench": 0.4924474015464845
+  },
+  {
+    "task": "playground-series-s3e25",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9918222222222222,
+    "delta_vs_dsbench": 0.49182222222222216
+  },
+  {
+    "task": "playground-series-s3e3",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9982221432063647,
+    "delta_vs_dsbench": 0.4982221432063647
+  },
+  {
+    "task": "playground-series-s3e4",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9927526566182029,
+    "delta_vs_dsbench": 0.4927526566182029
+  },
+  {
+    "task": "playground-series-s3e5",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.993411680911681,
+    "delta_vs_dsbench": 0.49341168091168097
+  },
+  {
+    "task": "playground-series-s3e6",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9972413793103448,
+    "delta_vs_dsbench": 0.49724137931034484
+  },
+  {
+    "task": "playground-series-s3e7",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9938666666666667,
+    "delta_vs_dsbench": 0.4938666666666667
+  },
+  {
+    "task": "playground-series-s3e8",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9889758179231863,
+    "delta_vs_dsbench": 0.48897581792318634
+  },
+  {
+    "task": "playground-series-s3e9",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9954821971730184,
+    "delta_vs_dsbench": 0.49548219717301845
+  },
+  {
+    "task": "playground-series-s4e1",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9848965548058447,
+    "delta_vs_dsbench": 0.4848965548058447
+  },
+  {
+    "task": "playground-series-s4e2",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9943303571428571,
+    "delta_vs_dsbench": 0.4943303571428571
+  },
+  {
+    "task": "playground-series-s4e3",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9909232480533927,
+    "delta_vs_dsbench": 0.4909232480533927
+  },
+  {
+    "task": "playground-series-s4e4",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9951091547730204,
+    "delta_vs_dsbench": 0.4951091547730204
+  },
+  {
+    "task": "playground-series-s4e5",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9949634515956498,
+    "delta_vs_dsbench": 0.4949634515956498
+  },
+  {
+    "task": "playground-series-s4e6",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9959539371304078,
+    "delta_vs_dsbench": 0.4959539371304078
+  },
+  {
+    "task": "porto-seguro-safe-driver-prediction",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9963392857142858,
+    "delta_vs_dsbench": 0.49633928571428576
+  },
+  {
+    "task": "santander-customer-satisfaction",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9938891119140016,
+    "delta_vs_dsbench": 0.49388911191400164
+  },
+  {
+    "task": "santander-customer-transaction-prediction",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9965654132655337,
+    "delta_vs_dsbench": 0.4965654132655337
+  },
+  {
+    "task": "santander-value-prediction-challenge",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": -0.35928897242638375,
+    "delta_vs_dsbench": 0.6407110275736163
+  },
+  {
+    "task": "see-click-predict-fix",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9896847627940064,
+    "delta_vs_dsbench": 0.4896847627940064
+  },
+  {
+    "task": "spaceship-titanic",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9962665007333659,
+    "delta_vs_dsbench": 0.49626650073336587
+  },
+  {
+    "task": "tabular-playground-series-apr-2021",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9926559491290134,
+    "delta_vs_dsbench": 0.49265594912901345
+  },
+  {
+    "task": "tabular-playground-series-aug-2021",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9950657894736842,
+    "delta_vs_dsbench": 0.4950657894736842
+  },
+  {
+    "task": "tabular-playground-series-aug-2022",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9938222222222223,
+    "delta_vs_dsbench": 0.4938222222222223
+  },
+  {
+    "task": "tabular-playground-series-dec-2021",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9954076808788438,
+    "delta_vs_dsbench": 0.4954076808788438
+  },
+  {
+    "task": "tabular-playground-series-feb-2021",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9912440552913463,
+    "delta_vs_dsbench": 0.4912440552913463
+  },
+  {
+    "task": "tabular-playground-series-feb-2022",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9909542788052483,
+    "delta_vs_dsbench": 0.49095427880524833
+  },
+  {
+    "task": "tabular-playground-series-jan-2021",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9956709956709957,
+    "delta_vs_dsbench": 0.4956709956709957
+  },
+  {
+    "task": "tabular-playground-series-jan-2022",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9972888888888888,
+    "delta_vs_dsbench": 0.4972888888888888
+  },
+  {
+    "task": "tabular-playground-series-jul-2021",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9934655049786628,
+    "delta_vs_dsbench": 0.4934655049786628
+  },
+  {
+    "task": "tabular-playground-series-mar-2021",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9963959955506119,
+    "delta_vs_dsbench": 0.49639599555061187
+  },
+  {
+    "task": "tabular-playground-series-mar-2022",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9948435277382646,
+    "delta_vs_dsbench": 0.49484352773826457
+  },
+  {
+    "task": "tabular-playground-series-may-2022",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9955929487179488,
+    "delta_vs_dsbench": 0.4955929487179488
+  },
+  {
+    "task": "tabular-playground-series-nov-2021",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9880121667561281,
+    "delta_vs_dsbench": 0.48801216675612813
+  },
+  {
+    "task": "tabular-playground-series-sep-2021",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9908244621620417,
+    "delta_vs_dsbench": 0.4908244621620417
+  },
+  {
+    "task": "tabular-playground-series-sep-2022",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9912,
+    "delta_vs_dsbench": 0.49119999999999997
+  },
+  {
+    "task": "titanic",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.9957264957264957,
+    "delta_vs_dsbench": 0.49572649572649574
+  },
+  {
+    "task": "tmdb-box-office-prediction",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": -0.34615007161819245,
+    "delta_vs_dsbench": 0.6538499283818076
+  },
+  {
+    "task": "tweet-sentiment-extraction",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": -0.39997071367579473,
+    "delta_vs_dsbench": 0.6000292863242053
+  },
+  {
+    "task": "us-patent-phrase-to-phrase-matching",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": -0.3827047585659761,
+    "delta_vs_dsbench": 0.6172952414340239
+  },
+  {
+    "task": "ventilator-pressure-prediction",
+    "kind": "modeling",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": -0.30768534798327696,
+    "delta_vs_dsbench": 0.692314652016723
+  },
+  {
+    "task": "2012-finals-excel-knowledge-test",
+    "kind": "analysis",
+    "status": "ok",
+    "beat_dsbench": false,
+    "test_score": 0.0,
+    "delta_vs_dsbench": -0.3412
+  },
+  {
+    "task": "2012-finals-investment-property",
+    "kind": "analysis",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 1.0,
+    "delta_vs_dsbench": 0.6588
+  },
+  {
+    "task": "2012-round-1-theory-and-practice-mcqs",
+    "kind": "analysis",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.4,
+    "delta_vs_dsbench": 0.05880000000000002
+  },
+  {
+    "task": "2012-round-2-asset-schedule",
+    "kind": "analysis",
+    "status": "ok",
+    "beat_dsbench": false,
+    "test_score": 0.0,
+    "delta_vs_dsbench": -0.3412
+  },
+  {
+    "task": "2012-round-2-find-that-error",
+    "kind": "analysis",
+    "status": "ok",
+    "beat_dsbench": false,
+    "test_score": 0.25,
+    "delta_vs_dsbench": -0.0912
+  },
+  {
+    "task": "2012-round-2-monte-carlo",
+    "kind": "analysis",
+    "status": "ok",
+    "beat_dsbench": false,
+    "test_score": 0.0,
+    "delta_vs_dsbench": -0.3412
+  },
+  {
+    "task": "2013-round-1-acquisition-financing",
+    "kind": "analysis",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 1.0,
+    "delta_vs_dsbench": 0.6588
+  },
+  {
+    "task": "2013-round-1-energy-operations",
+    "kind": "analysis",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 1.0,
+    "delta_vs_dsbench": 0.6588
+  },
+  {
+    "task": "2013-round-1-theory-and-practice",
+    "kind": "analysis",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.5,
+    "delta_vs_dsbench": 0.1588
+  },
+  {
+    "task": "2013-round-2-data-analysis",
+    "kind": "analysis",
+    "status": "ok",
+    "beat_dsbench": false,
+    "test_score": 0.3333333333333333,
+    "delta_vs_dsbench": -0.007866666666666688
+  },
+  {
+    "task": "2013-round-2-hard-times-turnaround-a-toy-company",
+    "kind": "analysis",
+    "status": "ok",
+    "beat_dsbench": false,
+    "test_score": 0.0,
+    "delta_vs_dsbench": -0.3412
+  },
+  {
+    "task": "2013-round-2-theory-and-practice",
+    "kind": "analysis",
+    "status": "ok",
+    "beat_dsbench": false,
+    "test_score": 0.0,
+    "delta_vs_dsbench": -0.3412
+  },
+  {
+    "task": "2014-round-1-dealing-with-data",
+    "kind": "analysis",
+    "status": "ok",
+    "beat_dsbench": false,
+    "test_score": 0.0,
+    "delta_vs_dsbench": -0.3412
+  },
+  {
+    "task": "2014-round-1-precise-debt-modeling",
+    "kind": "analysis",
+    "status": "ok",
+    "beat_dsbench": false,
+    "test_score": 0.0,
+    "delta_vs_dsbench": -0.3412
+  },
+  {
+    "task": "2014-round-1-snakes-and-ladders",
+    "kind": "analysis",
+    "status": "ok",
+    "beat_dsbench": false,
+    "test_score": 0.0,
+    "delta_vs_dsbench": -0.3412
+  },
+  {
+    "task": "2014-round-2-purple-city",
+    "kind": "analysis",
+    "status": "ok",
+    "beat_dsbench": false,
+    "test_score": 0.0,
+    "delta_vs_dsbench": -0.3412
+  },
+  {
+    "task": "2014-round-2-stepping-up",
+    "kind": "analysis",
+    "status": "ok",
+    "beat_dsbench": false,
+    "test_score": 0.0,
+    "delta_vs_dsbench": -0.3412
+  },
+  {
+    "task": "2014-round-2-time-is-money",
+    "kind": "analysis",
+    "status": "ok",
+    "beat_dsbench": false,
+    "test_score": 0.0,
+    "delta_vs_dsbench": -0.3412
+  },
+  {
+    "task": "2015-round-1-bread-and-butter",
+    "kind": "analysis",
+    "status": "ok",
+    "beat_dsbench": false,
+    "test_score": 0.0,
+    "delta_vs_dsbench": -0.3412
+  },
+  {
+    "task": "2015-round-1-tax",
+    "kind": "analysis",
+    "status": "ok",
+    "beat_dsbench": false,
+    "test_score": 0.0,
+    "delta_vs_dsbench": -0.3412
+  },
+  {
+    "task": "2015-round-2-more-money-please",
+    "kind": "analysis",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.5,
+    "delta_vs_dsbench": 0.1588
+  },
+  {
+    "task": "2015-round-2-the-price-is-right",
+    "kind": "analysis",
+    "status": "ok",
+    "beat_dsbench": false,
+    "test_score": 0.0,
+    "delta_vs_dsbench": -0.3412
+  },
+  {
+    "task": "2015-round-one-options-to-call",
+    "kind": "analysis",
+    "status": "ok",
+    "beat_dsbench": false,
+    "test_score": 0.0,
+    "delta_vs_dsbench": -0.3412
+  },
+  {
+    "task": "2016-round-1-section-2-chip-off-the-old-block",
+    "kind": "analysis",
+    "status": "ok",
+    "beat_dsbench": false,
+    "test_score": 0.0,
+    "delta_vs_dsbench": -0.3412
+  },
+  {
+    "task": "2016-round-1-section-3-roll-the-dice",
+    "kind": "analysis",
+    "status": "ok",
+    "beat_dsbench": false,
+    "test_score": 0.0,
+    "delta_vs_dsbench": -0.3412
+  },
+  {
+    "task": "2016-round-1-section-4-going-around-in-circles",
+    "kind": "analysis",
+    "status": "ok",
+    "beat_dsbench": false,
+    "test_score": 0.0,
+    "delta_vs_dsbench": -0.3412
+  },
+  {
+    "task": "2016-round-2-section-2-fund-the-future",
+    "kind": "analysis",
+    "status": "ok",
+    "beat_dsbench": false,
+    "test_score": 0.0,
+    "delta_vs_dsbench": -0.3412
+  },
+  {
+    "task": "2016-round-2-section-3-tally-up",
+    "kind": "analysis",
+    "status": "ok",
+    "beat_dsbench": false,
+    "test_score": 0.0,
+    "delta_vs_dsbench": -0.3412
+  },
+  {
+    "task": "2016-round-2-section-4-maximize-the-benefit",
+    "kind": "analysis",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.5,
+    "delta_vs_dsbench": 0.1588
+  },
+  {
+    "task": "2017-finals-castles-in-the-air",
+    "kind": "analysis",
+    "status": "ok",
+    "beat_dsbench": false,
+    "test_score": 0.0,
+    "delta_vs_dsbench": -0.3412
+  },
+  {
+    "task": "2017-finals-funding-fun",
+    "kind": "analysis",
+    "status": "ok",
+    "beat_dsbench": false,
+    "test_score": 0.0,
+    "delta_vs_dsbench": -0.3412
+  },
+  {
+    "task": "2017-finals-ladder-up",
+    "kind": "analysis",
+    "status": "ok",
+    "beat_dsbench": false,
+    "test_score": 0.0,
+    "delta_vs_dsbench": -0.3412
+  },
+  {
+    "task": "2017-finals-word-play",
+    "kind": "analysis",
+    "status": "ok",
+    "beat_dsbench": false,
+    "test_score": 0.0,
+    "delta_vs_dsbench": -0.3412
+  },
+  {
+    "task": "2017-round-1-go-with-the-flow",
+    "kind": "analysis",
+    "status": "ok",
+    "beat_dsbench": true,
+    "test_score": 0.5,
+    "delta_vs_dsbench": 0.1588
+  },
+  {
+    "task": "2017-round-1-when-it-rains-it-pours",
+    "kind": "analysis",
+    "status": "ok",
+    "beat_dsbench": false,
+    "test_score": 0.0,
+    "delta_vs_dsbench": -0.3412
+  },
+  {
+    "task": "2017-round-2-late-again",
+    "kind": "analysis",
+    "status": "ok",
+    "beat_dsbench": false,
+    "test_score": 0.0,
+    "delta_vs_dsbench": -0.3412
+  },
+  {
+    "task": "2017-round-2-section-1-collect-the-cash",
+    "kind": "analysis",
+    "status": "ok",
+    "beat_dsbench": false,
+    "test_score": 0.0,
+    "delta_vs_dsbench": -0.3412
+  },
+  {
+    "task": "2017-round-2-section-3-system-allocation",
+    "kind": "analysis",
+    "status": "ok",
+    "beat_dsbench": false,
+    "test_score": 0.0,
+    "delta_vs_dsbench": -0.3412
+  }
+]

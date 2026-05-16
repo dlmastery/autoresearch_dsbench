@@ -1,0 +1,17 @@
+{
+  "task_slug": "titanic",
+  "n_train": 1400,
+  "n_val": 300,
+  "n_test": 300,
+  "n_features": 32,
+  "hashes": {
+    "X_train": "cbcad1bb611b9adc",
+    "y_train": "3a80e06e2d6e61c6",
+    "X_val": "f1f87b4f9972d970",
+    "y_val": "07df0ba6dc2367fc",
+    "X_test": "31d0a023094e6120",
+    "y_test": "4d263f498009d0fd"
+  },
+  "generated_at": "2026-05-15 03:18:46",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

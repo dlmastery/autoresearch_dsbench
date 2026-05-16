@@ -1,0 +1,33 @@
+{
+  "experiment_num": 165,
+  "backbone": "mlp",
+  "description": "ext mlp 40/200: MLP capacity sweep \u2014 hidden=(512, 256) lr=0.003. The base 25",
+  "params": {
+    "iterations": 600,
+    "epochs": 60,
+    "lr": 0.003,
+    "hidden": [
+      512,
+      256
+    ],
+    "weight_decay": 0.0005
+  },
+  "metric": "rmse",
+  "train_score": -0.14438554791318237,
+  "val_score": -0.37579325381198064,
+  "composite": -0.38736363910692057,
+  "train_metrics": {
+    "rmse": 0.14438554791318237,
+    "mae": 0.08632013946771622,
+    "r2": 0.9995930790901184
+  },
+  "val_metrics": {
+    "rmse": 0.37579325381198064,
+    "mae": 0.29690977931022644,
+    "r2": 0.9970075488090515
+  },
+  "elapsed_sec": 4.7624311447143555,
+  "timestamp": "2026-05-15 19:28:38",
+  "task_slug": "learning-agency-lab-automated-essay-scoring-2",
+  "uses_test_set": false
+}

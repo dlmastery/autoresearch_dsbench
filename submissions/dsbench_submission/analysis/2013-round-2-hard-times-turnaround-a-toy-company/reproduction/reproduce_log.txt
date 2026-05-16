@@ -1,0 +1,8 @@
+Reproduction protocol for 2013-round-2-hard-times-turnaround-a-toy-company champion:
+
+  python -m framework.runner --repo C:\Users\evija\dsbench\analysis\2013-round-2-hard-times-turnaround-a-toy-company \
+    --backbone excel_agent \
+    --params '{"classifier": "prior_only", "seed": 42}' \
+    --description 'reproduction' --experiment-num 1
+
+Expected composite ≈ 0.5000 (within 0.005 due to RNG floor variance).

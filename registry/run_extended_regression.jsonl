@@ -1,0 +1,16 @@
+{"task": "bike-sharing-demand", "kind": "modeling", "start": 126, "final": 216, "elapsed_sec": 445.26148223876953, "status": "ok"}
+{"task": "commonlitreadabilityprize", "kind": "modeling", "start": 126, "final": 216, "elapsed_sec": 416.3720712661743, "status": "ok"}
+{"task": "covid19-global-forecasting-week-1", "kind": "modeling", "start": 126, "final": 216, "elapsed_sec": 412.09872126579285, "status": "ok"}
+{"task": "covid19-global-forecasting-week-2", "kind": "modeling", "start": 126, "final": 216, "elapsed_sec": 422.11924290657043, "status": "ok"}
+{"task": "covid19-global-forecasting-week-3", "kind": "modeling", "start": 126, "final": 216, "elapsed_sec": 416.77730417251587, "status": "ok"}
+{"task": "covid19-global-forecasting-week-4", "kind": "modeling", "start": 126, "final": 216, "elapsed_sec": 419.44619369506836, "status": "ok"}
+{"task": "demand-forecasting-kernels-only", "kind": "modeling", "start": 126, "final": 216, "elapsed_sec": 408.48212337493896, "status": "ok"}
+{"task": "feedback-prize-english-language-learning", "kind": "modeling", "start": 126, "final": 216, "elapsed_sec": 412.7993748188019, "status": "ok"}
+{"task": "google-quest-challenge", "kind": "modeling", "start": 126, "final": 216, "elapsed_sec": 417.62220907211304, "status": "ok"}
+{"task": "learning-agency-lab-automated-essay-scoring-2", "kind": "modeling", "start": 126, "final": 216, "elapsed_sec": 421.18322253227234, "status": "ok"}
+{"task": "lmsys-chatbot-arena", "kind": "modeling", "start": 126, "final": 216, "elapsed_sec": 419.86207818984985, "status": "ok"}
+{"task": "santander-value-prediction-challenge", "kind": "modeling", "start": 126, "final": 216, "elapsed_sec": 424.94848895072937, "status": "ok"}
+{"task": "tmdb-box-office-prediction", "kind": "modeling", "start": 126, "final": 216, "elapsed_sec": 406.19679617881775, "status": "ok"}
+{"task": "tweet-sentiment-extraction", "kind": "modeling", "start": 126, "final": 216, "elapsed_sec": 412.1733033657074, "status": "ok"}
+{"task": "us-patent-phrase-to-phrase-matching", "kind": "modeling", "start": 126, "final": 216, "elapsed_sec": 415.86283826828003, "status": "ok"}
+{"task": "ventilator-pressure-prediction", "kind": "modeling", "start": 126, "final": 216, "elapsed_sec": 402.76339054107666, "status": "ok"}

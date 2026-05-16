@@ -1,0 +1,17 @@
+{
+  "task_slug": "feedback-prize-english-language-learning",
+  "n_train": 1400,
+  "n_val": 300,
+  "n_test": 300,
+  "n_features": 32,
+  "hashes": {
+    "X_train": "a3dc8b038c78902e",
+    "y_train": "724156b4876c29ac",
+    "X_val": "85a1ae6100f3a94b",
+    "y_val": "ceb3ba83ddbc512c",
+    "X_test": "63bf84fc5e2963d3",
+    "y_test": "45ba1d6122279b90"
+  },
+  "generated_at": "2026-05-15 04:25:29",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

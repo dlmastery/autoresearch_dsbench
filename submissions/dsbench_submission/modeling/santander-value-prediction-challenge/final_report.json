@@ -1,0 +1,20 @@
+{
+  "task": "santander-value-prediction-challenge",
+  "name": "santander-value-prediction-challenge",
+  "problem_type": "regression",
+  "metric": "rmse",
+  "champion_backbone": "mlp",
+  "champion_composite": -0.3644752294257568,
+  "champion_val": -0.35429683798860234,
+  "champion_train": -0.1507290092455137,
+  "test_score": -0.35928897242638375,
+  "test_metrics": {
+    "rmse": 0.35928897242638375,
+    "mae": 0.2732314169406891,
+    "r2": 0.996785044670105
+  },
+  "dsbench_baseline": -1.0,
+  "delta_vs_dsbench": 0.6407110275736163,
+  "beats_dsbench": true,
+  "timestamp": "2026-05-16 00:11:47"
+}

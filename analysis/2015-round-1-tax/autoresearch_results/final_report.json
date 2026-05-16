@@ -1,0 +1,48 @@
+{
+  "task": "2015-round-1-tax",
+  "name": "2015-round-1-tax",
+  "problem_type": "qa_excel",
+  "metric": "exact_match_accuracy",
+  "champion_backbone": "excel_agent",
+  "champion_composite": 0.625,
+  "champion_val": 0.625,
+  "champion_train": 0.6666666666666666,
+  "test_score": 0.0,
+  "test_metrics": {
+    "accuracy": 0.0,
+    "f1": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "mcc": 0.0,
+    "confusion": [
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ]
+    ]
+  },
+  "dsbench_baseline": 0.3412,
+  "delta_vs_dsbench": -0.3412,
+  "beats_dsbench": false,
+  "timestamp": "2026-05-16 00:12:16"
+}

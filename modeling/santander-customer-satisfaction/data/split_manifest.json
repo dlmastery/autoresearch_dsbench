@@ -1,0 +1,17 @@
+{
+  "task_slug": "santander-customer-satisfaction",
+  "n_train": 1400,
+  "n_val": 300,
+  "n_test": 300,
+  "n_features": 32,
+  "hashes": {
+    "X_train": "257583284debc0ab",
+    "y_train": "66a44e320fa9d8f1",
+    "X_val": "bd7109366e3c9e0b",
+    "y_val": "80a8d643cb01ca73",
+    "X_test": "5511480de5b4fe43",
+    "y_test": "4758dd47f4317cfa"
+  },
+  "generated_at": "2026-05-15 07:56:10",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

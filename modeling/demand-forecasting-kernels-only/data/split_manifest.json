@@ -1,0 +1,17 @@
+{
+  "task_slug": "demand-forecasting-kernels-only",
+  "n_train": 1400,
+  "n_val": 300,
+  "n_test": 300,
+  "n_features": 32,
+  "hashes": {
+    "X_train": "bcfe6912b0227b9e",
+    "y_train": "cf613b6089811941",
+    "X_val": "1fa2a3b16878385e",
+    "y_val": "f2fdb0ab9fee5f3f",
+    "X_test": "d3d4158aa4e5e9dc",
+    "y_test": "3bd8ebe7f2b0b194"
+  },
+  "generated_at": "2026-05-15 04:14:18",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

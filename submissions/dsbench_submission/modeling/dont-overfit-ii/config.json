@@ -1,0 +1,58 @@
+{
+  "experiment_num": 92,
+  "backbone": "mlp",
+  "description": "mlp iter 17/25: Very wide.",
+  "params": {
+    "iterations": 400,
+    "epochs": 30,
+    "lr": 0.001,
+    "hidden": [
+      512,
+      256
+    ]
+  },
+  "metric": "roc_auc",
+  "train_score": 0.9998612015455617,
+  "val_score": 0.9982065997130559,
+  "composite": 0.9981238696214306,
+  "train_metrics": {
+    "accuracy": 0.9957142857142857,
+    "f1": 0.9956521739130435,
+    "precision": 0.9970972423802612,
+    "recall": 0.9942112879884226,
+    "mcc": 0.9914308876008098,
+    "roc_auc": 0.9998612015455617,
+    "confusion": [
+      [
+        707,
+        2
+      ],
+      [
+        4,
+        687
+      ]
+    ]
+  },
+  "val_metrics": {
+    "accuracy": 0.9766666666666667,
+    "f1": 0.9743589743589743,
+    "precision": 0.9708029197080292,
+    "recall": 0.9779411764705882,
+    "mcc": 0.9529742977980268,
+    "roc_auc": 0.9982065997130559,
+    "confusion": [
+      [
+        160,
+        4
+      ],
+      [
+        3,
+        133
+      ]
+    ]
+  },
+  "elapsed_sec": 2.6693835258483887,
+  "timestamp": "2026-05-15 04:23:33",
+  "task_slug": "dont-overfit-ii",
+  "uses_test_set": false
+}

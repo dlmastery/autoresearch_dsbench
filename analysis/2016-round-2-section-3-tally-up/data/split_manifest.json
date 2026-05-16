@@ -1,0 +1,17 @@
+{
+  "task_slug": "2016-round-2-section-3-tally-up",
+  "n_train": 6,
+  "n_val": 2,
+  "n_test": 2,
+  "n_features": 47,
+  "hashes": {
+    "X_train": "338929c5aec196ab",
+    "y_train": "9f78a38ab6100f94",
+    "X_val": "e922c5d5b0f2922f",
+    "y_val": "6e4b3dba085b07a7",
+    "X_test": "e7150c94db337af1",
+    "y_test": "a56566fa31fae338"
+  },
+  "generated_at": "2026-05-15 23:49:15",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

@@ -1,0 +1,12 @@
+{
+  "task": "playground-series-s3e22",
+  "problem_type": "classification_binary",
+  "primary_backbone": "xgboost",
+  "first_experiment": {
+    "backbone": "xgboost",
+    "diagnosis": "Fresh autoresearch run on playground-series-s3e22 \u2014 no champion exists. Anchor the xgboost-phase 25-iter cycle with the sota_catalog default config so the subsequent iterations can perturb individual axes (depth/lr/regularisation/seeds) from a known-good starting point. Per autoresearch CLAUDE.md research-driven selection, exploration must start with the SOTA literature default before venturing into bold changes.",
+    "citations": "Chen & Guestrin 2016 KDD 'XGBoost: A Scalable Tree Boosting System' (arXiv:1603.02754) \u2014 establishes the 2nd-order Newton boosting default tabular SOTA; Loshchilov & Hutter 2019 ICLR 'Decoupled Weight Decay Regularization' (arXiv:1711.05101) \u2014 neural-baseline AdamW recipe.",
+    "hypothesis": "The default sota_catalog config for xgboost should land in the middle of the Kaggle distribution for tasks of this size/type. The composite metric (min(val,train) - 0.05*|gap|) penalises overfit baselines; if the gap is wide, the next iter will tighten regularisation.",
+    "prediction": "Composite in [0.55, 0.85] for classification_binary; for regression the score is negated RMSE so target around [-1.5, -0.3]."
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "experiment_num": 164,
+  "backbone": "mlp",
+  "description": "ext mlp 39/200: MLP capacity sweep \u2014 hidden=(512, 256) lr=0.001. The base 25",
+  "params": {
+    "iterations": 600,
+    "epochs": 60,
+    "lr": 0.001,
+    "hidden": [
+      512,
+      256
+    ],
+    "weight_decay": 0.0005
+  },
+  "metric": "rmse",
+  "train_score": -0.15820735172229758,
+  "val_score": -0.3663100655225386,
+  "composite": -0.37671520121255064,
+  "train_metrics": {
+    "rmse": 0.15820735172229758,
+    "mae": 0.10961224883794785,
+    "r2": 0.9993104338645935
+  },
+  "val_metrics": {
+    "rmse": 0.3663100655225386,
+    "mae": 0.2934945821762085,
+    "r2": 0.9960803389549255
+  },
+  "elapsed_sec": 5.416420936584473,
+  "timestamp": "2026-05-15 19:21:32",
+  "task_slug": "google-quest-challenge",
+  "uses_test_set": false
+}

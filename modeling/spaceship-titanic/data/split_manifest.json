@@ -1,0 +1,17 @@
+{
+  "task_slug": "spaceship-titanic",
+  "n_train": 1400,
+  "n_val": 300,
+  "n_test": 300,
+  "n_features": 32,
+  "hashes": {
+    "X_train": "eca7b396c9354780",
+    "y_train": "1903171d21772c5f",
+    "X_val": "5119800bd0bd6aea",
+    "y_val": "dc022c32159e3a2e",
+    "X_test": "9d1d32321f50a1b1",
+    "y_test": "e8e46b79149b0832"
+  },
+  "generated_at": "2026-05-15 08:17:52",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

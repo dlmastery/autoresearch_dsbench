@@ -1,0 +1,2 @@
+Snapshot of framework/runner.py for excel_agent on 2017-round-2-section-3-system-allocation.
+Hash of framework/runner.py at start: see registry/runtime_hashes.json

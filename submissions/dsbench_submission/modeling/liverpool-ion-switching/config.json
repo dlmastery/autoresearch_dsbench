@@ -1,0 +1,87 @@
+{
+  "experiment_num": 82,
+  "backbone": "mlp",
+  "description": "mlp iter 7/25: Seed variance run #2.",
+  "params": {
+    "iterations": 400,
+    "epochs": 30,
+    "lr": 0.001,
+    "seed": 0
+  },
+  "metric": "macro_f1",
+  "train_score": 0.989261568886847,
+  "val_score": 0.9197184839608549,
+  "composite": 0.9162413297145553,
+  "train_metrics": {
+    "accuracy": 0.9892857142857143,
+    "f1": 0.989261568886847,
+    "precision": 0.9891860379867753,
+    "recall": 0.9893433956539383,
+    "mcc": 0.9856768662994093,
+    "roc_auc": 0.999538789364183,
+    "confusion": [
+      [
+        339,
+        3,
+        0,
+        1
+      ],
+      [
+        1,
+        399,
+        1,
+        3
+      ],
+      [
+        0,
+        0,
+        331,
+        1
+      ],
+      [
+        2,
+        1,
+        2,
+        316
+      ]
+    ]
+  },
+  "val_metrics": {
+    "accuracy": 0.92,
+    "f1": 0.9197184839608549,
+    "precision": 0.919346595310709,
+    "recall": 0.921262445358831,
+    "mcc": 0.8934907072238621,
+    "roc_auc": 0.9923049390653517,
+    "confusion": [
+      [
+        63,
+        3,
+        6,
+        2
+      ],
+      [
+        3,
+        78,
+        1,
+        1
+      ],
+      [
+        2,
+        2,
+        70,
+        3
+      ],
+      [
+        1,
+        0,
+        0,
+        65
+      ]
+    ]
+  },
+  "elapsed_sec": 1.0326950550079346,
+  "timestamp": "2026-05-15 04:55:39",
+  "task_slug": "liverpool-ion-switching",
+  "uses_test_set": false
+}

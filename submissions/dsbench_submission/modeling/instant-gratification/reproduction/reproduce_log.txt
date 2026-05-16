@@ -1,0 +1,8 @@
+Reproduction protocol for instant-gratification champion:
+
+  python -m framework.runner --repo C:\Users\evija\dsbench\modeling\instant-gratification \
+    --backbone mlp \
+    --params '{"iterations": 400, "epochs": 30, "lr": 0.001, "seed": 99}' \
+    --description 'reproduction' --experiment-num 83
+
+Expected composite ≈ 0.9966 (within 0.005 due to RNG floor variance).

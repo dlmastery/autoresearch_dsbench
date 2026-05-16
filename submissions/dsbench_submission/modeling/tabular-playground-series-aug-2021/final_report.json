@@ -1,0 +1,33 @@
+{
+  "task": "tabular-playground-series-aug-2021",
+  "name": "tabular-playground-series-aug-2021",
+  "problem_type": "classification_binary",
+  "metric": "roc_auc",
+  "champion_backbone": "mlp",
+  "champion_composite": 0.9955874440946703,
+  "champion_val": 0.9956871637543906,
+  "champion_train": 0.9976815569487982,
+  "test_score": 0.9950657894736842,
+  "test_metrics": {
+    "accuracy": 0.9566666666666667,
+    "f1": 0.9576547231270358,
+    "precision": 0.9483870967741935,
+    "recall": 0.9671052631578947,
+    "mcc": 0.9134776740327604,
+    "roc_auc": 0.9950657894736842,
+    "confusion": [
+      [
+        140,
+        8
+      ],
+      [
+        5,
+        147
+      ]
+    ]
+  },
+  "dsbench_baseline": 0.5,
+  "delta_vs_dsbench": 0.4950657894736842,
+  "beats_dsbench": true,
+  "timestamp": "2026-05-16 00:11:52"
+}

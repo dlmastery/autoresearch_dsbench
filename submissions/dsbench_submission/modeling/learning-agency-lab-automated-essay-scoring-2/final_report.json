@@ -1,0 +1,20 @@
+{
+  "task": "learning-agency-lab-automated-essay-scoring-2",
+  "name": "learning-agency-lab-automated-essay-scoring-2",
+  "problem_type": "regression",
+  "metric": "rmse",
+  "champion_backbone": "mlp",
+  "champion_composite": -0.38736363910692057,
+  "champion_val": -0.37579325381198064,
+  "champion_train": -0.14438554791318237,
+  "test_score": -0.3822924331567271,
+  "test_metrics": {
+    "rmse": 0.3822924331567271,
+    "mae": 0.30443018674850464,
+    "r2": 0.9968683123588562
+  },
+  "dsbench_baseline": -1.0,
+  "delta_vs_dsbench": 0.6177075668432729,
+  "beats_dsbench": true,
+  "timestamp": "2026-05-16 00:11:02"
+}

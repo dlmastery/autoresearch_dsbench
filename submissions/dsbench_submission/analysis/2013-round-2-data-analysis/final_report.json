@@ -1,0 +1,39 @@
+{
+  "task": "2013-round-2-data-analysis",
+  "name": "2013-round-2-data-analysis",
+  "problem_type": "qa_excel",
+  "metric": "exact_match_accuracy",
+  "champion_backbone": "excel_agent",
+  "champion_composite": 0.38461538461538464,
+  "champion_val": 0.38461538461538464,
+  "champion_train": 0.4,
+  "test_score": 0.3333333333333333,
+  "test_metrics": {
+    "accuracy": 0.3333333333333333,
+    "f1": 0.16666666666666666,
+    "precision": 0.1111111111111111,
+    "recall": 0.3333333333333333,
+    "mcc": 0.0,
+    "confusion": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ]
+    ]
+  },
+  "dsbench_baseline": 0.3412,
+  "delta_vs_dsbench": -0.007866666666666688,
+  "beats_dsbench": false,
+  "timestamp": "2026-05-16 00:12:16"
+}

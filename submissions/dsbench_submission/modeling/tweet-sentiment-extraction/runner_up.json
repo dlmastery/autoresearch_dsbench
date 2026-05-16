@@ -1,0 +1,33 @@
+{
+  "experiment_num": 164,
+  "backbone": "mlp",
+  "description": "ext mlp 39/200: MLP capacity sweep \u2014 hidden=(512, 256) lr=0.001. The base 25",
+  "params": {
+    "iterations": 600,
+    "epochs": 60,
+    "lr": 0.001,
+    "hidden": [
+      512,
+      256
+    ],
+    "weight_decay": 0.0005
+  },
+  "metric": "rmse",
+  "train_score": -0.16236942758241493,
+  "val_score": -0.3948596305355748,
+  "composite": -0.4064841406832328,
+  "train_metrics": {
+    "rmse": 0.16236942758241493,
+    "mae": 0.1147228553891182,
+    "r2": 0.9993597865104675
+  },
+  "val_metrics": {
+    "rmse": 0.3948596305355748,
+    "mae": 0.3080497682094574,
+    "r2": 0.9964948296546936
+  },
+  "elapsed_sec": 5.5852437019348145,
+  "timestamp": "2026-05-15 19:56:21",
+  "task_slug": "tweet-sentiment-extraction",
+  "uses_test_set": false
+}

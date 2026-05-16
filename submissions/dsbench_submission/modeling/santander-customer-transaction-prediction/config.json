@@ -1,0 +1,58 @@
+{
+  "experiment_num": 92,
+  "backbone": "mlp",
+  "description": "mlp iter 17/25: Very wide.",
+  "params": {
+    "iterations": 400,
+    "epochs": 30,
+    "lr": 0.001,
+    "hidden": [
+      512,
+      256
+    ]
+  },
+  "metric": "roc_auc",
+  "train_score": 0.9996509748212012,
+  "val_score": 0.9950220009778212,
+  "composite": 0.9947905522856523,
+  "train_metrics": {
+    "accuracy": 0.9928571428571429,
+    "f1": 0.9929278642149929,
+    "precision": 0.9943342776203966,
+    "recall": 0.9915254237288136,
+    "mcc": 0.9857169102911797,
+    "roc_auc": 0.9996509748212012,
+    "confusion": [
+      [
+        688,
+        4
+      ],
+      [
+        6,
+        702
+      ]
+    ]
+  },
+  "val_metrics": {
+    "accuracy": 0.9566666666666667,
+    "f1": 0.9556313993174061,
+    "precision": 0.9722222222222222,
+    "recall": 0.9395973154362416,
+    "mcc": 0.9138183050134479,
+    "roc_auc": 0.9950220009778212,
+    "confusion": [
+      [
+        147,
+        4
+      ],
+      [
+        9,
+        140
+      ]
+    ]
+  },
+  "elapsed_sec": 2.6199069023132324,
+  "timestamp": "2026-05-15 08:04:43",
+  "task_slug": "santander-customer-transaction-prediction",
+  "uses_test_set": false
+}

@@ -1,0 +1,57 @@
+{
+  "experiment_num": 80,
+  "backbone": "mlp",
+  "description": "mlp iter 5/25: Larger hidden \u2014 increases representational capacity.",
+  "params": {
+    "iterations": 400,
+    "epochs": 30,
+    "hidden": [
+      256,
+      128
+    ]
+  },
+  "metric": "roc_auc",
+  "train_score": 0.999856945500323,
+  "val_score": 0.9926103988603988,
+  "composite": 0.9922480715284026,
+  "train_metrics": {
+    "accuracy": 0.9957142857142857,
+    "f1": 0.9958677685950413,
+    "precision": 0.9958677685950413,
+    "recall": 0.9958677685950413,
+    "mcc": 0.9914167300193737,
+    "roc_auc": 0.999856945500323,
+    "confusion": [
+      [
+        671,
+        3
+      ],
+      [
+        3,
+        723
+      ]
+    ]
+  },
+  "val_metrics": {
+    "accuracy": 0.9333333333333333,
+    "f1": 0.9342105263157895,
+    "precision": 0.9594594594594594,
+    "recall": 0.9102564102564102,
+    "mcc": 0.8679717500973544,
+    "roc_auc": 0.9926103988603988,
+    "confusion": [
+      [
+        138,
+        6
+      ],
+      [
+        14,
+        142
+      ]
+    ]
+  },
+  "elapsed_sec": 2.124683380126953,
+  "timestamp": "2026-05-15 09:02:50",
+  "task_slug": "tabular-playground-series-jan-2022",
+  "uses_test_set": false
+}

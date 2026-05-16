@@ -1,0 +1,17 @@
+{
+  "task_slug": "instant-gratification",
+  "n_train": 1400,
+  "n_val": 300,
+  "n_test": 300,
+  "n_features": 32,
+  "hashes": {
+    "X_train": "5b2ef4740a3f788a",
+    "y_train": "c5f14a083135822f",
+    "X_val": "611f2690d226626e",
+    "y_val": "c25964fdf16892d7",
+    "X_test": "dbc77e1d208f8d55",
+    "y_test": "b592f5b31698593d"
+  },
+  "generated_at": "2026-05-15 04:37:17",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

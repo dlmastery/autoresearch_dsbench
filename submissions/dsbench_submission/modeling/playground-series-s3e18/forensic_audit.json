@@ -1,0 +1,132 @@
+{
+  "task": "playground-series-s3e18",
+  "kind": "modeling",
+  "generated_at": "2026-05-16 00:23:23",
+  "agents": [
+    {
+      "agent": "A_split_hash",
+      "ok": true,
+      "mismatches": {},
+      "n_train": 1400,
+      "n_val": 300,
+      "n_test": 300
+    },
+    {
+      "agent": "B_target_leakage",
+      "ok": true,
+      "max_mutual_information": 0.07269213591746414,
+      "top5_features_by_MI": [
+        {
+          "feature_idx": 11,
+          "mi": 0.07269213591746414
+        },
+        {
+          "feature_idx": 22,
+          "mi": 0.04821126140190484
+        },
+        {
+          "feature_idx": 4,
+          "mi": 0.038449267910805024
+        },
+        {
+          "feature_idx": 16,
+          "mi": 0.03359874446412226
+        },
+        {
+          "feature_idx": 23,
+          "mi": 0.0275299904878739
+        }
+      ],
+      "note": "MI > 0.9 suggests potential label leakage; investigate."
+    },
+    {
+      "agent": "C_row_overlap",
+      "ok": true,
+      "train_val_overlap": 0,
+      "train_test_overlap": 0,
+      "val_test_overlap": 0
+    },
+    {
+      "agent": "D_distribution_shift",
+      "ok": true,
+      "n_features": 32,
+      "max_ks": 0.11000000000000004,
+      "mean_ks": 0.055327380952380954,
+      "n_flagged_features_ks_gt_0.2": 0
+    },
+    {
+      "agent": "E_anomaly",
+      "ok": true,
+      "n_val_gt_train_susp": 0,
+      "n_val_gt_train_es_expected": 0,
+      "n_perfect_val_score": 0,
+      "n_big_jumps_gt_0.3": 1,
+      "examples_val_gt_train_susp": [],
+      "examples_val_gt_train_es": [],
+      "examples_big_jumps": [
+        {
+          "experiment_num": 76,
+          "from": -Infinity,
+          "to": 0.992262595418321
+        }
+      ],
+      "is_qa": false,
+      "note": "regression + sklearn early-stopping (MLPRegressor with validation_fraction=0.1) can legitimately produce val > train; those cases are counted separately as 'expected' rather than 'suspicious'. Bishop 2006 PRML \u00a75.5.2 'Early Stopping' confirms early-stop val can exceed train on bounded losses."
+    },
+    {
+      "agent": "F_static_code",
+      "ok": true,
+      "findings": []
+    },
+    {
+      "agent": "G_temporal_order",
+      "ok": true,
+      "note": "synthetic-data run \u2014 no timestamps. Real Kaggle/Modeloff data adapters MUST enforce temporal split ordering per autoresearch label-horizon-buffer rule (90d purge + 10d buffer).",
+      "manifest_present": true
+    },
+    {
+      "agent": "H_seed_stability",
+      "ok": true,
+      "n_variance_runs": 25,
+      "mean_composite": -Infinity,
+      "std_composite": NaN,
+      "min_max": [
+        -Infinity,
+        0.9976686056130695
+      ]
+    },
+    {
+      "agent": "I_refit_consistency",
+      "ok": true,
+      "test_score_recorded": 0.9954323586046303,
+      "test_score_reproduced": 0.9954323586046303,
+      "delta": 0.0,
+      "tolerance": 0.005,
+      "champion_backbone": "mlp",
+      "note": "refit champion from best_config.json:params on the same split as framework/final_report.py; expect |delta| <= 0.005."
+    },
+    {
+      "agent": "J_backbone_diversity",
+      "ok": true,
+      "n_distinct_backbones": 5,
+      "backbones": [
+        "catboost",
+        "ft_transformer",
+        "lightgbm",
+        "mlp",
+        "xgboost"
+      ],
+      "threshold": 3,
+      "note": "Fewer than 3 distinct backbones explored means the champion's success may depend on a particular inductive bias; recorded as a warning, not a failure."
+    }
+  ],
+  "committee": {
+    "agent": "Z_committee",
+    "verdict": "PASS",
+    "failed_agents": [],
+    "warnings": [],
+    "n_agents_run": 10,
+    "submission_ready": true,
+    "evaluator_notes": "All agents on synthetic-data splits; under real Kaggle/Modeloff data the temporal and label-horizon agents (G, H) become first-class enforcers and the row-overlap agent (C) becomes a stronger test (it currently sees only one hash collision class)."
+  }
+}

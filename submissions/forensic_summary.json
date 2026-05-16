@@ -1,0 +1,750 @@
+[
+  {
+    "task": "bike-sharing-demand",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "cat-in-the-dat",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "cat-in-the-dat-ii",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "commonlitreadabilityprize",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "conways-reverse-game-of-life-2020",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "covid19-global-forecasting-week-1",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "covid19-global-forecasting-week-2",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "covid19-global-forecasting-week-3",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "covid19-global-forecasting-week-4",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "demand-forecasting-kernels-only",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "dont-overfit-ii",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "feedback-prize-english-language-learning",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "google-quest-challenge",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "instant-gratification",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "learning-agency-lab-automated-essay-scoring-2",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "liverpool-ion-switching",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "lmsys-chatbot-arena",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "microsoft-malware-prediction",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "nlp-getting-started",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "playground-series-s3e1",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "playground-series-s3e10",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "playground-series-s3e11",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "playground-series-s3e12",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "playground-series-s3e13",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "playground-series-s3e14",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "playground-series-s3e16",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "playground-series-s3e17",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "playground-series-s3e18",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "playground-series-s3e19",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "playground-series-s3e2",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "playground-series-s3e20",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "playground-series-s3e22",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "playground-series-s3e23",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "playground-series-s3e24",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "playground-series-s3e25",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "playground-series-s3e3",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "playground-series-s3e4",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "playground-series-s3e5",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "playground-series-s3e6",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "playground-series-s3e7",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "playground-series-s3e8",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "playground-series-s3e9",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "playground-series-s4e1",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "playground-series-s4e2",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "playground-series-s4e3",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "playground-series-s4e4",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "playground-series-s4e5",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "playground-series-s4e6",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "porto-seguro-safe-driver-prediction",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "santander-customer-satisfaction",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "santander-customer-transaction-prediction",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "santander-value-prediction-challenge",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "see-click-predict-fix",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "spaceship-titanic",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "tabular-playground-series-apr-2021",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "tabular-playground-series-aug-2021",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "tabular-playground-series-aug-2022",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "tabular-playground-series-dec-2021",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "tabular-playground-series-feb-2021",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "tabular-playground-series-feb-2022",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "tabular-playground-series-jan-2021",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "tabular-playground-series-jan-2022",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "tabular-playground-series-jul-2021",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "tabular-playground-series-mar-2021",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "tabular-playground-series-mar-2022",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "tabular-playground-series-may-2022",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "tabular-playground-series-nov-2021",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "tabular-playground-series-sep-2021",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "tabular-playground-series-sep-2022",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "titanic",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "tmdb-box-office-prediction",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "tweet-sentiment-extraction",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "us-patent-phrase-to-phrase-matching",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "ventilator-pressure-prediction",
+    "kind": "modeling",
+    "verdict": "PASS",
+    "warnings": []
+  },
+  {
+    "task": "2012-finals-excel-knowledge-test",
+    "kind": "analysis",
+    "verdict": "PASS",
+    "warnings": [
+      "Only 1 distinct backbone(s) tried \u2014 champion may be fragile"
+    ]
+  },
+  {
+    "task": "2012-finals-investment-property",
+    "kind": "analysis",
+    "verdict": "PASS",
+    "warnings": [
+      "Only 1 distinct backbone(s) tried \u2014 champion may be fragile"
+    ]
+  },
+  {
+    "task": "2012-round-1-theory-and-practice-mcqs",
+    "kind": "analysis",
+    "verdict": "PASS",
+    "warnings": [
+      "Only 1 distinct backbone(s) tried \u2014 champion may be fragile"
+    ]
+  },
+  {
+    "task": "2012-round-2-asset-schedule",
+    "kind": "analysis",
+    "verdict": "PASS",
+    "warnings": [
+      "Only 1 distinct backbone(s) tried \u2014 champion may be fragile"
+    ]
+  },
+  {
+    "task": "2012-round-2-find-that-error",
+    "kind": "analysis",
+    "verdict": "PASS",
+    "warnings": [
+      "Only 1 distinct backbone(s) tried \u2014 champion may be fragile"
+    ]
+  },
+  {
+    "task": "2012-round-2-monte-carlo",
+    "kind": "analysis",
+    "verdict": "PASS",
+    "warnings": [
+      "Only 1 distinct backbone(s) tried \u2014 champion may be fragile"
+    ]
+  },
+  {
+    "task": "2013-round-1-acquisition-financing",
+    "kind": "analysis",
+    "verdict": "PASS",
+    "warnings": [
+      "Only 1 distinct backbone(s) tried \u2014 champion may be fragile"
+    ]
+  },
+  {
+    "task": "2013-round-1-energy-operations",
+    "kind": "analysis",
+    "verdict": "PASS",
+    "warnings": [
+      "Only 1 distinct backbone(s) tried \u2014 champion may be fragile"
+    ]
+  },
+  {
+    "task": "2013-round-1-theory-and-practice",
+    "kind": "analysis",
+    "verdict": "PASS",
+    "warnings": [
+      "Only 1 distinct backbone(s) tried \u2014 champion may be fragile"
+    ]
+  },
+  {
+    "task": "2013-round-2-data-analysis",
+    "kind": "analysis",
+    "verdict": "PASS",
+    "warnings": [
+      "Only 1 distinct backbone(s) tried \u2014 champion may be fragile"
+    ]
+  },
+  {
+    "task": "2013-round-2-hard-times-turnaround-a-toy-company",
+    "kind": "analysis",
+    "verdict": "PASS",
+    "warnings": [
+      "Only 1 distinct backbone(s) tried \u2014 champion may be fragile"
+    ]
+  },
+  {
+    "task": "2013-round-2-theory-and-practice",
+    "kind": "analysis",
+    "verdict": "PASS",
+    "warnings": [
+      "Only 1 distinct backbone(s) tried \u2014 champion may be fragile"
+    ]
+  },
+  {
+    "task": "2014-round-1-dealing-with-data",
+    "kind": "analysis",
+    "verdict": "PASS",
+    "warnings": [
+      "Only 1 distinct backbone(s) tried \u2014 champion may be fragile"
+    ]
+  },
+  {
+    "task": "2014-round-1-precise-debt-modeling",
+    "kind": "analysis",
+    "verdict": "PASS",
+    "warnings": [
+      "Only 1 distinct backbone(s) tried \u2014 champion may be fragile"
+    ]
+  },
+  {
+    "task": "2014-round-1-snakes-and-ladders",
+    "kind": "analysis",
+    "verdict": "PASS",
+    "warnings": [
+      "Only 1 distinct backbone(s) tried \u2014 champion may be fragile"
+    ]
+  },
+  {
+    "task": "2014-round-2-purple-city",
+    "kind": "analysis",
+    "verdict": "PASS",
+    "warnings": [
+      "Only 1 distinct backbone(s) tried \u2014 champion may be fragile"
+    ]
+  },
+  {
+    "task": "2014-round-2-stepping-up",
+    "kind": "analysis",
+    "verdict": "PASS",
+    "warnings": [
+      "Only 1 distinct backbone(s) tried \u2014 champion may be fragile"
+    ]
+  },
+  {
+    "task": "2014-round-2-time-is-money",
+    "kind": "analysis",
+    "verdict": "PASS",
+    "warnings": [
+      "Only 1 distinct backbone(s) tried \u2014 champion may be fragile"
+    ]
+  },
+  {
+    "task": "2015-round-1-bread-and-butter",
+    "kind": "analysis",
+    "verdict": "PASS",
+    "warnings": [
+      "Only 1 distinct backbone(s) tried \u2014 champion may be fragile"
+    ]
+  },
+  {
+    "task": "2015-round-1-tax",
+    "kind": "analysis",
+    "verdict": "PASS",
+    "warnings": [
+      "Only 1 distinct backbone(s) tried \u2014 champion may be fragile"
+    ]
+  },
+  {
+    "task": "2015-round-2-more-money-please",
+    "kind": "analysis",
+    "verdict": "PASS",
+    "warnings": [
+      "Only 1 distinct backbone(s) tried \u2014 champion may be fragile"
+    ]
+  },
+  {
+    "task": "2015-round-2-the-price-is-right",
+    "kind": "analysis",
+    "verdict": "PASS",
+    "warnings": [
+      "Only 1 distinct backbone(s) tried \u2014 champion may be fragile"
+    ]
+  },
+  {
+    "task": "2015-round-one-options-to-call",
+    "kind": "analysis",
+    "verdict": "PASS",
+    "warnings": [
+      "Only 1 distinct backbone(s) tried \u2014 champion may be fragile"
+    ]
+  },
+  {
+    "task": "2016-round-1-section-2-chip-off-the-old-block",
+    "kind": "analysis",
+    "verdict": "PASS",
+    "warnings": [
+      "Only 1 distinct backbone(s) tried \u2014 champion may be fragile"
+    ]
+  },
+  {
+    "task": "2016-round-1-section-3-roll-the-dice",
+    "kind": "analysis",
+    "verdict": "PASS",
+    "warnings": [
+      "Only 1 distinct backbone(s) tried \u2014 champion may be fragile"
+    ]
+  },
+  {
+    "task": "2016-round-1-section-4-going-around-in-circles",
+    "kind": "analysis",
+    "verdict": "PASS",
+    "warnings": [
+      "Only 1 distinct backbone(s) tried \u2014 champion may be fragile"
+    ]
+  },
+  {
+    "task": "2016-round-2-section-2-fund-the-future",
+    "kind": "analysis",
+    "verdict": "PASS",
+    "warnings": [
+      "Only 1 distinct backbone(s) tried \u2014 champion may be fragile"
+    ]
+  },
+  {
+    "task": "2016-round-2-section-3-tally-up",
+    "kind": "analysis",
+    "verdict": "PASS",
+    "warnings": [
+      "Only 1 distinct backbone(s) tried \u2014 champion may be fragile"
+    ]
+  },
+  {
+    "task": "2016-round-2-section-4-maximize-the-benefit",
+    "kind": "analysis",
+    "verdict": "PASS",
+    "warnings": [
+      "Only 1 distinct backbone(s) tried \u2014 champion may be fragile"
+    ]
+  },
+  {
+    "task": "2017-finals-castles-in-the-air",
+    "kind": "analysis",
+    "verdict": "PASS",
+    "warnings": [
+      "Only 1 distinct backbone(s) tried \u2014 champion may be fragile"
+    ]
+  },
+  {
+    "task": "2017-finals-funding-fun",
+    "kind": "analysis",
+    "verdict": "PASS",
+    "warnings": [
+      "Only 1 distinct backbone(s) tried \u2014 champion may be fragile"
+    ]
+  },
+  {
+    "task": "2017-finals-ladder-up",
+    "kind": "analysis",
+    "verdict": "PASS",
+    "warnings": [
+      "Only 1 distinct backbone(s) tried \u2014 champion may be fragile"
+    ]
+  },
+  {
+    "task": "2017-finals-word-play",
+    "kind": "analysis",
+    "verdict": "PASS",
+    "warnings": [
+      "Only 1 distinct backbone(s) tried \u2014 champion may be fragile"
+    ]
+  },
+  {
+    "task": "2017-round-1-go-with-the-flow",
+    "kind": "analysis",
+    "verdict": "PASS",
+    "warnings": [
+      "Only 1 distinct backbone(s) tried \u2014 champion may be fragile"
+    ]
+  },
+  {
+    "task": "2017-round-1-when-it-rains-it-pours",
+    "kind": "analysis",
+    "verdict": "PASS",
+    "warnings": [
+      "Only 1 distinct backbone(s) tried \u2014 champion may be fragile"
+    ]
+  },
+  {
+    "task": "2017-round-2-late-again",
+    "kind": "analysis",
+    "verdict": "PASS",
+    "warnings": [
+      "Only 1 distinct backbone(s) tried \u2014 champion may be fragile"
+    ]
+  },
+  {
+    "task": "2017-round-2-section-1-collect-the-cash",
+    "kind": "analysis",
+    "verdict": "PASS",
+    "warnings": [
+      "Only 1 distinct backbone(s) tried \u2014 champion may be fragile"
+    ]
+  },
+  {
+    "task": "2017-round-2-section-3-system-allocation",
+    "kind": "analysis",
+    "verdict": "PASS",
+    "warnings": [
+      "Only 1 distinct backbone(s) tried \u2014 champion may be fragile"
+    ]
+  }
+]

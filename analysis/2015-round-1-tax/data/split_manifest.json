@@ -1,0 +1,17 @@
+{
+  "task_slug": "2015-round-1-tax",
+  "n_train": 6,
+  "n_val": 2,
+  "n_test": 2,
+  "n_features": 47,
+  "hashes": {
+    "X_train": "bfc3afd5df713bac",
+    "y_train": "73c6764a24103a64",
+    "X_val": "a9850a398b7e4a05",
+    "y_val": "46417f4c3971c634",
+    "X_test": "b157f23cc053d6a1",
+    "y_test": "c8e29731c4da32c2"
+  },
+  "generated_at": "2026-05-15 23:46:24",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

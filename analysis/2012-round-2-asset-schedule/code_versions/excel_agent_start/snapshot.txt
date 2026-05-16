@@ -1,0 +1,2 @@
+Snapshot of framework/runner.py for excel_agent on 2012-round-2-asset-schedule.
+Hash of framework/runner.py at start: see registry/runtime_hashes.json

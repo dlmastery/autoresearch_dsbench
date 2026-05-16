@@ -1,0 +1,33 @@
+{
+  "experiment_num": 164,
+  "backbone": "mlp",
+  "description": "ext mlp 39/200: MLP capacity sweep \u2014 hidden=(512, 256) lr=0.001. The base 25",
+  "params": {
+    "iterations": 600,
+    "epochs": 60,
+    "lr": 0.001,
+    "hidden": [
+      512,
+      256
+    ],
+    "weight_decay": 0.0005
+  },
+  "metric": "rmse",
+  "train_score": -0.1461181449412092,
+  "val_score": -0.37576753825274384,
+  "composite": -0.3872500079183206,
+  "train_metrics": {
+    "rmse": 0.1461181449412092,
+    "mae": 0.09664535522460938,
+    "r2": 0.9992734789848328
+  },
+  "val_metrics": {
+    "rmse": 0.37576753825274384,
+    "mae": 0.2934398651123047,
+    "r2": 0.9957690834999084
+  },
+  "elapsed_sec": 5.896901607513428,
+  "timestamp": "2026-05-15 18:53:52",
+  "task_slug": "covid19-global-forecasting-week-3",
+  "uses_test_set": false
+}

@@ -1,0 +1,8 @@
+Reproduction protocol for playground-series-s3e13 champion:
+
+  python -m framework.runner --repo C:\Users\evija\dsbench\modeling\playground-series-s3e13 \
+    --backbone mlp \
+    --params '{"iterations": 400, "epochs": 30, "lr": 0.003}' \
+    --description 'reproduction' --experiment-num 79
+
+Expected composite ≈ 0.9968 (within 0.005 due to RNG floor variance).

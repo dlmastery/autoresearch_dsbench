@@ -1,0 +1,48 @@
+{
+  "task": "2012-round-2-find-that-error",
+  "name": "2012-round-2-find-that-error",
+  "problem_type": "qa_excel",
+  "metric": "exact_match_accuracy",
+  "champion_backbone": "excel_agent",
+  "champion_composite": 0.375,
+  "champion_val": 0.375,
+  "champion_train": 0.4166666666666667,
+  "test_score": 0.25,
+  "test_metrics": {
+    "accuracy": 0.25,
+    "f1": 0.1,
+    "precision": 0.0625,
+    "recall": 0.25,
+    "mcc": 0.0,
+    "confusion": [
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ]
+    ]
+  },
+  "dsbench_baseline": 0.3412,
+  "delta_vs_dsbench": -0.0912,
+  "beats_dsbench": false,
+  "timestamp": "2026-05-16 00:12:16"
+}

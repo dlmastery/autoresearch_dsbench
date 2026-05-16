@@ -1,0 +1,17 @@
+{
+  "task_slug": "covid19-global-forecasting-week-2",
+  "n_train": 1400,
+  "n_val": 300,
+  "n_test": 300,
+  "n_features": 32,
+  "hashes": {
+    "X_train": "5ded7e543f942eea",
+    "y_train": "b0fab7bb8bf7f010",
+    "X_val": "0cbe30552d3a8621",
+    "y_val": "c0787f710754a0e2",
+    "X_test": "0b9053e269e373e2",
+    "y_test": "44655deeca5667fd"
+  },
+  "generated_at": "2026-05-15 03:56:26",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

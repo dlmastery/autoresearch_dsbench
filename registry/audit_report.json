@@ -1,0 +1,898 @@
+[
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\bike-sharing-demand",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 216
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\cat-in-the-dat",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\cat-in-the-dat-ii",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\commonlitreadabilityprize",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 216
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\conways-reverse-game-of-life-2020",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\covid19-global-forecasting-week-1",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 216
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\covid19-global-forecasting-week-2",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 216
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\covid19-global-forecasting-week-3",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 216
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\covid19-global-forecasting-week-4",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 216
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\demand-forecasting-kernels-only",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 216
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\dont-overfit-ii",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\feedback-prize-english-language-learning",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 216
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\google-quest-challenge",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 216
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\instant-gratification",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\learning-agency-lab-automated-essay-scoring-2",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 216
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\liverpool-ion-switching",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\lmsys-chatbot-arena",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 216
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\microsoft-malware-prediction",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\nlp-getting-started",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\playground-series-s3e1",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\playground-series-s3e10",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\playground-series-s3e11",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\playground-series-s3e12",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\playground-series-s3e13",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\playground-series-s3e14",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\playground-series-s3e16",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\playground-series-s3e17",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\playground-series-s3e18",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\playground-series-s3e19",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\playground-series-s3e2",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\playground-series-s3e20",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\playground-series-s3e22",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\playground-series-s3e23",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\playground-series-s3e24",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\playground-series-s3e25",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\playground-series-s3e3",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\playground-series-s3e4",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\playground-series-s3e5",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\playground-series-s3e6",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\playground-series-s3e7",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\playground-series-s3e8",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\playground-series-s3e9",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\playground-series-s4e1",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\playground-series-s4e2",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\playground-series-s4e3",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\playground-series-s4e4",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\playground-series-s4e5",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\playground-series-s4e6",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\porto-seguro-safe-driver-prediction",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\santander-customer-satisfaction",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\santander-customer-transaction-prediction",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\santander-value-prediction-challenge",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 216
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\see-click-predict-fix",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\spaceship-titanic",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\tabular-playground-series-apr-2021",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\tabular-playground-series-aug-2021",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\tabular-playground-series-aug-2022",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\tabular-playground-series-dec-2021",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\tabular-playground-series-feb-2021",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\tabular-playground-series-feb-2022",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\tabular-playground-series-jan-2021",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\tabular-playground-series-jan-2022",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\tabular-playground-series-jul-2021",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\tabular-playground-series-mar-2021",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\tabular-playground-series-mar-2022",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\tabular-playground-series-may-2022",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\tabular-playground-series-nov-2021",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\tabular-playground-series-sep-2021",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\tabular-playground-series-sep-2022",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 125
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\titanic",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 150
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\tmdb-box-office-prediction",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 216
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\tweet-sentiment-extraction",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 216
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\us-patent-phrase-to-phrase-matching",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 216
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\modeling\\ventilator-pressure-prediction",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 216
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\analysis\\2012-finals-excel-knowledge-test",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 25
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\analysis\\2012-finals-investment-property",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 25
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\analysis\\2012-round-1-theory-and-practice-mcqs",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 25
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\analysis\\2012-round-2-asset-schedule",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 25
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\analysis\\2012-round-2-find-that-error",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 25
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\analysis\\2012-round-2-monte-carlo",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 25
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\analysis\\2013-round-1-acquisition-financing",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 25
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\analysis\\2013-round-1-energy-operations",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 25
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\analysis\\2013-round-1-theory-and-practice",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 25
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\analysis\\2013-round-2-data-analysis",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 25
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\analysis\\2013-round-2-hard-times-turnaround-a-toy-company",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 25
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\analysis\\2013-round-2-theory-and-practice",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 25
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\analysis\\2014-round-1-dealing-with-data",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 25
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\analysis\\2014-round-1-precise-debt-modeling",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 25
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\analysis\\2014-round-1-snakes-and-ladders",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 25
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\analysis\\2014-round-2-purple-city",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 25
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\analysis\\2014-round-2-stepping-up",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 25
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\analysis\\2014-round-2-time-is-money",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 25
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\analysis\\2015-round-1-bread-and-butter",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 25
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\analysis\\2015-round-1-tax",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 25
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\analysis\\2015-round-2-more-money-please",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 25
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\analysis\\2015-round-2-the-price-is-right",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 25
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\analysis\\2015-round-one-options-to-call",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 25
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\analysis\\2016-round-1-section-2-chip-off-the-old-block",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 25
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\analysis\\2016-round-1-section-3-roll-the-dice",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 25
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\analysis\\2016-round-1-section-4-going-around-in-circles",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 25
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\analysis\\2016-round-2-section-2-fund-the-future",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 25
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\analysis\\2016-round-2-section-3-tally-up",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 25
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\analysis\\2016-round-2-section-4-maximize-the-benefit",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 25
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\analysis\\2017-finals-castles-in-the-air",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 25
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\analysis\\2017-finals-funding-fun",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 25
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\analysis\\2017-finals-ladder-up",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 25
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\analysis\\2017-finals-word-play",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 25
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\analysis\\2017-round-1-go-with-the-flow",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 25
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\analysis\\2017-round-1-when-it-rains-it-pours",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 25
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\analysis\\2017-round-2-late-again",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 25
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\analysis\\2017-round-2-section-1-collect-the-cash",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 25
+  },
+  {
+    "repo": "C:\\Users\\evija\\dsbench\\analysis\\2017-round-2-section-3-system-allocation",
+    "missing_files": [],
+    "missing_sections": [],
+    "warnings": [],
+    "ok": true,
+    "n_experiments": 25
+  }
+]

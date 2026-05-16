@@ -1,0 +1,20 @@
+{
+  "task": "us-patent-phrase-to-phrase-matching",
+  "name": "us-patent-phrase-to-phrase-matching",
+  "problem_type": "regression",
+  "metric": "rmse",
+  "champion_backbone": "mlp",
+  "champion_composite": -0.402355817777883,
+  "champion_val": -0.39073559149220477,
+  "champion_train": -0.15833106577864056,
+  "test_score": -0.3827047585659761,
+  "test_metrics": {
+    "rmse": 0.3827047585659761,
+    "mae": 0.3024819791316986,
+    "r2": 0.9964969754219055
+  },
+  "dsbench_baseline": -1.0,
+  "delta_vs_dsbench": 0.6172952414340239,
+  "beats_dsbench": true,
+  "timestamp": "2026-05-16 00:12:12"
+}

@@ -1,0 +1,17 @@
+{
+  "task_slug": "2014-round-2-time-is-money",
+  "n_train": 5,
+  "n_val": 1,
+  "n_test": 1,
+  "n_features": 47,
+  "hashes": {
+    "X_train": "4697ec3d10c94b06",
+    "y_train": "6089505e4039b46e",
+    "X_val": "375386f14a44c84a",
+    "y_val": "703d37e650ac5852",
+    "X_test": "3cfc5fe488ad4fcc",
+    "y_test": "048db3815473d7aa"
+  },
+  "generated_at": "2026-05-15 23:45:31",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

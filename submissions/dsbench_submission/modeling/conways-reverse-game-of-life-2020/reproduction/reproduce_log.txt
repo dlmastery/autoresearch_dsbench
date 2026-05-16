@@ -1,0 +1,8 @@
+Reproduction protocol for conways-reverse-game-of-life-2020 champion:
+
+  python -m framework.runner --repo C:\Users\evija\dsbench\modeling\conways-reverse-game-of-life-2020 \
+    --backbone mlp \
+    --params '{"iterations": 400, "epochs": 30, "lr": 0.001, "hidden": [256, 256, 128]}' \
+    --description 'reproduction' --experiment-num 87
+
+Expected composite ≈ 0.9964 (within 0.005 due to RNG floor variance).

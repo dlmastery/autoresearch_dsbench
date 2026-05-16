@@ -1,0 +1,33 @@
+{
+  "experiment_num": 165,
+  "backbone": "mlp",
+  "description": "ext mlp 40/200: MLP capacity sweep \u2014 hidden=(512, 256) lr=0.003. The base 25",
+  "params": {
+    "iterations": 600,
+    "epochs": 60,
+    "lr": 0.003,
+    "hidden": [
+      512,
+      256
+    ],
+    "weight_decay": 0.0005
+  },
+  "metric": "rmse",
+  "train_score": -0.142300636219176,
+  "val_score": -0.34809575535033666,
+  "composite": -0.35838551130689467,
+  "train_metrics": {
+    "rmse": 0.142300636219176,
+    "mae": 0.08599179983139038,
+    "r2": 0.9995074272155762
+  },
+  "val_metrics": {
+    "rmse": 0.34809575535033666,
+    "mae": 0.2769031524658203,
+    "r2": 0.9969544410705566
+  },
+  "elapsed_sec": 4.222363471984863,
+  "timestamp": "2026-05-15 18:33:11",
+  "task_slug": "commonlitreadabilityprize",
+  "uses_test_set": false
+}

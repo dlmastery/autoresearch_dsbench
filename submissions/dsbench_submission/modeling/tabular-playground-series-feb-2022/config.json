@@ -1,0 +1,55 @@
+{
+  "experiment_num": 83,
+  "backbone": "mlp",
+  "description": "mlp iter 8/25: Seed variance run #3.",
+  "params": {
+    "iterations": 400,
+    "epochs": 30,
+    "lr": 0.001,
+    "seed": 99
+  },
+  "metric": "roc_auc",
+  "train_score": 0.999979586795923,
+  "val_score": 0.9917686318131257,
+  "composite": 0.9913580840639858,
+  "train_metrics": {
+    "accuracy": 0.9971428571428571,
+    "f1": 0.9971870604781997,
+    "precision": 0.9971870604781997,
+    "recall": 0.9971870604781997,
+    "mcc": 0.9942843028584609,
+    "roc_auc": 0.999979586795923,
+    "confusion": [
+      [
+        687,
+        2
+      ],
+      [
+        2,
+        709
+      ]
+    ]
+  },
+  "val_metrics": {
+    "accuracy": 0.9466666666666667,
+    "f1": 0.9452054794520548,
+    "precision": 0.9387755102040817,
+    "recall": 0.9517241379310345,
+    "mcc": 0.8933416924561282,
+    "roc_auc": 0.9917686318131257,
+    "confusion": [
+      [
+        146,
+        9
+      ],
+      [
+        7,
+        138
+      ]
+    ]
+  },
+  "elapsed_sec": 0.9433267116546631,
+  "timestamp": "2026-05-15 08:52:21",
+  "task_slug": "tabular-playground-series-feb-2022",
+  "uses_test_set": false
+}

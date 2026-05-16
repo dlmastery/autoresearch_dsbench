@@ -1,0 +1,17 @@
+{
+  "task_slug": "lmsys-chatbot-arena",
+  "n_train": 1400,
+  "n_val": 300,
+  "n_test": 300,
+  "n_features": 32,
+  "hashes": {
+    "X_train": "6c1e82286a61574b",
+    "y_train": "52493e18c31ff1de",
+    "X_val": "76cd601aedb3b4b1",
+    "y_val": "592d8f8c136f65e9",
+    "X_test": "0000245604b84f19",
+    "y_test": "c0ef4b01aadfbcb5"
+  },
+  "generated_at": "2026-05-15 05:01:27",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

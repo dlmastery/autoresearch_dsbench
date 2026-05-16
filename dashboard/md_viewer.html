@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Markdown Viewer · DSBench AutoResearch</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#0d1117; color:#c9d1d9; font-family:'Segoe UI',system-ui,sans-serif; padding:0; min-height:100vh; }
+.viewer-header { display:flex; align-items:center; justify-content:space-between; gap:14px; padding:12px 22px; background:#161b22; border-bottom:1px solid #30363d; position:sticky; top:0; z-index:50; }
+.viewer-header .title { color:#58a6ff; font-size:1.05em; font-weight:600; flex:1 1 auto; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.viewer-header .meta { color:#8b949e; font-size:0.78em; }
+.viewer-header a, .viewer-header button { background:#21262d; border:1px solid #30363d; color:#c9d1d9; padding:5px 11px; border-radius:5px; font-size:0.8em; cursor:pointer; text-decoration:none; }
+.viewer-header a:hover, .viewer-header button:hover { border-color:#58a6ff; color:#58a6ff; }
+.viewer-container { max-width:980px; margin:0 auto; padding:26px 32px 80px 32px; }
+.md-body { font-size:15px; line-height:1.65; color:#c9d1d9; }
+.md-body h1, .md-body h2, .md-body h3, .md-body h4, .md-body h5, .md-body h6 { color:#58a6ff; margin-top:24px; margin-bottom:12px; line-height:1.3; }
+.md-body h1 { font-size:1.9em; border-bottom:1px solid #30363d; padding-bottom:8px; }
+.md-body h2 { font-size:1.45em; border-bottom:1px solid #30363d; padding-bottom:6px; }
+.md-body h3 { font-size:1.2em; color:#79c0ff; }
+.md-body h4 { font-size:1.0em; color:#79c0ff; }
+.md-body p { margin:10px 0; }
+.md-body a { color:#58a6ff; text-decoration:none; }
+.md-body a:hover { text-decoration:underline; }
+.md-body code { background:#161b22; color:#ff7b72; padding:2px 5px; border-radius:3px; font-family:ui-monospace,SFMono-Regular,monospace; font-size:0.9em; }
+.md-body pre { background:#161b22; border:1px solid #30363d; border-radius:6px; padding:14px 16px; overflow-x:auto; margin:12px 0; }
+.md-body pre code { background:transparent; color:#c9d1d9; padding:0; font-size:0.88em; }
+.md-body blockquote { border-left:4px solid #30363d; padding:6px 14px; color:#8b949e; margin:12px 0; background:#0e1419; }
+.md-body ul, .md-body ol { margin:10px 0 10px 26px; }
+.md-body li { margin:4px 0; }
+.md-body table { border-collapse:collapse; margin:14px 0; width:100%; font-size:0.92em; }
+.md-body th, .md-body td { border:1px solid #30363d; padding:7px 11px; text-align:left; }
+.md-body th { background:#161b22; color:#8b949e; font-weight:600; }
+.md-body tr:nth-child(even) { background:#0e1419; }
+.md-body img { max-width:100%; height:auto; border-radius:4px; }
+.md-body hr { border:none; border-top:1px solid #30363d; margin:18px 0; }
+.md-body strong { color:#e6edf3; }
+.md-body em { color:#d2a8ff; }
+.md-body kbd { background:#161b22; border:1px solid #30363d; border-bottom-width:2px; border-radius:4px; padding:1px 5px; font-family:ui-monospace,monospace; font-size:0.85em; }
+.error-box { background:#3d1414; border:1px solid #f85149; border-radius:6px; padding:18px 22px; color:#ffa198; }
+.error-box h2 { color:#f85149; margin-bottom:8px; }
+.error-box code { background:#0d1117; padding:2px 5px; border-radius:3px; color:#ffa198; }
+.loading { color:#8b949e; padding:18px 0; font-style:italic; }
+</style>
+</head>
+<body>
+<div class="viewer-header">
+  <div style="display:flex;align-items:center;gap:14px;flex:1;overflow:hidden">
+    <button onclick="history.length>1?history.back():window.close()" title="back">← back</button>
+    <div class="title" id="viewer-title">loading…</div>
+    <div class="meta" id="viewer-meta"></div>
+  </div>
+  <a id="raw-link" href="#" target="_blank" rel="noopener">open raw</a>
+</div>
+<div class="viewer-container">
+  <div class="md-body" id="md-body"><div class="loading">fetching markdown…</div></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@11.1.1/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<script>
+(function() {
+  const params = new URLSearchParams(window.location.search);
+  const file = params.get('file') || '';
+  const title = params.get('title') || (file ? file.split('/').pop() : 'Markdown');
+  document.title = title + ' · DSBench';
+  document.getElementById('viewer-title').textContent = title;
+  document.getElementById('viewer-meta').textContent = file ? ('· ' + file) : '';
+  const rawLink = document.getElementById('raw-link');
+  rawLink.href = file || '#';
+  rawLink.setAttribute('download', '');  // hint to browser, but target=_blank still wins for click
+  rawLink.removeAttribute('download');     // we want it to display raw, not download
+  const body = document.getElementById('md-body');
+
+  if (!file) {
+    body.innerHTML = '<div class="error-box"><h2>No file specified</h2><div>Pass <code>?file=&lt;relative-path&gt;&amp;title=&lt;…&gt;</code> in the URL.</div></div>';
+    return;
+  }
+
+  if (typeof marked !== 'undefined') {
+    marked.setOptions({ gfm: true, breaks: true, headerIds: true, mangle: false });
+  }
+
+  fetch(file, { cache: 'no-cache' })
+    .then(r => {
+      if (!r.ok) throw new Error('HTTP ' + r.status + ' — ' + r.statusText);
+      return r.text();
+    })
+    .then(text => {
+      if (typeof marked === 'undefined') {
+        // marked failed to load — show raw text as a fallback
+        const pre = document.createElement('pre');
+        pre.textContent = text;
+        body.innerHTML = '';
+        body.appendChild(pre);
+        return;
+      }
+      const html = marked.parse(text);
+      body.innerHTML = html;
+      // Syntax-highlight any code blocks (Prism autoloader fetches languages on demand)
+      if (window.Prism && typeof Prism.highlightAllUnder === 'function') {
+        try { Prism.highlightAllUnder(body); } catch (e) { /* non-fatal */ }
+      }
+    })
+    .catch(err => {
+      body.innerHTML =
+        '<div class="error-box">' +
+          '<h2>Could not load markdown</h2>' +
+          '<div>File: <code>' + file.replace(/</g,'&lt;') + '</code></div>' +
+          '<div style="margin-top:6px">Error: <code>' + String(err).replace(/</g,'&lt;') + '</code></div>' +
+          '<div style="margin-top:10px;color:#8b949e;font-size:0.9em">' +
+            'Tip: this viewer expects a relative path served by the local dashboard at port 8765. ' +
+            'Use the <b>open raw</b> link to try fetching the file directly.' +
+          '</div>' +
+        '</div>';
+    });
+})();
+</script>
+</body>
+</html>

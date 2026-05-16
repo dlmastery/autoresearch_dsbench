@@ -1,0 +1,17 @@
+{
+  "task_slug": "liverpool-ion-switching",
+  "n_train": 1400,
+  "n_val": 300,
+  "n_test": 300,
+  "n_features": 32,
+  "hashes": {
+    "X_train": "361548e9831158fc",
+    "y_train": "c092ace3c4c38f9f",
+    "X_val": "9e38e8c74097ba76",
+    "y_val": "2f73968d82d9a9d2",
+    "X_test": "51a6d69f78b5dcd4",
+    "y_test": "86641d0d31c2e8d1"
+  },
+  "generated_at": "2026-05-15 04:48:29",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

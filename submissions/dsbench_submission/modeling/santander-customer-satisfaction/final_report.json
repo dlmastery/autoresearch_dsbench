@@ -1,0 +1,33 @@
+{
+  "task": "santander-customer-satisfaction",
+  "name": "santander-customer-satisfaction",
+  "problem_type": "classification_binary",
+  "metric": "roc_auc",
+  "champion_backbone": "mlp",
+  "champion_composite": 0.9964913445527465,
+  "champion_val": 0.9966571581387057,
+  "champion_train": 0.9999734298578906,
+  "test_score": 0.9938891119140016,
+  "test_metrics": {
+    "accuracy": 0.97,
+    "f1": 0.967741935483871,
+    "precision": 0.9782608695652174,
+    "recall": 0.9574468085106383,
+    "mcc": 0.9399004278708872,
+    "roc_auc": 0.9938891119140016,
+    "confusion": [
+      [
+        156,
+        3
+      ],
+      [
+        6,
+        135
+      ]
+    ]
+  },
+  "dsbench_baseline": 0.5,
+  "delta_vs_dsbench": 0.49388911191400164,
+  "beats_dsbench": true,
+  "timestamp": "2026-05-16 00:11:43"
+}

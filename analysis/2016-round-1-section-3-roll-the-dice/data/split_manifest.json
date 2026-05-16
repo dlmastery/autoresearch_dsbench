@@ -1,0 +1,17 @@
+{
+  "task_slug": "2016-round-1-section-3-roll-the-dice",
+  "n_train": 6,
+  "n_val": 2,
+  "n_test": 2,
+  "n_features": 47,
+  "hashes": {
+    "X_train": "d05b2a8a82109b20",
+    "y_train": "e3e57fee60d42636",
+    "X_val": "36c7e9a847f20f1a",
+    "y_val": "e8d63f79aae30671",
+    "X_test": "ab73b2e03747980c",
+    "y_test": "2569337dc3a70db3"
+  },
+  "generated_at": "2026-05-15 23:48:02",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

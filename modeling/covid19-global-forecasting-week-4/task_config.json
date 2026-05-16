@@ -1,0 +1,17 @@
+{
+  "name": "covid19-global-forecasting-week-4",
+  "slug": "covid19-global-forecasting-week-4",
+  "kind": "modeling",
+  "problem_type": "regression",
+  "task_type": "time_series",
+  "metric": "rmse",
+  "iterations_per_backbone": 25,
+  "backbones": [
+    "xgboost",
+    "lightgbm",
+    "catboost",
+    "mlp",
+    "ft_transformer"
+  ],
+  "dsbench_baseline": -1.0
+}

@@ -1,0 +1,33 @@
+{
+  "experiment_num": 165,
+  "backbone": "mlp",
+  "description": "ext mlp 40/200: MLP capacity sweep \u2014 hidden=(512, 256) lr=0.003. The base 25",
+  "params": {
+    "iterations": 600,
+    "epochs": 60,
+    "lr": 0.003,
+    "hidden": [
+      512,
+      256
+    ],
+    "weight_decay": 0.0005
+  },
+  "metric": "rmse",
+  "train_score": -0.1507290092455137,
+  "val_score": -0.35429683798860234,
+  "composite": -0.3644752294257568,
+  "train_metrics": {
+    "rmse": 0.1507290092455137,
+    "mae": 0.09496603906154633,
+    "r2": 0.9994262456893921
+  },
+  "val_metrics": {
+    "rmse": 0.35429683798860234,
+    "mae": 0.28653058409690857,
+    "r2": 0.9968356490135193
+  },
+  "elapsed_sec": 5.21665358543396,
+  "timestamp": "2026-05-15 19:42:40",
+  "task_slug": "santander-value-prediction-challenge",
+  "uses_test_set": false
+}

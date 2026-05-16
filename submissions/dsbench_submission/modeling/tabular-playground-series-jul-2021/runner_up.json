@@ -1,0 +1,54 @@
+{
+  "experiment_num": 93,
+  "backbone": "mlp",
+  "description": "mlp iter 18/25: Mid-high LR.",
+  "params": {
+    "iterations": 400,
+    "epochs": 30,
+    "lr": 0.002
+  },
+  "metric": "roc_auc",
+  "train_score": 0.9995794682518945,
+  "val_score": 0.9950558995144982,
+  "composite": 0.9948297210776285,
+  "train_metrics": {
+    "accuracy": 0.9957142857142857,
+    "f1": 0.9956584659913169,
+    "precision": 0.9913544668587896,
+    "recall": 1.0,
+    "mcc": 0.9914637442604814,
+    "roc_auc": 0.9995794682518945,
+    "confusion": [
+      [
+        706,
+        6
+      ],
+      [
+        0,
+        688
+      ]
+    ]
+  },
+  "val_metrics": {
+    "accuracy": 0.97,
+    "f1": 0.9681978798586572,
+    "precision": 0.9785714285714285,
+    "recall": 0.958041958041958,
+    "mcc": 0.9400019454708632,
+    "roc_auc": 0.9950558995144982,
+    "confusion": [
+      [
+        154,
+        3
+      ],
+      [
+        6,
+        137
+      ]
+    ]
+  },
+  "elapsed_sec": 0.7652146816253662,
+  "timestamp": "2026-05-15 09:08:37",
+  "task_slug": "tabular-playground-series-jul-2021",
+  "uses_test_set": false
+}

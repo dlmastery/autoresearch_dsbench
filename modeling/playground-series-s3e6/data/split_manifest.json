@@ -1,0 +1,17 @@
+{
+  "task_slug": "playground-series-s3e6",
+  "n_train": 1400,
+  "n_val": 300,
+  "n_test": 300,
+  "n_features": 32,
+  "hashes": {
+    "X_train": "e15f2e37dfc8c72d",
+    "y_train": "5d7eebbc26b8692f",
+    "X_val": "44a89b1d5a5056a1",
+    "y_val": "e36b0c0776410e91",
+    "X_test": "2b98ae3f698ee8e7",
+    "y_test": "12b9a2e08c47add6"
+  },
+  "generated_at": "2026-05-15 06:58:16",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

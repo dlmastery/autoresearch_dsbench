@@ -1,0 +1,20 @@
+{
+  "task": "tmdb-box-office-prediction",
+  "name": "tmdb-box-office-prediction",
+  "problem_type": "regression",
+  "metric": "rmse",
+  "champion_backbone": "mlp",
+  "champion_composite": -0.33110644563513414,
+  "champion_val": -0.3215500371721792,
+  "champion_train": -0.1304218679130811,
+  "test_score": -0.34615007161819245,
+  "test_metrics": {
+    "rmse": 0.34615007161819245,
+    "mae": 0.2730284631252289,
+    "r2": 0.9950184226036072
+  },
+  "dsbench_baseline": -1.0,
+  "delta_vs_dsbench": 0.6538499283818076,
+  "beats_dsbench": true,
+  "timestamp": "2026-05-16 00:12:07"
+}

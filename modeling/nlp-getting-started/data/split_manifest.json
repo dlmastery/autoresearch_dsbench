@@ -1,0 +1,17 @@
+{
+  "task_slug": "nlp-getting-started",
+  "n_train": 1400,
+  "n_val": 300,
+  "n_test": 300,
+  "n_features": 32,
+  "hashes": {
+    "X_train": "8ff38077bf74f879",
+    "y_train": "be58158ea9037c96",
+    "X_val": "01bdd0d2657c84a6",
+    "y_val": "40b5f96b36a3358a",
+    "X_test": "7adb479b882ff01c",
+    "y_test": "e5c1809a4dc37672"
+  },
+  "generated_at": "2026-05-15 05:12:43",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

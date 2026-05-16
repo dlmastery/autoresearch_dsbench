@@ -1,0 +1,17 @@
+{
+  "task_slug": "2012-round-1-theory-and-practice-mcqs",
+  "n_train": 15,
+  "n_val": 5,
+  "n_test": 5,
+  "n_features": 47,
+  "hashes": {
+    "X_train": "fdc3af2b8c8ac0db",
+    "y_train": "36fe8873d6294478",
+    "X_val": "5012d09811c66bd1",
+    "y_val": "c676e25d4f7c7b33",
+    "X_test": "7580e349ccfaa904",
+    "y_test": "34a32777aecaf985"
+  },
+  "generated_at": "2026-05-15 23:41:02",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

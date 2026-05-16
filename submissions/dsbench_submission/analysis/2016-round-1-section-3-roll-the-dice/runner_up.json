@@ -1,0 +1,98 @@
+{
+  "experiment_num": 2,
+  "backbone": "excel_agent",
+  "description": "excel_agent iter 2/25: Alternative baseline: predict the GLOBAL training mode pooled across all 38 Mode",
+  "params": {
+    "classifier": "global_prior",
+    "seed": 42
+  },
+  "metric": "exact_match_accuracy",
+  "train_score": 0.0,
+  "val_score": 0.0,
+  "composite": 0.0,
+  "train_metrics": {
+    "accuracy": 0.0,
+    "f1": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "mcc": 0.0,
+    "confusion": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "val_metrics": {
+    "accuracy": 0.0,
+    "f1": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "mcc": 0.0,
+    "confusion": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ]
+  },
+  "elapsed_sec": 0.00500178337097168,
+  "timestamp": "2026-05-15 23:48:02",
+  "task_slug": "2016-round-1-section-3-roll-the-dice",
+  "uses_test_set": false
+}

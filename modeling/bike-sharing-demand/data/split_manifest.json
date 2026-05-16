@@ -1,0 +1,17 @@
+{
+  "task_slug": "bike-sharing-demand",
+  "n_train": 1400,
+  "n_val": 300,
+  "n_test": 300,
+  "n_features": 32,
+  "hashes": {
+    "X_train": "5e1b8317e0148e02",
+    "y_train": "1454b8a9701fc89a",
+    "X_val": "ac5e2c275538bcc0",
+    "y_val": "aff29773ad2e71f8",
+    "X_test": "dbcf8623dab34857",
+    "y_test": "177e169e82f93cde"
+  },
+  "generated_at": "2026-05-15 03:22:10",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

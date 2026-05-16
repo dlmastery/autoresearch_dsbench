@@ -1,0 +1,27 @@
+{
+  "task": "2013-round-1-acquisition-financing",
+  "name": "2013-round-1-acquisition-financing",
+  "problem_type": "qa_excel",
+  "metric": "exact_match_accuracy",
+  "champion_backbone": "excel_agent",
+  "champion_composite": 0.6,
+  "champion_val": 0.6,
+  "champion_train": 0.75,
+  "test_score": 1.0,
+  "test_metrics": {
+    "accuracy": 1.0,
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "mcc": 0.0,
+    "confusion": [
+      [
+        1
+      ]
+    ]
+  },
+  "dsbench_baseline": 0.3412,
+  "delta_vs_dsbench": 0.6588,
+  "beats_dsbench": true,
+  "timestamp": "2026-05-16 00:12:16"
+}

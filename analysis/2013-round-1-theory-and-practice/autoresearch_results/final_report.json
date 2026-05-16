@@ -1,0 +1,39 @@
+{
+  "task": "2013-round-1-theory-and-practice",
+  "name": "2013-round-1-theory-and-practice",
+  "problem_type": "qa_excel",
+  "metric": "exact_match_accuracy",
+  "champion_backbone": "excel_agent",
+  "champion_composite": 0.375,
+  "champion_val": 0.375,
+  "champion_train": 0.3333333333333333,
+  "test_score": 0.5,
+  "test_metrics": {
+    "accuracy": 0.5,
+    "f1": 0.2222222222222222,
+    "precision": 0.16666666666666666,
+    "recall": 0.3333333333333333,
+    "mcc": 0.0,
+    "confusion": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ]
+  },
+  "dsbench_baseline": 0.3412,
+  "delta_vs_dsbench": 0.1588,
+  "beats_dsbench": true,
+  "timestamp": "2026-05-16 00:12:16"
+}

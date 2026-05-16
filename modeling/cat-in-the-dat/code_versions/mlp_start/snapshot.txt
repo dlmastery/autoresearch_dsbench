@@ -1,0 +1,2 @@
+Snapshot of framework/runner.py for mlp on cat-in-the-dat.
+Hash of framework/runner.py at start: see registry/runtime_hashes.json

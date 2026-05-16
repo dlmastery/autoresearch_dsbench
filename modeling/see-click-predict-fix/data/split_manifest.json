@@ -1,0 +1,17 @@
+{
+  "task_slug": "see-click-predict-fix",
+  "n_train": 1400,
+  "n_val": 300,
+  "n_test": 300,
+  "n_features": 32,
+  "hashes": {
+    "X_train": "ad0b4dbfb91c0013",
+    "y_train": "8cd85bf4acf51a93",
+    "X_val": "9f7bb502d442ef53",
+    "y_val": "9bb91543aa677930",
+    "X_test": "4a2a974479674736",
+    "y_test": "16a3e2c575629644"
+  },
+  "generated_at": "2026-05-15 08:12:38",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

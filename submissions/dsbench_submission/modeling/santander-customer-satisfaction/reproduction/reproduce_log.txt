@@ -1,0 +1,8 @@
+Reproduction protocol for santander-customer-satisfaction champion:
+
+  python -m framework.runner --repo C:\Users\evija\dsbench\modeling\santander-customer-satisfaction \
+    --backbone mlp \
+    --params '{"iterations": 400, "epochs": 30, "lr": 0.001, "hidden": [256, 256, 128]}' \
+    --description 'reproduction' --experiment-num 87
+
+Expected composite ≈ 0.9965 (within 0.005 due to RNG floor variance).

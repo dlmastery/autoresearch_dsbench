@@ -1,0 +1,20 @@
+{
+  "task": "feedback-prize-english-language-learning",
+  "name": "feedback-prize-english-language-learning",
+  "problem_type": "regression",
+  "metric": "rmse",
+  "champion_backbone": "mlp",
+  "champion_composite": -0.340854900298552,
+  "champion_val": -0.32958003276775016,
+  "champion_train": -0.10408268215171339,
+  "test_score": -0.3248621175875074,
+  "test_metrics": {
+    "rmse": 0.3248621175875074,
+    "mae": 0.2553000748157501,
+    "r2": 0.9955001473426819
+  },
+  "dsbench_baseline": -1.0,
+  "delta_vs_dsbench": 0.6751378824124926,
+  "beats_dsbench": true,
+  "timestamp": "2026-05-16 00:10:56"
+}

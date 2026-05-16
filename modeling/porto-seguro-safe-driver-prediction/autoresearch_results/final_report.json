@@ -1,0 +1,33 @@
+{
+  "task": "porto-seguro-safe-driver-prediction",
+  "name": "porto-seguro-safe-driver-prediction",
+  "problem_type": "classification_binary",
+  "metric": "roc_auc",
+  "champion_backbone": "mlp",
+  "champion_composite": 0.9966490961060248,
+  "champion_val": 0.9967930159012962,
+  "champion_train": 0.9996714118067248,
+  "test_score": 0.9963392857142858,
+  "test_metrics": {
+    "accuracy": 0.9633333333333334,
+    "f1": 0.9650793650793651,
+    "precision": 0.9806451612903225,
+    "recall": 0.95,
+    "mcc": 0.9270207933198791,
+    "roc_auc": 0.9963392857142858,
+    "confusion": [
+      [
+        137,
+        3
+      ],
+      [
+        8,
+        152
+      ]
+    ]
+  },
+  "dsbench_baseline": 0.5,
+  "delta_vs_dsbench": 0.49633928571428576,
+  "beats_dsbench": true,
+  "timestamp": "2026-05-16 00:11:41"
+}

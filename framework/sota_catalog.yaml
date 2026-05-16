@@ -1,0 +1,371 @@
+# SOTA training recipes by task-type, derived from the same 2024-2026 arXiv
+# references as autoresearch/CLAUDE.md. Each entry is the STARTING point for
+# experiment 1; the 25-iter-per-backbone hill climb tunes from there.
+#
+# Per autoresearch protocol: every backbone re-derives epochs/patience/lr/
+# scheduler/optimizer/batch/wd from its source paper.
+
+global:
+  iterations_per_backbone: 25       # user mandate (was 50 in autoresearch)
+  composite_metric: "min(val_score, train_score) - 0.05 * abs(val_score - train_score)"
+  cooldown_seconds: 30
+  seeds: [42, 0, 99]
+
+# ---------------------------------------------------------------------------
+# Tier 1 — from-scratch neural backbones
+# ---------------------------------------------------------------------------
+backbones:
+
+  mlp:
+    family: "feed-forward"
+    task_types: [tabular, structured]
+    epochs: 50
+    patience: 10
+    lr: 3e-4
+    warmup: 0
+    scheduler: cosine
+    batch: 32
+    wd: 1e-5
+    optimizer: AdamW
+    loss_regression: huber
+    loss_classification: ce
+    paper: "Gu, Kelly & Xiu 2020 RFS 'Empirical Asset Pricing via Machine Learning'"
+    arxiv: "n/a (RFS)"
+
+  lstm:
+    family: "rnn"
+    task_types: [time_series, nlp]
+    epochs: 100
+    patience: 15
+    lr: 1e-3
+    warmup: 0
+    scheduler: cosine
+    batch: 16
+    wd: 7e-4
+    optimizer: AdamW
+    loss_regression: huber
+    loss_classification: ce
+    paper: "Fischer & Krauss 2018 EJOR 'Deep learning with LSTMs for financial market predictions'"
+    arxiv: "n/a (EJOR)"
+
+  patchtst:
+    family: "transformer-ts"
+    task_types: [time_series]
+    epochs: 100
+    patience: 20
+    lr: 1e-4
+    warmup: 10
+    scheduler: cosine
+    batch: 32
+    wd: 1e-4
+    optimizer: AdamW
+    loss_regression: mse
+    paper: "Nie, Nguyen, Sinthong, Kalagnanam 2023 ICLR 'A Time Series is Worth 64 Words'"
+    arxiv: "arXiv:2211.14730"
+    notes: "requires seq_len >= 60"
+
+  patchtsmixer:
+    family: "mlp-mixer-ts"
+    task_types: [time_series, tabular]
+    epochs: 100
+    patience: 15
+    lr: 1e-3
+    warmup: 5
+    scheduler: cosine
+    batch: 32
+    wd: 1e-5
+    optimizer: AdamW
+    loss_regression: mse
+    paper: "Ekambaram, Jati, Nguyen, Sinthong, Kalagnanam 2023 KDD 'TSMixer'"
+    arxiv: "arXiv:2306.09364"
+
+  itransformer:
+    family: "transformer-ts"
+    task_types: [time_series, tabular]
+    epochs: 150
+    patience: 20
+    lr: 5e-5
+    warmup: 10
+    scheduler: cosine
+    batch: 32
+    wd: 0
+    optimizer: AdamW
+    loss_regression: mse
+    paper: "Liu, Hu, Zhang, Wang, Wu, Wang, Long 2024 ICLR 'iTransformer'"
+    arxiv: "arXiv:2310.06625"
+
+  xlstm:
+    family: "rnn"
+    task_types: [time_series, nlp]
+    epochs: 80
+    patience: 15
+    lr: 5e-4
+    warmup: 5
+    scheduler: cosine
+    batch: 16
+    wd: 1e-3
+    optimizer: AdamW
+    loss_regression: huber
+    paper: "Beck, Pöppel, Spanring, Auer, Prudnikova, Kopp, Klambauer, Brandstetter, Hochreiter 2024 NeurIPS 'xLSTM'"
+    arxiv: "arXiv:2405.04517"
+
+  mamba:
+    family: "ssm"
+    task_types: [time_series, nlp]
+    epochs: 100
+    patience: 20
+    lr: 5e-4
+    warmup: 10
+    scheduler: cosine
+    batch: 32
+    wd: 0.1
+    optimizer: AdamW
+    loss_regression: mse
+    paper: "Gu & Dao 2024 COLM 'Mamba: Linear-Time Sequence Modeling with Selective State Spaces'"
+    arxiv: "arXiv:2312.00752"
+
+  ft_transformer:
+    family: "tabular-transformer"
+    task_types: [tabular]
+    epochs: 100
+    patience: 15
+    lr: 1e-4
+    warmup: 5
+    scheduler: cosine
+    batch: 64
+    wd: 1e-5
+    optimizer: AdamW
+    loss_regression: mse
+    paper: "Gorishniy, Rubachev, Khrulkov, Babenko 2021 NeurIPS 'Revisiting Deep Learning Models for Tabular Data'"
+    arxiv: "arXiv:2106.11189"
+
+  # ----- Foundation models (zero-shot / PEFT only on 16 GB GPU) -----
+  timesfm:
+    family: "foundation-ts"
+    task_types: [time_series]
+    epochs: 20
+    patience: 5
+    lr: 1e-4
+    warmup: 2
+    scheduler: cosine
+    batch: 32
+    wd: 1e-5
+    optimizer: AdamW
+    loss_regression: quantile
+    paper: "Das, Kong, Sen, Zhou 2024 ICML 'A Decoder-Only Foundation Model for Time-Series Forecasting'"
+    arxiv: "arXiv:2310.10688"
+    mode: "head-only"
+
+  chronos_bolt:
+    family: "foundation-ts"
+    task_types: [time_series]
+    epochs: 15
+    patience: 5
+    lr: 5e-5
+    warmup: 2
+    scheduler: cosine
+    batch: 32
+    wd: 1e-5
+    optimizer: AdamW
+    loss_regression: token_ce
+    paper: "Ansari et al. 2024 TMLR 'Chronos: Learning the Language of Time Series'"
+    arxiv: "arXiv:2403.07815"
+    mode: "fine-tune"
+
+  moirai:
+    family: "foundation-ts"
+    task_types: [time_series]
+    epochs: 20
+    patience: 5
+    lr: 1e-4
+    warmup: 2
+    scheduler: cosine
+    batch: 32
+    wd: 0
+    optimizer: AdamW
+    loss_regression: nll_studentT
+    paper: "Woo et al. 2024 ICML 'Unified Training of Universal Time Series Forecasting Transformers'"
+    arxiv: "arXiv:2402.02592"
+    mode: "PEFT"
+
+  moment:
+    family: "foundation-ts"
+    task_types: [time_series]
+    epochs: 30
+    patience: 10
+    lr: 5e-5
+    warmup: 3
+    scheduler: cosine
+    batch: 32
+    wd: 1e-5
+    optimizer: AdamW
+    loss_regression: mse
+    paper: "Goswami et al. 2024 ICML 'MOMENT: A Family of Open Time-series Foundation Models'"
+    arxiv: "arXiv:2402.03885"
+
+  tirex:
+    family: "foundation-ts"
+    task_types: [time_series]
+    epochs: 25
+    patience: 8
+    lr: 1e-4
+    warmup: 3
+    scheduler: cosine
+    batch: 16
+    wd: 1e-4
+    optimizer: AdamW
+    loss_regression: quantile
+    paper: "Auer et al. 2025 NXAI/JKU 'TiRex: Zero-Shot Forecasting with Recurrent xLSTM Backbones'"
+    arxiv: "n/a (NXAI 2025)"
+
+  sundial:
+    family: "foundation-ts"
+    task_types: [time_series]
+    epochs: 30
+    patience: 10
+    lr: 1e-4
+    warmup: 3
+    scheduler: cosine
+    batch: 32
+    wd: 1e-5
+    optimizer: AdamW
+    loss_regression: timeflow
+    paper: "Liu, Zhang, Wu, Long 2025 'Sundial: A Family of Highly Capable Time Series Foundation Models'"
+    arxiv: "arXiv:2502.00816"
+
+  time_moe:
+    family: "foundation-ts"
+    task_types: [time_series]
+    epochs: 20
+    patience: 5
+    lr: 1e-4
+    warmup: 2
+    scheduler: cosine
+    batch: 32
+    wd: 1e-5
+    optimizer: AdamW
+    loss_regression: mse_loadbalance
+    paper: "Shi et al. 2025 ICLR 'Time-MoE: Billion-Scale Time Series Foundation Models with Mixture of Experts'"
+    arxiv: "arXiv:2409.16040"
+
+  timemixer:
+    family: "mlp-mixer-ts"
+    task_types: [time_series]
+    epochs: 100
+    patience: 15
+    lr: 1e-3
+    warmup: 5
+    scheduler: cosine
+    batch: 32
+    wd: 1e-5
+    optimizer: AdamW
+    loss_regression: mse
+    paper: "Wang et al. 2024 ICLR 'TimeMixer: Decomposable Multiscale Mixing for Time Series Forecasting'"
+    arxiv: "arXiv:2405.14616"
+
+  timesnet:
+    family: "cnn-ts"
+    task_types: [time_series]
+    epochs: 100
+    patience: 20
+    lr: 1e-4
+    warmup: 5
+    scheduler: cosine
+    batch: 32
+    wd: 1e-4
+    optimizer: AdamW
+    loss_regression: mse
+    paper: "Wu, Hu, Liu, Ma, Long 2023 ICLR 'TimesNet: Temporal 2D-Variation Modeling for General Time Series Analysis'"
+    arxiv: "arXiv:2210.02186"
+
+  mambats:
+    family: "ssm"
+    task_types: [time_series]
+    epochs: 100
+    patience: 20
+    lr: 1e-3
+    warmup: 5
+    scheduler: cosine
+    batch: 32
+    wd: 1e-4
+    optimizer: AdamW
+    loss_regression: mse
+    paper: "Cai et al. 2024 NeurIPS 'MambaTS: Improved Selective State Space Models for Long-Term Time Series Forecasting'"
+    arxiv: "arXiv:2405.16440"
+
+  # ----- Tier 3 — GBM trio (tabular) -----
+  xgboost:
+    family: "gbm"
+    task_types: [tabular]
+    iterations: 1500
+    max_depth: 6
+    lr: 0.03
+    subsample: 0.8
+    colsample_bytree: 0.8
+    early_stopping: 50
+    reg_lambda: 1.0
+    reg_alpha: 0
+    min_child_weight: 1
+    gamma: 0
+    paper: "Chen & Guestrin 2016 KDD 'XGBoost: A Scalable Tree Boosting System'"
+    arxiv: "arXiv:1603.02754"
+
+  lightgbm:
+    family: "gbm"
+    task_types: [tabular]
+    iterations: 2000
+    num_leaves: 63
+    lr: 0.03
+    feature_fraction: 0.8
+    bagging_fraction: 0.8
+    early_stopping: 50
+    min_data_in_leaf: 20
+    paper: "Ke et al. 2017 NeurIPS 'LightGBM: A Highly Efficient Gradient Boosting Decision Tree'"
+    arxiv: "n/a (NeurIPS)"
+
+  catboost:
+    family: "gbm"
+    task_types: [tabular]
+    iterations: 2000
+    depth: 6
+    lr: 0.03
+    random_strength: 1.0
+    early_stopping: 100
+    l2_leaf_reg: 3
+    bagging_temperature: 1.0
+    paper: "Prokhorenkova et al. 2018 NeurIPS 'CatBoost: Unbiased Boosting with Categorical Features'"
+    arxiv: "arXiv:1706.09516"
+
+# ---------------------------------------------------------------------------
+# Per-problem-type backbone preference (drives 25-iter hill climbing order)
+# ---------------------------------------------------------------------------
+problem_to_backbones:
+  classification_binary:
+    primary: [xgboost, lightgbm, catboost, mlp, ft_transformer]
+    secondary: [lstm]
+    iter_budget: 25
+    metric: roc_auc
+  classification_multiclass:
+    primary: [xgboost, lightgbm, catboost, mlp, ft_transformer]
+    secondary: [lstm]
+    iter_budget: 25
+    metric: macro_f1
+  regression:
+    primary: [xgboost, lightgbm, catboost, mlp, ft_transformer]
+    secondary: [lstm, patchtsmixer]
+    iter_budget: 25
+    metric: rmse
+  structured:
+    primary: [mlp, ft_transformer]
+    secondary: [xgboost]
+    iter_budget: 25
+    metric: accuracy
+  qa_excel:
+    # data_analysis tasks: financial-modeling questions over Excel files.
+    # No ML training in the classical sense — we use an answer-search agent
+    # with a structured "trial & error" loop matching autoresearch's 25-iter
+    # hill climb (each iter refines reading / formula heuristic).
+    primary: [excel_agent]
+    secondary: []
+    iter_budget: 25
+    metric: exact_match_accuracy

@@ -1,0 +1,17 @@
+{
+  "task_slug": "2014-round-2-purple-city",
+  "n_train": 6,
+  "n_val": 1,
+  "n_test": 1,
+  "n_features": 47,
+  "hashes": {
+    "X_train": "6eeccc14cecde6ee",
+    "y_train": "2aefd897e31ee3ca",
+    "X_val": "455fbf183503ec9a",
+    "y_val": "703d37e650ac5852",
+    "X_test": "e5c732686b5a7f9a",
+    "y_test": "048db3815473d7aa"
+  },
+  "generated_at": "2026-05-15 23:44:52",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

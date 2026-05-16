@@ -1,0 +1,17 @@
+{
+  "task_slug": "learning-agency-lab-automated-essay-scoring-2",
+  "n_train": 1400,
+  "n_val": 300,
+  "n_test": 300,
+  "n_features": 32,
+  "hashes": {
+    "X_train": "d239e20f0734d019",
+    "y_train": "014d141c524c80c7",
+    "X_val": "ae51f9ffdca065db",
+    "y_val": "82df74477d8260a7",
+    "X_test": "0ebe5bfa43c8f5c4",
+    "y_test": "b0a0732be5b0a9a5"
+  },
+  "generated_at": "2026-05-15 04:42:31",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

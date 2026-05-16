@@ -1,0 +1,54 @@
+{
+  "experiment_num": 93,
+  "backbone": "mlp",
+  "description": "mlp iter 18/25: Mid-high LR.",
+  "params": {
+    "iterations": 400,
+    "epochs": 30,
+    "lr": 0.002
+  },
+  "metric": "roc_auc",
+  "train_score": 0.9995673469387756,
+  "val_score": 0.9933143162774114,
+  "composite": 0.9930016647443431,
+  "train_metrics": {
+    "accuracy": 0.995,
+    "f1": 0.9949964260185847,
+    "precision": 0.9957081545064378,
+    "recall": 0.9942857142857143,
+    "mcc": 0.9900010102056279,
+    "roc_auc": 0.9995673469387756,
+    "confusion": [
+      [
+        697,
+        3
+      ],
+      [
+        4,
+        696
+      ]
+    ]
+  },
+  "val_metrics": {
+    "accuracy": 0.94,
+    "f1": 0.9370629370629371,
+    "precision": 0.9305555555555556,
+    "recall": 0.9436619718309859,
+    "mcc": 0.8798219973562911,
+    "roc_auc": 0.9933143162774114,
+    "confusion": [
+      [
+        148,
+        10
+      ],
+      [
+        8,
+        134
+      ]
+    ]
+  },
+  "elapsed_sec": 0.7213149070739746,
+  "timestamp": "2026-05-15 05:37:08",
+  "task_slug": "playground-series-s3e12",
+  "uses_test_set": false
+}

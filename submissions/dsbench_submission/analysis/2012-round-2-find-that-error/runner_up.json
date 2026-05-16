@@ -1,0 +1,75 @@
+{
+  "experiment_num": 6,
+  "backbone": "excel_agent",
+  "description": "excel_agent iter 6/25: k-Nearest-Neighbour with k=1. 1-NN is the maximum-capacity neighbour rule \u2014 copi",
+  "params": {
+    "classifier": "knn",
+    "knn_k": 1,
+    "seed": 42
+  },
+  "metric": "exact_match_accuracy",
+  "train_score": 1.0,
+  "val_score": 0.375,
+  "composite": 0.375,
+  "train_metrics": {
+    "accuracy": 1.0,
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "mcc": 1.0,
+    "confusion": [
+      [
+        5,
+        0,
+        0
+      ],
+      [
+        0,
+        5,
+        0
+      ],
+      [
+        0,
+        0,
+        2
+      ]
+    ]
+  },
+  "val_metrics": {
+    "accuracy": 0.25,
+    "f1": 0.16666666666666666,
+    "precision": 0.125,
+    "recall": 0.25,
+    "mcc": 0.1,
+    "confusion": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0
+      ]
+    ]
+  },
+  "elapsed_sec": 0.43880748748779297,
+  "timestamp": "2026-05-15 23:42:02",
+  "task_slug": "2012-round-2-find-that-error",
+  "uses_test_set": false
+}

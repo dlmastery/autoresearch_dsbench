@@ -1,0 +1,17 @@
+{
+  "task_slug": "2015-round-one-options-to-call",
+  "n_train": 6,
+  "n_val": 2,
+  "n_test": 2,
+  "n_features": 47,
+  "hashes": {
+    "X_train": "140426a4d5dc1216",
+    "y_train": "079099e1d6872f48",
+    "X_val": "55429cfa1b55380c",
+    "y_val": "c8ede8997c15c22f",
+    "X_test": "c835367b13ab057a",
+    "y_test": "b157a8511398bc40"
+  },
+  "generated_at": "2026-05-15 23:47:09",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}

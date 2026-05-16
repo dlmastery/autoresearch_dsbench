@@ -1,0 +1,2 @@
+Snapshot of framework/runner.py for lightgbm on playground-series-s3e13.
+Hash of framework/runner.py at start: see registry/runtime_hashes.json

@@ -1,0 +1,17 @@
+{
+  "task_slug": "santander-customer-transaction-prediction",
+  "n_train": 1400,
+  "n_val": 300,
+  "n_test": 300,
+  "n_features": 32,
+  "hashes": {
+    "X_train": "39e50243ca57bad1",
+    "y_train": "68a8f57267fa3282",
+    "X_val": "4afac6104fd322fc",
+    "y_val": "0bcfdce142b6742b",
+    "X_test": "0c1b796e304f377b",
+    "y_test": "0e65292ec4d26360"
+  },
+  "generated_at": "2026-05-15 08:01:22",
+  "warning": "test set is FROZEN \u2014 only used by framework/final_report.py"
+}
