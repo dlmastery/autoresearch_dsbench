@@ -1,7 +1,7 @@
 {
-  "experiment_num": 3,
+  "experiment_num": 20,
   "backbone": "excel_agent",
-  "description": "excel_agent iter 3/25: Multinomial Logistic Regression on the structural feature stack (year, question ",
+  "description": "excel_agent iter 20/25: Multinomial Logistic Regression on the structural feature stack (year, question ",
   "params": {
     "classifier": "logreg",
     "C": 1.0,
@@ -10,8 +10,8 @@
   },
   "metric": "exact_match_accuracy",
   "train_score": 0.6666666666666666,
-  "val_score": 0.625,
-  "composite": 0.625,
+  "val_score": 0.39045,
+  "composite": 0.39045,
   "train_metrics": {
     "accuracy": 0.6666666666666666,
     "f1": 0.4,
@@ -69,8 +69,8 @@
       ]
     ]
   },
-  "elapsed_sec": 0.7067954540252686,
-  "timestamp": "2026-05-15 23:46:25",
+  "elapsed_sec": 0.4286355972290039,
+  "timestamp": "2026-05-16 05:38:21",
   "task_slug": "2015-round-1-tax",
   "uses_test_set": false
 }

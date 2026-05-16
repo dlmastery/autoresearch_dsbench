@@ -17,7 +17,7 @@
     "dsbench_baseline": -1.0,
     "delta_vs_dsbench": 0.6641273782968341,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:10:34"
+    "timestamp": "2026-05-16 05:39:40"
   },
   {
     "task": "cat-in-the-dat",
@@ -50,7 +50,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4954648526077098,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:10:34"
+    "timestamp": "2026-05-16 05:39:40"
   },
   {
     "task": "cat-in-the-dat-ii",
@@ -83,7 +83,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.49172481660404355,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:10:35"
+    "timestamp": "2026-05-16 05:39:40"
   },
   {
     "task": "commonlitreadabilityprize",
@@ -103,7 +103,7 @@
     "dsbench_baseline": -1.0,
     "delta_vs_dsbench": 0.645369480525612,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:10:37"
+    "timestamp": "2026-05-16 05:39:42"
   },
   {
     "task": "conways-reverse-game-of-life-2020",
@@ -136,7 +136,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4885333333333334,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:10:39"
+    "timestamp": "2026-05-16 05:39:44"
   },
   {
     "task": "covid19-global-forecasting-week-1",
@@ -156,7 +156,7 @@
     "dsbench_baseline": -1.0,
     "delta_vs_dsbench": 0.6159132735876163,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:10:41"
+    "timestamp": "2026-05-16 05:39:46"
   },
   {
     "task": "covid19-global-forecasting-week-2",
@@ -176,7 +176,7 @@
     "dsbench_baseline": -1.0,
     "delta_vs_dsbench": 0.6964452844800657,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:10:43"
+    "timestamp": "2026-05-16 05:39:48"
   },
   {
     "task": "covid19-global-forecasting-week-3",
@@ -196,7 +196,7 @@
     "dsbench_baseline": -1.0,
     "delta_vs_dsbench": 0.6279975772828885,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:10:46"
+    "timestamp": "2026-05-16 05:39:51"
   },
   {
     "task": "covid19-global-forecasting-week-4",
@@ -216,7 +216,7 @@
     "dsbench_baseline": -1.0,
     "delta_vs_dsbench": 0.6643599562935238,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:10:49"
+    "timestamp": "2026-05-16 05:39:53"
   },
   {
     "task": "demand-forecasting-kernels-only",
@@ -236,7 +236,7 @@
     "dsbench_baseline": -1.0,
     "delta_vs_dsbench": 0.685752746493886,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:10:52"
+    "timestamp": "2026-05-16 05:39:55"
   },
   {
     "task": "dont-overfit-ii",
@@ -269,7 +269,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4956881223328591,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:10:53"
+    "timestamp": "2026-05-16 05:39:57"
   },
   {
     "task": "feedback-prize-english-language-learning",
@@ -289,7 +289,7 @@
     "dsbench_baseline": -1.0,
     "delta_vs_dsbench": 0.6751378824124926,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:10:56"
+    "timestamp": "2026-05-16 05:40:00"
   },
   {
     "task": "google-quest-challenge",
@@ -309,7 +309,7 @@
     "dsbench_baseline": -1.0,
     "delta_vs_dsbench": 0.6620147374554399,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:10:58"
+    "timestamp": "2026-05-16 05:40:01"
   },
   {
     "task": "instant-gratification",
@@ -342,7 +342,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.47947827635327633,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:10:59"
+    "timestamp": "2026-05-16 05:40:02"
   },
   {
     "task": "learning-agency-lab-automated-essay-scoring-2",
@@ -362,7 +362,7 @@
     "dsbench_baseline": -1.0,
     "delta_vs_dsbench": 0.6177075668432729,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:02"
+    "timestamp": "2026-05-16 05:40:04"
   },
   {
     "task": "liverpool-ion-switching",
@@ -411,7 +411,7 @@
     "dsbench_baseline": 0.34,
     "delta_vs_dsbench": 0.5343839072714911,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:02"
+    "timestamp": "2026-05-16 05:40:05"
   },
   {
     "task": "lmsys-chatbot-arena",
@@ -431,7 +431,7 @@
     "dsbench_baseline": -1.0,
     "delta_vs_dsbench": 0.6753345028472726,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:04"
+    "timestamp": "2026-05-16 05:40:07"
   },
   {
     "task": "microsoft-malware-prediction",
@@ -464,7 +464,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4949768847795163,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:06"
+    "timestamp": "2026-05-16 05:40:08"
   },
   {
     "task": "nlp-getting-started",
@@ -497,7 +497,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.49369681689253075,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:08"
+    "timestamp": "2026-05-16 05:40:10"
   },
   {
     "task": "playground-series-s3e1",
@@ -530,7 +530,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4934655049786628,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:08"
+    "timestamp": "2026-05-16 05:40:10"
   },
   {
     "task": "playground-series-s3e10",
@@ -563,7 +563,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.49055721348714976,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:10"
+    "timestamp": "2026-05-16 05:40:12"
   },
   {
     "task": "playground-series-s3e11",
@@ -596,7 +596,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.497021692745377,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:10"
+    "timestamp": "2026-05-16 05:40:12"
   },
   {
     "task": "playground-series-s3e12",
@@ -629,7 +629,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.49574067431850777,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:11"
+    "timestamp": "2026-05-16 05:40:13"
   },
   {
     "task": "playground-series-s3e13",
@@ -662,7 +662,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.49411213702662926,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:12"
+    "timestamp": "2026-05-16 05:40:14"
   },
   {
     "task": "playground-series-s3e14",
@@ -695,7 +695,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4959090091710123,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:13"
+    "timestamp": "2026-05-16 05:40:15"
   },
   {
     "task": "playground-series-s3e16",
@@ -728,7 +728,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.49350649350649356,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:14"
+    "timestamp": "2026-05-16 05:40:16"
   },
   {
     "task": "playground-series-s3e17",
@@ -761,7 +761,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.49746113758852617,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:15"
+    "timestamp": "2026-05-16 05:40:17"
   },
   {
     "task": "playground-series-s3e18",
@@ -794,7 +794,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4954323586046303,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:16"
+    "timestamp": "2026-05-16 05:40:18"
   },
   {
     "task": "playground-series-s3e19",
@@ -827,7 +827,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.49053165007112376,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:18"
+    "timestamp": "2026-05-16 05:40:19"
   },
   {
     "task": "playground-series-s3e2",
@@ -860,7 +860,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4966100182880593,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:18"
+    "timestamp": "2026-05-16 05:40:20"
   },
   {
     "task": "playground-series-s3e20",
@@ -893,7 +893,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.48906250000000007,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:20"
+    "timestamp": "2026-05-16 05:40:21"
   },
   {
     "task": "playground-series-s3e22",
@@ -926,7 +926,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4926994301994302,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:21"
+    "timestamp": "2026-05-16 05:40:22"
   },
   {
     "task": "playground-series-s3e23",
@@ -959,7 +959,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4955943175687826,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:22"
+    "timestamp": "2026-05-16 05:40:24"
   },
   {
     "task": "playground-series-s3e24",
@@ -992,7 +992,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4924474015464845,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:23"
+    "timestamp": "2026-05-16 05:40:24"
   },
   {
     "task": "playground-series-s3e25",
@@ -1025,7 +1025,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.49182222222222216,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:24"
+    "timestamp": "2026-05-16 05:40:25"
   },
   {
     "task": "playground-series-s3e3",
@@ -1058,7 +1058,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4982221432063647,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:26"
+    "timestamp": "2026-05-16 05:40:27"
   },
   {
     "task": "playground-series-s3e4",
@@ -1091,7 +1091,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4927526566182029,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:28"
+    "timestamp": "2026-05-16 05:40:29"
   },
   {
     "task": "playground-series-s3e5",
@@ -1124,7 +1124,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.49341168091168097,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:29"
+    "timestamp": "2026-05-16 05:40:30"
   },
   {
     "task": "playground-series-s3e6",
@@ -1157,7 +1157,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.49724137931034484,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:31"
+    "timestamp": "2026-05-16 05:40:32"
   },
   {
     "task": "playground-series-s3e7",
@@ -1190,7 +1190,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4938666666666667,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:32"
+    "timestamp": "2026-05-16 05:40:32"
   },
   {
     "task": "playground-series-s3e8",
@@ -1223,7 +1223,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.48897581792318634,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:33"
+    "timestamp": "2026-05-16 05:40:33"
   },
   {
     "task": "playground-series-s3e9",
@@ -1256,7 +1256,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.49548219717301845,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:34"
+    "timestamp": "2026-05-16 05:40:34"
   },
   {
     "task": "playground-series-s4e1",
@@ -1289,7 +1289,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4848965548058447,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:35"
+    "timestamp": "2026-05-16 05:40:35"
   },
   {
     "task": "playground-series-s4e2",
@@ -1322,7 +1322,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4943303571428571,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:36"
+    "timestamp": "2026-05-16 05:40:36"
   },
   {
     "task": "playground-series-s4e3",
@@ -1355,7 +1355,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4909232480533927,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:37"
+    "timestamp": "2026-05-16 05:40:37"
   },
   {
     "task": "playground-series-s4e4",
@@ -1388,7 +1388,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4951091547730204,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:38"
+    "timestamp": "2026-05-16 05:40:37"
   },
   {
     "task": "playground-series-s4e5",
@@ -1421,7 +1421,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4949634515956498,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:38"
+    "timestamp": "2026-05-16 05:40:38"
   },
   {
     "task": "playground-series-s4e6",
@@ -1454,7 +1454,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4959539371304078,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:40"
+    "timestamp": "2026-05-16 05:40:39"
   },
   {
     "task": "porto-seguro-safe-driver-prediction",
@@ -1487,7 +1487,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.49633928571428576,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:41"
+    "timestamp": "2026-05-16 05:40:41"
   },
   {
     "task": "santander-customer-satisfaction",
@@ -1520,7 +1520,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.49388911191400164,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:43"
+    "timestamp": "2026-05-16 05:40:42"
   },
   {
     "task": "santander-customer-transaction-prediction",
@@ -1553,7 +1553,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4965654132655337,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:44"
+    "timestamp": "2026-05-16 05:40:43"
   },
   {
     "task": "santander-value-prediction-challenge",
@@ -1573,7 +1573,7 @@
     "dsbench_baseline": -1.0,
     "delta_vs_dsbench": 0.6407110275736163,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:47"
+    "timestamp": "2026-05-16 05:40:46"
   },
   {
     "task": "see-click-predict-fix",
@@ -1606,7 +1606,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4896847627940064,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:48"
+    "timestamp": "2026-05-16 05:40:47"
   },
   {
     "task": "spaceship-titanic",
@@ -1639,7 +1639,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.49626650073336587,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:50"
+    "timestamp": "2026-05-16 05:40:48"
   },
   {
     "task": "tabular-playground-series-apr-2021",
@@ -1672,7 +1672,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.49265594912901345,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:51"
+    "timestamp": "2026-05-16 05:40:50"
   },
   {
     "task": "tabular-playground-series-aug-2021",
@@ -1705,7 +1705,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4950657894736842,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:52"
+    "timestamp": "2026-05-16 05:40:51"
   },
   {
     "task": "tabular-playground-series-aug-2022",
@@ -1738,7 +1738,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4938222222222223,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:54"
+    "timestamp": "2026-05-16 05:40:52"
   },
   {
     "task": "tabular-playground-series-dec-2021",
@@ -1771,7 +1771,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4954076808788438,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:54"
+    "timestamp": "2026-05-16 05:40:52"
   },
   {
     "task": "tabular-playground-series-feb-2021",
@@ -1804,7 +1804,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4912440552913463,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:54"
+    "timestamp": "2026-05-16 05:40:53"
   },
   {
     "task": "tabular-playground-series-feb-2022",
@@ -1837,7 +1837,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.49095427880524833,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:55"
+    "timestamp": "2026-05-16 05:40:53"
   },
   {
     "task": "tabular-playground-series-jan-2021",
@@ -1870,7 +1870,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4956709956709957,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:56"
+    "timestamp": "2026-05-16 05:40:54"
   },
   {
     "task": "tabular-playground-series-jan-2022",
@@ -1903,7 +1903,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4972888888888888,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:58"
+    "timestamp": "2026-05-16 05:40:56"
   },
   {
     "task": "tabular-playground-series-jul-2021",
@@ -1936,7 +1936,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4934655049786628,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:59"
+    "timestamp": "2026-05-16 05:40:56"
   },
   {
     "task": "tabular-playground-series-mar-2021",
@@ -1969,7 +1969,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.49639599555061187,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:11:59"
+    "timestamp": "2026-05-16 05:40:57"
   },
   {
     "task": "tabular-playground-series-mar-2022",
@@ -2002,7 +2002,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.49484352773826457,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:12:01"
+    "timestamp": "2026-05-16 05:40:58"
   },
   {
     "task": "tabular-playground-series-may-2022",
@@ -2035,7 +2035,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4955929487179488,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:12:01"
+    "timestamp": "2026-05-16 05:40:59"
   },
   {
     "task": "tabular-playground-series-nov-2021",
@@ -2068,7 +2068,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.48801216675612813,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:12:01"
+    "timestamp": "2026-05-16 05:40:59"
   },
   {
     "task": "tabular-playground-series-sep-2021",
@@ -2101,7 +2101,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4908244621620417,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:12:03"
+    "timestamp": "2026-05-16 05:41:00"
   },
   {
     "task": "tabular-playground-series-sep-2022",
@@ -2134,7 +2134,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.49119999999999997,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:12:03"
+    "timestamp": "2026-05-16 05:41:00"
   },
   {
     "task": "titanic",
@@ -2167,7 +2167,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.49572649572649574,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:12:05"
+    "timestamp": "2026-05-16 05:41:02"
   },
   {
     "task": "tmdb-box-office-prediction",
@@ -2187,7 +2187,7 @@
     "dsbench_baseline": -1.0,
     "delta_vs_dsbench": 0.6538499283818076,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:12:07"
+    "timestamp": "2026-05-16 05:41:04"
   },
   {
     "task": "tweet-sentiment-extraction",
@@ -2207,7 +2207,7 @@
     "dsbench_baseline": -1.0,
     "delta_vs_dsbench": 0.6000292863242053,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:12:10"
+    "timestamp": "2026-05-16 05:41:06"
   },
   {
     "task": "us-patent-phrase-to-phrase-matching",
@@ -2227,7 +2227,7 @@
     "dsbench_baseline": -1.0,
     "delta_vs_dsbench": 0.6172952414340239,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:12:12"
+    "timestamp": "2026-05-16 05:41:08"
   },
   {
     "task": "ventilator-pressure-prediction",
@@ -2247,7 +2247,7 @@
     "dsbench_baseline": -1.0,
     "delta_vs_dsbench": 0.692314652016723,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:12:15"
+    "timestamp": "2026-05-16 05:41:11"
   },
   {
     "task": "2012-finals-excel-knowledge-test",
@@ -2255,9 +2255,9 @@
     "problem_type": "qa_excel",
     "metric": "exact_match_accuracy",
     "champion_backbone": "excel_agent",
-    "champion_composite": 0.0,
-    "champion_val": 0.0,
-    "champion_train": 0.03333333333333333,
+    "champion_composite": 0.1253333333333334,
+    "champion_val": 0.1253333333333334,
+    "champion_train": 0.0,
     "test_score": 0.0,
     "test_metrics": {
       "accuracy": 0.0,
@@ -2268,19 +2268,6 @@
       "confusion": [
         [
           0,
-          1,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
           0,
           0,
           0,
@@ -2293,8 +2280,8 @@
           0
         ],
         [
-          0,
           1,
+          0,
           0,
           0,
           0,
@@ -2306,8 +2293,8 @@
           0
         ],
         [
-          0,
           1,
+          0,
           0,
           0,
           0,
@@ -2319,8 +2306,8 @@
           0
         ],
         [
-          0,
           1,
+          0,
           0,
           0,
           0,
@@ -2332,8 +2319,8 @@
           0
         ],
         [
-          0,
           1,
+          0,
           0,
           0,
           0,
@@ -2345,8 +2332,8 @@
           0
         ],
         [
-          0,
           1,
+          0,
           0,
           0,
           0,
@@ -2358,8 +2345,8 @@
           0
         ],
         [
-          0,
           1,
+          0,
           0,
           0,
           0,
@@ -2371,8 +2358,8 @@
           0
         ],
         [
-          0,
           1,
+          0,
           0,
           0,
           0,
@@ -2384,8 +2371,8 @@
           0
         ],
         [
-          0,
           1,
+          0,
           0,
           0,
           0,
@@ -2397,8 +2384,21 @@
           0
         ],
         [
-          0,
           1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
           0,
           0,
           0,
@@ -2414,7 +2414,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 00:12:16"
+    "timestamp": "2026-05-16 05:41:11"
   },
   {
     "task": "2012-finals-investment-property",
@@ -2422,8 +2422,8 @@
     "problem_type": "qa_excel",
     "metric": "exact_match_accuracy",
     "champion_backbone": "excel_agent",
-    "champion_composite": 0.5,
-    "champion_val": 0.5,
+    "champion_composite": 0.4126666666666667,
+    "champion_val": 0.4126666666666667,
     "champion_train": 0.6666666666666666,
     "test_score": 1.0,
     "test_metrics": {
@@ -2441,7 +2441,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": 0.6588,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:12:16"
+    "timestamp": "2026-05-16 05:41:11"
   },
   {
     "task": "2012-round-1-theory-and-practice-mcqs",
@@ -2449,8 +2449,8 @@
     "problem_type": "qa_excel",
     "metric": "exact_match_accuracy",
     "champion_backbone": "excel_agent",
-    "champion_composite": 0.4,
-    "champion_val": 0.4,
+    "champion_composite": 0.3264,
+    "champion_val": 0.3264,
     "champion_train": 0.4,
     "test_score": 0.4,
     "test_metrics": {
@@ -2480,7 +2480,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": 0.05880000000000002,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:12:16"
+    "timestamp": "2026-05-16 05:41:12"
   },
   {
     "task": "2012-round-2-asset-schedule",
@@ -2488,8 +2488,8 @@
     "problem_type": "qa_excel",
     "metric": "exact_match_accuracy",
     "champion_backbone": "excel_agent",
-    "champion_composite": 0.5,
-    "champion_val": 0.5,
+    "champion_composite": 0.35444444444444445,
+    "champion_val": 0.35444444444444445,
     "champion_train": 0.3333333333333333,
     "test_score": 0.0,
     "test_metrics": {
@@ -2512,7 +2512,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 00:12:16"
+    "timestamp": "2026-05-16 05:41:12"
   },
   {
     "task": "2012-round-2-find-that-error",
@@ -2520,8 +2520,8 @@
     "problem_type": "qa_excel",
     "metric": "exact_match_accuracy",
     "champion_backbone": "excel_agent",
-    "champion_composite": 0.375,
-    "champion_val": 0.375,
+    "champion_composite": 0.27835,
+    "champion_val": 0.27835,
     "champion_train": 0.4166666666666667,
     "test_score": 0.25,
     "test_metrics": {
@@ -2560,7 +2560,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.0912,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 00:12:16"
+    "timestamp": "2026-05-16 05:41:12"
   },
   {
     "task": "2012-round-2-monte-carlo",
@@ -2568,9 +2568,9 @@
     "problem_type": "qa_excel",
     "metric": "exact_match_accuracy",
     "champion_backbone": "excel_agent",
-    "champion_composite": 0.0,
-    "champion_val": 0.0,
-    "champion_train": 1.0,
+    "champion_composite": 0.3433333333333333,
+    "champion_val": 0.3433333333333333,
+    "champion_train": 0.0,
     "test_score": 0.0,
     "test_metrics": {
       "accuracy": 0.0,
@@ -2581,10 +2581,10 @@
       "confusion": [
         [
           0,
-          1
+          0
         ],
         [
-          0,
+          1,
           0
         ]
       ]
@@ -2592,7 +2592,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 00:12:16"
+    "timestamp": "2026-05-16 05:41:12"
   },
   {
     "task": "2013-round-1-acquisition-financing",
@@ -2600,9 +2600,9 @@
     "problem_type": "qa_excel",
     "metric": "exact_match_accuracy",
     "champion_backbone": "excel_agent",
-    "champion_composite": 0.6,
-    "champion_val": 0.6,
-    "champion_train": 0.75,
+    "champion_composite": 0.5029333333333333,
+    "champion_val": 0.5029333333333333,
+    "champion_train": 1.0,
     "test_score": 1.0,
     "test_metrics": {
       "accuracy": 1.0,
@@ -2619,7 +2619,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": 0.6588,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:12:16"
+    "timestamp": "2026-05-16 05:41:12"
   },
   {
     "task": "2013-round-1-energy-operations",
@@ -2627,8 +2627,8 @@
     "problem_type": "qa_excel",
     "metric": "exact_match_accuracy",
     "champion_backbone": "excel_agent",
-    "champion_composite": 0.5,
-    "champion_val": 0.5,
+    "champion_composite": 0.35444444444444445,
+    "champion_val": 0.35444444444444445,
     "champion_train": 0.6666666666666666,
     "test_score": 1.0,
     "test_metrics": {
@@ -2646,7 +2646,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": 0.6588,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:12:16"
+    "timestamp": "2026-05-16 05:41:12"
   },
   {
     "task": "2013-round-1-theory-and-practice",
@@ -2654,8 +2654,8 @@
     "problem_type": "qa_excel",
     "metric": "exact_match_accuracy",
     "champion_backbone": "excel_agent",
-    "champion_composite": 0.375,
-    "champion_val": 0.375,
+    "champion_composite": 0.2673333333333333,
+    "champion_val": 0.2673333333333333,
     "champion_train": 0.3333333333333333,
     "test_score": 0.5,
     "test_metrics": {
@@ -2685,7 +2685,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": 0.1588,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:12:16"
+    "timestamp": "2026-05-16 05:41:12"
   },
   {
     "task": "2013-round-2-data-analysis",
@@ -2693,38 +2693,47 @@
     "problem_type": "qa_excel",
     "metric": "exact_match_accuracy",
     "champion_backbone": "excel_agent",
-    "champion_composite": 0.38461538461538464,
-    "champion_val": 0.38461538461538464,
-    "champion_train": 0.4,
-    "test_score": 0.3333333333333333,
+    "champion_composite": 0.3356856319223184,
+    "champion_val": 0.3356856319223184,
+    "champion_train": 1.0,
+    "test_score": 0.0,
     "test_metrics": {
-      "accuracy": 0.3333333333333333,
-      "f1": 0.16666666666666666,
-      "precision": 0.1111111111111111,
-      "recall": 0.3333333333333333,
-      "mcc": 0.0,
+      "accuracy": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "mcc": -0.20412414523193154,
       "confusion": [
         [
-          1,
           0,
+          0,
+          1,
           0
         ],
         [
           1,
           0,
+          0,
           0
         ],
         [
-          1,
           0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
           0
         ]
       ]
     },
     "dsbench_baseline": 0.3412,
-    "delta_vs_dsbench": -0.007866666666666688,
+    "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 00:12:16"
+    "timestamp": "2026-05-16 05:41:12"
   },
   {
     "task": "2013-round-2-hard-times-turnaround-a-toy-company",
@@ -2732,8 +2741,8 @@
     "problem_type": "qa_excel",
     "metric": "exact_match_accuracy",
     "champion_backbone": "excel_agent",
-    "champion_composite": 0.5,
-    "champion_val": 0.5,
+    "champion_composite": 0.4126666666666666,
+    "champion_val": 0.4126666666666666,
     "champion_train": 0.6666666666666666,
     "test_score": 0.0,
     "test_metrics": {
@@ -2756,7 +2765,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 00:12:16"
+    "timestamp": "2026-05-16 05:41:12"
   },
   {
     "task": "2013-round-2-theory-and-practice",
@@ -2764,8 +2773,8 @@
     "problem_type": "qa_excel",
     "metric": "exact_match_accuracy",
     "champion_backbone": "excel_agent",
-    "champion_composite": 0.3333333333333333,
-    "champion_val": 0.3333333333333333,
+    "champion_composite": 0.25866666666666666,
+    "champion_val": 0.25866666666666666,
     "champion_train": 0.3333333333333333,
     "test_score": 0.0,
     "test_metrics": {
@@ -2795,7 +2804,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 00:12:16"
+    "timestamp": "2026-05-16 05:41:12"
   },
   {
     "task": "2014-round-1-dealing-with-data",
@@ -2803,9 +2812,9 @@
     "problem_type": "qa_excel",
     "metric": "exact_match_accuracy",
     "champion_backbone": "excel_agent",
-    "champion_composite": 0.5,
-    "champion_val": 0.5,
-    "champion_train": 0.4,
+    "champion_composite": 0.4126666666666666,
+    "champion_val": 0.4126666666666666,
+    "champion_train": 1.0,
     "test_score": 0.0,
     "test_metrics": {
       "accuracy": 0.0,
@@ -2827,7 +2836,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 00:12:16"
+    "timestamp": "2026-05-16 05:41:12"
   },
   {
     "task": "2014-round-1-precise-debt-modeling",
@@ -2835,31 +2844,26 @@
     "problem_type": "qa_excel",
     "metric": "exact_match_accuracy",
     "champion_backbone": "excel_agent",
-    "champion_composite": 0.2857142857142857,
-    "champion_val": 0.2857142857142857,
-    "champion_train": 0.3333333333333333,
-    "test_score": 0.0,
+    "champion_composite": 0.2469877551020408,
+    "champion_val": 0.2469877551020408,
+    "champion_train": 1.0,
+    "test_score": 1.0,
     "test_metrics": {
-      "accuracy": 0.0,
-      "f1": 0.0,
-      "precision": 0.0,
-      "recall": 0.0,
+      "accuracy": 1.0,
+      "f1": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
       "mcc": 0.0,
       "confusion": [
         [
-          0,
-          0
-        ],
-        [
-          1,
-          0
+          1
         ]
       ]
     },
     "dsbench_baseline": 0.3412,
-    "delta_vs_dsbench": -0.3412,
-    "beats_dsbench": false,
-    "timestamp": "2026-05-16 00:12:16"
+    "delta_vs_dsbench": 0.6588,
+    "beats_dsbench": true,
+    "timestamp": "2026-05-16 05:41:12"
   },
   {
     "task": "2014-round-1-snakes-and-ladders",
@@ -2867,9 +2871,9 @@
     "problem_type": "qa_excel",
     "metric": "exact_match_accuracy",
     "champion_backbone": "excel_agent",
-    "champion_composite": 0.75,
-    "champion_val": 0.75,
-    "champion_train": 0.6666666666666666,
+    "champion_composite": 0.6655,
+    "champion_val": 0.6655,
+    "champion_train": 1.0,
     "test_score": 0.0,
     "test_metrics": {
       "accuracy": 0.0,
@@ -2891,7 +2895,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 00:12:16"
+    "timestamp": "2026-05-16 05:41:12"
   },
   {
     "task": "2014-round-2-purple-city",
@@ -2899,8 +2903,8 @@
     "problem_type": "qa_excel",
     "metric": "exact_match_accuracy",
     "champion_backbone": "excel_agent",
-    "champion_composite": 0.2857142857142857,
-    "champion_val": 0.2857142857142857,
+    "champion_composite": 0.23961904761904762,
+    "champion_val": 0.23961904761904762,
     "champion_train": 0.16666666666666666,
     "test_score": 0.0,
     "test_metrics": {
@@ -2923,7 +2927,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 00:12:16"
+    "timestamp": "2026-05-16 05:41:12"
   },
   {
     "task": "2014-round-2-stepping-up",
@@ -2931,8 +2935,8 @@
     "problem_type": "qa_excel",
     "metric": "exact_match_accuracy",
     "champion_backbone": "excel_agent",
-    "champion_composite": 0.25,
-    "champion_val": 0.25,
+    "champion_composite": 0.22533333333333336,
+    "champion_val": 0.22533333333333336,
     "champion_train": 0.3333333333333333,
     "test_score": 0.0,
     "test_metrics": {
@@ -2962,7 +2966,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 00:12:16"
+    "timestamp": "2026-05-16 05:41:12"
   },
   {
     "task": "2014-round-2-time-is-money",
@@ -2970,8 +2974,8 @@
     "problem_type": "qa_excel",
     "metric": "exact_match_accuracy",
     "champion_backbone": "excel_agent",
-    "champion_composite": 0.3333333333333333,
-    "champion_val": 0.3333333333333333,
+    "champion_composite": 0.25866666666666666,
+    "champion_val": 0.25866666666666666,
     "champion_train": 0.2,
     "test_score": 0.0,
     "test_metrics": {
@@ -2994,7 +2998,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 00:12:16"
+    "timestamp": "2026-05-16 05:41:12"
   },
   {
     "task": "2015-round-1-bread-and-butter",
@@ -3002,8 +3006,8 @@
     "problem_type": "qa_excel",
     "metric": "exact_match_accuracy",
     "champion_backbone": "excel_agent",
-    "champion_composite": 0.3333333333333333,
-    "champion_val": 0.3333333333333333,
+    "champion_composite": 0.24533333333333338,
+    "champion_val": 0.24533333333333338,
     "champion_train": 0.4444444444444444,
     "test_score": 0.0,
     "test_metrics": {
@@ -3033,7 +3037,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 00:12:16"
+    "timestamp": "2026-05-16 05:41:12"
   },
   {
     "task": "2015-round-1-tax",
@@ -3041,8 +3045,8 @@
     "problem_type": "qa_excel",
     "metric": "exact_match_accuracy",
     "champion_backbone": "excel_agent",
-    "champion_composite": 0.625,
-    "champion_val": 0.625,
+    "champion_composite": 0.39045,
+    "champion_val": 0.39045,
     "champion_train": 0.6666666666666666,
     "test_score": 0.0,
     "test_metrics": {
@@ -3081,7 +3085,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 00:12:16"
+    "timestamp": "2026-05-16 05:41:12"
   },
   {
     "task": "2015-round-2-more-money-please",
@@ -3089,8 +3093,8 @@
     "problem_type": "qa_excel",
     "metric": "exact_match_accuracy",
     "champion_backbone": "excel_agent",
-    "champion_composite": 0.5,
-    "champion_val": 0.5,
+    "champion_composite": 0.29280000000000006,
+    "champion_val": 0.29280000000000006,
     "champion_train": 1.0,
     "test_score": 0.5,
     "test_metrics": {
@@ -3120,7 +3124,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": 0.1588,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:12:16"
+    "timestamp": "2026-05-16 05:41:12"
   },
   {
     "task": "2015-round-2-the-price-is-right",
@@ -3128,8 +3132,8 @@
     "problem_type": "qa_excel",
     "metric": "exact_match_accuracy",
     "champion_backbone": "excel_agent",
-    "champion_composite": 0.3333333333333333,
-    "champion_val": 0.3333333333333333,
+    "champion_composite": 0.2753185185185185,
+    "champion_val": 0.2753185185185185,
     "champion_train": 0.42857142857142855,
     "test_score": 0.0,
     "test_metrics": {
@@ -3159,7 +3163,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 00:12:16"
+    "timestamp": "2026-05-16 05:41:12"
   },
   {
     "task": "2015-round-one-options-to-call",
@@ -3167,8 +3171,8 @@
     "problem_type": "qa_excel",
     "metric": "exact_match_accuracy",
     "champion_backbone": "excel_agent",
-    "champion_composite": 0.125,
-    "champion_val": 0.125,
+    "champion_composite": 0.21733333333333335,
+    "champion_val": 0.21733333333333335,
     "champion_train": 0.16666666666666666,
     "test_score": 0.0,
     "test_metrics": {
@@ -3180,17 +3184,17 @@
       "confusion": [
         [
           0,
+          1,
+          0
+        ],
+        [
+          0,
           0,
           0
         ],
         [
-          1,
           0,
-          0
-        ],
-        [
           1,
-          0,
           0
         ]
       ]
@@ -3198,7 +3202,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 00:12:16"
+    "timestamp": "2026-05-16 05:41:12"
   },
   {
     "task": "2016-round-1-section-2-chip-off-the-old-block",
@@ -3206,8 +3210,8 @@
     "problem_type": "qa_excel",
     "metric": "exact_match_accuracy",
     "champion_backbone": "excel_agent",
-    "champion_composite": 0.2727272727272727,
-    "champion_val": 0.2727272727272727,
+    "champion_composite": 0.23021814876033053,
+    "champion_val": 0.23021814876033053,
     "champion_train": 0.2222222222222222,
     "test_score": 0.0,
     "test_metrics": {
@@ -3237,7 +3241,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 00:12:16"
+    "timestamp": "2026-05-16 05:41:12"
   },
   {
     "task": "2016-round-1-section-3-roll-the-dice",
@@ -3245,8 +3249,125 @@
     "problem_type": "qa_excel",
     "metric": "exact_match_accuracy",
     "champion_backbone": "excel_agent",
-    "champion_composite": 0.0,
-    "champion_val": 0.0,
+    "champion_composite": 0.212,
+    "champion_val": 0.212,
+    "champion_train": 0.16666666666666666,
+    "test_score": 0.0,
+    "test_metrics": {
+      "accuracy": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "mcc": 0.0,
+      "confusion": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    "dsbench_baseline": 0.3412,
+    "delta_vs_dsbench": -0.3412,
+    "beats_dsbench": false,
+    "timestamp": "2026-05-16 05:41:13"
+  },
+  {
+    "task": "2016-round-1-section-4-going-around-in-circles",
+    "name": "2016-round-1-section-4-going-around-in-circles",
+    "problem_type": "qa_excel",
+    "metric": "exact_match_accuracy",
+    "champion_backbone": "excel_agent",
+    "champion_composite": 0.30720000000000003,
+    "champion_val": 0.30720000000000003,
+    "champion_train": 0.5,
+    "test_score": 0.0,
+    "test_metrics": {
+      "accuracy": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "mcc": 0.0,
+      "confusion": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    "dsbench_baseline": 0.3412,
+    "delta_vs_dsbench": -0.3412,
+    "beats_dsbench": false,
+    "timestamp": "2026-05-16 05:41:13"
+  },
+  {
+    "task": "2016-round-2-section-2-fund-the-future",
+    "name": "2016-round-2-section-2-fund-the-future",
+    "problem_type": "qa_excel",
+    "metric": "exact_match_accuracy",
+    "champion_backbone": "excel_agent",
+    "champion_composite": 0.16733333333333333,
+    "champion_val": 0.16733333333333333,
+    "champion_train": 0.16666666666666666,
+    "test_score": 0.0,
+    "test_metrics": {
+      "accuracy": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "mcc": 0.0,
+      "confusion": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    "dsbench_baseline": 0.3412,
+    "delta_vs_dsbench": -0.3412,
+    "beats_dsbench": false,
+    "timestamp": "2026-05-16 05:41:13"
+  },
+  {
+    "task": "2016-round-2-section-3-tally-up",
+    "name": "2016-round-2-section-3-tally-up",
+    "problem_type": "qa_excel",
+    "metric": "exact_match_accuracy",
+    "champion_backbone": "excel_agent",
+    "champion_composite": 0.1904,
+    "champion_val": 0.1904,
     "champion_train": 0.3333333333333333,
     "test_score": 0.0,
     "test_metrics": {
@@ -3258,141 +3379,15 @@
       "confusion": [
         [
           0,
-          1,
-          0
+          0,
+          1
         ],
         [
           0,
           0,
-          0
+          1
         ],
         [
-          0,
-          1,
-          0
-        ]
-      ]
-    },
-    "dsbench_baseline": 0.3412,
-    "delta_vs_dsbench": -0.3412,
-    "beats_dsbench": false,
-    "timestamp": "2026-05-16 00:12:16"
-  },
-  {
-    "task": "2016-round-1-section-4-going-around-in-circles",
-    "name": "2016-round-1-section-4-going-around-in-circles",
-    "problem_type": "qa_excel",
-    "metric": "exact_match_accuracy",
-    "champion_backbone": "excel_agent",
-    "champion_composite": 0.375,
-    "champion_val": 0.375,
-    "champion_train": 0.5,
-    "test_score": 0.0,
-    "test_metrics": {
-      "accuracy": 0.0,
-      "f1": 0.0,
-      "precision": 0.0,
-      "recall": 0.0,
-      "mcc": 0.0,
-      "confusion": [
-        [
-          0,
-          1,
-          0
-        ],
-        [
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          1,
-          0
-        ]
-      ]
-    },
-    "dsbench_baseline": 0.3412,
-    "delta_vs_dsbench": -0.3412,
-    "beats_dsbench": false,
-    "timestamp": "2026-05-16 00:12:16"
-  },
-  {
-    "task": "2016-round-2-section-2-fund-the-future",
-    "name": "2016-round-2-section-2-fund-the-future",
-    "problem_type": "qa_excel",
-    "metric": "exact_match_accuracy",
-    "champion_backbone": "excel_agent",
-    "champion_composite": 0.0,
-    "champion_val": 0.0,
-    "champion_train": 0.16666666666666666,
-    "test_score": 0.0,
-    "test_metrics": {
-      "accuracy": 0.0,
-      "f1": 0.0,
-      "precision": 0.0,
-      "recall": 0.0,
-      "mcc": 0.0,
-      "confusion": [
-        [
-          0,
-          1,
-          0
-        ],
-        [
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          1,
-          0
-        ]
-      ]
-    },
-    "dsbench_baseline": 0.3412,
-    "delta_vs_dsbench": -0.3412,
-    "beats_dsbench": false,
-    "timestamp": "2026-05-16 00:12:16"
-  },
-  {
-    "task": "2016-round-2-section-3-tally-up",
-    "name": "2016-round-2-section-3-tally-up",
-    "problem_type": "qa_excel",
-    "metric": "exact_match_accuracy",
-    "champion_backbone": "excel_agent",
-    "champion_composite": 0.25,
-    "champion_val": 0.25,
-    "champion_train": 1.0,
-    "test_score": 0.0,
-    "test_metrics": {
-      "accuracy": 0.0,
-      "f1": 0.0,
-      "precision": 0.0,
-      "recall": 0.0,
-      "mcc": 0.0,
-      "confusion": [
-        [
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          1,
-          0,
-          0
-        ],
-        [
-          1,
           0,
           0,
           0
@@ -3402,7 +3397,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 00:12:16"
+    "timestamp": "2026-05-16 05:41:13"
   },
   {
     "task": "2016-round-2-section-4-maximize-the-benefit",
@@ -3410,31 +3405,38 @@
     "problem_type": "qa_excel",
     "metric": "exact_match_accuracy",
     "champion_backbone": "excel_agent",
-    "champion_composite": 0.125,
-    "champion_val": 0.125,
+    "champion_composite": 0.17533333333333334,
+    "champion_val": 0.17533333333333334,
     "champion_train": 0.16666666666666666,
-    "test_score": 0.5,
+    "test_score": 0.0,
     "test_metrics": {
-      "accuracy": 0.5,
-      "f1": 0.3333333333333333,
-      "precision": 0.25,
-      "recall": 0.5,
+      "accuracy": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
       "mcc": 0.0,
       "confusion": [
         [
           0,
-          1
+          0,
+          0
         ],
         [
+          1,
           0,
-          1
+          0
+        ],
+        [
+          1,
+          0,
+          0
         ]
       ]
     },
     "dsbench_baseline": 0.3412,
-    "delta_vs_dsbench": 0.1588,
-    "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:12:16"
+    "delta_vs_dsbench": -0.3412,
+    "beats_dsbench": false,
+    "timestamp": "2026-05-16 05:41:13"
   },
   {
     "task": "2017-finals-castles-in-the-air",
@@ -3442,8 +3444,8 @@
     "problem_type": "qa_excel",
     "metric": "exact_match_accuracy",
     "champion_backbone": "excel_agent",
-    "champion_composite": 0.4,
-    "champion_val": 0.4,
+    "champion_composite": 0.32160000000000005,
+    "champion_val": 0.32160000000000005,
     "champion_train": 0.5,
     "test_score": 0.0,
     "test_metrics": {
@@ -3473,7 +3475,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 00:12:16"
+    "timestamp": "2026-05-16 05:41:13"
   },
   {
     "task": "2017-finals-funding-fun",
@@ -3481,8 +3483,8 @@
     "problem_type": "qa_excel",
     "metric": "exact_match_accuracy",
     "champion_backbone": "excel_agent",
-    "champion_composite": 0.0,
-    "champion_val": 0.0,
+    "champion_composite": 0.1383859649122807,
+    "champion_val": 0.1383859649122807,
     "champion_train": 0.06666666666666667,
     "test_score": 0.0,
     "test_metrics": {
@@ -3532,7 +3534,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 00:12:16"
+    "timestamp": "2026-05-16 05:41:13"
   },
   {
     "task": "2017-finals-ladder-up",
@@ -3540,8 +3542,8 @@
     "problem_type": "qa_excel",
     "metric": "exact_match_accuracy",
     "champion_backbone": "excel_agent",
-    "champion_composite": 0.0,
-    "champion_val": 0.0,
+    "champion_composite": 0.14233333333333337,
+    "champion_val": 0.14233333333333337,
     "champion_train": 0.08333333333333333,
     "test_score": 0.0,
     "test_metrics": {
@@ -3591,7 +3593,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 00:12:16"
+    "timestamp": "2026-05-16 05:41:13"
   },
   {
     "task": "2017-finals-word-play",
@@ -3599,9 +3601,9 @@
     "problem_type": "qa_excel",
     "metric": "exact_match_accuracy",
     "champion_backbone": "excel_agent",
-    "champion_composite": 0.0,
-    "champion_val": 0.0,
-    "champion_train": 0.1111111111111111,
+    "champion_composite": 0.12533333333333332,
+    "champion_val": 0.12533333333333332,
+    "champion_train": 0.0,
     "test_score": 0.0,
     "test_metrics": {
       "accuracy": 0.0,
@@ -3614,22 +3616,22 @@
           0,
           0,
           0,
-          1
+          0
         ],
         [
+          1,
           0,
           0,
-          0,
-          1
+          0
         ],
         [
+          1,
           0,
           0,
-          0,
-          1
+          0
         ],
         [
-          0,
+          1,
           0,
           0,
           0
@@ -3639,7 +3641,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 00:12:16"
+    "timestamp": "2026-05-16 05:41:13"
   },
   {
     "task": "2017-round-1-go-with-the-flow",
@@ -3647,8 +3649,8 @@
     "problem_type": "qa_excel",
     "metric": "exact_match_accuracy",
     "champion_backbone": "excel_agent",
-    "champion_composite": 0.375,
-    "champion_val": 0.375,
+    "champion_composite": 0.3104,
+    "champion_val": 0.3104,
     "champion_train": 0.5,
     "test_score": 0.5,
     "test_metrics": {
@@ -3671,7 +3673,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": 0.1588,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 00:12:17"
+    "timestamp": "2026-05-16 05:41:13"
   },
   {
     "task": "2017-round-1-when-it-rains-it-pours",
@@ -3679,47 +3681,31 @@
     "problem_type": "qa_excel",
     "metric": "exact_match_accuracy",
     "champion_backbone": "excel_agent",
-    "champion_composite": 0.2222222222222222,
-    "champion_val": 0.2222222222222222,
-    "champion_train": 1.0,
-    "test_score": 0.0,
+    "champion_composite": 0.16977777777777778,
+    "champion_val": 0.16977777777777778,
+    "champion_train": 0.14285714285714285,
+    "test_score": 0.5,
     "test_metrics": {
-      "accuracy": 0.0,
-      "f1": 0.0,
-      "precision": 0.0,
-      "recall": 0.0,
+      "accuracy": 0.5,
+      "f1": 0.3333333333333333,
+      "precision": 0.25,
+      "recall": 0.5,
       "mcc": 0.0,
       "confusion": [
         [
-          0,
-          0,
-          0,
-          1
-        ],
-        [
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
           1,
-          0,
           0
         ],
         [
-          0,
-          0,
-          0,
+          1,
           0
         ]
       ]
     },
     "dsbench_baseline": 0.3412,
-    "delta_vs_dsbench": -0.3412,
-    "beats_dsbench": false,
-    "timestamp": "2026-05-16 00:12:17"
+    "delta_vs_dsbench": 0.1588,
+    "beats_dsbench": true,
+    "timestamp": "2026-05-16 05:41:13"
   },
   {
     "task": "2017-round-2-late-again",
@@ -3727,9 +3713,9 @@
     "problem_type": "qa_excel",
     "metric": "exact_match_accuracy",
     "champion_backbone": "excel_agent",
-    "champion_composite": 0.0,
-    "champion_val": 0.0,
-    "champion_train": 0.14285714285714285,
+    "champion_composite": 0.16177777777777777,
+    "champion_val": 0.16177777777777777,
+    "champion_train": 0.0,
     "test_score": 0.0,
     "test_metrics": {
       "accuracy": 0.0,
@@ -3758,7 +3744,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 00:12:17"
+    "timestamp": "2026-05-16 05:41:13"
   },
   {
     "task": "2017-round-2-section-1-collect-the-cash",
@@ -3766,9 +3752,9 @@
     "problem_type": "qa_excel",
     "metric": "exact_match_accuracy",
     "champion_backbone": "excel_agent",
-    "champion_composite": 0.1,
-    "champion_val": 0.1,
-    "champion_train": 0.0,
+    "champion_composite": 0.18933333333333335,
+    "champion_val": 0.18933333333333335,
+    "champion_train": 0.25,
     "test_score": 0.0,
     "test_metrics": {
       "accuracy": 0.0,
@@ -3797,7 +3783,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 00:12:17"
+    "timestamp": "2026-05-16 05:41:13"
   },
   {
     "task": "2017-round-2-section-3-system-allocation",
@@ -3805,8 +3791,8 @@
     "problem_type": "qa_excel",
     "metric": "exact_match_accuracy",
     "champion_backbone": "excel_agent",
-    "champion_composite": 0.125,
-    "champion_val": 0.125,
+    "champion_composite": 0.17533333333333334,
+    "champion_val": 0.17533333333333334,
     "champion_train": 0.0,
     "test_score": 0.0,
     "test_metrics": {
@@ -3829,6 +3815,6 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 00:12:17"
+    "timestamp": "2026-05-16 05:41:13"
   }
 ]

@@ -1,15 +1,16 @@
 {
-  "experiment_num": 1,
+  "experiment_num": 3,
   "backbone": "excel_agent",
-  "description": "excel_agent iter 1/25: Baseline: predict the per-task training mode for every Modeloff question. This i",
+  "description": "excel_agent iter 3/25: Constant predictor: emit ``C`` for every Modeloff question. The diagnosis report",
   "params": {
-    "classifier": "prior_only",
+    "classifier": "const",
+    "const": "C",
     "seed": 42
   },
   "metric": "exact_match_accuracy",
   "train_score": 0.16666666666666666,
-  "val_score": 0.0,
-  "composite": 0.0,
+  "val_score": 0.16733333333333333,
+  "composite": 0.16733333333333333,
   "train_metrics": {
     "accuracy": 0.16666666666666666,
     "f1": 0.047619047619047616,
@@ -18,49 +19,49 @@
     "mcc": 0.0,
     "confusion": [
       [
-        0,
-        0,
         1,
+        0,
+        0,
         0,
         0,
         0
       ],
       [
-        0,
-        0,
         1,
+        0,
+        0,
         0,
         0,
         0
       ],
       [
-        0,
-        0,
         1,
+        0,
+        0,
         0,
         0,
         0
       ],
       [
-        0,
-        0,
         1,
+        0,
+        0,
         0,
         0,
         0
       ],
       [
-        0,
-        0,
         1,
+        0,
+        0,
         0,
         0,
         0
       ],
       [
-        0,
-        0,
         1,
+        0,
+        0,
         0,
         0,
         0
@@ -91,8 +92,8 @@
       ]
     ]
   },
-  "elapsed_sec": 0.004000663757324219,
-  "timestamp": "2026-05-15 23:48:50",
+  "elapsed_sec": 0.003001689910888672,
+  "timestamp": "2026-05-16 05:38:41",
   "task_slug": "2016-round-2-section-2-fund-the-future",
   "uses_test_set": false
 }

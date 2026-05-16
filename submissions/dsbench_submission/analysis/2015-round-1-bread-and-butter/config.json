@@ -1,15 +1,16 @@
 {
-  "experiment_num": 11,
+  "experiment_num": 2,
   "backbone": "excel_agent",
-  "description": "excel_agent iter 11/25: sklearn DummyClassifier(strategy=most_frequent) \u2014 sanity-check that prior_only a",
+  "description": "excel_agent iter 2/25: Constant predictor: emit ``B`` for every Modeloff question. The diagnosis report",
   "params": {
-    "classifier": "dummy_majority",
+    "classifier": "const",
+    "const": "B",
     "seed": 42
   },
   "metric": "exact_match_accuracy",
   "train_score": 0.4444444444444444,
-  "val_score": 0.3333333333333333,
-  "composite": 0.3333333333333333,
+  "val_score": 0.24533333333333338,
+  "composite": 0.24533333333333338,
   "train_metrics": {
     "accuracy": 0.4444444444444444,
     "f1": 0.12307692307692308,
@@ -87,8 +88,8 @@
       ]
     ]
   },
-  "elapsed_sec": 0.010026693344116211,
-  "timestamp": "2026-05-15 23:45:54",
+  "elapsed_sec": 0.0030837059020996094,
+  "timestamp": "2026-05-16 05:38:15",
   "task_slug": "2015-round-1-bread-and-butter",
   "uses_test_set": false
 }

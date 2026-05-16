@@ -1,7 +1,7 @@
 {
   "task": "2016-round-1-section-2-chip-off-the-old-block",
   "kind": "analysis",
-  "generated_at": "2026-05-16 00:24:22",
+  "generated_at": "2026-05-16 05:43:02",
   "agents": [
     {
       "agent": "A_split_hash",
@@ -14,19 +14,19 @@
     {
       "agent": "B_target_leakage",
       "ok": true,
-      "max_mutual_information": 1.676987774316417,
+      "max_mutual_information": 1.6769877743164172,
       "top5_features_by_MI": [
         {
           "feature_idx": 1,
-          "mi": 1.676987774316417
+          "mi": 1.6769877743164172
         },
         {
           "feature_idx": 2,
-          "mi": 1.676987774316417
+          "mi": 1.6769877743164172
         },
         {
           "feature_idx": 4,
-          "mi": 1.676987774316417
+          "mi": 1.6769877743164172
         },
         {
           "feature_idx": 8,
@@ -59,14 +59,14 @@
       "agent": "E_anomaly",
       "ok": true,
       "n_val_gt_train_susp": 0,
-      "n_val_gt_train_es_expected": 12,
+      "n_val_gt_train_es_expected": 5,
       "n_perfect_val_score": 0,
       "n_big_jumps_gt_0.3": 0,
       "examples_val_gt_train_susp": [],
       "examples_val_gt_train_es": [
         1,
         2,
-        11
+        6
       ],
       "examples_big_jumps": [],
       "is_qa": true,
@@ -86,13 +86,8 @@
     {
       "agent": "H_seed_stability",
       "ok": true,
-      "n_variance_runs": 3,
-      "mean_composite": 0.2727272727272727,
-      "std_composite": 0.0,
-      "min_max": [
-        0.2727272727272727,
-        0.2727272727272727
-      ]
+      "note": "no off-seed runs in this phase",
+      "n_variance_runs": 0
     },
     {
       "agent": "I_refit_consistency",

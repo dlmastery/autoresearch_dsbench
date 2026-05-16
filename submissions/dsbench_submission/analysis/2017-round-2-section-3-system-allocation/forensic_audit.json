@@ -1,7 +1,7 @@
 {
   "task": "2017-round-2-section-3-system-allocation",
   "kind": "analysis",
-  "generated_at": "2026-05-16 00:24:22",
+  "generated_at": "2026-05-16 05:43:02",
   "agents": [
     {
       "agent": "A_split_hash",
@@ -59,12 +59,14 @@
       "agent": "E_anomaly",
       "ok": true,
       "n_val_gt_train_susp": 0,
-      "n_val_gt_train_es_expected": 1,
-      "n_perfect_val_score": 23,
+      "n_val_gt_train_es_expected": 5,
+      "n_perfect_val_score": 0,
       "n_big_jumps_gt_0.3": 0,
       "examples_val_gt_train_susp": [],
       "examples_val_gt_train_es": [
-        2
+        1,
+        4,
+        11
       ],
       "examples_big_jumps": [],
       "is_qa": true,
@@ -84,13 +86,8 @@
     {
       "agent": "H_seed_stability",
       "ok": true,
-      "n_variance_runs": 3,
-      "mean_composite": 0.0,
-      "std_composite": 0.0,
-      "min_max": [
-        0.0,
-        0.0
-      ]
+      "note": "no off-seed runs in this phase",
+      "n_variance_runs": 0
     },
     {
       "agent": "I_refit_consistency",

@@ -1,61 +1,17 @@
 {
-  "experiment_num": 6,
+  "experiment_num": 1,
   "backbone": "excel_agent",
-  "description": "excel_agent iter 6/25: k-Nearest-Neighbour with k=1. 1-NN is the maximum-capacity neighbour rule \u2014 copi",
+  "description": "excel_agent iter 1/25: Constant predictor: emit ``A`` for every Modeloff question. The diagnosis report",
   "params": {
-    "classifier": "knn",
-    "knn_k": 1,
+    "classifier": "const",
+    "const": "A",
     "seed": 42
   },
   "metric": "exact_match_accuracy",
-  "train_score": 1.0,
-  "val_score": 0.25,
-  "composite": 0.25,
+  "train_score": 0.0,
+  "val_score": 0.17533333333333334,
+  "composite": 0.17533333333333334,
   "train_metrics": {
-    "accuracy": 1.0,
-    "f1": 1.0,
-    "precision": 1.0,
-    "recall": 1.0,
-    "mcc": 1.0,
-    "confusion": [
-      [
-        1,
-        0,
-        0,
-        0,
-        0
-      ],
-      [
-        0,
-        1,
-        0,
-        0,
-        0
-      ],
-      [
-        0,
-        0,
-        1,
-        0,
-        0
-      ],
-      [
-        0,
-        0,
-        0,
-        2,
-        0
-      ],
-      [
-        0,
-        0,
-        0,
-        0,
-        1
-      ]
-    ]
-  },
-  "val_metrics": {
     "accuracy": 0.0,
     "f1": 0.0,
     "precision": 0.0,
@@ -65,22 +21,46 @@
       [
         0,
         0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
         1,
-        0
-      ],
-      [
         0,
-        0,
-        0,
-        1
-      ],
-      [
         0,
         0,
         0,
         0
       ],
       [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
         0,
         0,
         0,
@@ -88,8 +68,25 @@
       ]
     ]
   },
-  "elapsed_sec": 0.4411180019378662,
-  "timestamp": "2026-05-15 23:49:20",
+  "val_metrics": {
+    "accuracy": 0.5,
+    "f1": 0.3333333333333333,
+    "precision": 0.25,
+    "recall": 0.5,
+    "mcc": 0.0,
+    "confusion": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  "elapsed_sec": 0.0029954910278320312,
+  "timestamp": "2026-05-16 05:38:45",
   "task_slug": "2016-round-2-section-3-tally-up",
   "uses_test_set": false
 }

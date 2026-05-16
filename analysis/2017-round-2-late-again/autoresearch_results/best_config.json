@@ -1,88 +1,17 @@
 {
-  "experiment_num": 1,
+  "experiment_num": 3,
   "backbone": "excel_agent",
-  "description": "excel_agent iter 1/25: Baseline: predict the per-task training mode for every Modeloff question. This i",
+  "description": "excel_agent iter 3/25: Constant predictor: emit ``C`` for every Modeloff question. The diagnosis report",
   "params": {
-    "classifier": "prior_only",
+    "classifier": "const",
+    "const": "C",
     "seed": 42
   },
   "metric": "exact_match_accuracy",
-  "train_score": 0.14285714285714285,
-  "val_score": 0.0,
-  "composite": 0.0,
+  "train_score": 0.0,
+  "val_score": 0.16177777777777777,
+  "composite": 0.16177777777777777,
   "train_metrics": {
-    "accuracy": 0.14285714285714285,
-    "f1": 0.03571428571428571,
-    "precision": 0.02040816326530612,
-    "recall": 0.14285714285714285,
-    "mcc": 0.0,
-    "confusion": [
-      [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        1
-      ],
-      [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        1
-      ],
-      [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        1
-      ],
-      [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        1
-      ],
-      [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        1
-      ],
-      [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        1
-      ],
-      [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        1
-      ]
-    ]
-  },
-  "val_metrics": {
     "accuracy": 0.0,
     "f1": 0.0,
     "precision": 0.0,
@@ -92,22 +21,104 @@
       [
         0,
         0,
-        1
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
       ],
       [
         0,
         0,
-        1
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
       ],
       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
         0,
         0,
         0
       ]
     ]
   },
-  "elapsed_sec": 0.0038836002349853516,
-  "timestamp": "2026-05-15 23:53:52",
+  "val_metrics": {
+    "accuracy": 0.5,
+    "f1": 0.3333333333333333,
+    "precision": 0.25,
+    "recall": 0.5,
+    "mcc": 0.0,
+    "confusion": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        0
+      ]
+    ]
+  },
+  "elapsed_sec": 0.0030012130737304688,
+  "timestamp": "2026-05-16 05:39:19",
   "task_slug": "2017-round-2-late-again",
   "uses_test_set": false
 }

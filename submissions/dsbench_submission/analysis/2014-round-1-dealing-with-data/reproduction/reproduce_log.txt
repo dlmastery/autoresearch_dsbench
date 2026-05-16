@@ -2,7 +2,7 @@ Reproduction protocol for 2014-round-1-dealing-with-data champion:
 
   python -m framework.runner --repo C:\Users\evija\dsbench\analysis\2014-round-1-dealing-with-data \
     --backbone excel_agent \
-    --params '{"classifier": "prior_only", "seed": 42}' \
-    --description 'reproduction' --experiment-num 1
+    --params '{"classifier": "knn", "knn_k": 5, "seed": 42}' \
+    --description 'reproduction' --experiment-num 18
 
-Expected composite ≈ 0.5000 (within 0.005 due to RNG floor variance).
+Expected composite ≈ 0.4127 (within 0.005 due to RNG floor variance).

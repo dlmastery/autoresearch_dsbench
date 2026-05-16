@@ -1,6 +1,6 @@
 # Forensic Audit — spaceship-titanic
 
-_Generated 2026-05-16 00:23:56; kind=modeling._
+_Generated 2026-05-16 05:42:36; kind=modeling._
 
 > Conference-submission grade integrity report. Ten independent
 > audit agents (A-J) plus a committee verdict (Z). Each agent has a

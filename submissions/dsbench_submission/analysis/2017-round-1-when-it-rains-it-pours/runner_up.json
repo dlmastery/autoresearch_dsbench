@@ -1,15 +1,15 @@
 {
-  "experiment_num": 2,
+  "experiment_num": 11,
   "backbone": "excel_agent",
-  "description": "excel_agent iter 2/25: Alternative baseline: predict the GLOBAL training mode pooled across all 38 Mode",
+  "description": "excel_agent iter 11/25: Predict the GLOBAL training mode (canonicalised, currently ``A``) for every ques",
   "params": {
     "classifier": "global_prior",
     "seed": 42
   },
   "metric": "exact_match_accuracy",
   "train_score": 0.14285714285714285,
-  "val_score": 0.1111111111111111,
-  "composite": 0.1111111111111111,
+  "val_score": 0.16977777777777778,
+  "composite": 0.16977777777777778,
   "train_metrics": {
     "accuracy": 0.14285714285714285,
     "f1": 0.041666666666666664,
@@ -91,8 +91,8 @@
       ]
     ]
   },
-  "elapsed_sec": 0.0030066967010498047,
-  "timestamp": "2026-05-15 23:53:25",
+  "elapsed_sec": 0.002004384994506836,
+  "timestamp": "2026-05-16 05:39:16",
   "task_slug": "2017-round-1-when-it-rains-it-pours",
   "uses_test_set": false
 }

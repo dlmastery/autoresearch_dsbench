@@ -1,23 +1,22 @@
 {
-  "experiment_num": 5,
+  "experiment_num": 1,
   "backbone": "excel_agent",
-  "description": "excel_agent iter 5/25: LogReg with weak L2 (C=10.0). Less shrinkage, more capacity \u2014 tests whether the ",
+  "description": "excel_agent iter 1/25: Constant predictor: emit ``A`` for every Modeloff question. The diagnosis report",
   "params": {
-    "classifier": "logreg",
-    "C": 10.0,
-    "max_iter": 500,
+    "classifier": "const",
+    "const": "A",
     "seed": 42
   },
   "metric": "exact_match_accuracy",
-  "train_score": 1.0,
-  "val_score": 0.2857142857142857,
-  "composite": 0.2857142857142857,
+  "train_score": 0.3333333333333333,
+  "val_score": 0.23961904761904762,
+  "composite": 0.23961904761904762,
   "train_metrics": {
-    "accuracy": 1.0,
-    "f1": 1.0,
-    "precision": 1.0,
-    "recall": 1.0,
-    "mcc": 1.0,
+    "accuracy": 0.3333333333333333,
+    "f1": 0.125,
+    "precision": 0.08333333333333333,
+    "recall": 0.25,
+    "mcc": 0.0,
     "confusion": [
       [
         2,
@@ -26,22 +25,22 @@
         0
       ],
       [
-        0,
         2,
         0,
+        0,
         0
       ],
       [
-        0,
-        0,
         1,
+        0,
+        0,
         0
       ],
       [
+        1,
         0,
         0,
-        0,
-        1
+        0
       ]
     ]
   },
@@ -62,8 +61,8 @@
       ]
     ]
   },
-  "elapsed_sec": 1.2099854946136475,
-  "timestamp": "2026-05-15 23:44:36",
+  "elapsed_sec": 0.0029993057250976562,
+  "timestamp": "2026-05-16 05:38:05",
   "task_slug": "2014-round-1-precise-debt-modeling",
   "uses_test_set": false
 }

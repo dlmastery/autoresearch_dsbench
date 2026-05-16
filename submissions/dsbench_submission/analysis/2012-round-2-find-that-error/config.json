@@ -1,15 +1,18 @@
 {
-  "experiment_num": 1,
+  "experiment_num": 21,
   "backbone": "excel_agent",
-  "description": "excel_agent iter 1/25: Baseline: predict the per-task training mode for every Modeloff question. This i",
+  "description": "excel_agent iter 21/25: Strongly-regularised LogReg (C=0.1) blended at prior_weight=0.3 toward the per-t",
   "params": {
-    "classifier": "prior_only",
+    "classifier": "logreg",
+    "C": 0.1,
+    "max_iter": 500,
+    "prior_weight": 0.3,
     "seed": 42
   },
   "metric": "exact_match_accuracy",
   "train_score": 0.4166666666666667,
-  "val_score": 0.375,
-  "composite": 0.375,
+  "val_score": 0.27835,
+  "composite": 0.27835,
   "train_metrics": {
     "accuracy": 0.4166666666666667,
     "f1": 0.19607843137254902,
@@ -58,8 +61,8 @@
       ]
     ]
   },
-  "elapsed_sec": 0.006785392761230469,
-  "timestamp": "2026-05-15 23:41:56",
+  "elapsed_sec": 0.8239181041717529,
+  "timestamp": "2026-05-16 05:37:47",
   "task_slug": "2012-round-2-find-that-error",
   "uses_test_set": false
 }

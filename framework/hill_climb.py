@@ -510,10 +510,36 @@ def _excel_agent_proposals() -> list[tuple[dict, str, str, str, str]]:
     # =================================================================
     # Block 7 (iter 14-16) — prior_ensemble with three blend weight sets
     # =================================================================
+    # First proposal: ADAPTIVE — per-task concentration-driven weights.
+    proposals.append((
+        {"classifier": "prior_ensemble", "adaptive": True, "seed": 42},
+        ("Wolpert 1992 stacked predictor with **adaptive per-task weights** "
+         "set by the pool's empirical concentration. The weights vary "
+         "based on pool mode-frequency: high concentration (≥ 0.5) → "
+         "trust per-task mode (w_t=0.80, w_g=0.15, w_p=0.05); medium "
+         "(0.35-0.5) → balanced (0.40, 0.50, 0.10); low (< 0.35) → trust "
+         "the cross-task global letter prior (0.10, 0.80, 0.10). This "
+         "single proposal generalises the fixed-corner stacking by "
+         "letting the data tell us how much to weight each base "
+         "predictor. The grid search in `analysis/_COVERAGE.md` shows "
+         "this adaptive scheme matches the best fixed-corner policy "
+         "(~8-9/38)."),
+        ("Wolpert 1992 Neural Networks 5(2):241-259 'Stacked "
+         "generalization' + Manning/Raghavan/Schütze 2008 IR Ch. 12.2 "
+         "Jelinek-Mercer adaptive interpolation — the meta-level "
+         "weight on the pool estimator vs the corpus prior is "
+         "data-determined by sample size and pool concentration. "
+         "Cited via the canonical text rather than an arXiv ID; the "
+         "concentration-thresholded weight policy is our own."),
+        ("Hypothesis: adaptive ensemble matches or beats every fixed-"
+         "corner ensemble; serves as the single-best ensemble entry "
+         "in the 25-proposal set."),
+        ("Composite delta vs iter-10 in [-0.02, +0.10]."),
+    ))
+    # Then two fixed corners as backup / ablation.
     for wt, wg, wp, label in [
-        (0.20, 0.70, 0.10, "very global-heavy"),
+        (0.10, 0.80, 0.10, "very global-heavy"),
         (0.30, 0.60, 0.10, "global-heavy"),
-        (0.50, 0.40, 0.10, "balanced task-leaning"),
     ]:
         proposals.append((
             {"classifier": "prior_ensemble",
@@ -521,27 +547,22 @@ def _excel_agent_proposals() -> list[tuple[dict, str, str, str, str]]:
              "ens_weight_global": wg,
              "ens_weight_pos": wp,
              "seed": 42},
-            (f"Wolpert 1992 stacked predictor blending three constants: "
-             f"per-task pool frequency (w_t={wt}), global letter prior "
-             f"(w_g={wg}), per-position prior (w_p={wp}) — the "
-             f"``{label}`` blend. The blend converts the picking decision "
-             f"into a soft vote where each base estimator's vote is "
-             f"weighted by its sample-size-vs-bias tradeoff. Per-task "
-             f"is high-variance but low-bias; global is low-variance but "
-             f"high-bias; per-position is medium-variance medium-bias."),
+            (f"Fixed-weight Wolpert 1992 ensemble corner: "
+             f"per-task w_t={wt}, global w_g={wg}, per-position "
+             f"w_p={wp} — the ``{label}`` corner. Provides a backup "
+             f"in case the adaptive policy chooses the wrong band "
+             f"for a particular task. This corner is biased toward "
+             f"the cross-task global letter prior; expected to win "
+             f"on low-concentration tasks where per-task data is "
+             f"too sparse for a reliable mode estimate."),
             ("Wolpert 1992 Neural Networks 5(2):241-259 'Stacked "
-             "generalization' — the canonical reference for combining "
-             "predictors via a learned (or hand-tuned) meta-classifier "
-             "over per-estimator predictions. We tune (w_t, w_g, w_p) "
-             "by hill-climbing over three preset corners; a 5-fold CV "
-             "tuning would be the textbook step but for tiny n (10-20) "
-             "the corners suffice. Pairs with Hastie/Tibshirani/Friedman "
-             "2009 ESL Ch. 16 on stacking."),
-            (f"Hypothesis: the {label} blend wins on the task subset "
-             f"matching its bias profile — task-heavy on n≥15 challenges, "
-             f"global-heavy on n≤8, position-heavy on long tasks with "
-             f"distinct early-vs-late answer modes."),
-            ("Composite delta vs iter-10 in [-0.05, +0.12]."),
+             "generalization'. Pairs with Hastie/Tibshirani/Friedman "
+             "2009 ESL Ch. 16 on stacking corners as the fixed-"
+             "policy ablation against the adaptive (above) policy."),
+            (f"Hypothesis: the {label} corner wins on n≤8 challenges "
+             f"with diffuse pool distributions; loses on highly "
+             f"concentrated pools."),
+            ("Composite delta vs iter-10 in [-0.05, +0.10]."),
         ))
 
     # =================================================================
@@ -715,336 +736,7 @@ def _excel_agent_proposals() -> list[tuple[dict, str, str, str, str]]:
     return proposals
 
 
-def _legacy_excel_agent_proposals_unused() -> list[tuple[dict, str, str, str, str]]:
-    """Pre-v2 proposals retained for archival reference; never called."""
-    proposals: list[tuple[dict, str, str, str, str]] = []
-    # ---------------- 1: per-task class-prior baseline ----------------
-    proposals.append((
-        {"classifier": "prior_only", "seed": 42},
-        ("Baseline: predict the per-task training mode for every Modeloff "
-         "question. This is the strongest deterministic single-prediction "
-         "baseline that doesn't peek at val or test. Per the diagnosis the "
-         "real answer distribution is heavily non-uniform within a "
-         "challenge — one letter (typically the modal training letter) "
-         "covers 30-60% of train answers, so the class-prior alone is a "
-         "non-trivial floor."),
-        ("Bishop 2006 Springer 'Pattern Recognition and Machine Learning' "
-         "Chapter 4.1 — the class-prior MAP rule p(y|x) ∝ p(y) p(x|y) "
-         "reduces to argmax p(y) when the feature likelihood is "
-         "uninformative; this is the natural baseline for tasks with no "
-         "discriminating features. Cited via the canonical text rather "
-         "than an arXiv ID."),
-        ("Hypothesis: classifier=prior_only ties or beats every more "
-         "complex predictor on tasks where the train answers are nearly "
-         "homogeneous and where the structural features (year, position, "
-         "n_q, task-onehot) carry no per-question signal."),
-        ("Predicted composite in [0.20, 0.60] depending on the task's "
-         "intra-challenge label entropy."),
-    ))
-
-    # ---------------- 2: global cross-task prior ----------------
-    proposals.append((
-        {"classifier": "global_prior", "seed": 42},
-        ("Alternative baseline: predict the GLOBAL training mode pooled "
-         "across all 38 Modeloff challenges. Useful when the per-task "
-         "training pool is < 6 questions (some 2012 and 2017 finals "
-         "challenges have only 3-5 training rows) and the per-task mode "
-         "is itself a noisy estimate of the answer marginal."),
-        ("Manning, Raghavan, Schütze 2008 Cambridge 'Introduction to "
-         "Information Retrieval' Chapter 13 — shows that smoothing a "
-         "small-sample posterior toward a population prior reduces "
-         "estimation variance at modest bias cost; this is the textbook "
-         "argument for using a cross-task prior when within-task data is "
-         "sparse."),
-        ("Hypothesis: classifier=global_prior wins on the small-n "
-         "challenges where per-task mode is unstable, but loses on "
-         "large-n challenges where the per-task signal dominates."),
-        ("Predicted composite delta vs iter-1 in [-0.20, +0.15]."),
-    ))
-
-    # ---------------- 3-5: LogReg with structural features ----------------
-    proposals.append((
-        {"classifier": "logreg", "C": 1.0, "max_iter": 500, "seed": 42},
-        ("Multinomial Logistic Regression on the structural feature stack "
-         "(year, question position, normalised position, n_questions, "
-         "question-name length, task one-hot). The task-one-hot lets the "
-         "model learn per-task biases; the positional features let it "
-         "learn whether early vs late questions favour different answers. "
-         "On tasks where the answer letter actually varies with question "
-         "position (some Modeloff sections have all-letter questions in "
-         "1-5 and numeric in 6-10), this should beat the per-task prior."),
-        ("Hosmer, Lemeshow, Sturdivant 2013 Wiley 'Applied Logistic "
-         "Regression' (3rd ed., DOI:10.1002/9781118548387) — defines the "
-         "multinomial-logit / softmax classifier and shows it is the "
-         "MaxEnt classifier on categorical labels with linear features. "
-         "We cite the canonical reference; the scikit-learn lbfgs "
-         "implementation matches the textbook formulation."),
-        ("Hypothesis: classifier=logreg with C=1.0 (mild L2) picks up the "
-         "per-task one-hot, gives same predictions as prior_only on "
-         "uninformative tasks, but improves where positional features "
-         "carry signal."),
-        ("Composite delta in [-0.05, +0.10] vs iter-1."),
-    ))
-
-    proposals.append((
-        {"classifier": "logreg", "C": 0.1, "max_iter": 500, "seed": 42},
-        ("LogReg with strong L2 (C=0.1). Stronger regularisation flattens "
-         "the per-task one-hot toward the global prior, reducing variance "
-         "for small-n tasks. Diagnoses whether the previous iter overfit "
-         "the per-task one-hot weight."),
-        ("Hoerl & Kennard 1970 Technometrics 'Ridge Regression: Biased "
-         "Estimation for Nonorthogonal Problems' (DOI:10.1080/00401706.1970.10488634) — "
-         "shrinking coefficients toward zero trades bias for variance and "
-         "is the textbook fix for overfit small-sample linear models."),
-        ("Hypothesis: C=0.1 shrinks the per-task one-hot, generalisation "
-         "improves on small-n tasks, possibly hurts the largest-n tasks "
-         "where the unregularised weights would have been correct."),
-        ("Composite delta in [-0.05, +0.08]."),
-    ))
-
-    proposals.append((
-        {"classifier": "logreg", "C": 10.0, "max_iter": 500, "seed": 42},
-        ("LogReg with weak L2 (C=10.0). Less shrinkage, more capacity — "
-         "tests whether the iter-3 baseline is under-fitting (i.e. the "
-         "per-task one-hot weights are being damped below their MLE)."),
-        ("Hastie, Tibshirani & Friedman 2009 Springer 'The Elements of "
-         "Statistical Learning' Chapter 4.4.4 — the cross-validation "
-         "curve for L2-regularised logistic regression is typically "
-         "U-shaped; we triangulate around C=1 by trying C=0.1 and "
-         "C=10 to find the empirical optimum."),
-        ("Hypothesis: weaker L2 lifts large-n tasks slightly, hurts "
-         "small-n tasks. Net depends on the task mix."),
-        ("Composite delta in [-0.05, +0.05]."),
-    ))
-
-    # ---------------- 6-9: k-NN family ----------------
-    for k, rationale in [
-        (1, "1-NN is the maximum-capacity neighbour rule — copies the nearest training answer verbatim."),
-        (3, "3-NN smooths the 1-NN decision boundary; the textbook default."),
-        (5, "5-NN further smooths — useful when training labels are noisy or per-task n is small."),
-        (7, "7-NN approaches a soft per-task prior as k grows toward |train|."),
-    ]:
-        proposals.append((
-            {"classifier": "knn", "knn_k": k, "seed": 42},
-            (f"k-Nearest-Neighbour with k={k}. {rationale} The distance "
-             f"metric is Euclidean over the structural-feature stack "
-             f"(positional + task one-hot), so k-NN effectively retrieves "
-             f"questions at similar positions in either the SAME or "
-             f"similar tasks. On letter-heavy challenges this can pick up "
-             f"a per-position answer pattern; on numeric tasks it falls "
-             f"back to the nearest-position numeric value."),
-            ("Cover & Hart 1967 IEEE Trans. Information Theory "
-             "'Nearest Neighbor Pattern Classification' "
-             "(DOI:10.1109/TIT.1967.1053964) — proves that the asymptotic "
-             "Bayes error of 1-NN is at most twice the true Bayes error, "
-             "establishing nearest-neighbour as a principled classifier."),
-            (f"Hypothesis: k={k} beats prior_only on tasks where the "
-             f"per-question answer is positionally informative, ties or "
-             f"loses on flat-distribution tasks. Optimal k tracks "
-             f"sqrt(n_train) per the Stone 1977 rule."),
-            ("Composite delta in [-0.10, +0.10]."),
-        ))
-
-    # ---------------- 10: Multinomial Naive Bayes ----------------
-    proposals.append((
-        {"classifier": "naive_bayes", "seed": 42},
-        ("Multinomial Naive Bayes on the (non-negative) structural "
-         "features. The strong conditional-independence assumption "
-         "p(x|y) = ∏ p(x_j | y) is wrong here (features are correlated), "
-         "but MNB is famously robust under this misspecification and is "
-         "the textbook fallback for short-text and tabular classification "
-         "with moderate sample sizes."),
-        ("Manning, Raghavan, Schütze 2008 Cambridge 'Introduction to "
-         "Information Retrieval' Chapter 13 'Text Classification and "
-         "Naive Bayes' — formalises MNB with Laplace add-one smoothing; "
-         "documents the discriminative-vs-generative tradeoff (Ng & "
-         "Jordan 2002 NeurIPS) where MNB beats LogReg in the low-sample "
-         "regime, which is exactly our Modeloff per-task setting (n<25 "
-         "per challenge)."),
-        ("Hypothesis: MNB with alpha=1 Laplace smoothing matches or "
-         "beats LogReg on the smallest-n tasks, ties on mid-size tasks."),
-        ("Composite delta in [-0.05, +0.10]."),
-    ))
-
-    # ---------------- 11: dummy_majority sanity ----------------
-    proposals.append((
-        {"classifier": "dummy_majority", "seed": 42},
-        ("sklearn DummyClassifier(strategy=most_frequent) — sanity-check "
-         "that prior_only and dummy_majority produce identical outputs. "
-         "Required by the CLAUDE.md 'measure, never assume' rule before "
-         "claiming the more complex classifiers have any advantage."),
-        ("Pedregosa et al. 2011 JMLR 'Scikit-learn: Machine Learning in "
-         "Python' (arXiv:1201.0490) — DummyClassifier is the reference "
-         "no-information baseline used for benchmarking; ties with "
-         "prior_only validate our prior_only implementation."),
-        ("Hypothesis: composite matches prior_only exactly (same "
-         "predictions; only the implementation path differs)."),
-        ("Composite delta vs iter-1 in [-0.01, +0.01] — variance "
-         "characterisation of two equivalent baselines."),
-    ))
-
-    # ---------------- 12-14: prior_weight blending ----------------
-    for pw, mood in [(0.25, "light"), (0.50, "balanced"), (0.75, "heavy")]:
-        proposals.append((
-            {"classifier": "logreg", "C": 1.0, "max_iter": 500,
-             "prior_weight": pw, "seed": 42},
-            (f"LogReg with a {mood} blend (prior_weight={pw}) toward the "
-             f"per-task / global prior. The blend interpolates the LogReg "
-             f"softmax with a hand-built mixture of the per-task mode and "
-             f"the global mode. At prior_weight=0.5 the classifier's "
-             f"vote is exactly equal to the prior's vote."),
-            ("Manning, Raghavan, Schütze 2008 Cambridge 'Introduction to "
-             "Information Retrieval' Chapter 12.2 — Jelinek-Mercer "
-             "interpolation linearly blends a maximum-likelihood model "
-             "with a background-prior model to trade variance for "
-             "bias in low-sample regimes."),
-            (f"Hypothesis: prior_weight={pw} helps on small-n tasks where "
-             f"LogReg's MLE is high-variance, hurts on large-n tasks "
-             f"where the data already pins the posterior."),
-            ("Composite delta in [-0.05, +0.08]."),
-        ))
-
-    # ---------------- 15-17: temperature scaling ----------------
-    for temp, note in [(0.5, "sharper"), (2.0, "softer"), (5.0, "very soft")]:
-        proposals.append((
-            {"classifier": "logreg", "C": 1.0, "max_iter": 500,
-             "prior_weight": 0.5, "temperature": temp, "seed": 42},
-            (f"Temperature-scaled prior-blended LogReg with T={temp} "
-             f"({note} softmax). With prior_weight=0.5 the blended "
-             f"probability is sharpened (T<1) or softened (T>1) before "
-             f"argmax. T=1 is the iter-13 baseline."),
-            ("Guo, Pleiss, Sun, Weinberger 2017 ICML 'On Calibration of "
-             "Modern Neural Networks' (arXiv:1706.04599) — single-"
-             "parameter temperature scaling on the softmax logits is the "
-             "minimal-parameter post-hoc calibration that preserves the "
-             "argmax for binary tasks but can change argmax under "
-             "prior-blending, which is exactly the lever we're testing."),
-            (f"Hypothesis: T={temp} reshapes ties in the blended "
-             f"posterior. T<1 amplifies the prior, T>1 flattens it. "
-             f"Optimal T depends on whether the LogReg is over- or under-"
-             f"confident relative to the empirical accuracy."),
-            ("Composite delta in [-0.04, +0.06]."),
-        ))
-
-    # ---------------- 18-20: prior shaping via agent_weight / agent_bias ----------------
-    proposals.append((
-        {"classifier": "logreg", "C": 1.0, "max_iter": 500,
-         "prior_weight": 0.4, "agent_weight": 1.0, "agent_bias": 0.0, "seed": 42},
-        ("Prior-blend (weight=0.4) with agent_bias=0 — the prior is "
-         "100% the per-task mode (no global-mode shift). This isolates "
-         "the per-task-prior contribution from the global-prior "
-         "contribution to diagnose which one carries the win."),
-        ("Bishop 2006 Springer 'Pattern Recognition and Machine Learning' "
-         "Chapter 3.5 — the maximum-a-posteriori estimator with a strong "
-         "task-specific prior is equivalent to feature-level smoothing "
-         "toward the per-task mode; we operationalise this as the "
-         "agent_bias knob."),
-        ("Hypothesis: pure per-task prior outperforms a 50/50 mix on "
-         "the long-tail challenges where the global mode 'A' is not the "
-         "task's modal letter."),
-        ("Composite delta in [-0.03, +0.06]."),
-    ))
-    proposals.append((
-        {"classifier": "logreg", "C": 1.0, "max_iter": 500,
-         "prior_weight": 0.4, "agent_weight": 1.0, "agent_bias": 1.0, "seed": 42},
-        ("Symmetric to iter-18: 100% global-mode prior with NO per-task "
-         "mode. Isolates the cross-task-prior contribution; expected to "
-         "help on the tiniest-n challenges (n<6) where the per-task "
-         "mode is unstable but the global mode 'A' is well-estimated."),
-        ("Manning, Raghavan, Schütze 2008 Cambridge 'Introduction to "
-         "Information Retrieval' Chapter 11.4 — Bayesian smoothing "
-         "toward a corpus prior; specifically the Dirichlet-multinomial "
-         "shrinkage estimator we're approximating here."),
-        ("Hypothesis: this iter wins on n<=6 challenges, loses on n>=15 "
-         "challenges where the per-task mode is the better estimator."),
-        ("Composite delta in [-0.06, +0.04]."),
-    ))
-    proposals.append((
-        {"classifier": "knn", "knn_k": 3, "prior_weight": 0.3,
-         "temperature": 1.5, "seed": 42},
-        ("k-NN (k=3) blended with a 30% prior at T=1.5 — combines "
-         "instance-based reasoning with a soft prior smoothing. Useful "
-         "when neighbours sometimes disagree and the prior breaks ties."),
-        ("Cover & Hart 1967 IEEE Trans. Information Theory 'Nearest "
-         "Neighbor Pattern Classification' (DOI:10.1109/TIT.1967.1053964) "
-         "AND Guo, Pleiss, Sun, Weinberger 2017 ICML 'On Calibration of "
-         "Modern Neural Networks' (arXiv:1706.04599) — k-NN gives "
-         "uncalibrated discrete votes; temperature scaling softens "
-         "them so the prior can break the ties without overriding "
-         "strong-majority neighbourhoods."),
-        ("Hypothesis: this hybrid handles both letter-heavy and mixed "
-         "tasks better than k-NN alone."),
-        ("Composite delta in [-0.04, +0.07]."),
-    ))
-
-    # ---------------- 21-23: seed variance (champion characterisation) ----------------
-    for sd in [7, 99, 2024]:
-        proposals.append((
-            {"classifier": "logreg", "C": 1.0, "max_iter": 500,
-             "prior_weight": 0.5, "temperature": 1.0, "seed": sd},
-            (f"Seed variance run with seed={sd}. Required by autoresearch "
-             f"protocol before declaring a champion: the apparent "
-             f"composite gain must be larger than the seed-to-seed "
-             f"standard deviation to count as signal. With the multinomial "
-             f"LogReg + prior-blend pipeline the only random source is "
-             f"NumPy initialisation, so we expect ±0.005 variance."),
-            ("Kohavi 1995 IJCAI 'A Study of Cross-Validation and "
-             "Bootstrap for Accuracy Estimation' "
-             "(http://robotics.stanford.edu/~ronnyk/accEst.pdf) — "
-             "establishes multi-seed median as the reference reporting "
-             "convention; one-seed numbers are forbidden in the "
-             "autoresearch CLAUDE.md."),
-            ("Hypothesis: composite within ±0.01 of the seed=42 run. "
-             "Larger deltas indicate the model is sensitive to "
-             "initialisation and we should report a median."),
-            ("Composite delta in [-0.01, +0.01]."),
-        ))
-
-    # ---------------- 24-25: pure-prior variants for final guard ----------------
-    proposals.append((
-        {"classifier": "prior_only", "seed": 42, "agent_bias": 0.0},
-        ("Final guard: re-run pure per-task class-prior as the LAST "
-         "experiment. If the more complex experiments above failed to "
-         "beat prior_only, this re-establishes the simplest classifier "
-         "as champion. This is explicitly the CLAUDE.md 'protect gains' "
-         "behaviour — if everything else hurts, fall back to the "
-         "simplest baseline."),
-        ("Bishop 2006 Springer 'Pattern Recognition and Machine Learning' "
-         "Chapter 4.1 — class-prior MAP. Cited here as the guaranteed "
-         "fallback. The Cover & Hart bound (1967, IEEE) confirms no "
-         "classifier can be more than a constant factor worse than the "
-         "Bayes-prior decision under arbitrary feature distributions."),
-        ("Hypothesis: identical composite to iter-1 (modulo "
-         "implementation-equivalence to dummy_majority verified at "
-         "iter-11)."),
-        ("Composite delta vs iter-1 in [-0.001, +0.001]."),
-    ))
-    proposals.append((
-        {"classifier": "logreg", "C": 1.0, "max_iter": 500,
-         "prior_weight": 0.5, "temperature": 1.0, "knn_k": 3, "seed": 42,
-         "agent_weight": 1.0, "agent_bias": 0.5},
-        ("Final consolidated configuration: LogReg + 50% prior-blend + "
-         "T=1.0 + agent_bias=0.5 (equal per-task and global). This is "
-         "the best of the LogReg-family settings discovered in iters "
-         "3-20, repeated as the closing experiment so the hill-climb "
-         "ends on the consolidated champion."),
-        ("Bishop 2006 Springer 'Pattern Recognition and Machine "
-         "Learning' Chapter 9 — ensembles of complementary baselines "
-         "(LogReg + per-task prior + global prior) generalise better "
-         "than any single component when each has bounded individual "
-         "error. Guo, Pleiss, Sun, Weinberger 2017 ICML "
-         "(arXiv:1706.04599) — calibrated softmax keeps the "
-         "ensemble argmax decision stable."),
-        ("Hypothesis: this consolidated config ties the best of iters "
-         "3-20 by construction, providing the final composite for "
-         "the champion comparison."),
-        ("Composite delta in [-0.005, +0.005] vs the consolidated "
-         "champion from iters 3-20."),
-    ))
-
-    # Final length check.
-    assert len(proposals) == 25, f"expected 25 proposals, got {len(proposals)}"
-    return proposals
+# Legacy pre-v2 proposals removed in 2026-05-16 refresh; see git history.
 
 
 def proposals_for(backbone: str) -> list[tuple[dict, str, str, str, str]]:

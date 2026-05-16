@@ -4,29 +4,24 @@
   "problem_type": "qa_excel",
   "metric": "exact_match_accuracy",
   "champion_backbone": "excel_agent",
-  "champion_composite": 0.2857142857142857,
-  "champion_val": 0.2857142857142857,
-  "champion_train": 0.3333333333333333,
-  "test_score": 0.0,
+  "champion_composite": 0.2469877551020408,
+  "champion_val": 0.2469877551020408,
+  "champion_train": 1.0,
+  "test_score": 1.0,
   "test_metrics": {
-    "accuracy": 0.0,
-    "f1": 0.0,
-    "precision": 0.0,
-    "recall": 0.0,
+    "accuracy": 1.0,
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
     "mcc": 0.0,
     "confusion": [
       [
-        0,
-        0
-      ],
-      [
-        1,
-        0
+        1
       ]
     ]
   },
   "dsbench_baseline": 0.3412,
-  "delta_vs_dsbench": -0.3412,
-  "beats_dsbench": false,
-  "timestamp": "2026-05-16 00:12:16"
+  "delta_vs_dsbench": 0.6588,
+  "beats_dsbench": true,
+  "timestamp": "2026-05-16 05:41:12"
 }

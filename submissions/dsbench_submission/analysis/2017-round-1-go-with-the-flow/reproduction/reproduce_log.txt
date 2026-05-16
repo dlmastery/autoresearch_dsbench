@@ -2,7 +2,7 @@ Reproduction protocol for 2017-round-1-go-with-the-flow champion:
 
   python -m framework.runner --repo C:\Users\evija\dsbench\analysis\2017-round-1-go-with-the-flow \
     --backbone excel_agent \
-    --params '{"classifier": "prior_only", "seed": 42}' \
-    --description 'reproduction' --experiment-num 1
+    --params '{"classifier": "logreg", "C": 0.1, "max_iter": 500, "prior_weight": 0.3, "seed": 42}' \
+    --description 'reproduction' --experiment-num 21
 
-Expected composite ≈ 0.3750 (within 0.005 due to RNG floor variance).
+Expected composite ≈ 0.3104 (within 0.005 due to RNG floor variance).

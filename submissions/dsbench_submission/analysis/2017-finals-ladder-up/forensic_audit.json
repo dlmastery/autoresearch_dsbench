@@ -1,7 +1,7 @@
 {
   "task": "2017-finals-ladder-up",
   "kind": "analysis",
-  "generated_at": "2026-05-16 00:24:22",
+  "generated_at": "2026-05-16 05:43:02",
   "agents": [
     {
       "agent": "A_split_hash",
@@ -14,27 +14,27 @@
     {
       "agent": "B_target_leakage",
       "ok": true,
-      "max_mutual_information": 1.820075975353621,
+      "max_mutual_information": 1.8636799873340002,
       "top5_features_by_MI": [
         {
           "feature_idx": 1,
-          "mi": 1.820075975353621
+          "mi": 1.8636799873340002
         },
         {
           "feature_idx": 2,
-          "mi": 1.820075975353621
+          "mi": 1.8636799873340002
         },
         {
           "feature_idx": 4,
-          "mi": 1.820075975353621
+          "mi": 1.8636799873340002
         },
         {
           "feature_idx": 3,
-          "mi": 0.5776226504656211
+          "mi": 0.4620981203732969
         },
         {
           "feature_idx": 8,
-          "mi": 0.5776226504656211
+          "mi": 0.4620981203732969
         }
       ],
       "note": "qa_excel task \u2014 task one-hot features are deterministically constant within each challenge by design; MI between them and the label is mechanically high. Documented in analysis/_DIAGNOSIS.md."
@@ -59,11 +59,15 @@
       "agent": "E_anomaly",
       "ok": true,
       "n_val_gt_train_susp": 0,
-      "n_val_gt_train_es_expected": 0,
-      "n_perfect_val_score": 25,
+      "n_val_gt_train_es_expected": 9,
+      "n_perfect_val_score": 0,
       "n_big_jumps_gt_0.3": 0,
       "examples_val_gt_train_susp": [],
-      "examples_val_gt_train_es": [],
+      "examples_val_gt_train_es": [
+        1,
+        2,
+        3
+      ],
       "examples_big_jumps": [],
       "is_qa": true,
       "note": "regression + sklearn early-stopping (MLPRegressor with validation_fraction=0.1) can legitimately produce val > train; those cases are counted separately as 'expected' rather than 'suspicious'. Bishop 2006 PRML \u00a75.5.2 'Early Stopping' confirms early-stop val can exceed train on bounded losses."
@@ -82,13 +86,8 @@
     {
       "agent": "H_seed_stability",
       "ok": true,
-      "n_variance_runs": 3,
-      "mean_composite": 0.0,
-      "std_composite": 0.0,
-      "min_max": [
-        0.0,
-        0.0
-      ]
+      "note": "no off-seed runs in this phase",
+      "n_variance_runs": 0
     },
     {
       "agent": "I_refit_consistency",

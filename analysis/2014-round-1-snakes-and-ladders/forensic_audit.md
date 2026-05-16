@@ -1,6 +1,6 @@
 # Forensic Audit — 2014-round-1-snakes-and-ladders
 
-_Generated 2026-05-16 00:24:21; kind=analysis._
+_Generated 2026-05-16 05:43:01; kind=analysis._
 
 > Conference-submission grade integrity report. Ten independent
 > audit agents (A-J) plus a committee verdict (Z). Each agent has a
@@ -56,12 +56,12 @@ All agents on synthetic-data splits; under real Kaggle/Modeloff data the tempora
 
 - **ok:** True
 - **n_val_gt_train_susp:** 0
-- **n_val_gt_train_es_expected:** 16
-- **n_perfect_val_score:** 1
-- **n_big_jumps_gt_0.3:** 1
+- **n_val_gt_train_es_expected:** 4
+- **n_perfect_val_score:** 0
+- **n_big_jumps_gt_0.3:** 4
 - **examples_val_gt_train_susp:** `[]`
-- **examples_val_gt_train_es:** `[1, 4, 10]`
-- **examples_big_jumps:** `[{"experiment_num": 3, "from": 0.0, "to": 0.75}]`
+- **examples_val_gt_train_es:** `[1, 11, 13]`
+- **examples_big_jumps:** `[{"experiment_num": 2, "from": 0.052222222222222225, "to": 0.6091666666666666}, {"experiment_num": 10, "from": 0.01, "to": 0.6091666666666666}, {"experiment_num": 12, "from": 0.052222222222222225, "to`
 - **is_qa:** True
 - **note:** regression + sklearn early-stopping (MLPRegressor with validation_fraction=0.1) can legitimately produce val > train; those cases are counted separately as 'expected' rather than 'suspicious'. Bishop 2006 PRML §5.5.2 'Early Stopping' confirms early-stop val can exceed train on bounded losses.
 
@@ -79,10 +79,8 @@ All agents on synthetic-data splits; under real Kaggle/Modeloff data the tempora
 ### ✅ H_seed_stability
 
 - **ok:** True
-- **n_variance_runs:** 3
-- **mean_composite:** 0.75
-- **std_composite:** 0.0
-- **min_max:** `[0.75, 0.75]`
+- **note:** no off-seed runs in this phase
+- **n_variance_runs:** 0
 
 ### ✅ I_refit_consistency
 

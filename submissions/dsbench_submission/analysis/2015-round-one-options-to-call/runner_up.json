@@ -1,60 +1,55 @@
 {
-  "experiment_num": 19,
+  "experiment_num": 10,
   "backbone": "excel_agent",
-  "description": "excel_agent iter 19/25: Symmetric to iter-18: 100% global-mode prior with NO per-task mode. Isolates the",
+  "description": "excel_agent iter 10/25: Baseline: predict the per-task training mode for every question. This is the str",
   "params": {
-    "classifier": "logreg",
-    "C": 1.0,
-    "max_iter": 500,
-    "prior_weight": 0.4,
-    "agent_weight": 1.0,
-    "agent_bias": 1.0,
+    "classifier": "prior_only",
     "seed": 42
   },
   "metric": "exact_match_accuracy",
   "train_score": 0.3333333333333333,
-  "val_score": 0.125,
-  "composite": 0.125,
+  "val_score": 0.21733333333333335,
+  "composite": 0.21733333333333335,
   "train_metrics": {
     "accuracy": 0.3333333333333333,
-    "f1": 0.26666666666666666,
-    "precision": 0.24,
-    "recall": 0.4,
-    "mcc": 0.35856858280031806,
+    "f1": 0.1,
+    "precision": 0.06666666666666667,
+    "recall": 0.2,
+    "mcc": 0.0,
     "confusion": [
       [
+        0,
+        0,
+        0,
         1,
-        0,
-        0,
-        0,
         0
       ],
       [
         0,
+        0,
+        0,
         1,
-        0,
-        0,
         0
       ],
       [
+        0,
+        0,
+        0,
         1,
-        0,
-        0,
-        0,
         0
       ],
       [
+        0,
+        0,
+        0,
         2,
-        0,
-        0,
-        0,
         0
       ],
       [
+        0,
+        0,
+        0,
         1,
-        0,
-        0,
-        0,
         0
       ]
     ]
@@ -68,23 +63,23 @@
     "confusion": [
       [
         0,
+        1,
+        0
+      ],
+      [
+        0,
         0,
         0
       ],
       [
-        1,
         0,
-        0
-      ],
-      [
         1,
-        0,
         0
       ]
     ]
   },
-  "elapsed_sec": 1.1098718643188477,
-  "timestamp": "2026-05-15 23:47:23",
+  "elapsed_sec": 0.0029959678649902344,
+  "timestamp": "2026-05-16 05:38:28",
   "task_slug": "2015-round-one-options-to-call",
   "uses_test_set": false
 }

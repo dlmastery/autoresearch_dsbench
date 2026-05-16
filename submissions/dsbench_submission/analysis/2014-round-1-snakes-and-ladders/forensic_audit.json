@@ -1,7 +1,7 @@
 {
   "task": "2014-round-1-snakes-and-ladders",
   "kind": "analysis",
-  "generated_at": "2026-05-16 00:24:21",
+  "generated_at": "2026-05-16 05:43:01",
   "agents": [
     {
       "agent": "A_split_hash",
@@ -59,20 +59,30 @@
       "agent": "E_anomaly",
       "ok": true,
       "n_val_gt_train_susp": 0,
-      "n_val_gt_train_es_expected": 16,
-      "n_perfect_val_score": 1,
-      "n_big_jumps_gt_0.3": 1,
+      "n_val_gt_train_es_expected": 4,
+      "n_perfect_val_score": 0,
+      "n_big_jumps_gt_0.3": 4,
       "examples_val_gt_train_susp": [],
       "examples_val_gt_train_es": [
         1,
-        4,
-        10
+        11,
+        13
       ],
       "examples_big_jumps": [
         {
-          "experiment_num": 3,
-          "from": 0.0,
-          "to": 0.75
+          "experiment_num": 2,
+          "from": 0.052222222222222225,
+          "to": 0.6091666666666666
+        },
+        {
+          "experiment_num": 10,
+          "from": 0.01,
+          "to": 0.6091666666666666
+        },
+        {
+          "experiment_num": 12,
+          "from": 0.052222222222222225,
+          "to": 0.6091666666666666
         }
       ],
       "is_qa": true,
@@ -92,13 +102,8 @@
     {
       "agent": "H_seed_stability",
       "ok": true,
-      "n_variance_runs": 3,
-      "mean_composite": 0.75,
-      "std_composite": 0.0,
-      "min_max": [
-        0.75,
-        0.75
-      ]
+      "note": "no off-seed runs in this phase",
+      "n_variance_runs": 0
     },
     {
       "agent": "I_refit_consistency",

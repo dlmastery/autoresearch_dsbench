@@ -1,15 +1,15 @@
 {
-  "experiment_num": 1,
+  "experiment_num": 10,
   "backbone": "excel_agent",
-  "description": "excel_agent iter 1/25: Baseline: predict the per-task training mode for every Modeloff question. This i",
+  "description": "excel_agent iter 10/25: Baseline: predict the per-task training mode for every question. This is the str",
   "params": {
     "classifier": "prior_only",
     "seed": 42
   },
   "metric": "exact_match_accuracy",
   "train_score": 0.4444444444444444,
-  "val_score": 0.25,
-  "composite": 0.25,
+  "val_score": 0.24533333333333338,
+  "composite": 0.24533333333333338,
   "train_metrics": {
     "accuracy": 0.4444444444444444,
     "f1": 0.12307692307692308,
@@ -87,8 +87,8 @@
       ]
     ]
   },
-  "elapsed_sec": 0.004983425140380859,
-  "timestamp": "2026-05-15 23:45:45",
+  "elapsed_sec": 0.0019989013671875,
+  "timestamp": "2026-05-16 05:38:15",
   "task_slug": "2015-round-1-bread-and-butter",
   "uses_test_set": false
 }

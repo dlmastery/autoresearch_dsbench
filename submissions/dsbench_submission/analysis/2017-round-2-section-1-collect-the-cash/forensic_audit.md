@@ -1,6 +1,6 @@
 # Forensic Audit — 2017-round-2-section-1-collect-the-cash
 
-_Generated 2026-05-16 00:24:22; kind=analysis._
+_Generated 2026-05-16 05:43:02; kind=analysis._
 
 > Conference-submission grade integrity report. Ten independent
 > audit agents (A-J) plus a committee verdict (Z). Each agent has a
@@ -56,11 +56,11 @@ All agents on synthetic-data splits; under real Kaggle/Modeloff data the tempora
 
 - **ok:** True
 - **n_val_gt_train_susp:** 0
-- **n_val_gt_train_es_expected:** 1
-- **n_perfect_val_score:** 22
+- **n_val_gt_train_es_expected:** 4
+- **n_perfect_val_score:** 0
 - **n_big_jumps_gt_0.3:** 0
 - **examples_val_gt_train_susp:** `[]`
-- **examples_val_gt_train_es:** `[2]`
+- **examples_val_gt_train_es:** `[1, 2, 11]`
 - **examples_big_jumps:** `[]`
 - **is_qa:** True
 - **note:** regression + sklearn early-stopping (MLPRegressor with validation_fraction=0.1) can legitimately produce val > train; those cases are counted separately as 'expected' rather than 'suspicious'. Bishop 2006 PRML §5.5.2 'Early Stopping' confirms early-stop val can exceed train on bounded losses.
@@ -79,10 +79,8 @@ All agents on synthetic-data splits; under real Kaggle/Modeloff data the tempora
 ### ✅ H_seed_stability
 
 - **ok:** True
-- **n_variance_runs:** 3
-- **mean_composite:** 0.0
-- **std_composite:** 0.0
-- **min_max:** `[0.0, 0.0]`
+- **note:** no off-seed runs in this phase
+- **n_variance_runs:** 0
 
 ### ✅ I_refit_consistency
 

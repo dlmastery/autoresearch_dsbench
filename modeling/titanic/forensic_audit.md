@@ -1,6 +1,6 @@
 # Forensic Audit — titanic
 
-_Generated 2026-05-16 00:24:10; kind=modeling._
+_Generated 2026-05-16 05:42:50; kind=modeling._
 
 > Conference-submission grade integrity report. Ten independent
 > audit agents (A-J) plus a committee verdict (Z). Each agent has a

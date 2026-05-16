@@ -1,15 +1,15 @@
 {
-  "experiment_num": 1,
+  "experiment_num": 22,
   "backbone": "excel_agent",
-  "description": "excel_agent iter 1/25: Baseline: predict the per-task training mode for every Modeloff question. This i",
+  "description": "excel_agent iter 22/25: Multinomial Naive Bayes on the non-negative structural features. The strong cond",
   "params": {
-    "classifier": "prior_only",
+    "classifier": "naive_bayes",
     "seed": 42
   },
   "metric": "exact_match_accuracy",
   "train_score": 0.5,
-  "val_score": 0.4,
-  "composite": 0.4,
+  "val_score": 0.32160000000000005,
+  "composite": 0.32160000000000005,
   "train_metrics": {
     "accuracy": 0.5,
     "f1": 0.16666666666666666,
@@ -67,8 +67,8 @@
       ]
     ]
   },
-  "elapsed_sec": 0.00400090217590332,
-  "timestamp": "2026-05-15 23:50:06",
+  "elapsed_sec": 0.026997089385986328,
+  "timestamp": "2026-05-16 05:38:55",
   "task_slug": "2017-finals-castles-in-the-air",
   "uses_test_set": false
 }

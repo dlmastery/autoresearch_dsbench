@@ -1,15 +1,16 @@
 {
-  "experiment_num": 2,
+  "experiment_num": 1,
   "backbone": "excel_agent",
-  "description": "excel_agent iter 2/25: Alternative baseline: predict the GLOBAL training mode pooled across all 38 Mode",
+  "description": "excel_agent iter 1/25: Constant predictor: emit ``A`` for every Modeloff question. The diagnosis report",
   "params": {
-    "classifier": "global_prior",
+    "classifier": "const",
+    "const": "A",
     "seed": 42
   },
   "metric": "exact_match_accuracy",
   "train_score": 0.0,
-  "val_score": 0.125,
-  "composite": 0.125,
+  "val_score": 0.17533333333333334,
+  "composite": 0.17533333333333334,
   "train_metrics": {
     "accuracy": 0.0,
     "f1": 0.0,
@@ -99,8 +100,8 @@
       ]
     ]
   },
-  "elapsed_sec": 0.003999471664428711,
-  "timestamp": "2026-05-15 23:54:46",
+  "elapsed_sec": 0.0029892921447753906,
+  "timestamp": "2026-05-16 05:39:27",
   "task_slug": "2017-round-2-section-3-system-allocation",
   "uses_test_set": false
 }

@@ -2,7 +2,7 @@ Reproduction protocol for 2015-round-one-options-to-call champion:
 
   python -m framework.runner --repo C:\Users\evija\dsbench\analysis\2015-round-one-options-to-call \
     --backbone excel_agent \
-    --params '{"classifier": "global_prior", "seed": 42}' \
-    --description 'reproduction' --experiment-num 2
+    --params '{"classifier": "const", "const": "C", "seed": 42}' \
+    --description 'reproduction' --experiment-num 3
 
-Expected composite ≈ 0.1250 (within 0.005 due to RNG floor variance).
+Expected composite ≈ 0.2173 (within 0.005 due to RNG floor variance).

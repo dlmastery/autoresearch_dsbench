@@ -668,8 +668,8 @@
     "kind": "analysis",
     "status": "ok",
     "beat_dsbench": false,
-    "test_score": 0.3333333333333333,
-    "delta_vs_dsbench": -0.007866666666666688
+    "test_score": 0.0,
+    "delta_vs_dsbench": -0.3412
   },
   {
     "task": "2013-round-2-hard-times-turnaround-a-toy-company",
@@ -699,9 +699,9 @@
     "task": "2014-round-1-precise-debt-modeling",
     "kind": "analysis",
     "status": "ok",
-    "beat_dsbench": false,
-    "test_score": 0.0,
-    "delta_vs_dsbench": -0.3412
+    "beat_dsbench": true,
+    "test_score": 1.0,
+    "delta_vs_dsbench": 0.6588
   },
   {
     "task": "2014-round-1-snakes-and-ladders",
@@ -819,9 +819,9 @@
     "task": "2016-round-2-section-4-maximize-the-benefit",
     "kind": "analysis",
     "status": "ok",
-    "beat_dsbench": true,
-    "test_score": 0.5,
-    "delta_vs_dsbench": 0.1588
+    "beat_dsbench": false,
+    "test_score": 0.0,
+    "delta_vs_dsbench": -0.3412
   },
   {
     "task": "2017-finals-castles-in-the-air",
@@ -867,9 +867,9 @@
     "task": "2017-round-1-when-it-rains-it-pours",
     "kind": "analysis",
     "status": "ok",
-    "beat_dsbench": false,
-    "test_score": 0.0,
-    "delta_vs_dsbench": -0.3412
+    "beat_dsbench": true,
+    "test_score": 0.5,
+    "delta_vs_dsbench": 0.1588
   },
   {
     "task": "2017-round-2-late-again",

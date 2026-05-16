@@ -1,32 +1,32 @@
 {
-  "experiment_num": 7,
+  "experiment_num": 3,
   "backbone": "excel_agent",
-  "description": "excel_agent iter 7/25: k-Nearest-Neighbour with k=3. 3-NN smooths the 1-NN decision boundary; the textb",
+  "description": "excel_agent iter 3/25: Constant predictor: emit ``C`` for every Modeloff question. The diagnosis report",
   "params": {
-    "classifier": "knn",
-    "knn_k": 3,
+    "classifier": "const",
+    "const": "C",
     "seed": 42
   },
   "metric": "exact_match_accuracy",
-  "train_score": 1.0,
-  "val_score": 0.38461538461538464,
-  "composite": 0.38461538461538464,
+  "train_score": 0.4,
+  "val_score": 0.3183168967784353,
+  "composite": 0.3183168967784353,
   "train_metrics": {
-    "accuracy": 1.0,
-    "f1": 1.0,
-    "precision": 1.0,
-    "recall": 1.0,
-    "mcc": 1.0,
+    "accuracy": 0.4,
+    "f1": 0.19047619047619047,
+    "precision": 0.13333333333333333,
+    "recall": 0.3333333333333333,
+    "mcc": 0.0,
     "confusion": [
       [
-        4,
         0,
-        0
+        0,
+        4
       ],
       [
         0,
-        2,
-        0
+        0,
+        2
       ],
       [
         0,
@@ -36,24 +36,24 @@
     ]
   },
   "val_metrics": {
-    "accuracy": 0.3333333333333333,
-    "f1": 0.25,
-    "precision": 0.25,
-    "recall": 0.25,
-    "mcc": -0.5,
+    "accuracy": 0.6666666666666666,
+    "f1": 0.4,
+    "precision": 0.3333333333333333,
+    "recall": 0.5,
+    "mcc": 0.0,
     "confusion": [
       [
         0,
         1
       ],
       [
-        1,
-        1
+        0,
+        2
       ]
     ]
   },
-  "elapsed_sec": 0.2133026123046875,
-  "timestamp": "2026-05-15 23:43:27",
+  "elapsed_sec": 0.003009319305419922,
+  "timestamp": "2026-05-16 05:37:55",
   "task_slug": "2013-round-2-data-analysis",
   "uses_test_set": false
 }

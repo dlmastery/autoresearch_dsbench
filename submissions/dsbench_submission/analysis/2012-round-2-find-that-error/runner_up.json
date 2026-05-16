@@ -1,16 +1,16 @@
 {
-  "experiment_num": 6,
+  "experiment_num": 17,
   "backbone": "excel_agent",
-  "description": "excel_agent iter 6/25: k-Nearest-Neighbour with k=1. 1-NN is the maximum-capacity neighbour rule \u2014 copi",
+  "description": "excel_agent iter 17/25: k-Nearest-Neighbour with k=3. 3-NN smooths the 1-NN decision boundary; textbook ",
   "params": {
     "classifier": "knn",
-    "knn_k": 1,
+    "knn_k": 3,
     "seed": 42
   },
   "metric": "exact_match_accuracy",
   "train_score": 1.0,
-  "val_score": 0.375,
-  "composite": 0.375,
+  "val_score": 0.2739125,
+  "composite": 0.2739125,
   "train_metrics": {
     "accuracy": 1.0,
     "f1": 1.0,
@@ -37,10 +37,10 @@
   },
   "val_metrics": {
     "accuracy": 0.25,
-    "f1": 0.16666666666666666,
-    "precision": 0.125,
+    "f1": 0.25,
+    "precision": 0.25,
     "recall": 0.25,
-    "mcc": 0.1,
+    "mcc": 0.2,
     "confusion": [
       [
         0,
@@ -61,15 +61,15 @@
         0
       ],
       [
+        1,
+        1,
         0,
-        1,
-        1,
         0
       ]
     ]
   },
-  "elapsed_sec": 0.43880748748779297,
-  "timestamp": "2026-05-15 23:42:02",
+  "elapsed_sec": 0.2876248359680176,
+  "timestamp": "2026-05-16 05:37:44",
   "task_slug": "2012-round-2-find-that-error",
   "uses_test_set": false
 }

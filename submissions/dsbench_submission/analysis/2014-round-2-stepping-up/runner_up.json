@@ -1,20 +1,15 @@
 {
-  "experiment_num": 19,
+  "experiment_num": 10,
   "backbone": "excel_agent",
-  "description": "excel_agent iter 19/25: Symmetric to iter-18: 100% global-mode prior with NO per-task mode. Isolates the",
+  "description": "excel_agent iter 10/25: Baseline: predict the per-task training mode for every question. This is the str",
   "params": {
-    "classifier": "logreg",
-    "C": 1.0,
-    "max_iter": 500,
-    "prior_weight": 0.4,
-    "agent_weight": 1.0,
-    "agent_bias": 1.0,
+    "classifier": "prior_only",
     "seed": 42
   },
   "metric": "exact_match_accuracy",
   "train_score": 0.3333333333333333,
-  "val_score": 0.25,
-  "composite": 0.25,
+  "val_score": 0.22533333333333336,
+  "composite": 0.22533333333333336,
   "train_metrics": {
     "accuracy": 0.3333333333333333,
     "f1": 0.125,
@@ -72,8 +67,8 @@
       ]
     ]
   },
-  "elapsed_sec": 1.5457041263580322,
-  "timestamp": "2026-05-15 23:45:24",
+  "elapsed_sec": 0.0019884109497070312,
+  "timestamp": "2026-05-16 05:38:11",
   "task_slug": "2014-round-2-stepping-up",
   "uses_test_set": false
 }

@@ -1,24 +1,24 @@
 {
-  "experiment_num": 12,
+  "experiment_num": 21,
   "backbone": "excel_agent",
-  "description": "excel_agent iter 12/25: LogReg with a light blend (prior_weight=0.25) toward the per-task / global prior",
+  "description": "excel_agent iter 21/25: Strongly-regularised LogReg (C=0.1) blended at prior_weight=0.3 toward the per-t",
   "params": {
     "classifier": "logreg",
-    "C": 1.0,
+    "C": 0.1,
     "max_iter": 500,
-    "prior_weight": 0.25,
+    "prior_weight": 0.3,
     "seed": 42
   },
   "metric": "exact_match_accuracy",
   "train_score": 0.6666666666666666,
-  "val_score": 0.625,
-  "composite": 0.625,
+  "val_score": 0.3517,
+  "composite": 0.3517,
   "train_metrics": {
     "accuracy": 0.6666666666666666,
-    "f1": 0.4,
-    "precision": 0.3333333333333333,
+    "f1": 0.41666666666666663,
+    "precision": 0.375,
     "recall": 0.5,
-    "mcc": 0.554700196225229,
+    "mcc": 0.5883484054145521,
     "confusion": [
       [
         0,
@@ -29,8 +29,8 @@
       [
         0,
         0,
-        1,
-        0
+        0,
+        1
       ],
       [
         0,
@@ -56,22 +56,22 @@
       [
         0,
         0,
-        0
-      ],
-      [
-        1,
-        0,
-        0
-      ],
-      [
-        0,
-        0,
         1
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0
       ]
     ]
   },
-  "elapsed_sec": 0.6358108520507812,
-  "timestamp": "2026-05-15 23:46:28",
+  "elapsed_sec": 0.2508847713470459,
+  "timestamp": "2026-05-16 05:38:22",
   "task_slug": "2015-round-1-tax",
   "uses_test_set": false
 }

@@ -1,15 +1,18 @@
 {
-  "experiment_num": 1,
+  "experiment_num": 21,
   "backbone": "excel_agent",
-  "description": "excel_agent iter 1/25: Baseline: predict the per-task training mode for every Modeloff question. This i",
+  "description": "excel_agent iter 21/25: Strongly-regularised LogReg (C=0.1) blended at prior_weight=0.3 toward the per-t",
   "params": {
-    "classifier": "prior_only",
+    "classifier": "logreg",
+    "C": 0.1,
+    "max_iter": 500,
+    "prior_weight": 0.3,
     "seed": 42
   },
   "metric": "exact_match_accuracy",
   "train_score": 0.5,
-  "val_score": 0.375,
-  "composite": 0.375,
+  "val_score": 0.30720000000000003,
+  "composite": 0.30720000000000003,
   "train_metrics": {
     "accuracy": 0.5,
     "f1": 0.16666666666666666,
@@ -67,8 +70,8 @@
       ]
     ]
   },
-  "elapsed_sec": 0.004517555236816406,
-  "timestamp": "2026-05-15 23:48:27",
+  "elapsed_sec": 0.4454352855682373,
+  "timestamp": "2026-05-16 05:38:41",
   "task_slug": "2016-round-1-section-4-going-around-in-circles",
   "uses_test_set": false
 }

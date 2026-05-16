@@ -1,15 +1,16 @@
 {
-  "experiment_num": 11,
+  "experiment_num": 1,
   "backbone": "excel_agent",
-  "description": "excel_agent iter 11/25: sklearn DummyClassifier(strategy=most_frequent) \u2014 sanity-check that prior_only a",
+  "description": "excel_agent iter 1/25: Constant predictor: emit ``A`` for every Modeloff question. The diagnosis report",
   "params": {
-    "classifier": "dummy_majority",
+    "classifier": "const",
+    "const": "A",
     "seed": 42
   },
   "metric": "exact_match_accuracy",
   "train_score": 0.3333333333333333,
-  "val_score": 0.5,
-  "composite": 0.5,
+  "val_score": 0.35444444444444445,
+  "composite": 0.35444444444444445,
   "train_metrics": {
     "accuracy": 0.3333333333333333,
     "f1": 0.16666666666666666,
@@ -46,8 +47,8 @@
       ]
     ]
   },
-  "elapsed_sec": 0.0059986114501953125,
-  "timestamp": "2026-05-15 23:41:54",
+  "elapsed_sec": 0.0030040740966796875,
+  "timestamp": "2026-05-16 05:37:42",
   "task_slug": "2012-round-2-asset-schedule",
   "uses_test_set": false
 }

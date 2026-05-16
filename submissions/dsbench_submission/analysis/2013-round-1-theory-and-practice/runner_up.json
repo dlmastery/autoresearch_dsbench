@@ -1,69 +1,30 @@
 {
   "experiment_num": 10,
   "backbone": "excel_agent",
-  "description": "excel_agent iter 10/25: Multinomial Naive Bayes on the (non-negative) structural features. The strong co",
+  "description": "excel_agent iter 10/25: Baseline: predict the per-task training mode for every question. This is the str",
   "params": {
-    "classifier": "naive_bayes",
+    "classifier": "prior_only",
     "seed": 42
   },
   "metric": "exact_match_accuracy",
-  "train_score": 0.5,
-  "val_score": 0.25,
-  "composite": 0.25,
+  "train_score": 0.3333333333333333,
+  "val_score": 0.2673333333333333,
+  "composite": 0.2673333333333333,
   "train_metrics": {
-    "accuracy": 0.5,
-    "f1": 0.39166666666666666,
-    "precision": 0.4833333333333333,
-    "recall": 0.3958333333333333,
-    "mcc": 0.2733587605254346,
+    "accuracy": 0.3333333333333333,
+    "f1": 0.125,
+    "precision": 0.08333333333333333,
+    "recall": 0.25,
+    "mcc": 0.0,
     "confusion": [
       [
-        1,
-        0,
-        2,
-        0
-      ],
-      [
         0,
         0,
-        1,
-        0
-      ],
-      [
         0,
-        0,
-        2,
-        2
-      ],
-      [
-        0,
-        0,
-        1,
         3
-      ]
-    ]
-  },
-  "val_metrics": {
-    "accuracy": 0.0,
-    "f1": 0.0,
-    "precision": 0.0,
-    "recall": 0.0,
-    "mcc": -0.5,
-    "confusion": [
-      [
-        0,
-        0,
-        0,
-        0
       ],
       [
         0,
-        0,
-        1,
-        0
-      ],
-      [
-        1,
         0,
         0,
         1
@@ -71,13 +32,43 @@
       [
         0,
         0,
-        1,
-        0
+        0,
+        4
+      ],
+      [
+        0,
+        0,
+        0,
+        4
       ]
     ]
   },
-  "elapsed_sec": 0.04556751251220703,
-  "timestamp": "2026-05-15 23:42:51",
+  "val_metrics": {
+    "accuracy": 0.25,
+    "f1": 0.13333333333333333,
+    "precision": 0.08333333333333333,
+    "recall": 0.3333333333333333,
+    "mcc": 0.0,
+    "confusion": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ]
+  },
+  "elapsed_sec": 0.0020072460174560547,
+  "timestamp": "2026-05-16 05:37:51",
   "task_slug": "2013-round-1-theory-and-practice",
   "uses_test_set": false
 }

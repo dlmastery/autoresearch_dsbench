@@ -1,26 +1,21 @@
 {
-  "experiment_num": 19,
+  "experiment_num": 11,
   "backbone": "excel_agent",
-  "description": "excel_agent iter 19/25: Symmetric to iter-18: 100% global-mode prior with NO per-task mode. Isolates the",
+  "description": "excel_agent iter 11/25: Predict the GLOBAL training mode (canonicalised, currently ``A``) for every ques",
   "params": {
-    "classifier": "logreg",
-    "C": 1.0,
-    "max_iter": 500,
-    "prior_weight": 0.4,
-    "agent_weight": 1.0,
-    "agent_bias": 1.0,
+    "classifier": "global_prior",
     "seed": 42
   },
   "metric": "exact_match_accuracy",
-  "train_score": 0.3333333333333333,
-  "val_score": 0.125,
-  "composite": 0.125,
+  "train_score": 0.0,
+  "val_score": 0.17533333333333334,
+  "composite": 0.17533333333333334,
   "train_metrics": {
-    "accuracy": 0.3333333333333333,
-    "f1": 0.2857142857142857,
-    "precision": 0.2857142857142857,
-    "recall": 0.2857142857142857,
-    "mcc": 0.43033148291193524,
+    "accuracy": 0.0,
+    "f1": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "mcc": 0.0,
     "confusion": [
       [
         0,
@@ -51,9 +46,18 @@
       ],
       [
         0,
+        1,
         0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
         0,
         1,
+        0,
+        0,
         0,
         0,
         0
@@ -65,15 +69,6 @@
         0,
         0,
         0,
-        0
-      ],
-      [
-        0,
-        0,
-        0,
-        0,
-        0,
-        1,
         0
       ],
       [
@@ -90,29 +85,22 @@
   "val_metrics": {
     "accuracy": 0.5,
     "f1": 0.3333333333333333,
-    "precision": 0.3333333333333333,
-    "recall": 0.3333333333333333,
-    "mcc": 0.5,
+    "precision": 0.25,
+    "recall": 0.5,
+    "mcc": 0.0,
     "confusion": [
       [
-        0,
         0,
         1
       ],
       [
         0,
-        1,
-        0
-      ],
-      [
-        0,
-        0,
-        0
+        1
       ]
     ]
   },
-  "elapsed_sec": 1.4327850341796875,
-  "timestamp": "2026-05-15 23:55:04",
+  "elapsed_sec": 0.001940011978149414,
+  "timestamp": "2026-05-16 05:39:27",
   "task_slug": "2017-round-2-section-3-system-allocation",
   "uses_test_set": false
 }

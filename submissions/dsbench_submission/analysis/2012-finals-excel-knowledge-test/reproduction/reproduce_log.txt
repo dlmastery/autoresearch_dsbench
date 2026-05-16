@@ -2,7 +2,7 @@ Reproduction protocol for 2012-finals-excel-knowledge-test champion:
 
   python -m framework.runner --repo C:\Users\evija\dsbench\analysis\2012-finals-excel-knowledge-test \
     --backbone excel_agent \
-    --params '{"classifier": "prior_only", "seed": 42}' \
+    --params '{"classifier": "const", "const": "A", "seed": 42}' \
     --description 'reproduction' --experiment-num 1
 
-Expected composite ≈ 0.0000 (within 0.005 due to RNG floor variance).
+Expected composite ≈ 0.1253 (within 0.005 due to RNG floor variance).

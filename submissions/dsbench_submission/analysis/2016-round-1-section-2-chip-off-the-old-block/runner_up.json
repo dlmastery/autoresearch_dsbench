@@ -1,15 +1,16 @@
 {
-  "experiment_num": 11,
+  "experiment_num": 4,
   "backbone": "excel_agent",
-  "description": "excel_agent iter 11/25: sklearn DummyClassifier(strategy=most_frequent) \u2014 sanity-check that prior_only a",
+  "description": "excel_agent iter 4/25: Constant predictor: emit ``D`` for every Modeloff question. The diagnosis report",
   "params": {
-    "classifier": "dummy_majority",
+    "classifier": "const",
+    "const": "D",
     "seed": 42
   },
   "metric": "exact_match_accuracy",
   "train_score": 0.2222222222222222,
-  "val_score": 0.2727272727272727,
-  "composite": 0.2727272727272727,
+  "val_score": 0.21842424242424244,
+  "composite": 0.21842424242424244,
   "train_metrics": {
     "accuracy": 0.2222222222222222,
     "f1": 0.05194805194805195,
@@ -99,8 +100,8 @@
       ]
     ]
   },
-  "elapsed_sec": 0.00752568244934082,
-  "timestamp": "2026-05-15 23:47:38",
+  "elapsed_sec": 0.00399470329284668,
+  "timestamp": "2026-05-16 05:38:30",
   "task_slug": "2016-round-1-section-2-chip-off-the-old-block",
   "uses_test_set": false
 }

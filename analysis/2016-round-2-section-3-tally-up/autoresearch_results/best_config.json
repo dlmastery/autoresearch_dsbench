@@ -1,43 +1,41 @@
 {
-  "experiment_num": 5,
+  "experiment_num": 22,
   "backbone": "excel_agent",
-  "description": "excel_agent iter 5/25: LogReg with weak L2 (C=10.0). Less shrinkage, more capacity \u2014 tests whether the ",
+  "description": "excel_agent iter 22/25: Multinomial Naive Bayes on the non-negative structural features. The strong cond",
   "params": {
-    "classifier": "logreg",
-    "C": 10.0,
-    "max_iter": 500,
+    "classifier": "naive_bayes",
     "seed": 42
   },
   "metric": "exact_match_accuracy",
-  "train_score": 1.0,
-  "val_score": 0.25,
-  "composite": 0.25,
+  "train_score": 0.3333333333333333,
+  "val_score": 0.1904,
+  "composite": 0.1904,
   "train_metrics": {
-    "accuracy": 1.0,
-    "f1": 1.0,
-    "precision": 1.0,
-    "recall": 1.0,
-    "mcc": 1.0,
+    "accuracy": 0.3333333333333333,
+    "f1": 0.1,
+    "precision": 0.06666666666666667,
+    "recall": 0.2,
+    "mcc": 0.0,
     "confusion": [
       [
-        1,
         0,
         0,
-        0,
-        0
-      ],
-      [
         0,
         1,
-        0,
-        0,
         0
       ],
       [
         0,
         0,
-        1,
         0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
         0
       ],
       [
@@ -51,8 +49,8 @@
         0,
         0,
         0,
-        0,
-        1
+        1,
+        0
       ]
     ]
   },
@@ -66,11 +64,9 @@
       [
         0,
         0,
-        1,
-        0
+        1
       ],
       [
-        0,
         0,
         0,
         1
@@ -78,19 +74,12 @@
       [
         0,
         0,
-        0,
-        0
-      ],
-      [
-        0,
-        0,
-        0,
         0
       ]
     ]
   },
-  "elapsed_sec": 1.418008804321289,
-  "timestamp": "2026-05-15 23:49:19",
+  "elapsed_sec": 0.02402973175048828,
+  "timestamp": "2026-05-16 05:38:48",
   "task_slug": "2016-round-2-section-3-tally-up",
   "uses_test_set": false
 }

@@ -2,7 +2,7 @@ Reproduction protocol for 2014-round-1-precise-debt-modeling champion:
 
   python -m framework.runner --repo C:\Users\evija\dsbench\analysis\2014-round-1-precise-debt-modeling \
     --backbone excel_agent \
-    --params '{"classifier": "global_prior", "seed": 42}' \
-    --description 'reproduction' --experiment-num 2
+    --params '{"classifier": "knn", "knn_k": 3, "seed": 42}' \
+    --description 'reproduction' --experiment-num 17
 
-Expected composite ≈ 0.2857 (within 0.005 due to RNG floor variance).
+Expected composite ≈ 0.2470 (within 0.005 due to RNG floor variance).

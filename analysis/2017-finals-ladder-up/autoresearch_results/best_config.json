@@ -1,15 +1,16 @@
 {
-  "experiment_num": 1,
+  "experiment_num": 3,
   "backbone": "excel_agent",
-  "description": "excel_agent iter 1/25: Baseline: predict the per-task training mode for every Modeloff question. This i",
+  "description": "excel_agent iter 3/25: Constant predictor: emit ``C`` for every Modeloff question. The diagnosis report",
   "params": {
-    "classifier": "prior_only",
+    "classifier": "const",
+    "const": "C",
     "seed": 42
   },
   "metric": "exact_match_accuracy",
   "train_score": 0.08333333333333333,
-  "val_score": 0.0,
-  "composite": 0.0,
+  "val_score": 0.14233333333333337,
+  "composite": 0.14233333333333337,
   "train_metrics": {
     "accuracy": 0.08333333333333333,
     "f1": 0.012820512820512822,
@@ -231,8 +232,8 @@
       ]
     ]
   },
-  "elapsed_sec": 0.0065155029296875,
-  "timestamp": "2026-05-15 23:51:38",
+  "elapsed_sec": 0.003999471664428711,
+  "timestamp": "2026-05-16 05:39:02",
   "task_slug": "2017-finals-ladder-up",
   "uses_test_set": false
 }

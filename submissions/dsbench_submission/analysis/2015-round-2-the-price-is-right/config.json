@@ -1,23 +1,24 @@
 {
-  "experiment_num": 4,
+  "experiment_num": 21,
   "backbone": "excel_agent",
-  "description": "excel_agent iter 4/25: LogReg with strong L2 (C=0.1). Stronger regularisation flattens the per-task one",
+  "description": "excel_agent iter 21/25: Strongly-regularised LogReg (C=0.1) blended at prior_weight=0.3 toward the per-t",
   "params": {
     "classifier": "logreg",
     "C": 0.1,
     "max_iter": 500,
+    "prior_weight": 0.3,
     "seed": 42
   },
   "metric": "exact_match_accuracy",
   "train_score": 0.42857142857142855,
-  "val_score": 0.3333333333333333,
-  "composite": 0.3333333333333333,
+  "val_score": 0.2753185185185185,
+  "composite": 0.2753185185185185,
   "train_metrics": {
     "accuracy": 0.42857142857142855,
-    "f1": 0.36,
-    "precision": 0.3333333333333333,
+    "f1": 0.3,
+    "precision": 0.26666666666666666,
     "recall": 0.4,
-    "mcc": 0.23693955110363693,
+    "mcc": 0.3746343246326776,
     "confusion": [
       [
         1,
@@ -28,23 +29,23 @@
       ],
       [
         0,
-        1,
-        0,
-        1,
-        0
-      ],
-      [
+        2,
         0,
         0,
-        0,
-        1,
         0
       ],
       [
         0,
         1,
         0,
-        1,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        0,
+        0,
         0
       ],
       [
@@ -57,15 +58,15 @@
     ]
   },
   "val_metrics": {
-    "accuracy": 1.0,
-    "f1": 1.0,
-    "precision": 1.0,
-    "recall": 1.0,
-    "mcc": 1.0,
+    "accuracy": 0.5,
+    "f1": 0.3333333333333333,
+    "precision": 0.25,
+    "recall": 0.5,
+    "mcc": 0.0,
     "confusion": [
       [
-        1,
-        0
+        0,
+        1
       ],
       [
         0,
@@ -73,8 +74,8 @@
       ]
     ]
   },
-  "elapsed_sec": 1.1111712455749512,
-  "timestamp": "2026-05-15 23:46:49",
+  "elapsed_sec": 0.8681933879852295,
+  "timestamp": "2026-05-16 05:38:27",
   "task_slug": "2015-round-2-the-price-is-right",
   "uses_test_set": false
 }

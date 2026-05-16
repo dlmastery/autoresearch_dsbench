@@ -3,6 +3,6 @@ Reproduction protocol for 2015-round-1-tax champion:
   python -m framework.runner --repo C:\Users\evija\dsbench\analysis\2015-round-1-tax \
     --backbone excel_agent \
     --params '{"classifier": "logreg", "C": 1.0, "max_iter": 500, "seed": 42}' \
-    --description 'reproduction' --experiment-num 3
+    --description 'reproduction' --experiment-num 20
 
-Expected composite ≈ 0.6250 (within 0.005 due to RNG floor variance).
+Expected composite ≈ 0.3905 (within 0.005 due to RNG floor variance).

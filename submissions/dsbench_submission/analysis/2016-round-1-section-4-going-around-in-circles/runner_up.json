@@ -1,15 +1,15 @@
 {
-  "experiment_num": 10,
+  "experiment_num": 22,
   "backbone": "excel_agent",
-  "description": "excel_agent iter 10/25: Multinomial Naive Bayes on the (non-negative) structural features. The strong co",
+  "description": "excel_agent iter 22/25: Multinomial Naive Bayes on the non-negative structural features. The strong cond",
   "params": {
     "classifier": "naive_bayes",
     "seed": 42
   },
   "metric": "exact_match_accuracy",
   "train_score": 0.5,
-  "val_score": 0.375,
-  "composite": 0.375,
+  "val_score": 0.30720000000000003,
+  "composite": 0.30720000000000003,
   "train_metrics": {
     "accuracy": 0.5,
     "f1": 0.16666666666666666,
@@ -67,8 +67,8 @@
       ]
     ]
   },
-  "elapsed_sec": 0.03234696388244629,
-  "timestamp": "2026-05-15 23:48:33",
+  "elapsed_sec": 0.024468183517456055,
+  "timestamp": "2026-05-16 05:38:41",
   "task_slug": "2016-round-1-section-4-going-around-in-circles",
   "uses_test_set": false
 }

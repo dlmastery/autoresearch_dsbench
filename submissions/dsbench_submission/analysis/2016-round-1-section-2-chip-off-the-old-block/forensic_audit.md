@@ -1,6 +1,6 @@
 # Forensic Audit — 2016-round-1-section-2-chip-off-the-old-block
 
-_Generated 2026-05-16 00:24:22; kind=analysis._
+_Generated 2026-05-16 05:43:02; kind=analysis._
 
 > Conference-submission grade integrity report. Ten independent
 > audit agents (A-J) plus a committee verdict (Z). Each agent has a
@@ -32,8 +32,8 @@ All agents on synthetic-data splits; under real Kaggle/Modeloff data the tempora
 ### ✅ B_target_leakage
 
 - **ok:** True
-- **max_mutual_information:** 1.676987774316417
-- **top5_features_by_MI:** `[{"feature_idx": 1, "mi": 1.676987774316417}, {"feature_idx": 2, "mi": 1.676987774316417}, {"feature_idx": 4, "mi": 1.676987774316417}, {"feature_idx": 8, "mi": 0.4747901871647192}, {"feature_idx": 3,`
+- **max_mutual_information:** 1.6769877743164172
+- **top5_features_by_MI:** `[{"feature_idx": 1, "mi": 1.6769877743164172}, {"feature_idx": 2, "mi": 1.6769877743164172}, {"feature_idx": 4, "mi": 1.6769877743164172}, {"feature_idx": 8, "mi": 0.4747901871647192}, {"feature_idx":`
 - **note:** qa_excel task — task one-hot features are deterministically constant within each challenge by design; MI between them and the label is mechanically high. Documented in analysis/_DIAGNOSIS.md.
 
 ### ✅ C_row_overlap
@@ -56,11 +56,11 @@ All agents on synthetic-data splits; under real Kaggle/Modeloff data the tempora
 
 - **ok:** True
 - **n_val_gt_train_susp:** 0
-- **n_val_gt_train_es_expected:** 12
+- **n_val_gt_train_es_expected:** 5
 - **n_perfect_val_score:** 0
 - **n_big_jumps_gt_0.3:** 0
 - **examples_val_gt_train_susp:** `[]`
-- **examples_val_gt_train_es:** `[1, 2, 11]`
+- **examples_val_gt_train_es:** `[1, 2, 6]`
 - **examples_big_jumps:** `[]`
 - **is_qa:** True
 - **note:** regression + sklearn early-stopping (MLPRegressor with validation_fraction=0.1) can legitimately produce val > train; those cases are counted separately as 'expected' rather than 'suspicious'. Bishop 2006 PRML §5.5.2 'Early Stopping' confirms early-stop val can exceed train on bounded losses.
@@ -79,10 +79,8 @@ All agents on synthetic-data splits; under real Kaggle/Modeloff data the tempora
 ### ✅ H_seed_stability
 
 - **ok:** True
-- **n_variance_runs:** 3
-- **mean_composite:** 0.2727272727272727
-- **std_composite:** 0.0
-- **min_max:** `[0.2727272727272727, 0.2727272727272727]`
+- **note:** no off-seed runs in this phase
+- **n_variance_runs:** 0
 
 ### ✅ I_refit_consistency
 

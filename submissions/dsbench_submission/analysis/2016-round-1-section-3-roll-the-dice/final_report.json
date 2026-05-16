@@ -4,9 +4,9 @@
   "problem_type": "qa_excel",
   "metric": "exact_match_accuracy",
   "champion_backbone": "excel_agent",
-  "champion_composite": 0.0,
-  "champion_val": 0.0,
-  "champion_train": 0.3333333333333333,
+  "champion_composite": 0.212,
+  "champion_val": 0.212,
+  "champion_train": 0.16666666666666666,
   "test_score": 0.0,
   "test_metrics": {
     "accuracy": 0.0,
@@ -35,5 +35,5 @@
   "dsbench_baseline": 0.3412,
   "delta_vs_dsbench": -0.3412,
   "beats_dsbench": false,
-  "timestamp": "2026-05-16 00:12:16"
+  "timestamp": "2026-05-16 05:41:13"
 }

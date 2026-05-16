@@ -1,21 +1,22 @@
 {
-  "experiment_num": 2,
+  "experiment_num": 17,
   "backbone": "excel_agent",
-  "description": "excel_agent iter 2/25: Alternative baseline: predict the GLOBAL training mode pooled across all 38 Mode",
+  "description": "excel_agent iter 17/25: k-Nearest-Neighbour with k=3. 3-NN smooths the 1-NN decision boundary; textbook ",
   "params": {
-    "classifier": "global_prior",
+    "classifier": "knn",
+    "knn_k": 3,
     "seed": 42
   },
   "metric": "exact_match_accuracy",
-  "train_score": 0.3333333333333333,
-  "val_score": 0.2857142857142857,
-  "composite": 0.2857142857142857,
+  "train_score": 1.0,
+  "val_score": 0.2469877551020408,
+  "composite": 0.2469877551020408,
   "train_metrics": {
-    "accuracy": 0.3333333333333333,
-    "f1": 0.125,
-    "precision": 0.08333333333333333,
-    "recall": 0.25,
-    "mcc": 0.0,
+    "accuracy": 1.0,
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "mcc": 1.0,
     "confusion": [
       [
         2,
@@ -24,22 +25,22 @@
         0
       ],
       [
+        0,
         2,
         0,
-        0,
         0
       ],
       [
+        0,
+        0,
         1,
-        0,
-        0,
         0
       ],
       [
-        1,
         0,
         0,
-        0
+        0,
+        1
       ]
     ]
   },
@@ -60,8 +61,8 @@
       ]
     ]
   },
-  "elapsed_sec": 0.0034716129302978516,
-  "timestamp": "2026-05-15 23:44:34",
+  "elapsed_sec": 0.16526269912719727,
+  "timestamp": "2026-05-16 05:38:06",
   "task_slug": "2014-round-1-precise-debt-modeling",
   "uses_test_set": false
 }

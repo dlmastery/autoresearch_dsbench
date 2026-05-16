@@ -1,7 +1,7 @@
 {
   "task": "2017-finals-funding-fun",
   "kind": "analysis",
-  "generated_at": "2026-05-16 00:24:22",
+  "generated_at": "2026-05-16 05:43:02",
   "agents": [
     {
       "agent": "A_split_hash",
@@ -14,23 +14,23 @@
     {
       "agent": "B_target_leakage",
       "ok": true,
-      "max_mutual_information": 1.9338099989126318,
+      "max_mutual_information": 2.0262296229862913,
       "top5_features_by_MI": [
         {
           "feature_idx": 1,
-          "mi": 1.9338099989126318
+          "mi": 2.0262296229862913
         },
         {
           "feature_idx": 2,
-          "mi": 1.9338099989126318
+          "mi": 2.0262296229862913
         },
         {
           "feature_idx": 4,
-          "mi": 1.9338099989126318
+          "mi": 2.0262296229862913
         },
         {
           "feature_idx": 3,
-          "mi": 0.4306360043695816
+          "mi": 0.43063600436958155
         },
         {
           "feature_idx": 8,
@@ -59,11 +59,15 @@
       "agent": "E_anomaly",
       "ok": true,
       "n_val_gt_train_susp": 0,
-      "n_val_gt_train_es_expected": 0,
-      "n_perfect_val_score": 25,
+      "n_val_gt_train_es_expected": 12,
+      "n_perfect_val_score": 0,
       "n_big_jumps_gt_0.3": 0,
       "examples_val_gt_train_susp": [],
-      "examples_val_gt_train_es": [],
+      "examples_val_gt_train_es": [
+        1,
+        2,
+        3
+      ],
       "examples_big_jumps": [],
       "is_qa": true,
       "note": "regression + sklearn early-stopping (MLPRegressor with validation_fraction=0.1) can legitimately produce val > train; those cases are counted separately as 'expected' rather than 'suspicious'. Bishop 2006 PRML \u00a75.5.2 'Early Stopping' confirms early-stop val can exceed train on bounded losses."
@@ -82,13 +86,8 @@
     {
       "agent": "H_seed_stability",
       "ok": true,
-      "n_variance_runs": 3,
-      "mean_composite": 0.0,
-      "std_composite": 0.0,
-      "min_max": [
-        0.0,
-        0.0
-      ]
+      "note": "no off-seed runs in this phase",
+      "n_variance_runs": 0
     },
     {
       "agent": "I_refit_consistency",

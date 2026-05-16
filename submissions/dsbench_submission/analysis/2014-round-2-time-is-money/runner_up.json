@@ -1,48 +1,43 @@
 {
-  "experiment_num": 19,
+  "experiment_num": 10,
   "backbone": "excel_agent",
-  "description": "excel_agent iter 19/25: Symmetric to iter-18: 100% global-mode prior with NO per-task mode. Isolates the",
+  "description": "excel_agent iter 10/25: Baseline: predict the per-task training mode for every question. This is the str",
   "params": {
-    "classifier": "logreg",
-    "C": 1.0,
-    "max_iter": 500,
-    "prior_weight": 0.4,
-    "agent_weight": 1.0,
-    "agent_bias": 1.0,
+    "classifier": "prior_only",
     "seed": 42
   },
   "metric": "exact_match_accuracy",
-  "train_score": 0.6,
-  "val_score": 0.16666666666666666,
-  "composite": 0.16666666666666666,
+  "train_score": 0.4,
+  "val_score": 0.25866666666666666,
+  "composite": 0.25866666666666666,
   "train_metrics": {
-    "accuracy": 0.6,
-    "f1": 0.5416666666666666,
-    "precision": 0.5833333333333333,
-    "recall": 0.625,
-    "mcc": 0.5669467095138409,
+    "accuracy": 0.4,
+    "f1": 0.14285714285714285,
+    "precision": 0.1,
+    "recall": 0.25,
+    "mcc": 0.0,
     "confusion": [
       [
-        1,
         0,
-        0,
-        0
-      ],
-      [
-        1,
         1,
         0,
         0
       ],
       [
         0,
+        2,
         0,
-        1,
         0
       ],
       [
+        0,
         1,
         0,
+        0
+      ],
+      [
+        0,
+        1,
         0,
         0
       ]
@@ -65,8 +60,8 @@
       ]
     ]
   },
-  "elapsed_sec": 0.6491861343383789,
-  "timestamp": "2026-05-15 23:45:41",
+  "elapsed_sec": 0.0030031204223632812,
+  "timestamp": "2026-05-16 05:38:13",
   "task_slug": "2014-round-2-time-is-money",
   "uses_test_set": false
 }

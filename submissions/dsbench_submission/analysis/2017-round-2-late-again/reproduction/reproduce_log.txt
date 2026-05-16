@@ -2,7 +2,7 @@ Reproduction protocol for 2017-round-2-late-again champion:
 
   python -m framework.runner --repo C:\Users\evija\dsbench\analysis\2017-round-2-late-again \
     --backbone excel_agent \
-    --params '{"classifier": "prior_only", "seed": 42}' \
-    --description 'reproduction' --experiment-num 1
+    --params '{"classifier": "const", "const": "C", "seed": 42}' \
+    --description 'reproduction' --experiment-num 3
 
-Expected composite ≈ 0.0000 (within 0.005 due to RNG floor variance).
+Expected composite ≈ 0.1618 (within 0.005 due to RNG floor variance).

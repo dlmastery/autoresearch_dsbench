@@ -1,15 +1,16 @@
 {
-  "experiment_num": 11,
+  "experiment_num": 3,
   "backbone": "excel_agent",
-  "description": "excel_agent iter 11/25: sklearn DummyClassifier(strategy=most_frequent) \u2014 sanity-check that prior_only a",
+  "description": "excel_agent iter 3/25: Constant predictor: emit ``C`` for every Modeloff question. The diagnosis report",
   "params": {
-    "classifier": "dummy_majority",
+    "classifier": "const",
+    "const": "C",
     "seed": 42
   },
   "metric": "exact_match_accuracy",
   "train_score": 0.3333333333333333,
-  "val_score": 0.375,
-  "composite": 0.375,
+  "val_score": 0.2673333333333333,
+  "composite": 0.2673333333333333,
   "train_metrics": {
     "accuracy": 0.3333333333333333,
     "f1": 0.125,
@@ -67,8 +68,8 @@
       ]
     ]
   },
-  "elapsed_sec": 0.016572952270507812,
-  "timestamp": "2026-05-15 23:42:51",
+  "elapsed_sec": 0.0029993057250976562,
+  "timestamp": "2026-05-16 05:37:51",
   "task_slug": "2013-round-1-theory-and-practice",
   "uses_test_set": false
 }

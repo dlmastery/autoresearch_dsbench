@@ -1,15 +1,18 @@
 {
-  "experiment_num": 1,
+  "experiment_num": 21,
   "backbone": "excel_agent",
-  "description": "excel_agent iter 1/25: Baseline: predict the per-task training mode for every Modeloff question. This i",
+  "description": "excel_agent iter 21/25: Strongly-regularised LogReg (C=0.1) blended at prior_weight=0.3 toward the per-t",
   "params": {
-    "classifier": "prior_only",
+    "classifier": "logreg",
+    "C": 0.1,
+    "max_iter": 500,
+    "prior_weight": 0.3,
     "seed": 42
   },
   "metric": "exact_match_accuracy",
   "train_score": 0.5,
-  "val_score": 0.375,
-  "composite": 0.375,
+  "val_score": 0.3104,
+  "composite": 0.3104,
   "train_metrics": {
     "accuracy": 0.5,
     "f1": 0.16666666666666666,
@@ -67,8 +70,8 @@
       ]
     ]
   },
-  "elapsed_sec": 0.0029997825622558594,
-  "timestamp": "2026-05-15 23:53:04",
+  "elapsed_sec": 0.52597975730896,
+  "timestamp": "2026-05-16 05:39:16",
   "task_slug": "2017-round-1-go-with-the-flow",
   "uses_test_set": false
 }

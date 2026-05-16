@@ -1,22 +1,22 @@
 {
-  "experiment_num": 6,
+  "experiment_num": 1,
   "backbone": "excel_agent",
-  "description": "excel_agent iter 6/25: k-Nearest-Neighbour with k=1. 1-NN is the maximum-capacity neighbour rule \u2014 copi",
+  "description": "excel_agent iter 1/25: Constant predictor: emit ``A`` for every Modeloff question. The diagnosis report",
   "params": {
-    "classifier": "knn",
-    "knn_k": 1,
+    "classifier": "const",
+    "const": "A",
     "seed": 42
   },
   "metric": "exact_match_accuracy",
-  "train_score": 1.0,
-  "val_score": 0.2222222222222222,
-  "composite": 0.2222222222222222,
+  "train_score": 0.14285714285714285,
+  "val_score": 0.16977777777777778,
+  "composite": 0.16977777777777778,
   "train_metrics": {
-    "accuracy": 1.0,
-    "f1": 1.0,
-    "precision": 1.0,
-    "recall": 1.0,
-    "mcc": 1.0,
+    "accuracy": 0.14285714285714285,
+    "f1": 0.041666666666666664,
+    "precision": 0.023809523809523808,
+    "recall": 0.16666666666666666,
+    "mcc": 0.0,
     "confusion": [
       [
         1,
@@ -27,44 +27,44 @@
         0
       ],
       [
-        0,
         1,
+        0,
         0,
         0,
         0,
         0
       ],
       [
-        0,
-        0,
         1,
+        0,
+        0,
         0,
         0,
         0
       ],
       [
-        0,
-        0,
-        0,
         1,
+        0,
+        0,
+        0,
         0,
         0
       ],
       [
-        0,
-        0,
-        0,
-        0,
         2,
+        0,
+        0,
+        0,
+        0,
         0
       ],
       [
+        1,
         0,
         0,
         0,
         0,
-        0,
-        1
+        0
       ]
     ]
   },
@@ -78,31 +78,22 @@
       [
         0,
         0,
-        0,
-        1
-      ],
-      [
-        0,
-        0,
-        0,
         0
       ],
       [
-        0,
         1,
         0,
         0
       ],
       [
-        0,
-        0,
+        1,
         0,
         0
       ]
     ]
   },
-  "elapsed_sec": 0.1961965560913086,
-  "timestamp": "2026-05-15 23:53:29",
+  "elapsed_sec": 0.00299835205078125,
+  "timestamp": "2026-05-16 05:39:16",
   "task_slug": "2017-round-1-when-it-rains-it-pours",
   "uses_test_set": false
 }

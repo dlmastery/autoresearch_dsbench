@@ -4,7 +4,7 @@
 - **Problem:** qa_excel
 - **Metric:** exact_match_accuracy
 - **Champion backbone:** excel_agent
-- **Composite (train/val):** 0.5000
+- **Composite (train/val):** 0.3544
 - **Test score:** 1.0000
 - **DSBench baseline:** 0.3412
 - **Delta vs DSBench:** +0.6588  (BEAT)

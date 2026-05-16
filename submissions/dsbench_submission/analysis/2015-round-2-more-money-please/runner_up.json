@@ -1,21 +1,22 @@
 {
-  "experiment_num": 2,
+  "experiment_num": 18,
   "backbone": "excel_agent",
-  "description": "excel_agent iter 2/25: Alternative baseline: predict the GLOBAL training mode pooled across all 38 Mode",
+  "description": "excel_agent iter 18/25: k-Nearest-Neighbour with k=5. 5-NN further smooths; useful when training labels ",
   "params": {
-    "classifier": "global_prior",
+    "classifier": "knn",
+    "knn_k": 5,
     "seed": 42
   },
   "metric": "exact_match_accuracy",
-  "train_score": 0.3333333333333333,
-  "val_score": 0.375,
-  "composite": 0.375,
+  "train_score": 1.0,
+  "val_score": 0.29280000000000006,
+  "composite": 0.29280000000000006,
   "train_metrics": {
-    "accuracy": 0.3333333333333333,
-    "f1": 0.16666666666666666,
-    "precision": 0.1111111111111111,
-    "recall": 0.3333333333333333,
-    "mcc": 0.0,
+    "accuracy": 1.0,
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "mcc": 1.0,
     "confusion": [
       [
         2,
@@ -23,36 +24,43 @@
         0
       ],
       [
-        1,
         0,
+        1,
         0
       ],
       [
-        3,
         0,
-        0
+        0,
+        3
       ]
     ]
   },
   "val_metrics": {
-    "accuracy": 0.5,
-    "f1": 0.3333333333333333,
-    "precision": 0.25,
-    "recall": 0.5,
+    "accuracy": 0.0,
+    "f1": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
     "mcc": 0.0,
     "confusion": [
       [
-        1,
-        0
+        0,
+        0,
+        1
       ],
       [
-        1,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
         0
       ]
     ]
   },
-  "elapsed_sec": 0.003995418548583984,
-  "timestamp": "2026-05-15 23:46:36",
+  "elapsed_sec": 0.1092066764831543,
+  "timestamp": "2026-05-16 05:38:23",
   "task_slug": "2015-round-2-more-money-please",
   "uses_test_set": false
 }

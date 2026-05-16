@@ -1,15 +1,15 @@
 {
-  "experiment_num": 2,
+  "experiment_num": 22,
   "backbone": "excel_agent",
-  "description": "excel_agent iter 2/25: Alternative baseline: predict the GLOBAL training mode pooled across all 38 Mode",
+  "description": "excel_agent iter 22/25: Multinomial Naive Bayes on the non-negative structural features. The strong cond",
   "params": {
-    "classifier": "global_prior",
+    "classifier": "naive_bayes",
     "seed": 42
   },
   "metric": "exact_match_accuracy",
   "train_score": 0.6666666666666666,
-  "val_score": 0.5,
-  "composite": 0.5,
+  "val_score": 0.4126666666666666,
+  "composite": 0.4126666666666666,
   "train_metrics": {
     "accuracy": 0.6666666666666666,
     "f1": 0.4,
@@ -44,8 +44,8 @@
       ]
     ]
   },
-  "elapsed_sec": 0.004511356353759766,
-  "timestamp": "2026-05-15 23:43:38",
+  "elapsed_sec": 0.02399468421936035,
+  "timestamp": "2026-05-16 05:37:59",
   "task_slug": "2013-round-2-hard-times-turnaround-a-toy-company",
   "uses_test_set": false
 }

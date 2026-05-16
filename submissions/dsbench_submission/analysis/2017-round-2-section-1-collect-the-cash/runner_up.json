@@ -1,28 +1,26 @@
 {
-  "experiment_num": 5,
+  "experiment_num": 10,
   "backbone": "excel_agent",
-  "description": "excel_agent iter 5/25: LogReg with weak L2 (C=10.0). Less shrinkage, more capacity \u2014 tests whether the ",
+  "description": "excel_agent iter 10/25: Baseline: predict the per-task training mode for every question. This is the str",
   "params": {
-    "classifier": "logreg",
-    "C": 10.0,
-    "max_iter": 500,
+    "classifier": "prior_only",
     "seed": 42
   },
   "metric": "exact_match_accuracy",
-  "train_score": 1.0,
-  "val_score": 0.1,
-  "composite": 0.1,
+  "train_score": 0.25,
+  "val_score": 0.18933333333333335,
+  "composite": 0.18933333333333335,
   "train_metrics": {
-    "accuracy": 1.0,
-    "f1": 1.0,
-    "precision": 1.0,
-    "recall": 1.0,
-    "mcc": 1.0,
+    "accuracy": 0.25,
+    "f1": 0.05714285714285715,
+    "precision": 0.03571428571428571,
+    "recall": 0.14285714285714285,
+    "mcc": 0.0,
     "confusion": [
       [
+        0,
+        0,
         1,
-        0,
-        0,
         0,
         0,
         0,
@@ -30,8 +28,8 @@
       ],
       [
         0,
-        1,
         0,
+        1,
         0,
         0,
         0,
@@ -49,8 +47,8 @@
       [
         0,
         0,
-        0,
         1,
+        0,
         0,
         0,
         0
@@ -58,29 +56,29 @@
       [
         0,
         0,
-        0,
-        0,
         1,
+        0,
+        0,
         0,
         0
       ],
       [
         0,
         0,
-        0,
-        0,
-        0,
         1,
+        0,
+        0,
+        0,
         0
       ],
       [
         0,
         0,
+        1,
         0,
         0,
         0,
-        0,
-        1
+        0
       ]
     ]
   },
@@ -93,32 +91,23 @@
     "confusion": [
       [
         0,
-        0,
-        0,
-        1
-      ],
-      [
-        0,
-        0,
         1,
         0
       ],
       [
         0,
         0,
-        0,
         0
       ],
       [
         0,
-        0,
-        0,
+        1,
         0
       ]
     ]
   },
-  "elapsed_sec": 1.6189396381378174,
-  "timestamp": "2026-05-15 23:54:21",
+  "elapsed_sec": 0.0019807815551757812,
+  "timestamp": "2026-05-16 05:39:23",
   "task_slug": "2017-round-2-section-1-collect-the-cash",
   "uses_test_set": false
 }

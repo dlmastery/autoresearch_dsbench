@@ -6,8 +6,8 @@ _14-section audit per autoresearch CLAUDE.md 'Explainability & Auditability Repo
 
 - **Task:** 2013-round-1-theory-and-practice (analysis, qa_excel)
 - **Champion backbone:** excel_agent
-- **Experiment number:** 11
-- **Composite score (train/val):** 0.3750
+- **Experiment number:** 3
+- **Composite score (train/val):** 0.2673
 - **Final test score (exact_match_accuracy):** 0.5000
 - **DSBench baseline:** 0.3412
 - **Delta vs DSBench:** +0.1588 (BEAT)
@@ -58,7 +58,7 @@ _Histogram of predicted scores per fold to detect systematic bias._
 
 ## 9. Win/loss attribution
 
-See `winners/excel_agent_exp11/` `per_fold_results.json` and the per-sample decision log `trade_logs/exp11_decisions.csv`.
+See `winners/excel_agent_exp3/` `per_fold_results.json` and the per-sample decision log `trade_logs/exp3_decisions.csv`.
 
 ## 10. Risk audit
 
@@ -72,7 +72,8 @@ See `forensic_audit.md` agents A (split hash integrity) and C (row overlap).
 
 ```json
 {
-  "classifier": "dummy_majority",
+  "classifier": "const",
+  "const": "C",
   "seed": 42
 }
 ```
@@ -94,5 +95,5 @@ See `forensic_audit.md` agents A (split hash integrity) and C (row overlap).
 ## Provenance
 
 - Built from `framework/build_submission.py`
-- Generated 2026-05-16 00:24:53
+- Generated 2026-05-16 05:45:18
 - Conforms to autoresearch CLAUDE.md 'Explainability & Auditability Report' (14 sections)
