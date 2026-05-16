@@ -65,6 +65,21 @@ dsbench/
 & "C:/Users/evija/anaconda3/python.exe" framework/final_report.py
 ```
 
+## Documentation
+
+The [`docs/`](docs/) folder is a chapter-by-chapter mapping of *Software Engineering at Google* (Winters / Manshreck / Wright, O'Reilly 2020) onto this project: **25 chapters across 4 parts plus 4 appendices** (~80,000 words).
+
+Entry point: [`docs/README.md`](docs/README.md).
+
+Common starting reads:
+
+- **30-minute onboarding** — [Ch. 1 What Is AutoResearch Engineering?](docs/part_1_thesis/01_what_is_autoresearch_engineering.md) → [Ch. 8 Style Guides and Rules](docs/part_3_processes/08_style_guides_and_rules.md) → [Ch. 11 Testing Overview](docs/part_3_processes/11_testing_overview.md).
+- **Why is this so audit-heavy?** — [Ch. 9 Code Review](docs/part_3_processes/09_code_review.md) + [Appendix A Postmortems](docs/appendix_a_postmortems/).
+- **How do I add a backbone / task / skill?** — [Ch. 8](docs/part_3_processes/08_style_guides_and_rules.md), [Ch. 15 Deprecation](docs/part_3_processes/15_deprecation.md), [Ch. 18 Build Systems](docs/part_4_tools/18_build_systems.md), [Ch. 21 Dependency Management](docs/part_4_tools/21_dependency_management.md).
+- **Architectural decisions** — [Appendix B](docs/appendix_b_adrs/) (15 ADRs in Michael Nygard format).
+- **API + CLI** — [Appendix C](docs/appendix_c_api_reference/) (per-module reference + CLI + glossary).
+- **Diagrams** — [Appendix D](docs/appendix_d_diagrams/) (5 Mermaid diagrams).
+
 ## Provenance
 
 - Inherits 52 sections + protocol rules from [`autoresearch/CLAUDE.md`](C:/Users/evija/autoresearch/CLAUDE.md) (4/20/2026)

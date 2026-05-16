@@ -5,7 +5,7 @@
 
 ## Reading this docs/
 
-This documentation is structured as 25 chapters across 4 parts plus four appendices, mirroring the *Software Engineering at Google* (henceforth **SWE-book**) table of contents. Every chapter cites the SWE-book parallel in its opening section so a reader who knows the book recognises the mapping instantly.
+This documentation is structured as **25 chapters across 4 parts plus four appendices**, mirroring the *Software Engineering at Google* (henceforth **SWE-book**) table of contents. Every chapter cites the SWE-book parallel in its opening section so a reader who knows the book recognises the mapping instantly.
 
 The DSBench project (Jing et al. 2025 ICLR *DSBench: How Far Are Data Analysis Agents from Becoming Data Analysis Experts* arXiv:2409.07703) is treated as 112 independent Kaggle-style benchmarks (74 modeling + 38 analysis). We solve them with an LLM-driven, citation-disciplined Karpathy-style hill-climb wrapped in a 4-layer audit gate. This project is, to use the SWE-book's framing, **software engineering for ML experiment loops integrated over collaborator turns** — and that framing drives the chapter mapping.
 

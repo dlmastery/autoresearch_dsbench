@@ -1,0 +1,29 @@
+%% Per-experiment lifecycle — Claude as outer loop
+sequenceDiagram
+    autonumber
+    participant C as Claude (outer loop)
+    participant H as hill_climb.py
+    participant R as runner.py
+    participant DATA as splits.npz<br/>(cached)
+    participant LOG as experiment_log.jsonl
+    participant ANN as reasoning_annotations.json
+    participant BEST as best_config.json
+    participant CP as memory/checkpoint.md
+
+    C->>ANN: pre-write {diagnosis, citations, hypothesis, prediction, _manual:true}
+    C->>H: invoke proposal N for backbone B
+    H->>R: run_one(repo, backbone, params, description, N)
+    R->>R: _pin_to_safe_cores() [P-cores 0,2,4,6]
+    R->>DATA: load_or_make_data (hash-checked)
+    R->>R: _fit_predict on X_train -> pred_tr
+    R->>R: _fit_predict on X_val   -> pred_va
+    R->>R: train_score = _score(metric, pred_tr)
+    R->>R: val_score   = _score(metric, pred_va)
+    R->>R: composite = min(val,train) - 0.05*|val-train|
+    Note over R: qa_excel: composite = LOO-CV(train ∪ val)
+    R->>LOG: append JSON line
+    R->>BEST: overwrite if composite > current
+    R-->>H: record dict
+    H-->>C: record dict
+    C->>ANN: post-write {verdict, learning}
+    C->>CP: update champion + next command

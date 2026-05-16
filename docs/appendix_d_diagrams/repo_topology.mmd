@@ -1,0 +1,62 @@
+%% Repo topology — top-level dataflow
+graph TB
+    REG[registry/<br/>modeling_tasks.json<br/>analysis_tasks.json<br/>final_rollup.json<br/>forensic_summary.json]
+
+    subgraph FRAMEWORK[framework/ — shared harness]
+        TPL[CLAUDE_template.md]
+        SCAF[generate_scaffolds.py]
+        RUN[runner.py]
+        HC[hill_climb.py]
+        EHC[extended_hill_climb.py]
+        FR[final_report.py]
+        FA[forensic_audit.py]
+        BS[build_submission.py]
+        VAL[validator.py]
+        STAT[_status.py / _summary.py / _losses.py]
+        REFR[_refresh_dashboards.py]
+    end
+
+    subgraph MOD[modeling/<slug>/ × 74]
+        MCD[CLAUDE.md]
+        MTC[task_config.json]
+        MDATA[data/.data_cache/splits.npz]
+        MLOG[autoresearch_results/experiment_log.jsonl]
+        MBEST[autoresearch_results/best_config.json]
+        MFR[autoresearch_results/final_report.json]
+    end
+
+    subgraph ANA[analysis/<slug>/ × 38]
+        ACD[CLAUDE.md]
+        ATC[task_config.json]
+        ALOG[autoresearch_results/experiment_log.jsonl]
+    end
+
+    SK[skills/autoresearch-pack/<br/>44 skills + audit_pack.py]
+    SUB[submissions/dsbench_submission/<br/>14 files per task]
+    DASH[dashboard/<br/>index.html + md_viewer.html + task_detail.html]
+
+    REG --> SCAF
+    TPL --> SCAF
+    SCAF --> MCD
+    SCAF --> ACD
+    SCAF --> MTC
+    SCAF --> ATC
+    MTC --> RUN
+    RUN --> MDATA
+    RUN --> MLOG
+    RUN --> MBEST
+    HC --> RUN
+    EHC --> RUN
+    MBEST --> FR
+    FR --> MFR
+    MFR --> REG
+    MLOG --> FA
+    FA --> REG
+    REG --> BS
+    BS --> SUB
+    MCD --> VAL
+    SK --> VAL
+    REG --> STAT
+    REG --> REFR
+    REFR --> DASH
+    SUB --> DASH

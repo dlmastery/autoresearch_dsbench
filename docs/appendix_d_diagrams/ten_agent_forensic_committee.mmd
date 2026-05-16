@@ -1,0 +1,50 @@
+%% 10-agent forensic committee — agents A-J feed Z verdict
+flowchart TB
+    INPUT[Per-task champion<br/>best_config.json<br/>experiment_log.jsonl<br/>data/split_manifest.json] --> SPLIT
+
+    subgraph SPLIT[Split / data integrity]
+      direction LR
+      A[Agent A<br/>split-hash<br/>FAIL on mismatch]
+      C[Agent C<br/>row-overlap<br/>FAIL if cardinality > 0]
+      G[Agent G<br/>temporal order<br/>FAIL on future-in-train]
+    end
+
+    subgraph FEAT[Feature / distribution]
+      direction LR
+      B[Agent B<br/>target leakage<br/>MI threshold tabular 0.05<br/>qa_excel 0.50]
+      D[Agent D<br/>distribution shift<br/>KS tabular / chi-sq qa_excel]
+    end
+
+    subgraph MODEL[Model behaviour]
+      direction LR
+      E[Agent E<br/>anomaly<br/>val>train+0.05<br/>perfect 1.0<br/>jumps > 0.3<br/>whitelist: sklearn early-stop regression]
+      H[Agent H<br/>seed stability<br/>RECORD-ONLY]
+      I[Agent I<br/>refit consistency<br/>FAIL if |delta| > 0.005]
+    end
+
+    subgraph CODE[Code / breadth]
+      direction LR
+      F[Agent F<br/>static-code<br/>grep X_test/y_test<br/>FAIL on any reference]
+      J[Agent J<br/>backbone diversity<br/>WARN if < 3 distinct]
+    end
+
+    A --> Z
+    B --> Z
+    C --> Z
+    D --> Z
+    E --> Z
+    F --> Z
+    G --> Z
+    H --> Z
+    I --> Z
+    J --> Z
+
+    Z[Agent Z<br/>committee verdict<br/>PASS / FAIL + risks]
+    Z --> MD[forensic_audit.md]
+    Z --> JS[forensic_audit.json]
+    Z --> SUM[registry/forensic_summary.json]
+
+    classDef warn stroke:#fa0,fill:#ffe
+    classDef rec stroke:#88c,fill:#eef
+    class H rec
+    class J warn
