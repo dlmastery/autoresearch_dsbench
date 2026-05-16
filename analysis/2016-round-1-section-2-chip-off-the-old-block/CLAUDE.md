@@ -61,6 +61,106 @@ You are a top-tier ML researcher — multiple best-paper awards at NeurIPS/ICML/
 4. **When fixing a bug, audit the entire system for the same class of bug.**
 5. **Separation of concerns is not optional.** Runners log. Dashboards display. Evaluators evaluate. Never tangle them.
 
+## Auditing & Forensics (project guardrails — read this BEFORE writing code)
+
+The autoresearch protocol is policed by **four layers of automated audit**. A
+session that runs an experiment without these layers passing is not a valid
+run; the work doesn't count.
+
+### Layer 1 — Section-coverage validator (`framework/validator.py`)
+
+Reads `framework/SECTION_MAPPING.md` and verifies every required section
+header exists in the task's `CLAUDE.md`. Also greps `run_autoresearch.py` and
+`hill_climb.py` for `X_test` / `y_test` references and FAILS if found (test
+leakage = blocking error). Required file list: `task_config.json`,
+`seed_reasoning.json`, `paper.md`, `paper_abstract.md`, `README.md`,
+`autoresearch_results/dashboard.html`, plus the markdown artefacts. Run on
+every repo via:
+
+```powershell
+& "C:/Users/evija/anaconda3/python.exe" framework/validator.py
+```
+
+Target: **112/112 ok**. If <112, fix the failing task; do not proceed.
+
+### Layer 2 — Ten-agent forensic-audit committee (`framework/forensic_audit.py`)
+
+Per-task pipeline runs 10 independent agents, each with a single concern:
+
+| Agent | Concern | Threshold |
+|---|---|---|
+| **A** — split-hash | manifest hashes match actual `.npz` split | mismatches ≥ 1 → FAIL |
+| **B** — target / label leakage | per-feature mutual information vs label | max MI > 0.9 → FAIL on tabular; calibrated for `qa_excel` task-onehot |
+| **C** — row-overlap | train/val/test row hashes intersection | total overlap > 0 → FAIL |
+| **D** — distribution shift | per-feature KS train vs test | > 10% flagged features → FAIL on tabular; calibrated for `qa_excel` stride split |
+| **E** — anomaly | val > train + 0.05; perfect 1.0 scores; big jumps > 0.3 | susp count > 0 → FAIL; sklearn early-stop + regression is whitelisted (Bishop 2006 §5.5.2) |
+| **F** — static-code | grep for `X_test` / `y_test` in runner / hill_climb | any reference → FAIL |
+| **G** — temporal order | no future timestamps in train rows | N/A on synthetic data |
+| **H** — seed-stability | multi-seed champion reproduction variance | record-only |
+| **I** — refit-consistency | refit champion from `best_config.json`, score on test, compare to recorded | |delta| > 0.005 → FAIL |
+| **J** — backbone-diversity | distinct backbones in `experiment_log.jsonl` | < 3 → WARN (not FAIL) |
+| **Z** — committee verdict | aggregates A-J → PASS / FAIL with risks list | — |
+
+Outputs `<repo>/forensic_audit.md` (full narrative) +
+`<repo>/forensic_audit.json` (machine-readable) +
+`registry/forensic_summary.json` (one row per task). Run via:
+
+```powershell
+& "C:/Users/evija/anaconda3/python.exe" framework/forensic_audit.py
+```
+
+Target: **112/112 PASS**.
+
+### Layer 3 — 14-section explainability audit (per-task winner archive)
+
+When a new GLOBAL champion is found, `framework/build_submission.py` writes
+`submissions/dsbench_submission/<kind>/<slug>/audit_report.md` with all 14
+sections from the autoresearch CLAUDE.md "Explainability & Auditability
+Report" rule (executive summary; feature importance; top-N features;
+SHAP-style explanations; per-fold feature drift; calibration; uncertainty;
+prediction distribution; trade attribution; risk audit; data pipeline audit;
+config dump; known limitations; deployment checklist). Skipping any section
+of the 14 is a regression — re-run the builder.
+
+### Layer 4 — Skill-pack coverage audit (`skills/autoresearch-pack/audit/audit_pack.py`)
+
+Verifies every H2/H3 in `autoresearch/CLAUDE.md` AND
+`autoresearchindexspy/autoresearchspy/CLAUDE.md` AND
+`framework/CLAUDE_template.md` maps to ≥ 1 SKILL.md. Coverage target: **100%
+(currently 156/156)**. Run via:
+
+```powershell
+& "C:/Users/evija/anaconda3/python.exe" skills/autoresearch-pack/audit/audit_pack.py
+```
+
+### Cross-cutting tooling
+
+- `framework/_status.py` — canonical scoreboard: BEAT-DSBENCH / FORENSIC-PASS / FORENSIC-FAIL by kind and total.
+- `framework/_final_audit.py` — end-to-end audit (combines all 4 layers + checks dashboards have "About this task" + viewer URLs work + Lessons-Learned section present in every CLAUDE.md).
+- The 4 layers + 2 tools = the "is this submittable to a top-tier conference" checkpoint. Run all four before any commit that changes experiment state.
+
+### Submission-archive contract (`submissions/dsbench_submission/<kind>/<slug>/`)
+
+A self-contained, portable archive PER TASK that lets a committee reviewer
+spot-check without setting up the repo. Required contents:
+
+- `README.md` — task summary + champion + DSBench delta
+- `config.json` — exact champion config (backbone + params + metrics)
+- `final_report.json` — one-shot test-set score
+- `runner_up.json` — 2nd-best experiment (variance baseline)
+- `audit_report.md` — 14-section explainability audit
+- `forensic_audit.md` + `forensic_audit.json` — 10-agent committee report
+- `research_journal.md` — per-experiment 6-field reasoning narrative
+- `experiment_summary.md` — tabular per-experiment summary
+- `experiment_log.jsonl` — append-only raw log
+- `reasoning_annotations.json` — machine-readable per-experiment reasoning
+- `code/CLAUDE.md` + frozen task-config + paper + seed_reasoning
+- `inference/predict.py` — standalone inference script
+- `reproduction/reproduce_log.txt` — runnable repro command + expected composite
+
+Built / refreshed by `framework/build_submission.py` after every experiment
+batch that updates a champion.
+
 ## Hard Rules (NEVER violate)
 
 ### Data Integrity
@@ -542,5 +642,45 @@ This is the master "next-time-you-do-this-don't-miss-this" checklist. Every corr
 | 15 | **Status snapshot script.** `framework/_status.py` is the canonical "how do I see how things are going" tool — one command prints BEAT-DSBENCH / FORENSIC-PASS / FORENSIC-FAIL counts. | `mlops-documentation` (EXTENDED) |
 | 16 | **Refit-consistency audit (agent I).** Every champion MUST reproduce within ±0.005 on the test set when refit from `best_config.json:params`. FAIL blocks deployment. | `forensic-audit-pipeline` (EXTENDED) |
 | 17 | **Backbone-diversity audit (agent J).** Every task SHOULD have ≥ 3 distinct backbones tried (counted from `experiment_log.jsonl`). Fewer than 3 = WARN. | `forensic-audit-pipeline` (EXTENDED) |
+| 18 | **Composite metric definition is non-negotiable.** `composite = min(val_score, train_score) - 0.05 * |val_score - train_score|`. The first term forces both train AND val to be good; the second term penalises overfit. Used for KEEP/DISCARD on every experiment. Implemented in `framework/runner.py:run_one`. | `experiment-design` (EXTENDED) |
+| 19 | **Submission archive per task is MANDATORY.** `framework/build_submission.py` writes `submissions/dsbench_submission/<kind>/<slug>/` with README + config + final_report + runner_up + 14-section audit + 10-agent forensic + research journal + experiment log + reasoning annotations + code snapshot + inference + reproduction recipe. Refresh after every commit that updates a champion. | `winner-archive-protocol` (EXTENDED) |
+| 20 | **Expert-data-scientist diagnosis BEFORE coding the fix.** When user reports failures (e.g. "analysis tasks scoring 0%"), ship a rigorous diagnosis report first — read the actual data, compute coverage statistics, document the ceiling, then commit code. Pattern: `analysis/_DIAGNOSIS.md` (1950 words) + `analysis/_COVERAGE.md`. Conference-quality framing. | `seven-step-research-process` (EXTENDED) — diagnose-before-code |
+| 21 | **Background-agent + git-checkpoint cadence.** Long-running improvement work runs as a background agent; the foreground commits a checkpoint to `dlmastery/autoresearch_dsbench` (Windows note: `git config http.sslBackend schannel` for SSL cert). `.gitignore` excludes `.data_cache/` (synthetic / regenerable), `__pycache__/`, stdout logs. Commit message follows autoresearch convention: subject ≤ 70 chars + bullet body + Co-Authored-By trailer. | `mlops-documentation` (EXTENDED) |
+| 22 | **Four-layer audit gate before any submission claim.** Layer 1 = section-coverage validator (`framework/validator.py`); Layer 2 = 10-agent forensic committee (`framework/forensic_audit.py`); Layer 3 = 14-section explainability per winner (`framework/build_submission.py`); Layer 4 = skill-pack coverage audit (`skills/autoresearch-pack/audit/audit_pack.py`). All four must pass. Aggregate via `framework/_final_audit.py`. | `forensic-audit-pipeline` (EXTENDED) + new top-level "Auditing & Forensics" section |
+| 23 | **Sklearn early-stopping whitelist is backbone-AND-problem-type aware.** Agent E whitelists `(mlp \| ft_transformer \| lstm \| patchtsmixer \| lightgbm)` × `regression` because all five use validation-based early stopping (sklearn `MLPRegressor(early_stopping=True)`, LightGBM `early_stopping_rounds`). Classification + early-stop is NOT whitelisted (different failure modes). | `regression-early-stopping-discipline` (EXTENDED) |
+| 24 | **GitHub checkpoint protocol.** First commit goes to `dlmastery/autoresearch_dsbench`. Push exclusively via `gh repo create … --source .` + `git push -u origin main`. SSL backend: schannel on Windows (`git config --global http.sslBackend schannel`). Repo is ~156 MB after exclusions (24K+ files); push takes ~2-5 min initial, fast for follow-ups. | `mlops-documentation` (EXTENDED) |
+| 25 | **Two-tab dashboard navigation.** Cross-task leaderboard row click → per-task autoresearch dashboard in a NEW TAB (not modal, not new window). Per-task experiment row click → INLINE detail panel within the same dashboard. `target="_blank"` for cross-task; same-page DOM mutation for per-task. | `interactive-dashboard-design` (EXTENDED) |
+| 26 | **Live dashboard auto-refresh.** Cross-task leaderboard and per-task dashboards auto-refresh every 30s via `setInterval(load, 30000)` so a long-running background agent's progress is visible without manual reload. | `interactive-dashboard-design` (EXTENDED) |
 
-When a new correction lands, add a row here AND update the corresponding skill (or create a new one) AND re-run `skills/autoresearch-pack/audit/audit_pack.py` to confirm coverage holds at 100%.
+When a new correction lands, add a row here AND update the corresponding skill (or create a new one) AND re-run `skills/autoresearch-pack/audit/audit_pack.py` to confirm coverage holds at 100%. **Then** regenerate every per-task `CLAUDE.md` via `framework/_regenerate_claude_only.py` so the new rule reaches all 112 task repos. **Then** commit + push to `dlmastery/autoresearch_dsbench`.
+
+## Single-command end-to-end refresh
+
+Whenever the user adds a correction:
+
+```powershell
+# 1. apply the code change(s) implied by the correction
+# 2. regenerate all 112 task CLAUDE.md from the updated template
+& "C:/Users/evija/anaconda3/python.exe" framework/_regenerate_claude_only.py
+# 3. re-run every experiment loop that's affected (use --kind to scope)
+& "C:/Users/evija/anaconda3/python.exe" framework/run_all.py --kind analysis
+# 4. refresh the four audit layers
+& "C:/Users/evija/anaconda3/python.exe" framework/final_report.py
+& "C:/Users/evija/anaconda3/python.exe" framework/forensic_audit.py
+& "C:/Users/evija/anaconda3/python.exe" framework/validator.py
+& "C:/Users/evija/anaconda3/python.exe" skills/autoresearch-pack/audit/audit_pack.py
+# 5. rebuild the submission archive
+& "C:/Users/evija/anaconda3/python.exe" framework/build_submission.py
+# 6. refresh the per-task dashboards
+& "C:/Users/evija/anaconda3/python.exe" framework/_refresh_dashboards.py
+# 7. status snapshot
+& "C:/Users/evija/anaconda3/python.exe" framework/_status.py
+# 8. final cross-check audit
+& "C:/Users/evija/anaconda3/python.exe" framework/_final_audit.py
+# 9. commit + push
+git add -A
+git commit -m "<correction summary>"
+git push origin main
+```
+
+This nine-step ritual is the entire "user added a correction, propagate it" loop.

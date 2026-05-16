@@ -57,6 +57,23 @@ SPY_TOP_SECTIONS = [
 # When a source header doesn't naturally match a skill name, we map it
 # explicitly. This is the authoritative mapping the audit uses.
 SECTION_SKILL_MAP: Dict[str, List[str]] = {
+    # NEW DSBench-template "Auditing & Forensics" top-level section + its
+    # four layer subsections, the cross-cutting tooling sub-section, the
+    # submission-archive contract sub-section, and the single-command refresh.
+    "Auditing & Forensics (project guardrails — read this BEFORE writing code)": [
+        "forensic-audit-pipeline", "explainability-audit-14-section"],
+    "Layer 1 — Section-coverage validator (`framework/validator.py`)": [
+        "forensic-audit-pipeline", "mlops-documentation"],
+    "Layer 2 — Ten-agent forensic-audit committee (`framework/forensic_audit.py`)": [
+        "forensic-audit-pipeline"],
+    "Layer 3 — 14-section explainability audit (per-task winner archive)": [
+        "explainability-audit-14-section", "winner-archive-protocol"],
+    "Layer 4 — Skill-pack coverage audit (`skills/autoresearch-pack/audit/audit_pack.py`)": [
+        "mlops-documentation"],
+    "Cross-cutting tooling": ["mlops-documentation"],
+    "Submission-archive contract (`submissions/dsbench_submission/<kind>/<slug>/`)": [
+        "winner-archive-protocol"],
+    "Single-command end-to-end refresh": ["mlops-documentation"],
     # autoresearch H2s
     "On Session Start (ALWAYS do this first)": ["session-startup"],
     "Hardware Constraints (MANDATORY": ["hardware-pinning"],
@@ -169,20 +186,26 @@ HEADER_RE = re.compile(r"^(#{1,3})\s+(.+?)\s*$")
 
 
 def parse_headers(path: Path) -> List[Tuple[int, str, str]]:
-    """Return list of (line_no, level_str, title) from H1..H3 headers."""
+    """Return list of (line_no, level_str, title) from H1..H3 headers.
+
+    Skips lines inside fenced code blocks (``` … ```) — bash-comment
+    pseudo-headers don't count.
+    """
     out = []
+    in_fence = False
     with path.open("r", encoding="utf-8") as fh:
         for i, line in enumerate(fh, start=1):
+            stripped = line.lstrip()
+            # Toggle on lines that open / close a fenced code block.
+            if stripped.startswith("```") or stripped.startswith("~~~"):
+                in_fence = not in_fence
+                continue
+            if in_fence:
+                continue
             m = HEADER_RE.match(line)
             if not m:
                 continue
             hashes, title = m.group(1), m.group(2).strip()
-            # Skip noisy code-block "## comments" inside bash blocks.
-            # We only count headers in the first column of markdown body.
-            # We use a heuristic: ignore lines whose title looks like a
-            # bash comment continuation (starts with digit + dot in some
-            # places we already see in spy file). We'll keep all and let
-            # the user override via SECTION_SKILL_MAP.
             out.append((i, hashes, title))
     return out
 
