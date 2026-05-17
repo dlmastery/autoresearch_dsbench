@@ -1,0 +1,55 @@
+{
+  "slug": "2015-round-2-more-money-please",
+  "challenge_dir": "C:\\Users\\evija\\dsbench\\_hf_dsbench\\data_analysis\\data\\00000012",
+  "extracted_questions": [
+    {
+      "name": "question1",
+      "chars": 175
+    },
+    {
+      "name": "question2",
+      "chars": 178
+    },
+    {
+      "name": "question3",
+      "chars": 143
+    },
+    {
+      "name": "question4",
+      "chars": 183
+    },
+    {
+      "name": "question5",
+      "chars": 160
+    },
+    {
+      "name": "question6",
+      "chars": 197
+    },
+    {
+      "name": "question7",
+      "chars": 159
+    },
+    {
+      "name": "question8",
+      "chars": 219
+    },
+    {
+      "name": "question9",
+      "chars": 226
+    },
+    {
+      "name": "question10",
+      "chars": 238
+    }
+  ],
+  "extracted_intro": true,
+  "excel_files": [
+    {
+      "file": "MO15-More-Money-Please-Data.xlsx",
+      "md_chars": 21943
+    }
+  ],
+  "errors": [],
+  "intro_chars": 4524
+}

@@ -1,0 +1,67 @@
+{
+  "slug": "2016-round-1-section-2-chip-off-the-old-block",
+  "challenge_dir": "C:\\Users\\evija\\dsbench\\_hf_dsbench\\data_analysis\\data\\00000001",
+  "extracted_questions": [
+    {
+      "name": "question6",
+      "chars": 116
+    },
+    {
+      "name": "question7",
+      "chars": 180
+    },
+    {
+      "name": "question8",
+      "chars": 138
+    },
+    {
+      "name": "question9",
+      "chars": 293
+    },
+    {
+      "name": "question10",
+      "chars": 262
+    },
+    {
+      "name": "question11",
+      "chars": 275
+    },
+    {
+      "name": "question12",
+      "chars": 178
+    },
+    {
+      "name": "question13",
+      "chars": 178
+    },
+    {
+      "name": "question14",
+      "chars": 181
+    },
+    {
+      "name": "question15",
+      "chars": 359
+    },
+    {
+      "name": "question16",
+      "chars": 325
+    },
+    {
+      "name": "question17",
+      "chars": 375
+    },
+    {
+      "name": "question18",
+      "chars": 349
+    }
+  ],
+  "extracted_intro": true,
+  "excel_files": [
+    {
+      "file": "MO16-Round-1-Sec-2-Chip-Off-The-Old-Block.xlsx",
+      "md_chars": 9894
+    }
+  ],
+  "errors": [],
+  "intro_chars": 4553
+}

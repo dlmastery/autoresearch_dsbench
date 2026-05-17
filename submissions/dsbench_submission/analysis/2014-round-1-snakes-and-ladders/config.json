@@ -1,16 +1,17 @@
 {
-  "experiment_num": 17,
+  "experiment_num": 26,
   "backbone": "excel_agent",
-  "description": "excel_agent iter 17/25: k-Nearest-Neighbour with k=3. 3-NN smooths the 1-NN decision boundary; textbook ",
+  "description": "excel_agent iter 26/25: Single-shot prompt: pose the question + options + intro/excel background to the ",
   "params": {
-    "classifier": "knn",
-    "knn_k": 3,
+    "classifier": "llm_modeloff",
+    "llm_style": "single_shot",
+    "llm_source_chars": 8000,
     "seed": 42
   },
   "metric": "exact_match_accuracy",
   "train_score": 1.0,
-  "val_score": 0.6655,
-  "composite": 0.6655,
+  "val_score": 0.7095843333333335,
+  "composite": 0.7095843333333335,
   "train_metrics": {
     "accuracy": 1.0,
     "f1": 1.0,
@@ -40,8 +41,8 @@
       ]
     ]
   },
-  "elapsed_sec": 0.09651350975036621,
-  "timestamp": "2026-05-16 05:38:08",
+  "elapsed_sec": 0.013000011444091797,
+  "timestamp": "2026-05-16 17:31:39",
   "task_slug": "2014-round-1-snakes-and-ladders",
   "uses_test_set": false
 }

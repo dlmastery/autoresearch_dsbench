@@ -1,0 +1,43 @@
+{
+  "slug": "2014-round-1-dealing-with-data",
+  "challenge_dir": "C:\\Users\\evija\\dsbench\\_hf_dsbench\\data_analysis\\data\\00000032",
+  "extracted_questions": [
+    {
+      "name": "question1",
+      "chars": 107
+    },
+    {
+      "name": "question2",
+      "chars": 121
+    },
+    {
+      "name": "question3",
+      "chars": 113
+    },
+    {
+      "name": "question4",
+      "chars": 151
+    },
+    {
+      "name": "question5",
+      "chars": 187
+    },
+    {
+      "name": "question6",
+      "chars": 186
+    },
+    {
+      "name": "question7",
+      "chars": 231
+    }
+  ],
+  "extracted_intro": true,
+  "excel_files": [
+    {
+      "file": "MO14-Round-1-Dealing-With-Data-Workbook.xlsx",
+      "md_chars": 3113
+    }
+  ],
+  "errors": [],
+  "intro_chars": 1545
+}

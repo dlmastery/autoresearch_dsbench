@@ -1,6 +1,6 @@
 # Forensic Audit — cat-in-the-dat
 
-_Generated 2026-05-16 05:41:23; kind=modeling._
+_Generated 2026-05-16 17:10:03; kind=modeling._
 
 > Conference-submission grade integrity report. Ten independent
 > audit agents (A-J) plus a committee verdict (Z). Each agent has a

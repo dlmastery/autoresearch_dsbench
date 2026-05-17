@@ -1,0 +1,59 @@
+{
+  "slug": "2017-round-2-late-again",
+  "challenge_dir": "C:\\Users\\evija\\dsbench\\_hf_dsbench\\data_analysis\\data\\00000013",
+  "extracted_questions": [
+    {
+      "name": "question14",
+      "chars": 259
+    },
+    {
+      "name": "question15",
+      "chars": 164
+    },
+    {
+      "name": "question16",
+      "chars": 268
+    },
+    {
+      "name": "question17",
+      "chars": 213
+    },
+    {
+      "name": "question18",
+      "chars": 212
+    },
+    {
+      "name": "question19",
+      "chars": 142
+    },
+    {
+      "name": "question20",
+      "chars": 162
+    },
+    {
+      "name": "question21",
+      "chars": 170
+    },
+    {
+      "name": "question22",
+      "chars": 321
+    },
+    {
+      "name": "question23",
+      "chars": 96
+    },
+    {
+      "name": "question24",
+      "chars": 147
+    }
+  ],
+  "extracted_intro": true,
+  "excel_files": [
+    {
+      "file": "MO17-Round-2-Section-2-Late-Again-Data (1).xlsx",
+      "md_chars": 9722
+    }
+  ],
+  "errors": [],
+  "intro_chars": 5777
+}

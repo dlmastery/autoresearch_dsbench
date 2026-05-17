@@ -1,0 +1,47 @@
+{
+  "slug": "2014-round-2-purple-city",
+  "challenge_dir": "C:\\Users\\evija\\dsbench\\_hf_dsbench\\data_analysis\\data\\00000011",
+  "extracted_questions": [
+    {
+      "name": "question1",
+      "chars": 209
+    },
+    {
+      "name": "question2",
+      "chars": 107
+    },
+    {
+      "name": "question3",
+      "chars": 123
+    },
+    {
+      "name": "question4",
+      "chars": 106
+    },
+    {
+      "name": "question5",
+      "chars": 115
+    },
+    {
+      "name": "question6",
+      "chars": 162
+    },
+    {
+      "name": "question7",
+      "chars": 270
+    },
+    {
+      "name": "question8",
+      "chars": 349
+    }
+  ],
+  "extracted_intro": true,
+  "excel_files": [
+    {
+      "file": "MO14-Purple-City.xlsx",
+      "md_chars": 9411
+    }
+  ],
+  "errors": [],
+  "intro_chars": 2209
+}

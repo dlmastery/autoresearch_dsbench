@@ -1,0 +1,95 @@
+{
+  "slug": "2012-round-2-find-that-error",
+  "challenge_dir": "C:\\Users\\evija\\dsbench\\_hf_dsbench\\data_analysis\\data\\00000043",
+  "extracted_questions": [
+    {
+      "name": "question1",
+      "chars": 154
+    },
+    {
+      "name": "question2",
+      "chars": 478
+    },
+    {
+      "name": "question3",
+      "chars": 115
+    },
+    {
+      "name": "question4",
+      "chars": 416
+    },
+    {
+      "name": "question5",
+      "chars": 146
+    },
+    {
+      "name": "question6",
+      "chars": 426
+    },
+    {
+      "name": "question7",
+      "chars": 127
+    },
+    {
+      "name": "question8",
+      "chars": 115
+    },
+    {
+      "name": "question9",
+      "chars": 128
+    },
+    {
+      "name": "question10",
+      "chars": 132
+    },
+    {
+      "name": "question11",
+      "chars": 132
+    },
+    {
+      "name": "question12",
+      "chars": 148
+    },
+    {
+      "name": "question13",
+      "chars": 197
+    },
+    {
+      "name": "question14",
+      "chars": 125
+    },
+    {
+      "name": "question15",
+      "chars": 243
+    },
+    {
+      "name": "question16",
+      "chars": 124
+    },
+    {
+      "name": "question17",
+      "chars": 125
+    },
+    {
+      "name": "question18",
+      "chars": 162
+    },
+    {
+      "name": "question19",
+      "chars": 97
+    },
+    {
+      "name": "question20",
+      "chars": 170
+    }
+  ],
+  "extracted_intro": true,
+  "excel_files": [
+    {
+      "file": "ModelOff-Find-That-Error-QUESTION-1.xlsx",
+      "md_chars": 17119
+    }
+  ],
+  "errors": [],
+  "intro_chars": 536
+}

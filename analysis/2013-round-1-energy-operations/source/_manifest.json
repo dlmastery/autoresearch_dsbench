@@ -1,0 +1,35 @@
+{
+  "slug": "2013-round-1-energy-operations",
+  "challenge_dir": "C:\\Users\\evija\\dsbench\\_hf_dsbench\\data_analysis\\data\\00000038",
+  "extracted_questions": [
+    {
+      "name": "question1",
+      "chars": 180
+    },
+    {
+      "name": "question2",
+      "chars": 159
+    },
+    {
+      "name": "question3",
+      "chars": 191
+    },
+    {
+      "name": "question4",
+      "chars": 143
+    },
+    {
+      "name": "question5",
+      "chars": 162
+    }
+  ],
+  "extracted_intro": true,
+  "excel_files": [
+    {
+      "file": "MO13-Energy-Operations-Workbook.xlsx",
+      "md_chars": 2826
+    }
+  ],
+  "errors": [],
+  "intro_chars": 4017
+}

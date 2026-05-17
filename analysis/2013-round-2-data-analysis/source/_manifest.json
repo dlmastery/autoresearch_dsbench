@@ -1,0 +1,79 @@
+{
+  "slug": "2013-round-2-data-analysis",
+  "challenge_dir": "C:\\Users\\evija\\dsbench\\_hf_dsbench\\data_analysis\\data\\00000034",
+  "extracted_questions": [
+    {
+      "name": "question1",
+      "chars": 183
+    },
+    {
+      "name": "question2",
+      "chars": 149
+    },
+    {
+      "name": "question3",
+      "chars": 227
+    },
+    {
+      "name": "question4",
+      "chars": 155
+    },
+    {
+      "name": "question5",
+      "chars": 115
+    },
+    {
+      "name": "question6",
+      "chars": 127
+    },
+    {
+      "name": "question7",
+      "chars": 139
+    },
+    {
+      "name": "question8",
+      "chars": 149
+    },
+    {
+      "name": "question9",
+      "chars": 279
+    },
+    {
+      "name": "question10",
+      "chars": 166
+    },
+    {
+      "name": "question11",
+      "chars": 327
+    },
+    {
+      "name": "question12",
+      "chars": 84
+    },
+    {
+      "name": "question13",
+      "chars": 157
+    },
+    {
+      "name": "question14",
+      "chars": 297
+    },
+    {
+      "name": "question15",
+      "chars": 300
+    },
+    {
+      "name": "question16",
+      "chars": 139
+    }
+  ],
+  "extracted_intro": true,
+  "excel_files": [
+    {
+      "file": "MO13-Data-Analysis-Data-Workbook.xlsx",
+      "md_chars": 8715
+    }
+  ],
+  "errors": [],
+  "intro_chars": 871
+}

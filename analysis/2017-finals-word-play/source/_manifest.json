@@ -1,0 +1,76 @@
+{
+  "slug": "2017-finals-word-play",
+  "challenge_dir": "C:\\Users\\evija\\dsbench\\_hf_dsbench\\data_analysis\\data\\00000009",
+  "extracted_questions": [
+    {
+      "name": "question1",
+      "chars": 136
+    },
+    {
+      "name": "question2",
+      "chars": 136
+    },
+    {
+      "name": "question3",
+      "chars": 136
+    },
+    {
+      "name": "question4",
+      "chars": 136
+    },
+    {
+      "name": "question5",
+      "chars": 203
+    },
+    {
+      "name": "question6",
+      "chars": 136
+    },
+    {
+      "name": "question7",
+      "chars": 136
+    },
+    {
+      "name": "question8",
+      "chars": 136
+    },
+    {
+      "name": "question9",
+      "chars": 137
+    },
+    {
+      "name": "question10",
+      "chars": 202
+    },
+    {
+      "name": "question11",
+      "chars": 138
+    },
+    {
+      "name": "question12",
+      "chars": 139
+    },
+    {
+      "name": "question13",
+      "chars": 138
+    },
+    {
+      "name": "question14",
+      "chars": 138
+    },
+    {
+      "name": "question15",
+      "chars": 212
+    }
+  ],
+  "extracted_intro": true,
+  "excel_files": [
+    {
+      "file": "MO2017-Finals-Sec-3-Word-Play (1).xlsb",
+      "md_chars": 0,
+      "note": "xlsb format \u2014 not parsed (no engine)"
+    }
+  ],
+  "errors": [],
+  "intro_chars": 4428
+}

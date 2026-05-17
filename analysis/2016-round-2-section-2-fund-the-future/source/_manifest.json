@@ -1,0 +1,55 @@
+{
+  "slug": "2016-round-2-section-2-fund-the-future",
+  "challenge_dir": "C:\\Users\\evija\\dsbench\\_hf_dsbench\\data_analysis\\data\\00000019",
+  "extracted_questions": [
+    {
+      "name": "question6",
+      "chars": 173
+    },
+    {
+      "name": "question7",
+      "chars": 223
+    },
+    {
+      "name": "question8",
+      "chars": 197
+    },
+    {
+      "name": "question9",
+      "chars": 166
+    },
+    {
+      "name": "question10",
+      "chars": 184
+    },
+    {
+      "name": "question11",
+      "chars": 163
+    },
+    {
+      "name": "question12",
+      "chars": 221
+    },
+    {
+      "name": "question13",
+      "chars": 438
+    },
+    {
+      "name": "question14",
+      "chars": 298
+    },
+    {
+      "name": "question15",
+      "chars": 335
+    }
+  ],
+  "extracted_intro": true,
+  "excel_files": [
+    {
+      "file": "MO16-Round-2-Sec-2-Fund-the-Future (2).xlsx",
+      "md_chars": 3121
+    }
+  ],
+  "errors": [],
+  "intro_chars": 6115
+}

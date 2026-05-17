@@ -1,0 +1,55 @@
+{
+  "slug": "2016-round-1-section-4-going-around-in-circles",
+  "challenge_dir": "C:\\Users\\evija\\dsbench\\_hf_dsbench\\data_analysis\\data\\00000022",
+  "extracted_questions": [
+    {
+      "name": "question31",
+      "chars": 239
+    },
+    {
+      "name": "question32",
+      "chars": 267
+    },
+    {
+      "name": "question33",
+      "chars": 340
+    },
+    {
+      "name": "question34",
+      "chars": 275
+    },
+    {
+      "name": "question35",
+      "chars": 274
+    },
+    {
+      "name": "question36",
+      "chars": 225
+    },
+    {
+      "name": "question37",
+      "chars": 344
+    },
+    {
+      "name": "question38",
+      "chars": 362
+    },
+    {
+      "name": "question39",
+      "chars": 268
+    },
+    {
+      "name": "question40",
+      "chars": 466
+    }
+  ],
+  "extracted_intro": true,
+  "excel_files": [
+    {
+      "file": "MO16-Round-1-Sec-4-Going-Around-in-Circles (1) (1).xlsx",
+      "md_chars": 7873
+    }
+  ],
+  "errors": [],
+  "intro_chars": 7500
+}

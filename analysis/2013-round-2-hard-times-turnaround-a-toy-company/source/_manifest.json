@@ -1,0 +1,55 @@
+{
+  "slug": "2013-round-2-hard-times-turnaround-a-toy-company",
+  "challenge_dir": "C:\\Users\\evija\\dsbench\\_hf_dsbench\\data_analysis\\data\\00000035",
+  "extracted_questions": [
+    {
+      "name": "question1",
+      "chars": 123
+    },
+    {
+      "name": "question2",
+      "chars": 135
+    },
+    {
+      "name": "question3",
+      "chars": 149
+    },
+    {
+      "name": "question4",
+      "chars": 161
+    },
+    {
+      "name": "question5",
+      "chars": 133
+    },
+    {
+      "name": "question6",
+      "chars": 125
+    },
+    {
+      "name": "question7",
+      "chars": 296
+    },
+    {
+      "name": "question8",
+      "chars": 168
+    },
+    {
+      "name": "question9",
+      "chars": 622
+    }
+  ],
+  "extracted_intro": true,
+  "excel_files": [
+    {
+      "file": "MO13-Hard-Times-Assumptions.xlsx",
+      "md_chars": 7328
+    },
+    {
+      "file": "mock_data.xlsx",
+      "md_chars": 2515
+    }
+  ],
+  "errors": [],
+  "intro_chars": 937
+}

@@ -1,7 +1,7 @@
 {
   "task": "2014-round-1-dealing-with-data",
   "kind": "analysis",
-  "generated_at": "2026-05-16 05:43:01",
+  "generated_at": "2026-05-16 17:11:46",
   "agents": [
     {
       "agent": "A_split_hash",
@@ -66,7 +66,7 @@
       "examples_val_gt_train_es": [],
       "examples_big_jumps": [
         {
-          "experiment_num": 10,
+          "experiment_num": 15,
           "from": 0.02,
           "to": 0.3544444444444444
         }

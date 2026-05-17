@@ -1,0 +1,70 @@
+{
+  "slug": "2013-round-2-theory-and-practice",
+  "challenge_dir": "C:\\Users\\evija\\dsbench\\_hf_dsbench\\data_analysis\\data\\00000036",
+  "extracted_questions": [
+    {
+      "name": "question1",
+      "chars": 246
+    },
+    {
+      "name": "question2",
+      "chars": 289
+    },
+    {
+      "name": "question3",
+      "chars": 398
+    },
+    {
+      "name": "question4",
+      "chars": 688
+    },
+    {
+      "name": "question5",
+      "chars": 301
+    },
+    {
+      "name": "question6",
+      "chars": 277
+    },
+    {
+      "name": "question7",
+      "chars": 361
+    },
+    {
+      "name": "question8",
+      "chars": 305
+    },
+    {
+      "name": "question9",
+      "chars": 116
+    },
+    {
+      "name": "question10",
+      "chars": 183
+    },
+    {
+      "name": "question11",
+      "chars": 425
+    },
+    {
+      "name": "question12",
+      "chars": 247
+    },
+    {
+      "name": "question13",
+      "chars": 183
+    },
+    {
+      "name": "question14",
+      "chars": 113
+    },
+    {
+      "name": "question15",
+      "chars": 345
+    }
+  ],
+  "extracted_intro": true,
+  "excel_files": [],
+  "errors": [],
+  "intro_chars": 0
+}

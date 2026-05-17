@@ -1,0 +1,55 @@
+{
+  "slug": "2015-round-one-options-to-call",
+  "challenge_dir": "C:\\Users\\evija\\dsbench\\_hf_dsbench\\data_analysis\\data\\00000028",
+  "extracted_questions": [
+    {
+      "name": "question1",
+      "chars": 187
+    },
+    {
+      "name": "question2",
+      "chars": 188
+    },
+    {
+      "name": "question3",
+      "chars": 165
+    },
+    {
+      "name": "question4",
+      "chars": 189
+    },
+    {
+      "name": "question5",
+      "chars": 118
+    },
+    {
+      "name": "question6",
+      "chars": 241
+    },
+    {
+      "name": "question7",
+      "chars": 214
+    },
+    {
+      "name": "question8",
+      "chars": 171
+    },
+    {
+      "name": "question9",
+      "chars": 202
+    },
+    {
+      "name": "question10",
+      "chars": 420
+    }
+  ],
+  "extracted_intro": true,
+  "excel_files": [
+    {
+      "file": "MO15-Round-1-Sec-4-Options-to-Call-Data.xlsx",
+      "md_chars": 2822
+    }
+  ],
+  "errors": [],
+  "intro_chars": 3475
+}

@@ -1,0 +1,30 @@
+{
+  "slug": "2012-finals-investment-property",
+  "challenge_dir": "C:\\Users\\evija\\dsbench\\_hf_dsbench\\data_analysis\\data\\00000041",
+  "extracted_questions": [
+    {
+      "name": "question1",
+      "chars": 143
+    },
+    {
+      "name": "question2",
+      "chars": 146
+    },
+    {
+      "name": "question3",
+      "chars": 164
+    },
+    {
+      "name": "question4",
+      "chars": 205
+    },
+    {
+      "name": "question5",
+      "chars": 116
+    }
+  ],
+  "extracted_intro": true,
+  "excel_files": [],
+  "errors": [],
+  "intro_chars": 2361
+}

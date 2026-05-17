@@ -524,8 +524,9 @@
     "status": "miss",
     "champion_backbone": "excel_agent",
     "champion_params": {
-      "classifier": "knn",
-      "knn_k": 3,
+      "classifier": "llm_modeloff",
+      "llm_style": "single_shot",
+      "llm_source_chars": 8000,
       "seed": 42
     },
     "test_score": 0.0,

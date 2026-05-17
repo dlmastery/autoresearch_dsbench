@@ -1,6 +1,6 @@
 # Forensic Audit — 2017-finals-word-play
 
-_Generated 2026-05-16 05:43:02; kind=analysis._
+_Generated 2026-05-16 17:11:47; kind=analysis._
 
 > Conference-submission grade integrity report. Ten independent
 > audit agents (A-J) plus a committee verdict (Z). Each agent has a
@@ -56,7 +56,7 @@ All agents on synthetic-data splits; under real Kaggle/Modeloff data the tempora
 
 - **ok:** True
 - **n_val_gt_train_susp:** 0
-- **n_val_gt_train_es_expected:** 13
+- **n_val_gt_train_es_expected:** 15
 - **n_perfect_val_score:** 0
 - **n_big_jumps_gt_0.3:** 0
 - **examples_val_gt_train_susp:** `[]`

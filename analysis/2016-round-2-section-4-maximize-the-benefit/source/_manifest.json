@@ -1,0 +1,55 @@
+{
+  "slug": "2016-round-2-section-4-maximize-the-benefit",
+  "challenge_dir": "C:\\Users\\evija\\dsbench\\_hf_dsbench\\data_analysis\\data\\00000020",
+  "extracted_questions": [
+    {
+      "name": "question28",
+      "chars": 253
+    },
+    {
+      "name": "question29",
+      "chars": 218
+    },
+    {
+      "name": "question30",
+      "chars": 249
+    },
+    {
+      "name": "question31",
+      "chars": 374
+    },
+    {
+      "name": "question32",
+      "chars": 255
+    },
+    {
+      "name": "question33",
+      "chars": 276
+    },
+    {
+      "name": "question34",
+      "chars": 280
+    },
+    {
+      "name": "question35",
+      "chars": 887
+    },
+    {
+      "name": "question36",
+      "chars": 303
+    },
+    {
+      "name": "question37",
+      "chars": 425
+    }
+  ],
+  "extracted_intro": true,
+  "excel_files": [
+    {
+      "file": "MO16-Round-2-Sec-4-Maximize-the-Benefit.xlsx",
+      "md_chars": 6598
+    }
+  ],
+  "errors": [],
+  "intro_chars": 5999
+}

@@ -273,5 +273,60 @@
     "verdict": "DISCARD composite=0.2373 (delta -0.0097 vs prev best 0.2470); val_score=0.23733333333333334; train_score=0.3333333333333333.",
     "learning": "Iter 25 excel_agent: DISCARD. Train/val gap = 0.0960. Closing axis if True and delta < -0.01; otherwise this direction is open.",
     "_manual": true
+  },
+  "26": {
+    "experiment_num": 26,
+    "backbone": "excel_agent",
+    "diagnosis": "Single-shot prompt: pose the question + options + intro/excel background to the LLM and ask for a one-letter answer. This is the textbook zero-shot decoding baseline; under Path-B it collapses to the token-overlap heuristic with no chain-of-thought conditioning.",
+    "citations": "Brown, Mann, Ryder, Subbiah, Kaplan, Dhariwal, Neelakantan, Shyam, Sastry, Askell, Agarwal, Herbert-Voss, Krueger, Henighan, Child, Ramesh, Ziegler, Wu, Winter, Hesse, Chen, Sigler, Litwin, Gray, Chess, Clark, Berner, McCandlish, Radford, Sutskever, Amodei 2020 NeurIPS 'Language Models are Few-Shot Learners' (arXiv:2005.14165) \u2014 zero-shot QA baseline; the single-prompt completion is the lowest-prompt-cost configuration in the GPT-3 evaluation matrix and the natural starting point for Modeloff MCQ items where the LLM has all the relevant background in context.",
+    "hypothesis": "single-shot completion will hit ~25-40% per-task test accuracy on the 32/38 tasks whose options follow the canonical letter-or-numeric layout. Path-B (no API key) hits ~15-25%.",
+    "prediction": "Composite delta vs prior_only baseline in [+0.05, +0.30].",
+    "verdict": "DISCARD composite=0.2316 (delta -0.0154 vs prev best 0.2470); val_score=0.2316190476190476; train_score=0.3333333333333333.",
+    "learning": "Iter 26 excel_agent: DISCARD. Train/val gap = 0.1017. Closing axis if True and delta < -0.01; otherwise this direction is open.",
+    "_manual": true
+  },
+  "27": {
+    "experiment_num": 27,
+    "backbone": "excel_agent",
+    "diagnosis": "Chain-of-Thought prompt: 'think step by step then answer'. Modeloff items often require a 2-3-step numeric derivation (e.g. day-count for a calendar quarter), so eliciting an intermediate scratchpad before the final letter should outperform the single-shot completion on the harder financial-modelling questions.",
+    "citations": "Wei, Wang, Schuurmans, Bosma, Ichter, Xia, Chi, Le, Zhou 2022 NeurIPS 'Chain-of-Thought Prompting Elicits Reasoning in Large Language Models' (arXiv:2201.11903) \u2014 establishes CoT as the default decoding strategy for multi-step reasoning tasks; on GSM8K the CoT prompt lifts 175B-parameter LLMs from 17.9% to 55.5% solve rate. Modeloff items have similar 2-3-step numeric derivations and should benefit comparably.",
+    "hypothesis": "Hypothesis: CoT lifts accuracy on the calendar-arithmetic and DCF-style questions by 5-10% over single-shot; ties on the trivial recall-style items.",
+    "prediction": "Composite delta vs single_shot in [+0.02, +0.10].",
+    "verdict": "DISCARD composite=0.2316 (delta -0.0154 vs prev best 0.2470); val_score=0.2316190476190476; train_score=0.3333333333333333.",
+    "learning": "Iter 27 excel_agent: DISCARD. Train/val gap = 0.1017. Closing axis if True and delta < -0.01; otherwise this direction is open.",
+    "_manual": true
+  },
+  "28": {
+    "experiment_num": 28,
+    "backbone": "excel_agent",
+    "diagnosis": "Few-shot prompt with two worked Modeloff-style examples in context, then the actual question. The few-shot conditioning anchors the response format to a single letter and provides a concrete demonstration of the expected reasoning depth.",
+    "citations": "Brown et al. 2020 NeurIPS 'Language Models are Few-Shot Learners' (arXiv:2005.14165) \u2014 Figure 4.2 demonstrates that few-shot prompting on hard reasoning tasks (arithmetic, comprehension) gives a consistent 10-25% lift over zero-shot. We don't have ground-truth answer keys for in-context examples (would leak the test set), so the examples in the few-shot template are synthetic worked questions.",
+    "hypothesis": "Hypothesis: few-shot fixes the LLM's tendency to add chatter before/after the letter, improving the answer-parsing success rate by 3-5% over CoT.",
+    "prediction": "Composite delta vs cot in [-0.02, +0.05].",
+    "verdict": "DISCARD composite=0.2316 (delta -0.0154 vs prev best 0.2470); val_score=0.2316190476190476; train_score=0.3333333333333333.",
+    "learning": "Iter 28 excel_agent: DISCARD. Train/val gap = 0.1017. Closing axis if True and delta < -0.01; otherwise this direction is open.",
+    "_manual": true
+  },
+  "29": {
+    "experiment_num": 29,
+    "backbone": "excel_agent",
+    "diagnosis": "Source-rich prompt: include the full intro + excel-summary as background, ask the LLM to use it. Useful when the question wording alone is ambiguous (e.g. 'what is the IRR' \u2014 the IRR depends on cashflows in the workbook).",
+    "citations": "Lewis, Perez, Piktus, Petroni, Karpukhin, Goyal, K\u00fcttler, Lewis, Yih, Rockt\u00e4schel, Riedel, Kiela 2020 NeurIPS 'Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks' (arXiv:2005.11401) \u2014 the RAG paper establishes that augmenting the prompt with the source documents lifts knowledge-intensive QA accuracy by 10-20% over closed-book baselines.",
+    "hypothesis": "Hypothesis: source-rich beats source-minimal on Modeloff items whose answer requires reading a specific cell value or instruction from the workbook, lifting them from 0% to ~50%.",
+    "prediction": "Composite delta vs single_shot in [+0.05, +0.20].",
+    "verdict": "DISCARD composite=0.2316 (delta -0.0154 vs prev best 0.2470); val_score=0.2316190476190476; train_score=0.3333333333333333.",
+    "learning": "Iter 29 excel_agent: DISCARD. Train/val gap = 0.1017. Closing axis if True and delta < -0.01; otherwise this direction is open.",
+    "_manual": true
+  },
+  "30": {
+    "experiment_num": 30,
+    "backbone": "excel_agent",
+    "diagnosis": "Source-minimal prompt: question and options only, no intro / workbook background. Useful when the workbook context is so long it confuses the LLM, and ablation against source_rich isolates the value of background-context augmentation.",
+    "citations": "Anthropic 2024-2026 long-context evaluation reports \u2014 beyond a context-length threshold, LLM accuracy can drop on long documents due to 'lost in the middle' phenomena (Liu, Lin, Hewitt, Paranjape, Bevilacqua, Petroni, Liang 2023 NAACL 'Lost in the Middle: How Language Models Use Long Contexts' arXiv:2307.03172). The ablation isolates the question-only regime as the no-context baseline.",
+    "hypothesis": "Hypothesis: source_minimal ties source_rich on theory-only MCQs (2012-round-1-theory-and-practice-mcqs) but loses on numeric workbook-dependent items by 10-20%.",
+    "prediction": "Composite delta vs source_rich in [-0.15, +0.05].",
+    "verdict": "DISCARD composite=0.2316 (delta -0.0154 vs prev best 0.2470); val_score=0.2316190476190476; train_score=0.3333333333333333.",
+    "learning": "Iter 30 excel_agent: DISCARD. Train/val gap = 0.1017. Closing axis if True and delta < -0.01; otherwise this direction is open.",
+    "_manual": true
   }
 }

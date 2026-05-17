@@ -1,7 +1,7 @@
 {
   "task": "2012-finals-investment-property",
   "kind": "analysis",
-  "generated_at": "2026-05-16 05:43:00",
+  "generated_at": "2026-05-16 17:11:46",
   "agents": [
     {
       "agent": "A_split_hash",
@@ -64,12 +64,12 @@
       "n_big_jumps_gt_0.3": 1,
       "examples_val_gt_train_susp": [],
       "examples_val_gt_train_es": [
-        2,
-        3
+        7,
+        8
       ],
       "examples_big_jumps": [
         {
-          "experiment_num": 10,
+          "experiment_num": 15,
           "from": 0.02,
           "to": 0.35444444444444445
         }

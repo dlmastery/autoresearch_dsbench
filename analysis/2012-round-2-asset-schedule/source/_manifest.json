@@ -1,0 +1,30 @@
+{
+  "slug": "2012-round-2-asset-schedule",
+  "challenge_dir": "C:\\Users\\evija\\dsbench\\_hf_dsbench\\data_analysis\\data\\00000014",
+  "extracted_questions": [
+    {
+      "name": "question1",
+      "chars": 121
+    },
+    {
+      "name": "question2",
+      "chars": 120
+    },
+    {
+      "name": "question3",
+      "chars": 112
+    },
+    {
+      "name": "question4",
+      "chars": 138
+    },
+    {
+      "name": "question5",
+      "chars": 130
+    }
+  ],
+  "extracted_intro": true,
+  "excel_files": [],
+  "errors": [],
+  "intro_chars": 1464
+}

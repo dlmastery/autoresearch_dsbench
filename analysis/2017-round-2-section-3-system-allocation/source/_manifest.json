@@ -1,0 +1,51 @@
+{
+  "slug": "2017-round-2-section-3-system-allocation",
+  "challenge_dir": "C:\\Users\\evija\\dsbench\\_hf_dsbench\\data_analysis\\data\\00000008",
+  "extracted_questions": [
+    {
+      "name": "question26",
+      "chars": 277
+    },
+    {
+      "name": "question27",
+      "chars": 197
+    },
+    {
+      "name": "question28",
+      "chars": 184
+    },
+    {
+      "name": "question29",
+      "chars": 207
+    },
+    {
+      "name": "question30",
+      "chars": 195
+    },
+    {
+      "name": "question31",
+      "chars": 209
+    },
+    {
+      "name": "question32",
+      "chars": 209
+    },
+    {
+      "name": "question33",
+      "chars": 226
+    },
+    {
+      "name": "question34",
+      "chars": 220
+    }
+  ],
+  "extracted_intro": true,
+  "excel_files": [
+    {
+      "file": "MO17-Round-2-Section-3-System-Allocation-Workbook.xlsx",
+      "md_chars": 4779
+    }
+  ],
+  "errors": [],
+  "intro_chars": 5086
+}

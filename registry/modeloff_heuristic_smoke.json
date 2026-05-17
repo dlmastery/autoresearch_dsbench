@@ -1,0 +1,294 @@
+{
+  "per_task": [
+    {
+      "slug": "2016-round-1-section-2-chip-off-the-old-block",
+      "n": 13,
+      "letter_n": 11,
+      "letter_correct": 2,
+      "overall_correct": 2,
+      "letter_acc": 0.18181818181818182
+    },
+    {
+      "slug": "2012-round-1-theory-and-practice-mcqs",
+      "n": 25,
+      "letter_n": 25,
+      "letter_correct": 5,
+      "overall_correct": 5,
+      "letter_acc": 0.2
+    },
+    {
+      "slug": "2012-round-2-monte-carlo",
+      "n": 3,
+      "letter_n": 3,
+      "letter_correct": 0,
+      "overall_correct": 0,
+      "letter_acc": 0.0
+    },
+    {
+      "slug": "2017-round-1-go-with-the-flow",
+      "n": 10,
+      "letter_n": 8,
+      "letter_correct": 1,
+      "overall_correct": 1,
+      "letter_acc": 0.125
+    },
+    {
+      "slug": "2016-round-1-section-3-roll-the-dice",
+      "n": 10,
+      "letter_n": 8,
+      "letter_correct": 0,
+      "overall_correct": 0,
+      "letter_acc": 0.0
+    },
+    {
+      "slug": "2016-round-2-section-3-tally-up",
+      "n": 10,
+      "letter_n": 8,
+      "letter_correct": 1,
+      "overall_correct": 1,
+      "letter_acc": 0.125
+    },
+    {
+      "slug": "2017-finals-funding-fun",
+      "n": 23,
+      "letter_n": 3,
+      "letter_correct": 0,
+      "overall_correct": 0,
+      "letter_acc": 0.0
+    },
+    {
+      "slug": "2017-round-2-section-3-system-allocation",
+      "n": 9,
+      "letter_n": 7,
+      "letter_correct": 1,
+      "overall_correct": 1,
+      "letter_acc": 0.14285714285714285
+    },
+    {
+      "slug": "2017-finals-word-play",
+      "n": 15,
+      "letter_n": 0,
+      "letter_correct": 0,
+      "overall_correct": 0,
+      "letter_acc": 0.0
+    },
+    {
+      "slug": "2017-finals-ladder-up",
+      "n": 20,
+      "letter_n": 7,
+      "letter_correct": 0,
+      "overall_correct": 0,
+      "letter_acc": 0.0
+    },
+    {
+      "slug": "2014-round-2-purple-city",
+      "n": 8,
+      "letter_n": 8,
+      "letter_correct": 2,
+      "overall_correct": 2,
+      "letter_acc": 0.25
+    },
+    {
+      "slug": "2015-round-2-more-money-please",
+      "n": 10,
+      "letter_n": 10,
+      "letter_correct": 3,
+      "overall_correct": 3,
+      "letter_acc": 0.3
+    },
+    {
+      "slug": "2017-round-2-late-again",
+      "n": 11,
+      "letter_n": 8,
+      "letter_correct": 0,
+      "overall_correct": 0,
+      "letter_acc": 0.0
+    },
+    {
+      "slug": "2012-round-2-asset-schedule",
+      "n": 5,
+      "letter_n": 5,
+      "letter_correct": 2,
+      "overall_correct": 2,
+      "letter_acc": 0.4
+    },
+    {
+      "slug": "2017-round-2-section-1-collect-the-cash",
+      "n": 12,
+      "letter_n": 10,
+      "letter_correct": 1,
+      "overall_correct": 1,
+      "letter_acc": 0.1
+    },
+    {
+      "slug": "2017-round-1-when-it-rains-it-pours",
+      "n": 11,
+      "letter_n": 11,
+      "letter_correct": 2,
+      "overall_correct": 2,
+      "letter_acc": 0.18181818181818182
+    },
+    {
+      "slug": "2017-finals-castles-in-the-air",
+      "n": 12,
+      "letter_n": 9,
+      "letter_correct": 1,
+      "overall_correct": 1,
+      "letter_acc": 0.1111111111111111
+    },
+    {
+      "slug": "2016-round-2-section-2-fund-the-future",
+      "n": 10,
+      "letter_n": 8,
+      "letter_correct": 0,
+      "overall_correct": 0,
+      "letter_acc": 0.0
+    },
+    {
+      "slug": "2016-round-2-section-4-maximize-the-benefit",
+      "n": 10,
+      "letter_n": 8,
+      "letter_correct": 1,
+      "overall_correct": 1,
+      "letter_acc": 0.125
+    },
+    {
+      "slug": "2016-round-1-section-4-going-around-in-circles",
+      "n": 10,
+      "letter_n": 7,
+      "letter_correct": 1,
+      "overall_correct": 1,
+      "letter_acc": 0.14285714285714285
+    },
+    {
+      "slug": "2015-round-1-tax",
+      "n": 10,
+      "letter_n": 10,
+      "letter_correct": 2,
+      "overall_correct": 2,
+      "letter_acc": 0.2
+    },
+    {
+      "slug": "2015-round-2-the-price-is-right",
+      "n": 11,
+      "letter_n": 11,
+      "letter_correct": 2,
+      "overall_correct": 2,
+      "letter_acc": 0.18181818181818182
+    },
+    {
+      "slug": "2015-round-1-bread-and-butter",
+      "n": 15,
+      "letter_n": 15,
+      "letter_correct": 1,
+      "overall_correct": 1,
+      "letter_acc": 0.06666666666666667
+    },
+    {
+      "slug": "2015-round-one-options-to-call",
+      "n": 10,
+      "letter_n": 10,
+      "letter_correct": 1,
+      "overall_correct": 1,
+      "letter_acc": 0.1
+    },
+    {
+      "slug": "2014-round-2-stepping-up",
+      "n": 10,
+      "letter_n": 10,
+      "letter_correct": 1,
+      "overall_correct": 1,
+      "letter_acc": 0.1
+    },
+    {
+      "slug": "2014-round-2-time-is-money",
+      "n": 7,
+      "letter_n": 7,
+      "letter_correct": 2,
+      "overall_correct": 2,
+      "letter_acc": 0.2857142857142857
+    },
+    {
+      "slug": "2014-round-1-snakes-and-ladders",
+      "n": 5,
+      "letter_n": 5,
+      "letter_correct": 2,
+      "overall_correct": 2,
+      "letter_acc": 0.4
+    },
+    {
+      "slug": "2014-round-1-dealing-with-data",
+      "n": 7,
+      "letter_n": 7,
+      "letter_correct": 3,
+      "overall_correct": 3,
+      "letter_acc": 0.42857142857142855
+    },
+    {
+      "slug": "2014-round-1-precise-debt-modeling",
+      "n": 8,
+      "letter_n": 8,
+      "letter_correct": 2,
+      "overall_correct": 2,
+      "letter_acc": 0.25
+    },
+    {
+      "slug": "2013-round-2-data-analysis",
+      "n": 16,
+      "letter_n": 16,
+      "letter_correct": 6,
+      "overall_correct": 6,
+      "letter_acc": 0.375
+    },
+    {
+      "slug": "2013-round-2-hard-times-turnaround-a-toy-company",
+      "n": 9,
+      "letter_n": 9,
+      "letter_correct": 4,
+      "overall_correct": 4,
+      "letter_acc": 0.4444444444444444
+    },
+    {
+      "slug": "2013-round-1-energy-operations",
+      "n": 5,
+      "letter_n": 5,
+      "letter_correct": 3,
+      "overall_correct": 3,
+      "letter_acc": 0.6
+    },
+    {
+      "slug": "2013-round-1-acquisition-financing",
+      "n": 6,
+      "letter_n": 6,
+      "letter_correct": 1,
+      "overall_correct": 1,
+      "letter_acc": 0.16666666666666666
+    },
+    {
+      "slug": "2012-finals-investment-property",
+      "n": 5,
+      "letter_n": 5,
+      "letter_correct": 3,
+      "overall_correct": 3,
+      "letter_acc": 0.6
+    },
+    {
+      "slug": "2012-finals-excel-knowledge-test",
+      "n": 50,
+      "letter_n": 0,
+      "letter_correct": 0,
+      "overall_correct": 0,
+      "letter_acc": 0.0
+    },
+    {
+      "slug": "2012-round-2-find-that-error",
+      "n": 20,
+      "letter_n": 20,
+      "letter_correct": 6,
+      "overall_correct": 6,
+      "letter_acc": 0.3
+    }
+  ],
+  "pooled_letter_correct": 62,
+  "pooled_letter_total": 308
+}

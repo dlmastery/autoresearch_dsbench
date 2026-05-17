@@ -2,10 +2,10 @@
   {
     "task": "2012-finals-excel-knowledge-test",
     "status": "ok",
-    "elapsed_sec": 24.719658613204956,
+    "elapsed_sec": 25.25652813911438,
     "hill": {
       "task": "2012-finals-excel-knowledge-test",
-      "n_experiments": 25,
+      "n_experiments": 30,
       "best": {
         "experiment_num": 1,
         "backbone": "excel_agent",
@@ -1203,8 +1203,8 @@
             ]
           ]
         },
-        "elapsed_sec": 0.16299843788146973,
-        "timestamp": "2026-05-16 05:37:13",
+        "elapsed_sec": 2.741178035736084,
+        "timestamp": "2026-05-16 17:30:38",
         "task_slug": "2012-finals-excel-knowledge-test",
         "uses_test_set": false
       }
@@ -1215,7 +1215,7 @@
       "missing_sections": [],
       "warnings": [],
       "ok": true,
-      "n_experiments": 25
+      "n_experiments": 30
     },
     "final": {
       "task": "2012-finals-excel-knowledge-test",
@@ -1382,16 +1382,16 @@
       "dsbench_baseline": 0.3412,
       "delta_vs_dsbench": -0.3412,
       "beats_dsbench": false,
-      "timestamp": "2026-05-16 05:37:35"
+      "timestamp": "2026-05-16 17:31:00"
     }
   },
   {
     "task": "2012-finals-investment-property",
     "status": "ok",
-    "elapsed_sec": 1.3932347297668457,
+    "elapsed_sec": 1.6230850219726562,
     "hill": {
       "task": "2012-finals-investment-property",
-      "n_experiments": 25,
+      "n_experiments": 30,
       "best": {
         "experiment_num": 21,
         "backbone": "excel_agent",
@@ -1441,8 +1441,8 @@
             ]
           ]
         },
-        "elapsed_sec": 0.059542179107666016,
-        "timestamp": "2026-05-16 05:37:36",
+        "elapsed_sec": 0.06071591377258301,
+        "timestamp": "2026-05-16 17:31:01",
         "task_slug": "2012-finals-investment-property",
         "uses_test_set": false
       }
@@ -1453,7 +1453,7 @@
       "missing_sections": [],
       "warnings": [],
       "ok": true,
-      "n_experiments": 25
+      "n_experiments": 30
     },
     "final": {
       "task": "2012-finals-investment-property",
@@ -1480,16 +1480,16 @@
       "dsbench_baseline": 0.3412,
       "delta_vs_dsbench": 0.6588,
       "beats_dsbench": true,
-      "timestamp": "2026-05-16 05:37:36"
+      "timestamp": "2026-05-16 17:31:02"
     }
   },
   {
     "task": "2012-round-1-theory-and-practice-mcqs",
     "status": "ok",
-    "elapsed_sec": 5.351525783538818,
+    "elapsed_sec": 6.054356336593628,
     "hill": {
       "task": "2012-round-1-theory-and-practice-mcqs",
-      "n_experiments": 25,
+      "n_experiments": 30,
       "best": {
         "experiment_num": 21,
         "backbone": "excel_agent",
@@ -1562,8 +1562,8 @@
             ]
           ]
         },
-        "elapsed_sec": 0.9934506416320801,
-        "timestamp": "2026-05-16 05:37:41",
+        "elapsed_sec": 1.1929585933685303,
+        "timestamp": "2026-05-16 17:31:07",
         "task_slug": "2012-round-1-theory-and-practice-mcqs",
         "uses_test_set": false
       }
@@ -1574,7 +1574,7 @@
       "missing_sections": [],
       "warnings": [],
       "ok": true,
-      "n_experiments": 25
+      "n_experiments": 30
     },
     "final": {
       "task": "2012-round-1-theory-and-practice-mcqs",
@@ -1613,16 +1613,16 @@
       "dsbench_baseline": 0.3412,
       "delta_vs_dsbench": 0.05880000000000002,
       "beats_dsbench": true,
-      "timestamp": "2026-05-16 05:37:42"
+      "timestamp": "2026-05-16 17:31:08"
     }
   },
   {
     "task": "2012-round-2-asset-schedule",
     "status": "ok",
-    "elapsed_sec": 1.2851617336273193,
+    "elapsed_sec": 1.712270736694336,
     "hill": {
       "task": "2012-round-2-asset-schedule",
-      "n_experiments": 25,
+      "n_experiments": 30,
       "best": {
         "experiment_num": 1,
         "backbone": "excel_agent",
@@ -1672,8 +1672,8 @@
             ]
           ]
         },
-        "elapsed_sec": 0.0030040740966796875,
-        "timestamp": "2026-05-16 05:37:42",
+        "elapsed_sec": 0.00298309326171875,
+        "timestamp": "2026-05-16 17:31:08",
         "task_slug": "2012-round-2-asset-schedule",
         "uses_test_set": false
       }
@@ -1684,7 +1684,7 @@
       "missing_sections": [],
       "warnings": [],
       "ok": true,
-      "n_experiments": 25
+      "n_experiments": 30
     },
     "final": {
       "task": "2012-round-2-asset-schedule",
@@ -1716,16 +1716,16 @@
       "dsbench_baseline": 0.3412,
       "delta_vs_dsbench": -0.3412,
       "beats_dsbench": false,
-      "timestamp": "2026-05-16 05:37:43"
+      "timestamp": "2026-05-16 17:31:10"
     }
   },
   {
     "task": "2012-round-2-find-that-error",
     "status": "ok",
-    "elapsed_sec": 4.029803037643433,
+    "elapsed_sec": 4.895586013793945,
     "hill": {
       "task": "2012-round-2-find-that-error",
-      "n_experiments": 25,
+      "n_experiments": 30,
       "best": {
         "experiment_num": 21,
         "backbone": "excel_agent",
@@ -1789,8 +1789,8 @@
             ]
           ]
         },
-        "elapsed_sec": 0.8239181041717529,
-        "timestamp": "2026-05-16 05:37:47",
+        "elapsed_sec": 0.8292675018310547,
+        "timestamp": "2026-05-16 17:31:14",
         "task_slug": "2012-round-2-find-that-error",
         "uses_test_set": false
       }
@@ -1801,7 +1801,7 @@
       "missing_sections": [],
       "warnings": [],
       "ok": true,
-      "n_experiments": 25
+      "n_experiments": 30
     },
     "final": {
       "task": "2012-round-2-find-that-error",
@@ -1849,16 +1849,16 @@
       "dsbench_baseline": 0.3412,
       "delta_vs_dsbench": -0.0912,
       "beats_dsbench": false,
-      "timestamp": "2026-05-16 05:37:47"
+      "timestamp": "2026-05-16 17:31:15"
     }
   },
   {
     "task": "2012-round-2-monte-carlo",
     "status": "ok",
-    "elapsed_sec": 1.0731899738311768,
+    "elapsed_sec": 1.3010962009429932,
     "hill": {
       "task": "2012-round-2-monte-carlo",
-      "n_experiments": 25,
+      "n_experiments": 30,
       "best": {
         "experiment_num": 2,
         "backbone": "excel_agent",
@@ -1901,8 +1901,8 @@
             ]
           ]
         },
-        "elapsed_sec": 0.0039975643157958984,
-        "timestamp": "2026-05-16 05:37:47",
+        "elapsed_sec": 0.003011941909790039,
+        "timestamp": "2026-05-16 17:31:15",
         "task_slug": "2012-round-2-monte-carlo",
         "uses_test_set": false
       }
@@ -1913,7 +1913,7 @@
       "missing_sections": [],
       "warnings": [],
       "ok": true,
-      "n_experiments": 25
+      "n_experiments": 30
     },
     "final": {
       "task": "2012-round-2-monte-carlo",
@@ -1945,16 +1945,16 @@
       "dsbench_baseline": 0.3412,
       "delta_vs_dsbench": -0.3412,
       "beats_dsbench": false,
-      "timestamp": "2026-05-16 05:37:48"
+      "timestamp": "2026-05-16 17:31:16"
     }
   },
   {
     "task": "2013-round-1-acquisition-financing",
     "status": "ok",
-    "elapsed_sec": 1.412665605545044,
+    "elapsed_sec": 1.6475436687469482,
     "hill": {
       "task": "2013-round-1-acquisition-financing",
-      "n_experiments": 25,
+      "n_experiments": 30,
       "best": {
         "experiment_num": 17,
         "backbone": "excel_agent",
@@ -2002,8 +2002,8 @@
             ]
           ]
         },
-        "elapsed_sec": 0.14551854133605957,
-        "timestamp": "2026-05-16 05:37:49",
+        "elapsed_sec": 0.08828139305114746,
+        "timestamp": "2026-05-16 17:31:17",
         "task_slug": "2013-round-1-acquisition-financing",
         "uses_test_set": false
       }
@@ -2014,7 +2014,7 @@
       "missing_sections": [],
       "warnings": [],
       "ok": true,
-      "n_experiments": 25
+      "n_experiments": 30
     },
     "final": {
       "task": "2013-round-1-acquisition-financing",
@@ -2041,16 +2041,16 @@
       "dsbench_baseline": 0.3412,
       "delta_vs_dsbench": 0.6588,
       "beats_dsbench": true,
-      "timestamp": "2026-05-16 05:37:50"
+      "timestamp": "2026-05-16 17:31:18"
     }
   },
   {
     "task": "2013-round-1-energy-operations",
     "status": "ok",
-    "elapsed_sec": 1.2991669178009033,
+    "elapsed_sec": 1.4869716167449951,
     "hill": {
       "task": "2013-round-1-energy-operations",
-      "n_experiments": 25,
+      "n_experiments": 30,
       "best": {
         "experiment_num": 1,
         "backbone": "excel_agent",
@@ -2098,8 +2098,8 @@
             ]
           ]
         },
-        "elapsed_sec": 0.002999544143676758,
-        "timestamp": "2026-05-16 05:37:50",
+        "elapsed_sec": 0.00391697883605957,
+        "timestamp": "2026-05-16 17:31:18",
         "task_slug": "2013-round-1-energy-operations",
         "uses_test_set": false
       }
@@ -2110,7 +2110,7 @@
       "missing_sections": [],
       "warnings": [],
       "ok": true,
-      "n_experiments": 25
+      "n_experiments": 30
     },
     "final": {
       "task": "2013-round-1-energy-operations",
@@ -2137,16 +2137,16 @@
       "dsbench_baseline": 0.3412,
       "delta_vs_dsbench": 0.6588,
       "beats_dsbench": true,
-      "timestamp": "2026-05-16 05:37:51"
+      "timestamp": "2026-05-16 17:31:19"
     }
   },
   {
     "task": "2013-round-1-theory-and-practice",
     "status": "ok",
-    "elapsed_sec": 4.4088685512542725,
+    "elapsed_sec": 4.55171799659729,
     "hill": {
       "task": "2013-round-1-theory-and-practice",
-      "n_experiments": 25,
+      "n_experiments": 30,
       "best": {
         "experiment_num": 3,
         "backbone": "excel_agent",
@@ -2217,8 +2217,8 @@
             ]
           ]
         },
-        "elapsed_sec": 0.0029993057250976562,
-        "timestamp": "2026-05-16 05:37:51",
+        "elapsed_sec": 0.003997802734375,
+        "timestamp": "2026-05-16 17:31:19",
         "task_slug": "2013-round-1-theory-and-practice",
         "uses_test_set": false
       }
@@ -2229,7 +2229,7 @@
       "missing_sections": [],
       "warnings": [],
       "ok": true,
-      "n_experiments": 25
+      "n_experiments": 30
     },
     "final": {
       "task": "2013-round-1-theory-and-practice",
@@ -2268,16 +2268,16 @@
       "dsbench_baseline": 0.3412,
       "delta_vs_dsbench": 0.1588,
       "beats_dsbench": true,
-      "timestamp": "2026-05-16 05:37:55"
+      "timestamp": "2026-05-16 17:31:24"
     }
   },
   {
     "task": "2013-round-2-data-analysis",
     "status": "ok",
-    "elapsed_sec": 2.449735641479492,
+    "elapsed_sec": 2.9929401874542236,
     "hill": {
       "task": "2013-round-2-data-analysis",
-      "n_experiments": 25,
+      "n_experiments": 30,
       "best": {
         "experiment_num": 17,
         "backbone": "excel_agent",
@@ -2332,8 +2332,8 @@
             ]
           ]
         },
-        "elapsed_sec": 0.2766871452331543,
-        "timestamp": "2026-05-16 05:37:56",
+        "elapsed_sec": 0.2392261028289795,
+        "timestamp": "2026-05-16 17:31:24",
         "task_slug": "2013-round-2-data-analysis",
         "uses_test_set": false
       }
@@ -2344,7 +2344,7 @@
       "missing_sections": [],
       "warnings": [],
       "ok": true,
-      "n_experiments": 25
+      "n_experiments": 30
     },
     "final": {
       "task": "2013-round-2-data-analysis",
@@ -2392,16 +2392,16 @@
       "dsbench_baseline": 0.3412,
       "delta_vs_dsbench": -0.3412,
       "beats_dsbench": false,
-      "timestamp": "2026-05-16 05:37:58"
+      "timestamp": "2026-05-16 17:31:27"
     }
   },
   {
     "task": "2013-round-2-hard-times-turnaround-a-toy-company",
     "status": "ok",
-    "elapsed_sec": 1.8843441009521484,
+    "elapsed_sec": 2.0832386016845703,
     "hill": {
       "task": "2013-round-2-hard-times-turnaround-a-toy-company",
-      "n_experiments": 25,
+      "n_experiments": 30,
       "best": {
         "experiment_num": 21,
         "backbone": "excel_agent",
@@ -2451,8 +2451,8 @@
             ]
           ]
         },
-        "elapsed_sec": 0.23028993606567383,
-        "timestamp": "2026-05-16 05:37:59",
+        "elapsed_sec": 0.22520947456359863,
+        "timestamp": "2026-05-16 17:31:28",
         "task_slug": "2013-round-2-hard-times-turnaround-a-toy-company",
         "uses_test_set": false
       }
@@ -2463,7 +2463,7 @@
       "missing_sections": [],
       "warnings": [],
       "ok": true,
-      "n_experiments": 25
+      "n_experiments": 30
     },
     "final": {
       "task": "2013-round-2-hard-times-turnaround-a-toy-company",
@@ -2495,16 +2495,16 @@
       "dsbench_baseline": 0.3412,
       "delta_vs_dsbench": -0.3412,
       "beats_dsbench": false,
-      "timestamp": "2026-05-16 05:38:00"
+      "timestamp": "2026-05-16 17:31:29"
     }
   },
   {
     "task": "2013-round-2-theory-and-practice",
     "status": "ok",
-    "elapsed_sec": 3.601966619491577,
+    "elapsed_sec": 4.100403070449829,
     "hill": {
       "task": "2013-round-2-theory-and-practice",
-      "n_experiments": 25,
+      "n_experiments": 30,
       "best": {
         "experiment_num": 1,
         "backbone": "excel_agent",
@@ -2575,8 +2575,8 @@
             ]
           ]
         },
-        "elapsed_sec": 0.0029969215393066406,
-        "timestamp": "2026-05-16 05:38:00",
+        "elapsed_sec": 0.00399470329284668,
+        "timestamp": "2026-05-16 17:31:29",
         "task_slug": "2013-round-2-theory-and-practice",
         "uses_test_set": false
       }
@@ -2587,7 +2587,7 @@
       "missing_sections": [],
       "warnings": [],
       "ok": true,
-      "n_experiments": 25
+      "n_experiments": 30
     },
     "final": {
       "task": "2013-round-2-theory-and-practice",
@@ -2626,16 +2626,16 @@
       "dsbench_baseline": 0.3412,
       "delta_vs_dsbench": -0.3412,
       "beats_dsbench": false,
-      "timestamp": "2026-05-16 05:38:03"
+      "timestamp": "2026-05-16 17:31:33"
     }
   },
   {
     "task": "2014-round-1-dealing-with-data",
     "status": "ok",
-    "elapsed_sec": 1.7988379001617432,
+    "elapsed_sec": 2.4354124069213867,
     "hill": {
       "task": "2014-round-1-dealing-with-data",
-      "n_experiments": 25,
+      "n_experiments": 30,
       "best": {
         "experiment_num": 18,
         "backbone": "excel_agent",
@@ -2694,8 +2694,8 @@
             ]
           ]
         },
-        "elapsed_sec": 0.10752224922180176,
-        "timestamp": "2026-05-16 05:38:04",
+        "elapsed_sec": 0.11681890487670898,
+        "timestamp": "2026-05-16 17:31:34",
         "task_slug": "2014-round-1-dealing-with-data",
         "uses_test_set": false
       }
@@ -2706,7 +2706,7 @@
       "missing_sections": [],
       "warnings": [],
       "ok": true,
-      "n_experiments": 25
+      "n_experiments": 30
     },
     "final": {
       "task": "2014-round-1-dealing-with-data",
@@ -2738,16 +2738,16 @@
       "dsbench_baseline": 0.3412,
       "delta_vs_dsbench": -0.3412,
       "beats_dsbench": false,
-      "timestamp": "2026-05-16 05:38:05"
+      "timestamp": "2026-05-16 17:31:35"
     }
   },
   {
     "task": "2014-round-1-precise-debt-modeling",
     "status": "ok",
-    "elapsed_sec": 2.2241666316986084,
+    "elapsed_sec": 2.4196584224700928,
     "hill": {
       "task": "2014-round-1-precise-debt-modeling",
-      "n_experiments": 25,
+      "n_experiments": 30,
       "best": {
         "experiment_num": 17,
         "backbone": "excel_agent",
@@ -2811,8 +2811,8 @@
             ]
           ]
         },
-        "elapsed_sec": 0.16526269912719727,
-        "timestamp": "2026-05-16 05:38:06",
+        "elapsed_sec": 0.17207098007202148,
+        "timestamp": "2026-05-16 17:31:36",
         "task_slug": "2014-round-1-precise-debt-modeling",
         "uses_test_set": false
       }
@@ -2823,7 +2823,7 @@
       "missing_sections": [],
       "warnings": [],
       "ok": true,
-      "n_experiments": 25
+      "n_experiments": 30
     },
     "final": {
       "task": "2014-round-1-precise-debt-modeling",
@@ -2850,29 +2850,30 @@
       "dsbench_baseline": 0.3412,
       "delta_vs_dsbench": 0.6588,
       "beats_dsbench": true,
-      "timestamp": "2026-05-16 05:38:07"
+      "timestamp": "2026-05-16 17:31:38"
     }
   },
   {
     "task": "2014-round-1-snakes-and-ladders",
     "status": "ok",
-    "elapsed_sec": 1.210669755935669,
+    "elapsed_sec": 1.4948863983154297,
     "hill": {
       "task": "2014-round-1-snakes-and-ladders",
-      "n_experiments": 25,
+      "n_experiments": 30,
       "best": {
-        "experiment_num": 17,
+        "experiment_num": 26,
         "backbone": "excel_agent",
-        "description": "excel_agent iter 17/25: k-Nearest-Neighbour with k=3. 3-NN smooths the 1-NN decision boundary; textbook ",
+        "description": "excel_agent iter 26/25: Single-shot prompt: pose the question + options + intro/excel background to the ",
         "params": {
-          "classifier": "knn",
-          "knn_k": 3,
+          "classifier": "llm_modeloff",
+          "llm_style": "single_shot",
+          "llm_source_chars": 8000,
           "seed": 42
         },
         "metric": "exact_match_accuracy",
         "train_score": 1.0,
-        "val_score": 0.6655,
-        "composite": 0.6655,
+        "val_score": 0.7095843333333335,
+        "composite": 0.7095843333333335,
         "train_metrics": {
           "accuracy": 1.0,
           "f1": 1.0,
@@ -2902,8 +2903,8 @@
             ]
           ]
         },
-        "elapsed_sec": 0.09651350975036621,
-        "timestamp": "2026-05-16 05:38:08",
+        "elapsed_sec": 0.013000011444091797,
+        "timestamp": "2026-05-16 17:31:39",
         "task_slug": "2014-round-1-snakes-and-ladders",
         "uses_test_set": false
       }
@@ -2914,7 +2915,7 @@
       "missing_sections": [],
       "warnings": [],
       "ok": true,
-      "n_experiments": 25
+      "n_experiments": 30
     },
     "final": {
       "task": "2014-round-1-snakes-and-ladders",
@@ -2922,8 +2923,8 @@
       "problem_type": "qa_excel",
       "metric": "exact_match_accuracy",
       "champion_backbone": "excel_agent",
-      "champion_composite": 0.6655,
-      "champion_val": 0.6655,
+      "champion_composite": 0.7095843333333335,
+      "champion_val": 0.7095843333333335,
       "champion_train": 1.0,
       "test_score": 0.0,
       "test_metrics": {
@@ -2946,16 +2947,16 @@
       "dsbench_baseline": 0.3412,
       "delta_vs_dsbench": -0.3412,
       "beats_dsbench": false,
-      "timestamp": "2026-05-16 05:38:08"
+      "timestamp": "2026-05-16 17:31:39"
     }
   },
   {
     "task": "2014-round-2-purple-city",
     "status": "ok",
-    "elapsed_sec": 1.938093662261963,
+    "elapsed_sec": 2.372758626937866,
     "hill": {
       "task": "2014-round-2-purple-city",
-      "n_experiments": 25,
+      "n_experiments": 30,
       "best": {
         "experiment_num": 1,
         "backbone": "excel_agent",
@@ -3014,8 +3015,8 @@
             ]
           ]
         },
-        "elapsed_sec": 0.0029964447021484375,
-        "timestamp": "2026-05-16 05:38:08",
+        "elapsed_sec": 0.0029952526092529297,
+        "timestamp": "2026-05-16 17:31:39",
         "task_slug": "2014-round-2-purple-city",
         "uses_test_set": false
       }
@@ -3026,7 +3027,7 @@
       "missing_sections": [],
       "warnings": [],
       "ok": true,
-      "n_experiments": 25
+      "n_experiments": 30
     },
     "final": {
       "task": "2014-round-2-purple-city",
@@ -3058,16 +3059,16 @@
       "dsbench_baseline": 0.3412,
       "delta_vs_dsbench": -0.3412,
       "beats_dsbench": false,
-      "timestamp": "2026-05-16 05:38:10"
+      "timestamp": "2026-05-16 17:31:41"
     }
   },
   {
     "task": "2014-round-2-stepping-up",
     "status": "ok",
-    "elapsed_sec": 2.7336554527282715,
+    "elapsed_sec": 3.3965554237365723,
     "hill": {
       "task": "2014-round-2-stepping-up",
-      "n_experiments": 25,
+      "n_experiments": 30,
       "best": {
         "experiment_num": 1,
         "backbone": "excel_agent",
@@ -3138,8 +3139,8 @@
             ]
           ]
         },
-        "elapsed_sec": 0.00394439697265625,
-        "timestamp": "2026-05-16 05:38:10",
+        "elapsed_sec": 0.0035300254821777344,
+        "timestamp": "2026-05-16 17:31:41",
         "task_slug": "2014-round-2-stepping-up",
         "uses_test_set": false
       }
@@ -3150,7 +3151,7 @@
       "missing_sections": [],
       "warnings": [],
       "ok": true,
-      "n_experiments": 25
+      "n_experiments": 30
     },
     "final": {
       "task": "2014-round-2-stepping-up",
@@ -3189,16 +3190,16 @@
       "dsbench_baseline": 0.3412,
       "delta_vs_dsbench": -0.3412,
       "beats_dsbench": false,
-      "timestamp": "2026-05-16 05:38:13"
+      "timestamp": "2026-05-16 17:31:45"
     }
   },
   {
     "task": "2014-round-2-time-is-money",
     "status": "ok",
-    "elapsed_sec": 1.9799778461456299,
+    "elapsed_sec": 2.2972161769866943,
     "hill": {
       "task": "2014-round-2-time-is-money",
-      "n_experiments": 25,
+      "n_experiments": 30,
       "best": {
         "experiment_num": 1,
         "backbone": "excel_agent",
@@ -3257,8 +3258,8 @@
             ]
           ]
         },
-        "elapsed_sec": 0.0030002593994140625,
-        "timestamp": "2026-05-16 05:38:13",
+        "elapsed_sec": 0.003002643585205078,
+        "timestamp": "2026-05-16 17:31:45",
         "task_slug": "2014-round-2-time-is-money",
         "uses_test_set": false
       }
@@ -3269,7 +3270,7 @@
       "missing_sections": [],
       "warnings": [],
       "ok": true,
-      "n_experiments": 25
+      "n_experiments": 30
     },
     "final": {
       "task": "2014-round-2-time-is-money",
@@ -3301,16 +3302,16 @@
       "dsbench_baseline": 0.3412,
       "delta_vs_dsbench": -0.3412,
       "beats_dsbench": false,
-      "timestamp": "2026-05-16 05:38:15"
+      "timestamp": "2026-05-16 17:31:47"
     }
   },
   {
     "task": "2015-round-1-bread-and-butter",
     "status": "ok",
-    "elapsed_sec": 4.590991020202637,
+    "elapsed_sec": 5.7110185623168945,
     "hill": {
       "task": "2015-round-1-bread-and-butter",
-      "n_experiments": 25,
+      "n_experiments": 30,
       "best": {
         "experiment_num": 2,
         "backbone": "excel_agent",
@@ -3401,8 +3402,8 @@
             ]
           ]
         },
-        "elapsed_sec": 0.0030837059020996094,
-        "timestamp": "2026-05-16 05:38:15",
+        "elapsed_sec": 0.002997159957885742,
+        "timestamp": "2026-05-16 17:31:47",
         "task_slug": "2015-round-1-bread-and-butter",
         "uses_test_set": false
       }
@@ -3413,7 +3414,7 @@
       "missing_sections": [],
       "warnings": [],
       "ok": true,
-      "n_experiments": 25
+      "n_experiments": 30
     },
     "final": {
       "task": "2015-round-1-bread-and-butter",
@@ -3452,16 +3453,16 @@
       "dsbench_baseline": 0.3412,
       "delta_vs_dsbench": -0.3412,
       "beats_dsbench": false,
-      "timestamp": "2026-05-16 05:38:20"
+      "timestamp": "2026-05-16 17:31:53"
     }
   },
   {
     "task": "2015-round-1-tax",
     "status": "ok",
-    "elapsed_sec": 2.1566381454467773,
+    "elapsed_sec": 2.6414031982421875,
     "hill": {
       "task": "2015-round-1-tax",
-      "n_experiments": 25,
+      "n_experiments": 30,
       "best": {
         "experiment_num": 20,
         "backbone": "excel_agent",
@@ -3533,8 +3534,8 @@
             ]
           ]
         },
-        "elapsed_sec": 0.4286355972290039,
-        "timestamp": "2026-05-16 05:38:21",
+        "elapsed_sec": 0.4875962734222412,
+        "timestamp": "2026-05-16 17:31:55",
         "task_slug": "2015-round-1-tax",
         "uses_test_set": false
       }
@@ -3545,7 +3546,7 @@
       "missing_sections": [],
       "warnings": [],
       "ok": true,
-      "n_experiments": 25
+      "n_experiments": 30
     },
     "final": {
       "task": "2015-round-1-tax",
@@ -3593,16 +3594,16 @@
       "dsbench_baseline": 0.3412,
       "delta_vs_dsbench": -0.3412,
       "beats_dsbench": false,
-      "timestamp": "2026-05-16 05:38:22"
+      "timestamp": "2026-05-16 17:31:55"
     }
   },
   {
     "task": "2015-round-2-more-money-please",
     "status": "ok",
-    "elapsed_sec": 2.081009864807129,
+    "elapsed_sec": 2.9593939781188965,
     "hill": {
       "task": "2015-round-2-more-money-please",
-      "n_experiments": 25,
+      "n_experiments": 30,
       "best": {
         "experiment_num": 17,
         "backbone": "excel_agent",
@@ -3664,8 +3665,8 @@
             ]
           ]
         },
-        "elapsed_sec": 0.18911218643188477,
-        "timestamp": "2026-05-16 05:38:23",
+        "elapsed_sec": 0.15383148193359375,
+        "timestamp": "2026-05-16 17:31:56",
         "task_slug": "2015-round-2-more-money-please",
         "uses_test_set": false
       }
@@ -3676,7 +3677,7 @@
       "missing_sections": [],
       "warnings": [],
       "ok": true,
-      "n_experiments": 25
+      "n_experiments": 30
     },
     "final": {
       "task": "2015-round-2-more-money-please",
@@ -3715,16 +3716,16 @@
       "dsbench_baseline": 0.3412,
       "delta_vs_dsbench": 0.1588,
       "beats_dsbench": true,
-      "timestamp": "2026-05-16 05:38:24"
+      "timestamp": "2026-05-16 17:31:58"
     }
   },
   {
     "task": "2015-round-2-the-price-is-right",
     "status": "ok",
-    "elapsed_sec": 3.4844810962677,
+    "elapsed_sec": 3.9402618408203125,
     "hill": {
       "task": "2015-round-2-the-price-is-right",
-      "n_experiments": 25,
+      "n_experiments": 30,
       "best": {
         "experiment_num": 21,
         "backbone": "excel_agent",
@@ -3801,8 +3802,8 @@
             ]
           ]
         },
-        "elapsed_sec": 0.8681933879852295,
-        "timestamp": "2026-05-16 05:38:27",
+        "elapsed_sec": 0.9239201545715332,
+        "timestamp": "2026-05-16 17:32:02",
         "task_slug": "2015-round-2-the-price-is-right",
         "uses_test_set": false
       }
@@ -3813,7 +3814,7 @@
       "missing_sections": [],
       "warnings": [],
       "ok": true,
-      "n_experiments": 25
+      "n_experiments": 30
     },
     "final": {
       "task": "2015-round-2-the-price-is-right",
@@ -3852,16 +3853,16 @@
       "dsbench_baseline": 0.3412,
       "delta_vs_dsbench": -0.3412,
       "beats_dsbench": false,
-      "timestamp": "2026-05-16 05:38:27"
+      "timestamp": "2026-05-16 17:32:02"
     }
   },
   {
     "task": "2015-round-one-options-to-call",
     "status": "ok",
-    "elapsed_sec": 2.9080755710601807,
+    "elapsed_sec": 3.343942642211914,
     "hill": {
       "task": "2015-round-one-options-to-call",
-      "n_experiments": 25,
+      "n_experiments": 30,
       "best": {
         "experiment_num": 3,
         "backbone": "excel_agent",
@@ -3936,8 +3937,8 @@
             ]
           ]
         },
-        "elapsed_sec": 0.0029976367950439453,
-        "timestamp": "2026-05-16 05:38:28",
+        "elapsed_sec": 0.003087759017944336,
+        "timestamp": "2026-05-16 17:32:03",
         "task_slug": "2015-round-one-options-to-call",
         "uses_test_set": false
       }
@@ -3948,7 +3949,7 @@
       "missing_sections": [],
       "warnings": [],
       "ok": true,
-      "n_experiments": 25
+      "n_experiments": 30
     },
     "final": {
       "task": "2015-round-one-options-to-call",
@@ -3987,16 +3988,16 @@
       "dsbench_baseline": 0.3412,
       "delta_vs_dsbench": -0.3412,
       "beats_dsbench": false,
-      "timestamp": "2026-05-16 05:38:30"
+      "timestamp": "2026-05-16 17:32:06"
     }
   },
   {
     "task": "2016-round-1-section-2-chip-off-the-old-block",
     "status": "ok",
-    "elapsed_sec": 4.626766204833984,
+    "elapsed_sec": 5.166564464569092,
     "hill": {
       "task": "2016-round-1-section-2-chip-off-the-old-block",
-      "n_experiments": 25,
+      "n_experiments": 30,
       "best": {
         "experiment_num": 21,
         "backbone": "excel_agent",
@@ -4101,8 +4102,8 @@
             ]
           ]
         },
-        "elapsed_sec": 1.465714454650879,
-        "timestamp": "2026-05-16 05:38:35",
+        "elapsed_sec": 1.5786192417144775,
+        "timestamp": "2026-05-16 17:32:10",
         "task_slug": "2016-round-1-section-2-chip-off-the-old-block",
         "uses_test_set": false
       }
@@ -4113,7 +4114,7 @@
       "missing_sections": [],
       "warnings": [],
       "ok": true,
-      "n_experiments": 25
+      "n_experiments": 30
     },
     "final": {
       "task": "2016-round-1-section-2-chip-off-the-old-block",
@@ -4152,16 +4153,16 @@
       "dsbench_baseline": 0.3412,
       "delta_vs_dsbench": -0.3412,
       "beats_dsbench": false,
-      "timestamp": "2026-05-16 05:38:35"
+      "timestamp": "2026-05-16 17:32:11"
     }
   },
   {
     "task": "2016-round-1-section-3-roll-the-dice",
     "status": "ok",
-    "elapsed_sec": 3.297354221343994,
+    "elapsed_sec": 3.576162099838257,
     "hill": {
       "task": "2016-round-1-section-3-roll-the-dice",
-      "n_experiments": 25,
+      "n_experiments": 30,
       "best": {
         "experiment_num": 2,
         "backbone": "excel_agent",
@@ -4236,8 +4237,8 @@
             ]
           ]
         },
-        "elapsed_sec": 0.003002166748046875,
-        "timestamp": "2026-05-16 05:38:35",
+        "elapsed_sec": 0.0030002593994140625,
+        "timestamp": "2026-05-16 17:32:11",
         "task_slug": "2016-round-1-section-3-roll-the-dice",
         "uses_test_set": false
       }
@@ -4248,7 +4249,7 @@
       "missing_sections": [],
       "warnings": [],
       "ok": true,
-      "n_experiments": 25
+      "n_experiments": 30
     },
     "final": {
       "task": "2016-round-1-section-3-roll-the-dice",
@@ -4287,16 +4288,16 @@
       "dsbench_baseline": 0.3412,
       "delta_vs_dsbench": -0.3412,
       "beats_dsbench": false,
-      "timestamp": "2026-05-16 05:38:38"
+      "timestamp": "2026-05-16 17:32:14"
     }
   },
   {
     "task": "2016-round-1-section-4-going-around-in-circles",
     "status": "ok",
-    "elapsed_sec": 2.984196186065674,
+    "elapsed_sec": 3.257359027862549,
     "hill": {
       "task": "2016-round-1-section-4-going-around-in-circles",
-      "n_experiments": 25,
+      "n_experiments": 30,
       "best": {
         "experiment_num": 21,
         "backbone": "excel_agent",
@@ -4369,8 +4370,8 @@
             ]
           ]
         },
-        "elapsed_sec": 0.4454352855682373,
-        "timestamp": "2026-05-16 05:38:41",
+        "elapsed_sec": 0.4756624698638916,
+        "timestamp": "2026-05-16 17:32:17",
         "task_slug": "2016-round-1-section-4-going-around-in-circles",
         "uses_test_set": false
       }
@@ -4381,7 +4382,7 @@
       "missing_sections": [],
       "warnings": [],
       "ok": true,
-      "n_experiments": 25
+      "n_experiments": 30
     },
     "final": {
       "task": "2016-round-1-section-4-going-around-in-circles",
@@ -4420,16 +4421,16 @@
       "dsbench_baseline": 0.3412,
       "delta_vs_dsbench": -0.3412,
       "beats_dsbench": false,
-      "timestamp": "2026-05-16 05:38:41"
+      "timestamp": "2026-05-16 17:32:18"
     }
   },
   {
     "task": "2016-round-2-section-2-fund-the-future",
     "status": "ok",
-    "elapsed_sec": 3.2917320728302,
+    "elapsed_sec": 3.476623058319092,
     "hill": {
       "task": "2016-round-2-section-2-fund-the-future",
-      "n_experiments": 25,
+      "n_experiments": 30,
       "best": {
         "experiment_num": 3,
         "backbone": "excel_agent",
@@ -4524,8 +4525,8 @@
             ]
           ]
         },
-        "elapsed_sec": 0.003001689910888672,
-        "timestamp": "2026-05-16 05:38:41",
+        "elapsed_sec": 0.003983974456787109,
+        "timestamp": "2026-05-16 17:32:18",
         "task_slug": "2016-round-2-section-2-fund-the-future",
         "uses_test_set": false
       }
@@ -4536,7 +4537,7 @@
       "missing_sections": [],
       "warnings": [],
       "ok": true,
-      "n_experiments": 25
+      "n_experiments": 30
     },
     "final": {
       "task": "2016-round-2-section-2-fund-the-future",
@@ -4575,16 +4576,16 @@
       "dsbench_baseline": 0.3412,
       "delta_vs_dsbench": -0.3412,
       "beats_dsbench": false,
-      "timestamp": "2026-05-16 05:38:45"
+      "timestamp": "2026-05-16 17:32:21"
     }
   },
   {
     "task": "2016-round-2-section-3-tally-up",
     "status": "ok",
-    "elapsed_sec": 3.473165512084961,
+    "elapsed_sec": 3.64870548248291,
     "hill": {
       "task": "2016-round-2-section-3-tally-up",
-      "n_experiments": 25,
+      "n_experiments": 30,
       "best": {
         "experiment_num": 22,
         "backbone": "excel_agent",
@@ -4665,8 +4666,8 @@
             ]
           ]
         },
-        "elapsed_sec": 0.02402973175048828,
-        "timestamp": "2026-05-16 05:38:48",
+        "elapsed_sec": 0.029082059860229492,
+        "timestamp": "2026-05-16 17:32:24",
         "task_slug": "2016-round-2-section-3-tally-up",
         "uses_test_set": false
       }
@@ -4677,7 +4678,7 @@
       "missing_sections": [],
       "warnings": [],
       "ok": true,
-      "n_experiments": 25
+      "n_experiments": 30
     },
     "final": {
       "task": "2016-round-2-section-3-tally-up",
@@ -4716,16 +4717,16 @@
       "dsbench_baseline": 0.3412,
       "delta_vs_dsbench": -0.3412,
       "beats_dsbench": false,
-      "timestamp": "2026-05-16 05:38:48"
+      "timestamp": "2026-05-16 17:32:25"
     }
   },
   {
     "task": "2016-round-2-section-4-maximize-the-benefit",
     "status": "ok",
-    "elapsed_sec": 2.8762435913085938,
+    "elapsed_sec": 3.675499439239502,
     "hill": {
       "task": "2016-round-2-section-4-maximize-the-benefit",
-      "n_experiments": 25,
+      "n_experiments": 30,
       "best": {
         "experiment_num": 1,
         "backbone": "excel_agent",
@@ -4820,8 +4821,8 @@
             ]
           ]
         },
-        "elapsed_sec": 0.00400090217590332,
-        "timestamp": "2026-05-16 05:38:48",
+        "elapsed_sec": 0.0029990673065185547,
+        "timestamp": "2026-05-16 17:32:25",
         "task_slug": "2016-round-2-section-4-maximize-the-benefit",
         "uses_test_set": false
       }
@@ -4832,7 +4833,7 @@
       "missing_sections": [],
       "warnings": [],
       "ok": true,
-      "n_experiments": 25
+      "n_experiments": 30
     },
     "final": {
       "task": "2016-round-2-section-4-maximize-the-benefit",
@@ -4871,16 +4872,16 @@
       "dsbench_baseline": 0.3412,
       "delta_vs_dsbench": -0.3412,
       "beats_dsbench": false,
-      "timestamp": "2026-05-16 05:38:51"
+      "timestamp": "2026-05-16 17:32:29"
     }
   },
   {
     "task": "2017-finals-castles-in-the-air",
     "status": "ok",
-    "elapsed_sec": 3.8010661602020264,
+    "elapsed_sec": 4.370303153991699,
     "hill": {
       "task": "2017-finals-castles-in-the-air",
-      "n_experiments": 25,
+      "n_experiments": 30,
       "best": {
         "experiment_num": 22,
         "backbone": "excel_agent",
@@ -4950,8 +4951,8 @@
             ]
           ]
         },
-        "elapsed_sec": 0.026997089385986328,
-        "timestamp": "2026-05-16 05:38:55",
+        "elapsed_sec": 0.032006025314331055,
+        "timestamp": "2026-05-16 17:32:33",
         "task_slug": "2017-finals-castles-in-the-air",
         "uses_test_set": false
       }
@@ -4962,7 +4963,7 @@
       "missing_sections": [],
       "warnings": [],
       "ok": true,
-      "n_experiments": 25
+      "n_experiments": 30
     },
     "final": {
       "task": "2017-finals-castles-in-the-air",
@@ -5001,16 +5002,16 @@
       "dsbench_baseline": 0.3412,
       "delta_vs_dsbench": -0.3412,
       "beats_dsbench": false,
-      "timestamp": "2026-05-16 05:38:55"
+      "timestamp": "2026-05-16 17:32:33"
     }
   },
   {
     "task": "2017-finals-funding-fun",
     "status": "ok",
-    "elapsed_sec": 7.476001501083374,
+    "elapsed_sec": 9.079483985900879,
     "hill": {
       "task": "2017-finals-funding-fun",
-      "n_experiments": 25,
+      "n_experiments": 30,
       "best": {
         "experiment_num": 3,
         "backbone": "excel_agent",
@@ -5332,8 +5333,8 @@
             ]
           ]
         },
-        "elapsed_sec": 0.003994464874267578,
-        "timestamp": "2026-05-16 05:38:55",
+        "elapsed_sec": 0.003999948501586914,
+        "timestamp": "2026-05-16 17:32:33",
         "task_slug": "2017-finals-funding-fun",
         "uses_test_set": false
       }
@@ -5344,7 +5345,7 @@
       "missing_sections": [],
       "warnings": [],
       "ok": true,
-      "n_experiments": 25
+      "n_experiments": 30
     },
     "final": {
       "task": "2017-finals-funding-fun",
@@ -5403,16 +5404,16 @@
       "dsbench_baseline": 0.3412,
       "delta_vs_dsbench": -0.3412,
       "beats_dsbench": false,
-      "timestamp": "2026-05-16 05:39:02"
+      "timestamp": "2026-05-16 17:32:42"
     }
   },
   {
     "task": "2017-finals-ladder-up",
     "status": "ok",
-    "elapsed_sec": 6.45279598236084,
+    "elapsed_sec": 7.812934875488281,
     "hill": {
       "task": "2017-finals-ladder-up",
-      "n_experiments": 25,
+      "n_experiments": 30,
       "best": {
         "experiment_num": 3,
         "backbone": "excel_agent",
@@ -5647,8 +5648,8 @@
             ]
           ]
         },
-        "elapsed_sec": 0.003999471664428711,
-        "timestamp": "2026-05-16 05:39:02",
+        "elapsed_sec": 0.002982616424560547,
+        "timestamp": "2026-05-16 17:32:42",
         "task_slug": "2017-finals-ladder-up",
         "uses_test_set": false
       }
@@ -5659,7 +5660,7 @@
       "missing_sections": [],
       "warnings": [],
       "ok": true,
-      "n_experiments": 25
+      "n_experiments": 30
     },
     "final": {
       "task": "2017-finals-ladder-up",
@@ -5718,16 +5719,16 @@
       "dsbench_baseline": 0.3412,
       "delta_vs_dsbench": -0.3412,
       "beats_dsbench": false,
-      "timestamp": "2026-05-16 05:39:09"
+      "timestamp": "2026-05-16 17:32:50"
     }
   },
   {
     "task": "2017-finals-word-play",
     "status": "ok",
-    "elapsed_sec": 4.3922271728515625,
+    "elapsed_sec": 4.680023908615112,
     "hill": {
       "task": "2017-finals-word-play",
-      "n_experiments": 25,
+      "n_experiments": 30,
       "best": {
         "experiment_num": 1,
         "backbone": "excel_agent",
@@ -5903,8 +5904,8 @@
             ]
           ]
         },
-        "elapsed_sec": 0.003991603851318359,
-        "timestamp": "2026-05-16 05:39:09",
+        "elapsed_sec": 0.0030851364135742188,
+        "timestamp": "2026-05-16 17:32:50",
         "task_slug": "2017-finals-word-play",
         "uses_test_set": false
       }
@@ -5915,7 +5916,7 @@
       "missing_sections": [],
       "warnings": [],
       "ok": true,
-      "n_experiments": 25
+      "n_experiments": 30
     },
     "final": {
       "task": "2017-finals-word-play",
@@ -5963,16 +5964,16 @@
       "dsbench_baseline": 0.3412,
       "delta_vs_dsbench": -0.3412,
       "beats_dsbench": false,
-      "timestamp": "2026-05-16 05:39:13"
+      "timestamp": "2026-05-16 17:32:54"
     }
   },
   {
     "task": "2017-round-1-go-with-the-flow",
     "status": "ok",
-    "elapsed_sec": 2.84148907661438,
+    "elapsed_sec": 3.1677396297454834,
     "hill": {
       "task": "2017-round-1-go-with-the-flow",
-      "n_experiments": 25,
+      "n_experiments": 30,
       "best": {
         "experiment_num": 21,
         "backbone": "excel_agent",
@@ -6045,8 +6046,8 @@
             ]
           ]
         },
-        "elapsed_sec": 0.52597975730896,
-        "timestamp": "2026-05-16 05:39:16",
+        "elapsed_sec": 0.5280253887176514,
+        "timestamp": "2026-05-16 17:32:57",
         "task_slug": "2017-round-1-go-with-the-flow",
         "uses_test_set": false
       }
@@ -6057,7 +6058,7 @@
       "missing_sections": [],
       "warnings": [],
       "ok": true,
-      "n_experiments": 25
+      "n_experiments": 30
     },
     "final": {
       "task": "2017-round-1-go-with-the-flow",
@@ -6089,16 +6090,16 @@
       "dsbench_baseline": 0.3412,
       "delta_vs_dsbench": 0.1588,
       "beats_dsbench": true,
-      "timestamp": "2026-05-16 05:39:16"
+      "timestamp": "2026-05-16 17:32:58"
     }
   },
   {
     "task": "2017-round-1-when-it-rains-it-pours",
     "status": "ok",
-    "elapsed_sec": 3.4640555381774902,
+    "elapsed_sec": 3.8784141540527344,
     "hill": {
       "task": "2017-round-1-when-it-rains-it-pours",
-      "n_experiments": 25,
+      "n_experiments": 30,
       "best": {
         "experiment_num": 1,
         "backbone": "excel_agent",
@@ -6193,8 +6194,8 @@
             ]
           ]
         },
-        "elapsed_sec": 0.00299835205078125,
-        "timestamp": "2026-05-16 05:39:16",
+        "elapsed_sec": 0.0030138492584228516,
+        "timestamp": "2026-05-16 17:32:58",
         "task_slug": "2017-round-1-when-it-rains-it-pours",
         "uses_test_set": false
       }
@@ -6205,7 +6206,7 @@
       "missing_sections": [],
       "warnings": [],
       "ok": true,
-      "n_experiments": 25
+      "n_experiments": 30
     },
     "final": {
       "task": "2017-round-1-when-it-rains-it-pours",
@@ -6237,16 +6238,16 @@
       "dsbench_baseline": 0.3412,
       "delta_vs_dsbench": 0.1588,
       "beats_dsbench": true,
-      "timestamp": "2026-05-16 05:39:19"
+      "timestamp": "2026-05-16 17:33:02"
     }
   },
   {
     "task": "2017-round-2-late-again",
     "status": "ok",
-    "elapsed_sec": 3.2246737480163574,
+    "elapsed_sec": 3.5701444149017334,
     "hill": {
       "task": "2017-round-2-late-again",
-      "n_experiments": 25,
+      "n_experiments": 30,
       "best": {
         "experiment_num": 3,
         "backbone": "excel_agent",
@@ -6366,8 +6367,8 @@
             ]
           ]
         },
-        "elapsed_sec": 0.0030012130737304688,
-        "timestamp": "2026-05-16 05:39:19",
+        "elapsed_sec": 0.0039882659912109375,
+        "timestamp": "2026-05-16 17:33:02",
         "task_slug": "2017-round-2-late-again",
         "uses_test_set": false
       }
@@ -6378,7 +6379,7 @@
       "missing_sections": [],
       "warnings": [],
       "ok": true,
-      "n_experiments": 25
+      "n_experiments": 30
     },
     "final": {
       "task": "2017-round-2-late-again",
@@ -6417,16 +6418,16 @@
       "dsbench_baseline": 0.3412,
       "delta_vs_dsbench": -0.3412,
       "beats_dsbench": false,
-      "timestamp": "2026-05-16 05:39:23"
+      "timestamp": "2026-05-16 17:33:05"
     }
   },
   {
     "task": "2017-round-2-section-1-collect-the-cash",
     "status": "ok",
-    "elapsed_sec": 4.094705104827881,
+    "elapsed_sec": 4.601188898086548,
     "hill": {
       "task": "2017-round-2-section-1-collect-the-cash",
-      "n_experiments": 25,
+      "n_experiments": 30,
       "best": {
         "experiment_num": 4,
         "backbone": "excel_agent",
@@ -6536,8 +6537,8 @@
             ]
           ]
         },
-        "elapsed_sec": 0.0029151439666748047,
-        "timestamp": "2026-05-16 05:39:23",
+        "elapsed_sec": 0.0040056705474853516,
+        "timestamp": "2026-05-16 17:33:05",
         "task_slug": "2017-round-2-section-1-collect-the-cash",
         "uses_test_set": false
       }
@@ -6548,7 +6549,7 @@
       "missing_sections": [],
       "warnings": [],
       "ok": true,
-      "n_experiments": 25
+      "n_experiments": 30
     },
     "final": {
       "task": "2017-round-2-section-1-collect-the-cash",
@@ -6587,16 +6588,16 @@
       "dsbench_baseline": 0.3412,
       "delta_vs_dsbench": -0.3412,
       "beats_dsbench": false,
-      "timestamp": "2026-05-16 05:39:27"
+      "timestamp": "2026-05-16 17:33:10"
     }
   },
   {
     "task": "2017-round-2-section-3-system-allocation",
     "status": "ok",
-    "elapsed_sec": 3.142035961151123,
+    "elapsed_sec": 3.371588945388794,
     "hill": {
       "task": "2017-round-2-section-3-system-allocation",
-      "n_experiments": 25,
+      "n_experiments": 30,
       "best": {
         "experiment_num": 1,
         "backbone": "excel_agent",
@@ -6699,8 +6700,8 @@
             ]
           ]
         },
-        "elapsed_sec": 0.0029892921447753906,
-        "timestamp": "2026-05-16 05:39:27",
+        "elapsed_sec": 0.00402522087097168,
+        "timestamp": "2026-05-16 17:33:10",
         "task_slug": "2017-round-2-section-3-system-allocation",
         "uses_test_set": false
       }
@@ -6711,7 +6712,7 @@
       "missing_sections": [],
       "warnings": [],
       "ok": true,
-      "n_experiments": 25
+      "n_experiments": 30
     },
     "final": {
       "task": "2017-round-2-section-3-system-allocation",
@@ -6743,7 +6744,7 @@
       "dsbench_baseline": 0.3412,
       "delta_vs_dsbench": -0.3412,
       "beats_dsbench": false,
-      "timestamp": "2026-05-16 05:39:30"
+      "timestamp": "2026-05-16 17:33:13"
     }
   }
 ]

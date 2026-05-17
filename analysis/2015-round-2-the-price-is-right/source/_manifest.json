@@ -1,0 +1,54 @@
+{
+  "slug": "2015-round-2-the-price-is-right",
+  "challenge_dir": "C:\\Users\\evija\\dsbench\\_hf_dsbench\\data_analysis\\data\\00000026",
+  "extracted_questions": [
+    {
+      "name": "question1",
+      "chars": 178
+    },
+    {
+      "name": "question2",
+      "chars": 178
+    },
+    {
+      "name": "question3",
+      "chars": 205
+    },
+    {
+      "name": "question4",
+      "chars": 266
+    },
+    {
+      "name": "question5",
+      "chars": 307
+    },
+    {
+      "name": "question6",
+      "chars": 443
+    },
+    {
+      "name": "question7",
+      "chars": 260
+    },
+    {
+      "name": "question8",
+      "chars": 243
+    },
+    {
+      "name": "question9",
+      "chars": 289
+    },
+    {
+      "name": "question10",
+      "chars": 754
+    },
+    {
+      "name": "question11",
+      "chars": 277
+    }
+  ],
+  "extracted_intro": true,
+  "excel_files": [],
+  "errors": [],
+  "intro_chars": 5541
+}

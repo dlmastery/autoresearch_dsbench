@@ -1,0 +1,34 @@
+{
+  "slug": "2013-round-1-acquisition-financing",
+  "challenge_dir": "C:\\Users\\evija\\dsbench\\_hf_dsbench\\data_analysis\\data\\00000039",
+  "extracted_questions": [
+    {
+      "name": "question1",
+      "chars": 121
+    },
+    {
+      "name": "question2",
+      "chars": 134
+    },
+    {
+      "name": "question3",
+      "chars": 159
+    },
+    {
+      "name": "question4",
+      "chars": 152
+    },
+    {
+      "name": "question5",
+      "chars": 159
+    },
+    {
+      "name": "question6",
+      "chars": 187
+    }
+  ],
+  "extracted_intro": true,
+  "excel_files": [],
+  "errors": [],
+  "intro_chars": 4084
+}

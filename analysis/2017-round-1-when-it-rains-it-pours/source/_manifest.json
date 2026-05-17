@@ -1,0 +1,59 @@
+{
+  "slug": "2017-round-1-when-it-rains-it-pours",
+  "challenge_dir": "C:\\Users\\evija\\dsbench\\_hf_dsbench\\data_analysis\\data\\00000017",
+  "extracted_questions": [
+    {
+      "name": "question29",
+      "chars": 188
+    },
+    {
+      "name": "question30",
+      "chars": 204
+    },
+    {
+      "name": "question31",
+      "chars": 186
+    },
+    {
+      "name": "question32",
+      "chars": 179
+    },
+    {
+      "name": "question33",
+      "chars": 181
+    },
+    {
+      "name": "question34",
+      "chars": 212
+    },
+    {
+      "name": "question35",
+      "chars": 234
+    },
+    {
+      "name": "question36",
+      "chars": 242
+    },
+    {
+      "name": "question37",
+      "chars": 176
+    },
+    {
+      "name": "question38",
+      "chars": 220
+    },
+    {
+      "name": "question39",
+      "chars": 263
+    }
+  ],
+  "extracted_intro": true,
+  "excel_files": [
+    {
+      "file": "MO17-Round-1-Sec-3-When-it-Rains-it-Pours-data.xlsx",
+      "md_chars": 9141
+    }
+  ],
+  "errors": [],
+  "intro_chars": 5543
+}

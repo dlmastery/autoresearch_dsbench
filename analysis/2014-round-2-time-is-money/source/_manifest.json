@@ -1,0 +1,43 @@
+{
+  "slug": "2014-round-2-time-is-money",
+  "challenge_dir": "C:\\Users\\evija\\dsbench\\_hf_dsbench\\data_analysis\\data\\00000030",
+  "extracted_questions": [
+    {
+      "name": "question1",
+      "chars": 102
+    },
+    {
+      "name": "question2",
+      "chars": 92
+    },
+    {
+      "name": "question3",
+      "chars": 137
+    },
+    {
+      "name": "question4",
+      "chars": 129
+    },
+    {
+      "name": "question5",
+      "chars": 94
+    },
+    {
+      "name": "question6",
+      "chars": 170
+    },
+    {
+      "name": "question7",
+      "chars": 283
+    }
+  ],
+  "extracted_intro": true,
+  "excel_files": [
+    {
+      "file": "MO14-Time-is-Money-Data.xlsx",
+      "md_chars": 7191
+    }
+  ],
+  "errors": [],
+  "intro_chars": 2933
+}

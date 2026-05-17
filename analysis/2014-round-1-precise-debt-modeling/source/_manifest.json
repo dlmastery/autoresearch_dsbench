@@ -1,0 +1,51 @@
+{
+  "slug": "2014-round-1-precise-debt-modeling",
+  "challenge_dir": "C:\\Users\\evija\\dsbench\\_hf_dsbench\\data_analysis\\data\\00000033",
+  "extracted_questions": [
+    {
+      "name": "question1",
+      "chars": 112
+    },
+    {
+      "name": "question2",
+      "chars": 133
+    },
+    {
+      "name": "question3",
+      "chars": 135
+    },
+    {
+      "name": "question4",
+      "chars": 168
+    },
+    {
+      "name": "question5",
+      "chars": 96
+    },
+    {
+      "name": "question6",
+      "chars": 107
+    },
+    {
+      "name": "question7",
+      "chars": 152
+    },
+    {
+      "name": "question8",
+      "chars": 191
+    }
+  ],
+  "extracted_intro": true,
+  "excel_files": [
+    {
+      "file": "MO14-Round-1-Debt-Modeling-Workbook.xlsx",
+      "md_chars": 1222
+    },
+    {
+      "file": "Precise-Debt-Modelling-Model-Citizn.xlsm",
+      "md_chars": 20120
+    }
+  ],
+  "errors": [],
+  "intro_chars": 3735
+}

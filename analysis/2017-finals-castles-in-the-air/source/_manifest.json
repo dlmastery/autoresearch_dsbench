@@ -1,0 +1,63 @@
+{
+  "slug": "2017-finals-castles-in-the-air",
+  "challenge_dir": "C:\\Users\\evija\\dsbench\\_hf_dsbench\\data_analysis\\data\\00000018",
+  "extracted_questions": [
+    {
+      "name": "question16",
+      "chars": 171
+    },
+    {
+      "name": "question17",
+      "chars": 180
+    },
+    {
+      "name": "question18",
+      "chars": 161
+    },
+    {
+      "name": "question19",
+      "chars": 192
+    },
+    {
+      "name": "question20",
+      "chars": 200
+    },
+    {
+      "name": "question21",
+      "chars": 195
+    },
+    {
+      "name": "question22",
+      "chars": 204
+    },
+    {
+      "name": "question23",
+      "chars": 132
+    },
+    {
+      "name": "question24",
+      "chars": 256
+    },
+    {
+      "name": "question25",
+      "chars": 242
+    },
+    {
+      "name": "question26",
+      "chars": 244
+    },
+    {
+      "name": "question27",
+      "chars": 290
+    }
+  ],
+  "extracted_intro": true,
+  "excel_files": [
+    {
+      "file": "MO17-Round-1-Sec-2-Castles-In-The-Air-data.xlsx",
+      "md_chars": 9796
+    }
+  ],
+  "errors": [],
+  "intro_chars": 3351
+}

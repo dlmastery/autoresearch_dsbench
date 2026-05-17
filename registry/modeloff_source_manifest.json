@@ -1,0 +1,382 @@
+[
+  {
+    "slug": "2016-round-1-section-2-chip-off-the-old-block",
+    "chid": "00000001",
+    "n_questions": 13,
+    "n_extracted_questions": 13,
+    "intro": true,
+    "excel_md_files": 1,
+    "excel_xlsb_skipped": 0,
+    "status": "FULL"
+  },
+  {
+    "slug": "2012-round-1-theory-and-practice-mcqs",
+    "chid": "00000002",
+    "n_questions": 25,
+    "n_extracted_questions": 25,
+    "intro": true,
+    "excel_md_files": 0,
+    "excel_xlsb_skipped": 0,
+    "status": "FULL"
+  },
+  {
+    "slug": "2012-round-2-monte-carlo",
+    "chid": "00000003",
+    "n_questions": 3,
+    "n_extracted_questions": 3,
+    "intro": true,
+    "excel_md_files": 0,
+    "excel_xlsb_skipped": 0,
+    "status": "FULL"
+  },
+  {
+    "slug": "2017-round-1-go-with-the-flow",
+    "chid": "00000004",
+    "n_questions": 10,
+    "n_extracted_questions": 10,
+    "intro": true,
+    "excel_md_files": 1,
+    "excel_xlsb_skipped": 0,
+    "status": "FULL"
+  },
+  {
+    "slug": "2016-round-1-section-3-roll-the-dice",
+    "chid": "00000005",
+    "n_questions": 10,
+    "n_extracted_questions": 10,
+    "intro": true,
+    "excel_md_files": 1,
+    "excel_xlsb_skipped": 0,
+    "status": "FULL"
+  },
+  {
+    "slug": "2016-round-2-section-3-tally-up",
+    "chid": "00000006",
+    "n_questions": 10,
+    "n_extracted_questions": 10,
+    "intro": true,
+    "excel_md_files": 1,
+    "excel_xlsb_skipped": 0,
+    "status": "FULL"
+  },
+  {
+    "slug": "2017-finals-funding-fun",
+    "chid": "00000007",
+    "n_questions": 23,
+    "n_extracted_questions": 23,
+    "intro": true,
+    "excel_md_files": 0,
+    "excel_xlsb_skipped": 1,
+    "status": "FULL"
+  },
+  {
+    "slug": "2017-round-2-section-3-system-allocation",
+    "chid": "00000008",
+    "n_questions": 9,
+    "n_extracted_questions": 9,
+    "intro": true,
+    "excel_md_files": 1,
+    "excel_xlsb_skipped": 0,
+    "status": "FULL"
+  },
+  {
+    "slug": "2017-finals-word-play",
+    "chid": "00000009",
+    "n_questions": 15,
+    "n_extracted_questions": 15,
+    "intro": true,
+    "excel_md_files": 0,
+    "excel_xlsb_skipped": 1,
+    "status": "FULL"
+  },
+  {
+    "slug": "2017-finals-ladder-up",
+    "chid": "00000010",
+    "n_questions": 20,
+    "n_extracted_questions": 20,
+    "intro": true,
+    "excel_md_files": 1,
+    "excel_xlsb_skipped": 0,
+    "status": "FULL"
+  },
+  {
+    "slug": "2014-round-2-purple-city",
+    "chid": "00000011",
+    "n_questions": 8,
+    "n_extracted_questions": 8,
+    "intro": true,
+    "excel_md_files": 1,
+    "excel_xlsb_skipped": 0,
+    "status": "FULL"
+  },
+  {
+    "slug": "2015-round-2-more-money-please",
+    "chid": "00000012",
+    "n_questions": 10,
+    "n_extracted_questions": 10,
+    "intro": true,
+    "excel_md_files": 1,
+    "excel_xlsb_skipped": 0,
+    "status": "FULL"
+  },
+  {
+    "slug": "2017-round-2-late-again",
+    "chid": "00000013",
+    "n_questions": 11,
+    "n_extracted_questions": 11,
+    "intro": true,
+    "excel_md_files": 1,
+    "excel_xlsb_skipped": 0,
+    "status": "FULL"
+  },
+  {
+    "slug": "2012-round-2-asset-schedule",
+    "chid": "00000014",
+    "n_questions": 5,
+    "n_extracted_questions": 5,
+    "intro": true,
+    "excel_md_files": 0,
+    "excel_xlsb_skipped": 0,
+    "status": "FULL"
+  },
+  {
+    "slug": "2017-round-2-section-1-collect-the-cash",
+    "chid": "00000016",
+    "n_questions": 12,
+    "n_extracted_questions": 12,
+    "intro": true,
+    "excel_md_files": 1,
+    "excel_xlsb_skipped": 0,
+    "status": "FULL"
+  },
+  {
+    "slug": "2017-round-1-when-it-rains-it-pours",
+    "chid": "00000017",
+    "n_questions": 11,
+    "n_extracted_questions": 11,
+    "intro": true,
+    "excel_md_files": 1,
+    "excel_xlsb_skipped": 0,
+    "status": "FULL"
+  },
+  {
+    "slug": "2017-finals-castles-in-the-air",
+    "chid": "00000018",
+    "n_questions": 12,
+    "n_extracted_questions": 12,
+    "intro": true,
+    "excel_md_files": 1,
+    "excel_xlsb_skipped": 0,
+    "status": "FULL"
+  },
+  {
+    "slug": "2016-round-2-section-2-fund-the-future",
+    "chid": "00000019",
+    "n_questions": 10,
+    "n_extracted_questions": 10,
+    "intro": true,
+    "excel_md_files": 1,
+    "excel_xlsb_skipped": 0,
+    "status": "FULL"
+  },
+  {
+    "slug": "2016-round-2-section-4-maximize-the-benefit",
+    "chid": "00000020",
+    "n_questions": 10,
+    "n_extracted_questions": 10,
+    "intro": true,
+    "excel_md_files": 1,
+    "excel_xlsb_skipped": 0,
+    "status": "FULL"
+  },
+  {
+    "slug": "2016-round-1-section-4-going-around-in-circles",
+    "chid": "00000022",
+    "n_questions": 10,
+    "n_extracted_questions": 10,
+    "intro": true,
+    "excel_md_files": 1,
+    "excel_xlsb_skipped": 0,
+    "status": "FULL"
+  },
+  {
+    "slug": "2015-round-1-tax",
+    "chid": "00000025",
+    "n_questions": 10,
+    "n_extracted_questions": 10,
+    "intro": true,
+    "excel_md_files": 1,
+    "excel_xlsb_skipped": 0,
+    "status": "FULL"
+  },
+  {
+    "slug": "2015-round-2-the-price-is-right",
+    "chid": "00000026",
+    "n_questions": 11,
+    "n_extracted_questions": 11,
+    "intro": true,
+    "excel_md_files": 0,
+    "excel_xlsb_skipped": 0,
+    "status": "FULL"
+  },
+  {
+    "slug": "2015-round-1-bread-and-butter",
+    "chid": "00000027",
+    "n_questions": 15,
+    "n_extracted_questions": 15,
+    "intro": true,
+    "excel_md_files": 1,
+    "excel_xlsb_skipped": 0,
+    "status": "FULL"
+  },
+  {
+    "slug": "2015-round-one-options-to-call",
+    "chid": "00000028",
+    "n_questions": 10,
+    "n_extracted_questions": 10,
+    "intro": true,
+    "excel_md_files": 1,
+    "excel_xlsb_skipped": 0,
+    "status": "FULL"
+  },
+  {
+    "slug": "2014-round-2-stepping-up",
+    "chid": "00000029",
+    "n_questions": 10,
+    "n_extracted_questions": 10,
+    "intro": true,
+    "excel_md_files": 1,
+    "excel_xlsb_skipped": 0,
+    "status": "FULL"
+  },
+  {
+    "slug": "2014-round-2-time-is-money",
+    "chid": "00000030",
+    "n_questions": 7,
+    "n_extracted_questions": 7,
+    "intro": true,
+    "excel_md_files": 1,
+    "excel_xlsb_skipped": 0,
+    "status": "FULL"
+  },
+  {
+    "slug": "2014-round-1-snakes-and-ladders",
+    "chid": "00000031",
+    "n_questions": 5,
+    "n_extracted_questions": 5,
+    "intro": true,
+    "excel_md_files": 0,
+    "excel_xlsb_skipped": 0,
+    "status": "FULL"
+  },
+  {
+    "slug": "2014-round-1-dealing-with-data",
+    "chid": "00000032",
+    "n_questions": 7,
+    "n_extracted_questions": 7,
+    "intro": true,
+    "excel_md_files": 1,
+    "excel_xlsb_skipped": 0,
+    "status": "FULL"
+  },
+  {
+    "slug": "2014-round-1-precise-debt-modeling",
+    "chid": "00000033",
+    "n_questions": 8,
+    "n_extracted_questions": 8,
+    "intro": true,
+    "excel_md_files": 2,
+    "excel_xlsb_skipped": 0,
+    "status": "FULL"
+  },
+  {
+    "slug": "2013-round-2-data-analysis",
+    "chid": "00000034",
+    "n_questions": 16,
+    "n_extracted_questions": 16,
+    "intro": true,
+    "excel_md_files": 1,
+    "excel_xlsb_skipped": 0,
+    "status": "FULL"
+  },
+  {
+    "slug": "2013-round-2-hard-times-turnaround-a-toy-company",
+    "chid": "00000035",
+    "n_questions": 9,
+    "n_extracted_questions": 9,
+    "intro": true,
+    "excel_md_files": 2,
+    "excel_xlsb_skipped": 0,
+    "status": "FULL"
+  },
+  {
+    "slug": "2013-round-2-theory-and-practice",
+    "chid": "00000036",
+    "n_questions": 15,
+    "n_extracted_questions": 15,
+    "intro": true,
+    "excel_md_files": 0,
+    "excel_xlsb_skipped": 0,
+    "status": "FULL"
+  },
+  {
+    "slug": "2013-round-1-theory-and-practice",
+    "chid": "00000037",
+    "n_questions": 20,
+    "n_extracted_questions": 20,
+    "intro": true,
+    "excel_md_files": 0,
+    "excel_xlsb_skipped": 0,
+    "status": "FULL"
+  },
+  {
+    "slug": "2013-round-1-energy-operations",
+    "chid": "00000038",
+    "n_questions": 5,
+    "n_extracted_questions": 5,
+    "intro": true,
+    "excel_md_files": 1,
+    "excel_xlsb_skipped": 0,
+    "status": "FULL"
+  },
+  {
+    "slug": "2013-round-1-acquisition-financing",
+    "chid": "00000039",
+    "n_questions": 6,
+    "n_extracted_questions": 6,
+    "intro": true,
+    "excel_md_files": 0,
+    "excel_xlsb_skipped": 0,
+    "status": "FULL"
+  },
+  {
+    "slug": "2012-finals-investment-property",
+    "chid": "00000041",
+    "n_questions": 5,
+    "n_extracted_questions": 5,
+    "intro": true,
+    "excel_md_files": 0,
+    "excel_xlsb_skipped": 0,
+    "status": "FULL"
+  },
+  {
+    "slug": "2012-finals-excel-knowledge-test",
+    "chid": "00000042",
+    "n_questions": 50,
+    "n_extracted_questions": 50,
+    "intro": true,
+    "excel_md_files": 0,
+    "excel_xlsb_skipped": 0,
+    "status": "FULL"
+  },
+  {
+    "slug": "2012-round-2-find-that-error",
+    "chid": "00000043",
+    "n_questions": 20,
+    "n_extracted_questions": 20,
+    "intro": true,
+    "excel_md_files": 1,
+    "excel_xlsb_skipped": 0,
+    "status": "FULL"
+  }
+]

@@ -17,7 +17,7 @@
     "dsbench_baseline": -1.0,
     "delta_vs_dsbench": 0.6641273782968341,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:39:40"
+    "timestamp": "2026-05-16 17:33:23"
   },
   {
     "task": "cat-in-the-dat",
@@ -50,7 +50,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4954648526077098,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:39:40"
+    "timestamp": "2026-05-16 17:33:24"
   },
   {
     "task": "cat-in-the-dat-ii",
@@ -83,7 +83,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.49172481660404355,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:39:40"
+    "timestamp": "2026-05-16 17:33:24"
   },
   {
     "task": "commonlitreadabilityprize",
@@ -103,7 +103,7 @@
     "dsbench_baseline": -1.0,
     "delta_vs_dsbench": 0.645369480525612,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:39:42"
+    "timestamp": "2026-05-16 17:33:27"
   },
   {
     "task": "conways-reverse-game-of-life-2020",
@@ -136,7 +136,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4885333333333334,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:39:44"
+    "timestamp": "2026-05-16 17:33:28"
   },
   {
     "task": "covid19-global-forecasting-week-1",
@@ -156,7 +156,7 @@
     "dsbench_baseline": -1.0,
     "delta_vs_dsbench": 0.6159132735876163,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:39:46"
+    "timestamp": "2026-05-16 17:33:30"
   },
   {
     "task": "covid19-global-forecasting-week-2",
@@ -176,7 +176,7 @@
     "dsbench_baseline": -1.0,
     "delta_vs_dsbench": 0.6964452844800657,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:39:48"
+    "timestamp": "2026-05-16 17:33:33"
   },
   {
     "task": "covid19-global-forecasting-week-3",
@@ -196,7 +196,7 @@
     "dsbench_baseline": -1.0,
     "delta_vs_dsbench": 0.6279975772828885,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:39:51"
+    "timestamp": "2026-05-16 17:33:35"
   },
   {
     "task": "covid19-global-forecasting-week-4",
@@ -216,7 +216,7 @@
     "dsbench_baseline": -1.0,
     "delta_vs_dsbench": 0.6643599562935238,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:39:53"
+    "timestamp": "2026-05-16 17:33:39"
   },
   {
     "task": "demand-forecasting-kernels-only",
@@ -236,7 +236,7 @@
     "dsbench_baseline": -1.0,
     "delta_vs_dsbench": 0.685752746493886,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:39:55"
+    "timestamp": "2026-05-16 17:33:41"
   },
   {
     "task": "dont-overfit-ii",
@@ -269,7 +269,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4956881223328591,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:39:57"
+    "timestamp": "2026-05-16 17:33:43"
   },
   {
     "task": "feedback-prize-english-language-learning",
@@ -289,7 +289,7 @@
     "dsbench_baseline": -1.0,
     "delta_vs_dsbench": 0.6751378824124926,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:00"
+    "timestamp": "2026-05-16 17:33:46"
   },
   {
     "task": "google-quest-challenge",
@@ -309,7 +309,7 @@
     "dsbench_baseline": -1.0,
     "delta_vs_dsbench": 0.6620147374554399,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:01"
+    "timestamp": "2026-05-16 17:33:48"
   },
   {
     "task": "instant-gratification",
@@ -342,7 +342,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.47947827635327633,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:02"
+    "timestamp": "2026-05-16 17:33:49"
   },
   {
     "task": "learning-agency-lab-automated-essay-scoring-2",
@@ -362,7 +362,7 @@
     "dsbench_baseline": -1.0,
     "delta_vs_dsbench": 0.6177075668432729,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:04"
+    "timestamp": "2026-05-16 17:33:51"
   },
   {
     "task": "liverpool-ion-switching",
@@ -411,7 +411,7 @@
     "dsbench_baseline": 0.34,
     "delta_vs_dsbench": 0.5343839072714911,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:05"
+    "timestamp": "2026-05-16 17:33:52"
   },
   {
     "task": "lmsys-chatbot-arena",
@@ -431,7 +431,7 @@
     "dsbench_baseline": -1.0,
     "delta_vs_dsbench": 0.6753345028472726,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:07"
+    "timestamp": "2026-05-16 17:33:54"
   },
   {
     "task": "microsoft-malware-prediction",
@@ -464,7 +464,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4949768847795163,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:08"
+    "timestamp": "2026-05-16 17:33:56"
   },
   {
     "task": "nlp-getting-started",
@@ -497,7 +497,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.49369681689253075,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:10"
+    "timestamp": "2026-05-16 17:33:57"
   },
   {
     "task": "playground-series-s3e1",
@@ -530,7 +530,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4934655049786628,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:10"
+    "timestamp": "2026-05-16 17:33:58"
   },
   {
     "task": "playground-series-s3e10",
@@ -563,7 +563,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.49055721348714976,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:12"
+    "timestamp": "2026-05-16 17:33:59"
   },
   {
     "task": "playground-series-s3e11",
@@ -596,7 +596,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.497021692745377,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:12"
+    "timestamp": "2026-05-16 17:34:00"
   },
   {
     "task": "playground-series-s3e12",
@@ -629,7 +629,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.49574067431850777,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:13"
+    "timestamp": "2026-05-16 17:34:01"
   },
   {
     "task": "playground-series-s3e13",
@@ -662,7 +662,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.49411213702662926,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:14"
+    "timestamp": "2026-05-16 17:34:01"
   },
   {
     "task": "playground-series-s3e14",
@@ -695,7 +695,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4959090091710123,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:15"
+    "timestamp": "2026-05-16 17:34:03"
   },
   {
     "task": "playground-series-s3e16",
@@ -728,7 +728,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.49350649350649356,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:16"
+    "timestamp": "2026-05-16 17:34:04"
   },
   {
     "task": "playground-series-s3e17",
@@ -761,7 +761,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.49746113758852617,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:17"
+    "timestamp": "2026-05-16 17:34:04"
   },
   {
     "task": "playground-series-s3e18",
@@ -794,7 +794,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4954323586046303,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:18"
+    "timestamp": "2026-05-16 17:34:06"
   },
   {
     "task": "playground-series-s3e19",
@@ -827,7 +827,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.49053165007112376,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:19"
+    "timestamp": "2026-05-16 17:34:08"
   },
   {
     "task": "playground-series-s3e2",
@@ -860,7 +860,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4966100182880593,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:20"
+    "timestamp": "2026-05-16 17:34:08"
   },
   {
     "task": "playground-series-s3e20",
@@ -893,7 +893,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.48906250000000007,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:21"
+    "timestamp": "2026-05-16 17:34:10"
   },
   {
     "task": "playground-series-s3e22",
@@ -926,7 +926,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4926994301994302,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:22"
+    "timestamp": "2026-05-16 17:34:11"
   },
   {
     "task": "playground-series-s3e23",
@@ -959,7 +959,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4955943175687826,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:24"
+    "timestamp": "2026-05-16 17:34:13"
   },
   {
     "task": "playground-series-s3e24",
@@ -992,7 +992,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4924474015464845,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:24"
+    "timestamp": "2026-05-16 17:34:13"
   },
   {
     "task": "playground-series-s3e25",
@@ -1025,7 +1025,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.49182222222222216,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:25"
+    "timestamp": "2026-05-16 17:34:15"
   },
   {
     "task": "playground-series-s3e3",
@@ -1058,7 +1058,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4982221432063647,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:27"
+    "timestamp": "2026-05-16 17:34:16"
   },
   {
     "task": "playground-series-s3e4",
@@ -1091,7 +1091,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4927526566182029,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:29"
+    "timestamp": "2026-05-16 17:34:18"
   },
   {
     "task": "playground-series-s3e5",
@@ -1124,7 +1124,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.49341168091168097,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:30"
+    "timestamp": "2026-05-16 17:34:20"
   },
   {
     "task": "playground-series-s3e6",
@@ -1157,7 +1157,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.49724137931034484,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:32"
+    "timestamp": "2026-05-16 17:34:22"
   },
   {
     "task": "playground-series-s3e7",
@@ -1190,7 +1190,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4938666666666667,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:32"
+    "timestamp": "2026-05-16 17:34:22"
   },
   {
     "task": "playground-series-s3e8",
@@ -1223,7 +1223,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.48897581792318634,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:33"
+    "timestamp": "2026-05-16 17:34:23"
   },
   {
     "task": "playground-series-s3e9",
@@ -1256,7 +1256,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.49548219717301845,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:34"
+    "timestamp": "2026-05-16 17:34:25"
   },
   {
     "task": "playground-series-s4e1",
@@ -1289,7 +1289,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4848965548058447,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:35"
+    "timestamp": "2026-05-16 17:34:25"
   },
   {
     "task": "playground-series-s4e2",
@@ -1322,7 +1322,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4943303571428571,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:36"
+    "timestamp": "2026-05-16 17:34:27"
   },
   {
     "task": "playground-series-s4e3",
@@ -1355,7 +1355,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4909232480533927,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:37"
+    "timestamp": "2026-05-16 17:34:28"
   },
   {
     "task": "playground-series-s4e4",
@@ -1388,7 +1388,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4951091547730204,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:37"
+    "timestamp": "2026-05-16 17:34:28"
   },
   {
     "task": "playground-series-s4e5",
@@ -1421,7 +1421,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4949634515956498,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:38"
+    "timestamp": "2026-05-16 17:34:29"
   },
   {
     "task": "playground-series-s4e6",
@@ -1454,7 +1454,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4959539371304078,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:39"
+    "timestamp": "2026-05-16 17:34:30"
   },
   {
     "task": "porto-seguro-safe-driver-prediction",
@@ -1487,7 +1487,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.49633928571428576,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:41"
+    "timestamp": "2026-05-16 17:34:32"
   },
   {
     "task": "santander-customer-satisfaction",
@@ -1520,7 +1520,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.49388911191400164,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:42"
+    "timestamp": "2026-05-16 17:34:34"
   },
   {
     "task": "santander-customer-transaction-prediction",
@@ -1553,7 +1553,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4965654132655337,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:43"
+    "timestamp": "2026-05-16 17:34:35"
   },
   {
     "task": "santander-value-prediction-challenge",
@@ -1573,7 +1573,7 @@
     "dsbench_baseline": -1.0,
     "delta_vs_dsbench": 0.6407110275736163,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:46"
+    "timestamp": "2026-05-16 17:34:38"
   },
   {
     "task": "see-click-predict-fix",
@@ -1606,7 +1606,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4896847627940064,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:47"
+    "timestamp": "2026-05-16 17:34:39"
   },
   {
     "task": "spaceship-titanic",
@@ -1639,7 +1639,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.49626650073336587,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:48"
+    "timestamp": "2026-05-16 17:34:41"
   },
   {
     "task": "tabular-playground-series-apr-2021",
@@ -1672,7 +1672,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.49265594912901345,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:50"
+    "timestamp": "2026-05-16 17:34:42"
   },
   {
     "task": "tabular-playground-series-aug-2021",
@@ -1705,7 +1705,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4950657894736842,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:51"
+    "timestamp": "2026-05-16 17:34:43"
   },
   {
     "task": "tabular-playground-series-aug-2022",
@@ -1738,7 +1738,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4938222222222223,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:52"
+    "timestamp": "2026-05-16 17:34:45"
   },
   {
     "task": "tabular-playground-series-dec-2021",
@@ -1771,7 +1771,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4954076808788438,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:52"
+    "timestamp": "2026-05-16 17:34:45"
   },
   {
     "task": "tabular-playground-series-feb-2021",
@@ -1804,7 +1804,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4912440552913463,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:53"
+    "timestamp": "2026-05-16 17:34:46"
   },
   {
     "task": "tabular-playground-series-feb-2022",
@@ -1837,7 +1837,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.49095427880524833,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:53"
+    "timestamp": "2026-05-16 17:34:46"
   },
   {
     "task": "tabular-playground-series-jan-2021",
@@ -1870,7 +1870,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4956709956709957,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:54"
+    "timestamp": "2026-05-16 17:34:48"
   },
   {
     "task": "tabular-playground-series-jan-2022",
@@ -1903,7 +1903,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4972888888888888,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:56"
+    "timestamp": "2026-05-16 17:34:49"
   },
   {
     "task": "tabular-playground-series-jul-2021",
@@ -1936,7 +1936,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4934655049786628,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:56"
+    "timestamp": "2026-05-16 17:34:50"
   },
   {
     "task": "tabular-playground-series-mar-2021",
@@ -1969,7 +1969,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.49639599555061187,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:57"
+    "timestamp": "2026-05-16 17:34:50"
   },
   {
     "task": "tabular-playground-series-mar-2022",
@@ -2002,7 +2002,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.49484352773826457,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:58"
+    "timestamp": "2026-05-16 17:34:52"
   },
   {
     "task": "tabular-playground-series-may-2022",
@@ -2035,7 +2035,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4955929487179488,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:59"
+    "timestamp": "2026-05-16 17:34:52"
   },
   {
     "task": "tabular-playground-series-nov-2021",
@@ -2068,7 +2068,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.48801216675612813,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:40:59"
+    "timestamp": "2026-05-16 17:34:53"
   },
   {
     "task": "tabular-playground-series-sep-2021",
@@ -2101,7 +2101,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.4908244621620417,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:41:00"
+    "timestamp": "2026-05-16 17:34:54"
   },
   {
     "task": "tabular-playground-series-sep-2022",
@@ -2134,7 +2134,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.49119999999999997,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:41:00"
+    "timestamp": "2026-05-16 17:34:54"
   },
   {
     "task": "titanic",
@@ -2167,7 +2167,7 @@
     "dsbench_baseline": 0.5,
     "delta_vs_dsbench": 0.49572649572649574,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:41:02"
+    "timestamp": "2026-05-16 17:34:55"
   },
   {
     "task": "tmdb-box-office-prediction",
@@ -2187,7 +2187,7 @@
     "dsbench_baseline": -1.0,
     "delta_vs_dsbench": 0.6538499283818076,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:41:04"
+    "timestamp": "2026-05-16 17:34:58"
   },
   {
     "task": "tweet-sentiment-extraction",
@@ -2207,7 +2207,7 @@
     "dsbench_baseline": -1.0,
     "delta_vs_dsbench": 0.6000292863242053,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:41:06"
+    "timestamp": "2026-05-16 17:35:00"
   },
   {
     "task": "us-patent-phrase-to-phrase-matching",
@@ -2227,7 +2227,7 @@
     "dsbench_baseline": -1.0,
     "delta_vs_dsbench": 0.6172952414340239,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:41:08"
+    "timestamp": "2026-05-16 17:35:02"
   },
   {
     "task": "ventilator-pressure-prediction",
@@ -2247,7 +2247,7 @@
     "dsbench_baseline": -1.0,
     "delta_vs_dsbench": 0.692314652016723,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:41:11"
+    "timestamp": "2026-05-16 17:35:06"
   },
   {
     "task": "2012-finals-excel-knowledge-test",
@@ -2414,7 +2414,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 05:41:11"
+    "timestamp": "2026-05-16 17:35:06"
   },
   {
     "task": "2012-finals-investment-property",
@@ -2441,7 +2441,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": 0.6588,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:41:11"
+    "timestamp": "2026-05-16 17:35:06"
   },
   {
     "task": "2012-round-1-theory-and-practice-mcqs",
@@ -2480,7 +2480,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": 0.05880000000000002,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:41:12"
+    "timestamp": "2026-05-16 17:35:06"
   },
   {
     "task": "2012-round-2-asset-schedule",
@@ -2512,7 +2512,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 05:41:12"
+    "timestamp": "2026-05-16 17:35:06"
   },
   {
     "task": "2012-round-2-find-that-error",
@@ -2560,7 +2560,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.0912,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 05:41:12"
+    "timestamp": "2026-05-16 17:35:06"
   },
   {
     "task": "2012-round-2-monte-carlo",
@@ -2592,7 +2592,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 05:41:12"
+    "timestamp": "2026-05-16 17:35:06"
   },
   {
     "task": "2013-round-1-acquisition-financing",
@@ -2619,7 +2619,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": 0.6588,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:41:12"
+    "timestamp": "2026-05-16 17:35:06"
   },
   {
     "task": "2013-round-1-energy-operations",
@@ -2646,7 +2646,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": 0.6588,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:41:12"
+    "timestamp": "2026-05-16 17:35:06"
   },
   {
     "task": "2013-round-1-theory-and-practice",
@@ -2685,7 +2685,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": 0.1588,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:41:12"
+    "timestamp": "2026-05-16 17:35:06"
   },
   {
     "task": "2013-round-2-data-analysis",
@@ -2733,7 +2733,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 05:41:12"
+    "timestamp": "2026-05-16 17:35:06"
   },
   {
     "task": "2013-round-2-hard-times-turnaround-a-toy-company",
@@ -2765,7 +2765,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 05:41:12"
+    "timestamp": "2026-05-16 17:35:06"
   },
   {
     "task": "2013-round-2-theory-and-practice",
@@ -2804,7 +2804,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 05:41:12"
+    "timestamp": "2026-05-16 17:35:06"
   },
   {
     "task": "2014-round-1-dealing-with-data",
@@ -2836,7 +2836,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 05:41:12"
+    "timestamp": "2026-05-16 17:35:06"
   },
   {
     "task": "2014-round-1-precise-debt-modeling",
@@ -2863,7 +2863,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": 0.6588,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:41:12"
+    "timestamp": "2026-05-16 17:35:06"
   },
   {
     "task": "2014-round-1-snakes-and-ladders",
@@ -2871,8 +2871,8 @@
     "problem_type": "qa_excel",
     "metric": "exact_match_accuracy",
     "champion_backbone": "excel_agent",
-    "champion_composite": 0.6655,
-    "champion_val": 0.6655,
+    "champion_composite": 0.7095843333333335,
+    "champion_val": 0.7095843333333335,
     "champion_train": 1.0,
     "test_score": 0.0,
     "test_metrics": {
@@ -2895,7 +2895,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 05:41:12"
+    "timestamp": "2026-05-16 17:35:06"
   },
   {
     "task": "2014-round-2-purple-city",
@@ -2927,7 +2927,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 05:41:12"
+    "timestamp": "2026-05-16 17:35:06"
   },
   {
     "task": "2014-round-2-stepping-up",
@@ -2966,7 +2966,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 05:41:12"
+    "timestamp": "2026-05-16 17:35:07"
   },
   {
     "task": "2014-round-2-time-is-money",
@@ -2998,7 +2998,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 05:41:12"
+    "timestamp": "2026-05-16 17:35:07"
   },
   {
     "task": "2015-round-1-bread-and-butter",
@@ -3037,7 +3037,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 05:41:12"
+    "timestamp": "2026-05-16 17:35:07"
   },
   {
     "task": "2015-round-1-tax",
@@ -3085,7 +3085,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 05:41:12"
+    "timestamp": "2026-05-16 17:35:07"
   },
   {
     "task": "2015-round-2-more-money-please",
@@ -3124,7 +3124,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": 0.1588,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:41:12"
+    "timestamp": "2026-05-16 17:35:07"
   },
   {
     "task": "2015-round-2-the-price-is-right",
@@ -3163,7 +3163,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 05:41:12"
+    "timestamp": "2026-05-16 17:35:07"
   },
   {
     "task": "2015-round-one-options-to-call",
@@ -3202,7 +3202,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 05:41:12"
+    "timestamp": "2026-05-16 17:35:07"
   },
   {
     "task": "2016-round-1-section-2-chip-off-the-old-block",
@@ -3241,7 +3241,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 05:41:12"
+    "timestamp": "2026-05-16 17:35:07"
   },
   {
     "task": "2016-round-1-section-3-roll-the-dice",
@@ -3280,7 +3280,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 05:41:13"
+    "timestamp": "2026-05-16 17:35:07"
   },
   {
     "task": "2016-round-1-section-4-going-around-in-circles",
@@ -3319,7 +3319,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 05:41:13"
+    "timestamp": "2026-05-16 17:35:07"
   },
   {
     "task": "2016-round-2-section-2-fund-the-future",
@@ -3358,7 +3358,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 05:41:13"
+    "timestamp": "2026-05-16 17:35:07"
   },
   {
     "task": "2016-round-2-section-3-tally-up",
@@ -3397,7 +3397,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 05:41:13"
+    "timestamp": "2026-05-16 17:35:07"
   },
   {
     "task": "2016-round-2-section-4-maximize-the-benefit",
@@ -3436,7 +3436,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 05:41:13"
+    "timestamp": "2026-05-16 17:35:07"
   },
   {
     "task": "2017-finals-castles-in-the-air",
@@ -3475,7 +3475,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 05:41:13"
+    "timestamp": "2026-05-16 17:35:07"
   },
   {
     "task": "2017-finals-funding-fun",
@@ -3534,7 +3534,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 05:41:13"
+    "timestamp": "2026-05-16 17:35:07"
   },
   {
     "task": "2017-finals-ladder-up",
@@ -3593,7 +3593,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 05:41:13"
+    "timestamp": "2026-05-16 17:35:07"
   },
   {
     "task": "2017-finals-word-play",
@@ -3641,7 +3641,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 05:41:13"
+    "timestamp": "2026-05-16 17:35:07"
   },
   {
     "task": "2017-round-1-go-with-the-flow",
@@ -3673,7 +3673,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": 0.1588,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:41:13"
+    "timestamp": "2026-05-16 17:35:07"
   },
   {
     "task": "2017-round-1-when-it-rains-it-pours",
@@ -3705,7 +3705,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": 0.1588,
     "beats_dsbench": true,
-    "timestamp": "2026-05-16 05:41:13"
+    "timestamp": "2026-05-16 17:35:07"
   },
   {
     "task": "2017-round-2-late-again",
@@ -3744,7 +3744,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 05:41:13"
+    "timestamp": "2026-05-16 17:35:07"
   },
   {
     "task": "2017-round-2-section-1-collect-the-cash",
@@ -3783,7 +3783,7 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 05:41:13"
+    "timestamp": "2026-05-16 17:35:07"
   },
   {
     "task": "2017-round-2-section-3-system-allocation",
@@ -3815,6 +3815,6 @@
     "dsbench_baseline": 0.3412,
     "delta_vs_dsbench": -0.3412,
     "beats_dsbench": false,
-    "timestamp": "2026-05-16 05:41:13"
+    "timestamp": "2026-05-16 17:35:07"
   }
 ]

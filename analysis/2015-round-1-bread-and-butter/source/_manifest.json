@@ -1,0 +1,75 @@
+{
+  "slug": "2015-round-1-bread-and-butter",
+  "challenge_dir": "C:\\Users\\evija\\dsbench\\_hf_dsbench\\data_analysis\\data\\00000027",
+  "extracted_questions": [
+    {
+      "name": "question1",
+      "chars": 193
+    },
+    {
+      "name": "question2",
+      "chars": 192
+    },
+    {
+      "name": "question3",
+      "chars": 226
+    },
+    {
+      "name": "question4",
+      "chars": 185
+    },
+    {
+      "name": "question5",
+      "chars": 212
+    },
+    {
+      "name": "question6",
+      "chars": 220
+    },
+    {
+      "name": "question7",
+      "chars": 206
+    },
+    {
+      "name": "question8",
+      "chars": 215
+    },
+    {
+      "name": "question9",
+      "chars": 210
+    },
+    {
+      "name": "question10",
+      "chars": 221
+    },
+    {
+      "name": "question11",
+      "chars": 217
+    },
+    {
+      "name": "question12",
+      "chars": 221
+    },
+    {
+      "name": "question13",
+      "chars": 262
+    },
+    {
+      "name": "question14",
+      "chars": 274
+    },
+    {
+      "name": "question15",
+      "chars": 445
+    }
+  ],
+  "extracted_intro": true,
+  "excel_files": [
+    {
+      "file": "MO15-Round-1-Sec-2-Bread-and-Butter-Data.xlsx",
+      "md_chars": 6760
+    }
+  ],
+  "errors": [],
+  "intro_chars": 4207
+}

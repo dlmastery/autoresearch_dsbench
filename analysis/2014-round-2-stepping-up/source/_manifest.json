@@ -1,0 +1,55 @@
+{
+  "slug": "2014-round-2-stepping-up",
+  "challenge_dir": "C:\\Users\\evija\\dsbench\\_hf_dsbench\\data_analysis\\data\\00000029",
+  "extracted_questions": [
+    {
+      "name": "question1",
+      "chars": 315
+    },
+    {
+      "name": "question2",
+      "chars": 320
+    },
+    {
+      "name": "question3",
+      "chars": 333
+    },
+    {
+      "name": "question4",
+      "chars": 329
+    },
+    {
+      "name": "question5",
+      "chars": 355
+    },
+    {
+      "name": "question6",
+      "chars": 380
+    },
+    {
+      "name": "question7",
+      "chars": 725
+    },
+    {
+      "name": "question8",
+      "chars": 308
+    },
+    {
+      "name": "question9",
+      "chars": 300
+    },
+    {
+      "name": "question10",
+      "chars": 284
+    }
+  ],
+  "extracted_intro": true,
+  "excel_files": [
+    {
+      "file": "MO14-Stepping-Up.xlsx",
+      "md_chars": 13935
+    }
+  ],
+  "errors": [],
+  "intro_chars": 1291
+}

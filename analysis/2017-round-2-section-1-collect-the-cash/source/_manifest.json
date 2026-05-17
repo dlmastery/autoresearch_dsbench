@@ -1,0 +1,63 @@
+{
+  "slug": "2017-round-2-section-1-collect-the-cash",
+  "challenge_dir": "C:\\Users\\evija\\dsbench\\_hf_dsbench\\data_analysis\\data\\00000016",
+  "extracted_questions": [
+    {
+      "name": "question1",
+      "chars": 223
+    },
+    {
+      "name": "question2",
+      "chars": 225
+    },
+    {
+      "name": "question3",
+      "chars": 215
+    },
+    {
+      "name": "question4",
+      "chars": 225
+    },
+    {
+      "name": "question5",
+      "chars": 214
+    },
+    {
+      "name": "question6",
+      "chars": 199
+    },
+    {
+      "name": "question7",
+      "chars": 152
+    },
+    {
+      "name": "question8",
+      "chars": 197
+    },
+    {
+      "name": "question9",
+      "chars": 224
+    },
+    {
+      "name": "question10",
+      "chars": 195
+    },
+    {
+      "name": "question11",
+      "chars": 449
+    },
+    {
+      "name": "question12",
+      "chars": 364
+    }
+  ],
+  "extracted_intro": true,
+  "excel_files": [
+    {
+      "file": "MO17-Round-2-Section-1-Collect-the-Cash-Spreadsheet-Format (1).xlsx",
+      "md_chars": 1528
+    }
+  ],
+  "errors": [],
+  "intro_chars": 2886
+}

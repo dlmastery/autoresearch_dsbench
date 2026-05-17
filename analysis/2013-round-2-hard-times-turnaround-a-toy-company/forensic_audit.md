@@ -1,6 +1,6 @@
 # Forensic Audit — 2013-round-2-hard-times-turnaround-a-toy-company
 
-_Generated 2026-05-16 05:43:01; kind=analysis._
+_Generated 2026-05-16 17:11:46; kind=analysis._
 
 > Conference-submission grade integrity report. Ten independent
 > audit agents (A-J) plus a committee verdict (Z). Each agent has a
@@ -60,8 +60,8 @@ All agents on synthetic-data splits; under real Kaggle/Modeloff data the tempora
 - **n_perfect_val_score:** 0
 - **n_big_jumps_gt_0.3:** 1
 - **examples_val_gt_train_susp:** `[]`
-- **examples_val_gt_train_es:** `[2, 4, 13]`
-- **examples_big_jumps:** `[{"experiment_num": 10, "from": 0.02, "to": 0.3544444444444444}]`
+- **examples_val_gt_train_es:** `[7, 9, 18]`
+- **examples_big_jumps:** `[{"experiment_num": 15, "from": 0.02, "to": 0.3544444444444444}]`
 - **is_qa:** True
 - **note:** regression + sklearn early-stopping (MLPRegressor with validation_fraction=0.1) can legitimately produce val > train; those cases are counted separately as 'expected' rather than 'suspicious'. Bishop 2006 PRML §5.5.2 'Early Stopping' confirms early-stop val can exceed train on bounded losses.
 

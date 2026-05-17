@@ -1,0 +1,55 @@
+{
+  "slug": "2016-round-2-section-3-tally-up",
+  "challenge_dir": "C:\\Users\\evija\\dsbench\\_hf_dsbench\\data_analysis\\data\\00000006",
+  "extracted_questions": [
+    {
+      "name": "question17",
+      "chars": 122
+    },
+    {
+      "name": "question18",
+      "chars": 139
+    },
+    {
+      "name": "question19",
+      "chars": 160
+    },
+    {
+      "name": "question20",
+      "chars": 156
+    },
+    {
+      "name": "question21",
+      "chars": 157
+    },
+    {
+      "name": "question22",
+      "chars": 179
+    },
+    {
+      "name": "question23",
+      "chars": 157
+    },
+    {
+      "name": "question24",
+      "chars": 156
+    },
+    {
+      "name": "question25",
+      "chars": 111
+    },
+    {
+      "name": "question26",
+      "chars": 391
+    }
+  ],
+  "extracted_intro": true,
+  "excel_files": [
+    {
+      "file": "MO16-Round-2-Sec-3-Tally-Up-1.xlsx",
+      "md_chars": 8135
+    }
+  ],
+  "errors": [],
+  "intro_chars": 3051
+}

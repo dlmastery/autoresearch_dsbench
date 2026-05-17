@@ -1,0 +1,110 @@
+{
+  "slug": "2012-round-1-theory-and-practice-mcqs",
+  "challenge_dir": "C:\\Users\\evija\\dsbench\\_hf_dsbench\\data_analysis\\data\\00000002",
+  "extracted_questions": [
+    {
+      "name": "question1",
+      "chars": 608
+    },
+    {
+      "name": "question2",
+      "chars": 214
+    },
+    {
+      "name": "question3",
+      "chars": 374
+    },
+    {
+      "name": "question4",
+      "chars": 140
+    },
+    {
+      "name": "question5",
+      "chars": 214
+    },
+    {
+      "name": "question6",
+      "chars": 164
+    },
+    {
+      "name": "question7",
+      "chars": 714
+    },
+    {
+      "name": "question8",
+      "chars": 286
+    },
+    {
+      "name": "question9",
+      "chars": 203
+    },
+    {
+      "name": "question10",
+      "chars": 258
+    },
+    {
+      "name": "question11",
+      "chars": 226
+    },
+    {
+      "name": "question12",
+      "chars": 332
+    },
+    {
+      "name": "question13",
+      "chars": 430
+    },
+    {
+      "name": "question14",
+      "chars": 426
+    },
+    {
+      "name": "question15",
+      "chars": 285
+    },
+    {
+      "name": "question16",
+      "chars": 131
+    },
+    {
+      "name": "question17",
+      "chars": 162
+    },
+    {
+      "name": "question18",
+      "chars": 149
+    },
+    {
+      "name": "question19",
+      "chars": 184
+    },
+    {
+      "name": "question20",
+      "chars": 213
+    },
+    {
+      "name": "question21",
+      "chars": 200
+    },
+    {
+      "name": "question22",
+      "chars": 179
+    },
+    {
+      "name": "question23",
+      "chars": 128
+    },
+    {
+      "name": "question24",
+      "chars": 138
+    },
+    {
+      "name": "question25",
+      "chars": 128
+    }
+  ],
+  "extracted_intro": true,
+  "excel_files": [],
+  "errors": [],
+  "intro_chars": 108
+}

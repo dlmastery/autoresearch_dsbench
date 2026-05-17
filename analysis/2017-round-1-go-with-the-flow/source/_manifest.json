@@ -1,0 +1,55 @@
+{
+  "slug": "2017-round-1-go-with-the-flow",
+  "challenge_dir": "C:\\Users\\evija\\dsbench\\_hf_dsbench\\data_analysis\\data\\00000004",
+  "extracted_questions": [
+    {
+      "name": "question41",
+      "chars": 191
+    },
+    {
+      "name": "question42",
+      "chars": 191
+    },
+    {
+      "name": "question43",
+      "chars": 241
+    },
+    {
+      "name": "question44",
+      "chars": 276
+    },
+    {
+      "name": "question45",
+      "chars": 251
+    },
+    {
+      "name": "question46",
+      "chars": 254
+    },
+    {
+      "name": "question47",
+      "chars": 225
+    },
+    {
+      "name": "question48",
+      "chars": 276
+    },
+    {
+      "name": "question49",
+      "chars": 105
+    },
+    {
+      "name": "question50",
+      "chars": 150
+    }
+  ],
+  "extracted_intro": true,
+  "excel_files": [
+    {
+      "file": "MO17-Round-1-Sec-4-Go-With-The-Flow-data.xlsx",
+      "md_chars": 10173
+    }
+  ],
+  "errors": [],
+  "intro_chars": 4608
+}

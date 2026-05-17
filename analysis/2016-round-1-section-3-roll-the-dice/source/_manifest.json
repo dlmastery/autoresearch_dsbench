@@ -1,0 +1,55 @@
+{
+  "slug": "2016-round-1-section-3-roll-the-dice",
+  "challenge_dir": "C:\\Users\\evija\\dsbench\\_hf_dsbench\\data_analysis\\data\\00000005",
+  "extracted_questions": [
+    {
+      "name": "question20",
+      "chars": 197
+    },
+    {
+      "name": "question21",
+      "chars": 183
+    },
+    {
+      "name": "question22",
+      "chars": 134
+    },
+    {
+      "name": "question23",
+      "chars": 171
+    },
+    {
+      "name": "question24",
+      "chars": 219
+    },
+    {
+      "name": "question25",
+      "chars": 135
+    },
+    {
+      "name": "question26",
+      "chars": 236
+    },
+    {
+      "name": "question27",
+      "chars": 268
+    },
+    {
+      "name": "question28",
+      "chars": 164
+    },
+    {
+      "name": "question29",
+      "chars": 412
+    }
+  ],
+  "extracted_intro": true,
+  "excel_files": [
+    {
+      "file": "MO16-Round-1-Sec-3-Roll-The-Dice-1.xlsx",
+      "md_chars": 4841
+    }
+  ],
+  "errors": [],
+  "intro_chars": 2149
+}

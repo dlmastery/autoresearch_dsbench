@@ -1,0 +1,210 @@
+{
+  "slug": "2012-finals-excel-knowledge-test",
+  "challenge_dir": "C:\\Users\\evija\\dsbench\\_hf_dsbench\\data_analysis\\data\\00000042",
+  "extracted_questions": [
+    {
+      "name": "question1",
+      "chars": 49
+    },
+    {
+      "name": "question2",
+      "chars": 78
+    },
+    {
+      "name": "question3",
+      "chars": 51
+    },
+    {
+      "name": "question4",
+      "chars": 95
+    },
+    {
+      "name": "question5",
+      "chars": 112
+    },
+    {
+      "name": "question6",
+      "chars": 61
+    },
+    {
+      "name": "question7",
+      "chars": 72
+    },
+    {
+      "name": "question8",
+      "chars": 84
+    },
+    {
+      "name": "question9",
+      "chars": 107
+    },
+    {
+      "name": "question10",
+      "chars": 102
+    },
+    {
+      "name": "question11",
+      "chars": 62
+    },
+    {
+      "name": "question12",
+      "chars": 36
+    },
+    {
+      "name": "question13",
+      "chars": 87
+    },
+    {
+      "name": "question14",
+      "chars": 80
+    },
+    {
+      "name": "question15",
+      "chars": 39
+    },
+    {
+      "name": "question16",
+      "chars": 129
+    },
+    {
+      "name": "question17",
+      "chars": 98
+    },
+    {
+      "name": "question18",
+      "chars": 51
+    },
+    {
+      "name": "question19",
+      "chars": 126
+    },
+    {
+      "name": "question20",
+      "chars": 138
+    },
+    {
+      "name": "question21",
+      "chars": 74
+    },
+    {
+      "name": "question22",
+      "chars": 36
+    },
+    {
+      "name": "question23",
+      "chars": 41
+    },
+    {
+      "name": "question24",
+      "chars": 62
+    },
+    {
+      "name": "question25",
+      "chars": 74
+    },
+    {
+      "name": "question26",
+      "chars": 70
+    },
+    {
+      "name": "question27",
+      "chars": 30
+    },
+    {
+      "name": "question28",
+      "chars": 36
+    },
+    {
+      "name": "question29",
+      "chars": 86
+    },
+    {
+      "name": "question30",
+      "chars": 46
+    },
+    {
+      "name": "question31",
+      "chars": 44
+    },
+    {
+      "name": "question32",
+      "chars": 58
+    },
+    {
+      "name": "question33",
+      "chars": 73
+    },
+    {
+      "name": "question34",
+      "chars": 84
+    },
+    {
+      "name": "question35",
+      "chars": 69
+    },
+    {
+      "name": "question36",
+      "chars": 26
+    },
+    {
+      "name": "question37",
+      "chars": 61
+    },
+    {
+      "name": "question38",
+      "chars": 82
+    },
+    {
+      "name": "question39",
+      "chars": 74
+    },
+    {
+      "name": "question40",
+      "chars": 103
+    },
+    {
+      "name": "question41",
+      "chars": 102
+    },
+    {
+      "name": "question42",
+      "chars": 131
+    },
+    {
+      "name": "question43",
+      "chars": 49
+    },
+    {
+      "name": "question44",
+      "chars": 68
+    },
+    {
+      "name": "question45",
+      "chars": 125
+    },
+    {
+      "name": "question46",
+      "chars": 134
+    },
+    {
+      "name": "question47",
+      "chars": 89
+    },
+    {
+      "name": "question48",
+      "chars": 62
+    },
+    {
+      "name": "question49",
+      "chars": 108
+    },
+    {
+      "name": "question50",
+      "chars": 133
+    }
+  ],
+  "extracted_intro": true,
+  "excel_files": [],
+  "errors": [],
+  "intro_chars": 77
+}

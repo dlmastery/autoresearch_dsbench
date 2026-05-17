@@ -3,6 +3,12 @@
 **/.data_cache/
 *.npz
 
+# External Modeloff source material (downloaded from HuggingFace
+# liqiang888/DSBench by framework/_download_hf_modeloff.py — ~17 MB,
+# regenerable, NOT our source of truth, just an artefact of the
+# llm_modeloff swap).
+_hf_dsbench/
+
 # Python
 __pycache__/
 **/__pycache__/

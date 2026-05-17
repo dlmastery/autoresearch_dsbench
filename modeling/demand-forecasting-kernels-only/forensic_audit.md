@@ -1,6 +1,6 @@
 # Forensic Audit — demand-forecasting-kernels-only
 
-_Generated 2026-05-16 05:41:39; kind=modeling._
+_Generated 2026-05-16 17:10:20; kind=modeling._
 
 > Conference-submission grade integrity report. Ten independent
 > audit agents (A-J) plus a committee verdict (Z). Each agent has a

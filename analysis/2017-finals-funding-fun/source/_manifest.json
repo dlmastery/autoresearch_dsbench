@@ -1,0 +1,108 @@
+{
+  "slug": "2017-finals-funding-fun",
+  "challenge_dir": "C:\\Users\\evija\\dsbench\\_hf_dsbench\\data_analysis\\data\\00000007",
+  "extracted_questions": [
+    {
+      "name": "question1",
+      "chars": 213
+    },
+    {
+      "name": "question2",
+      "chars": 171
+    },
+    {
+      "name": "question3",
+      "chars": 255
+    },
+    {
+      "name": "question4",
+      "chars": 60
+    },
+    {
+      "name": "question5",
+      "chars": 79
+    },
+    {
+      "name": "question6",
+      "chars": 87
+    },
+    {
+      "name": "question7",
+      "chars": 54
+    },
+    {
+      "name": "question8",
+      "chars": 63
+    },
+    {
+      "name": "question9",
+      "chars": 60
+    },
+    {
+      "name": "question10",
+      "chars": 95
+    },
+    {
+      "name": "question11",
+      "chars": 55
+    },
+    {
+      "name": "question12",
+      "chars": 94
+    },
+    {
+      "name": "question13",
+      "chars": 62
+    },
+    {
+      "name": "question14",
+      "chars": 80
+    },
+    {
+      "name": "question15",
+      "chars": 55
+    },
+    {
+      "name": "question16",
+      "chars": 81
+    },
+    {
+      "name": "question17",
+      "chars": 55
+    },
+    {
+      "name": "question18",
+      "chars": 91
+    },
+    {
+      "name": "question19",
+      "chars": 63
+    },
+    {
+      "name": "question20",
+      "chars": 94
+    },
+    {
+      "name": "question21",
+      "chars": 609
+    },
+    {
+      "name": "question22",
+      "chars": 266
+    },
+    {
+      "name": "question23",
+      "chars": 285
+    }
+  ],
+  "extracted_intro": true,
+  "excel_files": [
+    {
+      "file": "MO2017-Finals-Sec-2-Funding-Fun.xlsb",
+      "md_chars": 0,
+      "note": "xlsb format \u2014 not parsed (no engine)"
+    }
+  ],
+  "errors": [],
+  "intro_chars": 5997
+}

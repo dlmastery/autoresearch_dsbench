@@ -96,5 +96,5 @@ See `forensic_audit.md` agents A (split hash integrity) and C (row overlap).
 ## Provenance
 
 - Built from `framework/build_submission.py`
-- Generated 2026-05-16 05:45:16
+- Generated 2026-05-16 17:36:24
 - Conforms to autoresearch CLAUDE.md 'Explainability & Auditability Report' (14 sections)
